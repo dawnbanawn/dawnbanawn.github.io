@@ -16,7 +16,7 @@
 			<div id="loadingBlock">
 				<img class="logo" src="TemplateData/img/Logo.png"></img>
 				<span class="subtitle"> DAN HEIKENBERG <br><br>
-				Welcome to my portfolio! <br> A 3D scene is currently being loaded. This will take a while. Thank you for your patience.
+				Welcome to my portfolio! <br> A 3D scene is currently being loaded. Thank you for your patience.
 				</span>
 			
 				<div id="progressBar">
@@ -39,7 +39,7 @@
 				</div>
 				<div id="warningMobileBlock" style="display:none;">
 					<div class="warningBrowserText">
-						Please note that Unity WebGL is not currently supported on mobiles.
+						Please note that Unity WebGL might not be supported on this mobile.
 					</div>
 				</div>
 			</div>
@@ -47,12 +47,12 @@
 			<div id="errorBrowserBlock" style="display:none;">
 				<img class="logo" src="TemplateData/img/Logo.png"></img>
 				<span class="subtitle"> DAN HEIKENBERG <br>
-					A 3D scene is being loaded. This will take a while. Thank you for your patience.
+					A 3D scene is being loaded. Thank you for your patience.
 				</span>
 				
 				<div id="errorContent" style="display:none;">
 					<div class="errorBrowserText">
-						Your browser does not support WebGL. <br> You can download one of this popular web browsers.
+						Your browser might not support WebGL. <br> You can download one of this popular web browsers.
 					</div>
 					<div class="browserIcons">
 						<a href="https://www.mozilla.org/firefox" target="_blank"><img src="TemplateData/img/browser-firefox.png" alt="Firefox browser"></a>
@@ -136,11 +136,11 @@
 		var isChrome =  isIOSChrome || (isChromium !== null && typeof isChromium !== "undefined" && vendorName === "Google Inc." && isOpera === false && isIEedge === false);
 		
 		var buildUrl = "Build";
-		var loaderUrl = buildUrl + "/v04.loader.js";
+		var loaderUrl = buildUrl + "/v05.loader.js";
 		var config = {
-        dataUrl: buildUrl + "/v04.data",
-        frameworkUrl: buildUrl + "/v04.framework.js",
-        codeUrl: buildUrl + "/v04.wasm",
+        dataUrl: buildUrl + "/v05.data",
+        frameworkUrl: buildUrl + "/v05.framework.js",
+        codeUrl: buildUrl + "/v05.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Wintergrim Entertainment",
         productName: "Camp Comet",
