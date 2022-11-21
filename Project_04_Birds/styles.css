@@ -8,10 +8,20 @@ canvas {
 #main {
     top: 50%;
     left: 50%;
-    width: 40%;
-    height: 30%;
+    width: 325px;
+    height: 320px;
     transform: translate(-50%, -50%);
-    border: 1px solid #666;
-    background-color: #b9faac;
     position: fixed;
+    
+}
+.mainContainer {
+    display: flex;
+    width: 100%;
+    
+    
+}
+.searchContainer {
+    background-color: rgba(53, 69, 57, 0.8);
+    width: 100%;
+    border-radius: 15%;
 }

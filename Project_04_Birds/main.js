@@ -45,16 +45,16 @@ function init(){
 
     const geometry2 = new THREE.BoxGeometry( 1, 1, 1 );
     ///const material2 = new THREE.MeshBasicMaterial( {color: 0x0000ff} );
-    const texture2 = new THREE.TextureLoader().load('textures/test.png');
-    const material2 = new THREE.MeshBasicMaterial( {map: texture2, transparent: true} );
-        material2.side = THREE.BackSide;
-    cube2 = new THREE.Mesh( geometry2, material2 );
+    // const texture2 = new THREE.TextureLoader().load('textures/test.png');
+    // const material2 = new THREE.MeshBasicMaterial( {map: texture2, transparent: true} );
+    //     material2.side = THREE.BackSide;
+    // cube2 = new THREE.Mesh( geometry2, material2 );
 
 
 
     var group = new THREE.Group();
     group.add(cube);
-    group.add(cube2);
+    //group.add(cube2);
 
     scene.add( group);
 
