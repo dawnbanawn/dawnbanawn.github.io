@@ -44,7 +44,7 @@
     height: 320px;
     transform: translate(-50%, -50%);
     border: 1px solid #666;
-    background-color: #7c9176;
+    background-color: rgba(105, 135, 103, 0.5);
   
   }
   .player #music-info{
@@ -94,7 +94,7 @@
     content:"";
     width: 16px;
     height: 16px;
-    background: #53af59;
+    background: #3c7d41;
     position: absolute;
     right: -8px;
     bottom: -4px;
@@ -137,6 +137,6 @@
     font-size: 35px;
   }
   .player .buttons .button-small:hover, .player .buttons .button-medium:hover, .player .buttons .button-large:hover{
-    background: #53af62;
+    background: #437a4c;
     color: #fff;
   }

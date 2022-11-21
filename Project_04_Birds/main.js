@@ -3,7 +3,6 @@ let scene, scene2, camera, renderer, renderer2, cube, cube2;
 function init(){
      scene = new THREE.Scene();
 
-
      camera = new THREE.PerspectiveCamera(
         75, 
         window.innerWidth / window.innerHeight,
@@ -28,7 +27,7 @@ function init(){
         let texture_dn = new THREE.TextureLoader().load('textures/negy.jpg');
         let texture_bk = new THREE.TextureLoader().load('textures/negz.jpg');
         let texture_rt = new THREE.TextureLoader().load('textures/posx.jpg');
-        let texture_up = new THREE.TextureLoader().load('textures/posy.jpg');
+        let texture_up = new THREE.TextureLoader().load('textures/posyv2.jpg');
         let texture_ft = new THREE.TextureLoader().load('textures/posz.jpg');
         materialArray.push(new THREE.MeshBasicMaterial({map: texture_bk}));
         materialArray.push(new THREE.MeshBasicMaterial({map: texture_ft}));
@@ -58,7 +57,7 @@ function init(){
 
     scene.add( group);
 
-    
+    cube.rotation.y += 4;
             
                 //scene.add( group );
 // let controls;
