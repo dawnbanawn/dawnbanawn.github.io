@@ -1,3 +1,25 @@
+//import { createApi } from 'unsplash-js';
+//Search APIs for use with musicplayer ->
+//const unsplash = createApi({ accessKey: 'G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q' });
+
+let button = document.getElementById("button");
+button.addEventListener("click", function(e){
+  e.preventDefault()
+  console.log("submitted");
+  
+  console.log(document.getElementById("bird").value);
+
+});
+// document.getElementById("submitForm").addEventListener("submit", function(e){
+    
+//     console.log("submitted");
+  
+// });
+
+
+
+//Musicplayer ->
+
 let audioList = [
     {
       title:"Evolution",

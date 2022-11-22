@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow: hidden;
 }
 canvas {
     width: 100%;
@@ -11,14 +12,16 @@ canvas {
     width: 325px;
     height: 320px;
     transform: translate(-50%, -50%);
-    position: fixed;
-    
+    position: fixed;    
 }
+@media only screen and (max-width: 600px) {
+    #main {
+        top: 40%;
+    }
+  }
 .mainContainer {
     display: flex;
-    width: 100%;
-    
-    
+    width: 100%; 
 }
 .searchContainer {
     background-color: rgba(53, 69, 57, 0.8);
@@ -26,3 +29,26 @@ canvas {
     border-radius: 15%;
     border: 0.5px solid rgba(255, 255, 255, 0.7);
 }
+.formContainer {
+    margin-top: 350px;
+}
+.formContainer label {
+    margin-top: 350px;
+    margin-left: 10px;
+    color: rgb(249, 252, 249);
+}
+.formContainer input {
+    margin-left: 5px;
+    width: 47%;
+    outline: none;
+}
+.formContainer button {
+    color: rgb(249, 252, 249);
+    background-color: rgb(95, 123, 104);
+    border-radius: 10%;
+    margin-left: 7px;
+}
+.formContainer button:active {
+    background-color: rgb(53, 55, 54);
+}
+

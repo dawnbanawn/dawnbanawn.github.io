@@ -1,3 +1,5 @@
+
+//Three JS Skybox (cube2 not used).
 let scene, scene2, camera, renderer, renderer2, cube, cube2;
 
 function init(){
@@ -10,11 +12,9 @@ function init(){
         1000
         );
     
-     renderer = new THREE.WebGLRenderer({antialias: true});    
+    renderer = new THREE.WebGLRenderer({antialias: true});    
     renderer.setSize(window.innerWidth, window.innerHeight);    
     document.body.appendChild(renderer.domElement);
-
-
     
     const geometry = new THREE.BoxGeometry( 8, 8, 8 );
     //Skybox images from Emil Persson, aka Humus. http://www.humus.name
@@ -47,10 +47,8 @@ function init(){
     ///const material2 = new THREE.MeshBasicMaterial( {color: 0x0000ff} );
     // const texture2 = new THREE.TextureLoader().load('textures/test.png');
     // const material2 = new THREE.MeshBasicMaterial( {map: texture2, transparent: true} );
-    //     material2.side = THREE.BackSide;
+    // material2.side = THREE.BackSide;
     // cube2 = new THREE.Mesh( geometry2, material2 );
-
-
 
     var group = new THREE.Group();
     group.add(cube);
@@ -58,38 +56,28 @@ function init(){
 
     scene.add( group);
 
-    cube.rotation.y += 4;
-            
-                //scene.add( group );
-// let controls;
-//     controls = new TrackballControls( camera, renderer.domElement );
-//     controls.rotateSpeed = 4;
-
+    cube.rotation.y += 4;            
 }
 
 
 
 function animate() {
     requestAnimationFrame(animate);
-    //cube.rotation.x += 0.01;
     cube.rotation.y += 0.0005;
     //cube2.rotation.y += 0.001;
-
-
     renderer.render(scene, camera);
     //renderer2.render(scene2, camera);
-
-
 }
 
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-
 }
 
 window.addEventListener('resize', onWindowResize, false);
 
 init();
 animate();
+
+
