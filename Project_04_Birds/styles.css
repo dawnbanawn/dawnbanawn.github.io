@@ -24,4 +24,5 @@ canvas {
     background-color: rgba(53, 69, 57, 0.8);
     width: 100%;
     border-radius: 15%;
+    border: 0.5px solid rgba(255, 255, 255, 0.7);
 }

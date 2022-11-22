@@ -17,7 +17,8 @@ function init(){
 
     
     const geometry = new THREE.BoxGeometry( 8, 8, 8 );
-    //const material = new THREE.MeshBasicMaterial( {color: 0x0000ff} );
+    //Skybox images from Emil Persson, aka Humus. http://www.humus.name
+    //Licensed under a Creative Commons Attribution 3.0 Unported License.
     const texture = new THREE.TextureLoader().load('textures/posz.jpg')
     const material = new THREE.MeshBasicMaterial( {map: texture} );
         material.side = THREE.BackSide;

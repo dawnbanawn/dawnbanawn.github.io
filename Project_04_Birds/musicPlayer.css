@@ -137,6 +137,6 @@
     font-size: 35px;
   }
   .player .buttons .button-small:hover, .player .buttons .button-medium:hover, .player .buttons .button-large:hover{
-    background: #437a4c;
-    color: #fff;
+    background: #4d7053;
+    color: rgb(204, 225, 205);
   }
