@@ -1,14 +1,48 @@
-//import { createApi } from 'unsplash-js';
 //Search APIs for use with musicplayer ->
 //const unsplash = createApi({ accessKey: 'G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q' });
 
+const url = "https://api.unsplash.com/search/photos?query=coffee&per_page=20&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
+
+
+//Listens to search button, and catches input value.
 let button = document.getElementById("button");
 button.addEventListener("click", function(e){
   e.preventDefault()
-  console.log("submitted");
-  
-  console.log(document.getElementById("bird").value);
+  let birdName = "";
+  birdName = document.getElementById("bird").value;
+  const soundUrl = "https://xeno-canto.org/api/2/recordings?query=" + birdName;
+  fetch(soundUrl)
+  .then(response => response.json())
+  .then(data => { 
+    if (data === undefined) { //Kollar om objectet (staden) finns, och gör val därefter.
+      alert("Please check the spelling, or try another bird name.");
+      console.log(birdName + "not found!");
 
+    } else {
+      console.log(data.recordings[0].file); //sound file link
+      console.log(data.recordings[0].en); //bird name
+      console.log(data.recordings[0].gen); //latin name
+      console.log(data.recordings[0].cnt); //county name
+
+      console.log(birdName + "found!");
+    }
+    //Hämtar bild-data från Unsplash.
+    const unsplashUrl = "https://api.unsplash.com/search/photos?query=" + birdName + "&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
+
+    fetch(unsplashUrl)
+    .then(response => response.json())
+    .then(data => { 
+      if (data === undefined) { //Kollar om objectet (staden) finns, och gör val därefter.
+        alert("Image of the bird does cant be found.");
+
+      } else {
+        console.log(data.results[0].links.download); //image link of the bird.
+        console.log("Image of bird found!");
+      }
+    })
+  //console.log("submitted");  
+  //console.log(document.getElementById("bird").value);
+  })
 });
 // document.getElementById("submitForm").addEventListener("submit", function(e){
     
