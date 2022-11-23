@@ -1,30 +1,71 @@
 //Search APIs for use with musicplayer ->
 //const unsplash = createApi({ accessKey: 'G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q' });
+let audioList = [
+  {
+    title:"",
+    album:"",
+    author:"Benjamin Tissot",
+    source:"https://www.bensound.com/bensound-music/bensound-evolution.mp3",
+    type:"audio/mpeg"
+    //https://www.bensound.com/bensound-img/epic.jpg
+  },
+  {
+    title:"Epic",
+    album:"Bensound",
+    author:"Benjamin Tissot",
+    source:"https://www.bensound.com/bensound-music/bensound-epic.mp3",
+    type:"audio/mpeg"
+  }
+];
 
 const url = "https://api.unsplash.com/search/photos?query=coffee&per_page=20&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
 
+let finalBirdEngName = "";
+let finalBirdGenName = "";
+let finalBirdCountryName = "";
+let finalBirdSoundLink = "";
 
 //Listens to search button, and catches input value.
 let button = document.getElementById("button");
 button.addEventListener("click", function(e){
   e.preventDefault()
   let birdName = "";
+  let correctBirdName = "";
   birdName = document.getElementById("bird").value;
+  document.getElementById("bird").value = "Please wait 1-5 seconds";
   const soundUrl = "https://xeno-canto.org/api/2/recordings?query=" + birdName;
   fetch(soundUrl)
   .then(response => response.json())
   .then(data => { 
-    if (data === undefined) { //Kollar om objectet (staden) finns, och gör val därefter.
-      alert("Please check the spelling, or try another bird name.");
-      console.log(birdName + "not found!");
+    if (data.recordings[0] !== undefined) { //Kollar om objectet (staden) finns, och gör val därefter.
+      //console.log(data.recordings[0].file); //sound file link
+      //console.log(data.recordings[0].en); //bird name
+      //console.log(data.recordings[0].gen); //latin name
+      //console.log(data.recordings[0].cnt); //county name
+      finalBirdEngName = data.recordings[0].en;
+      finalBirdGenName = data.recordings[0].gen;
+      finalBirdCountryName = data.recordings[0].cnt;
+      finalBirdSoundLink = data.recordings[0].file;
+      console.log(data); //county name
+
+      
+      //console.log(birdName + "found!");
+      document.getElementById("bird").value = "We found it!";
+
+      //correctBirdName = data.recordings[0].en;
+      //Fills the array with all search results.
+      for (let i = 0; i < 100; i++){
+        audioList[i] = {title: data.recordings[i].en,
+          album: data.recordings[i].gen,
+          source: data.recordings[i].file,
+          image: ""}; //For later adding of unsplash link results.
+      }
+      console.log(audioList);
 
     } else {
-      console.log(data.recordings[0].file); //sound file link
-      console.log(data.recordings[0].en); //bird name
-      console.log(data.recordings[0].gen); //latin name
-      console.log(data.recordings[0].cnt); //county name
-
-      console.log(birdName + "found!");
+      //alert("Please check the spelling, or try another bird name.");
+      //console.log(birdName + "not found!");
+      document.getElementById("bird").value = "It wasn´t found ..";
     }
     //Hämtar bild-data från Unsplash.
     const unsplashUrl = "https://api.unsplash.com/search/photos?query=" + birdName + "&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
@@ -33,15 +74,26 @@ button.addEventListener("click", function(e){
     .then(response => response.json())
     .then(data => { 
       if (data === undefined) { //Kollar om objectet (staden) finns, och gör val därefter.
-        alert("Image of the bird does cant be found.");
-
+        //alert("Image of the bird does cant be found.");
+        console.log("Image of bird not found!");
       } else {
         console.log(data.results[0].links.download); //image link of the bird.
         console.log("Image of bird found!");
+        for (let i = 0; i < 100; i++){
+          audioList[i].image = data.results[0].links.download;
+        }
+      console.log(audioList);
+      loadAudio(0); //Loads the first bird object;
+
       }
     })
   //console.log("submitted");  
   //console.log(document.getElementById("bird").value);
+
+  
+
+  
+
   })
 });
 // document.getElementById("submitForm").addEventListener("submit", function(e){
@@ -54,23 +106,11 @@ button.addEventListener("click", function(e){
 
 //Musicplayer ->
 
-let audioList = [
-    {
-      title:"Evolution",
-      album:"Bensound",
-      author:"Benjamin Tissot",
-      source:"https://www.bensound.com/bensound-music/bensound-evolution.mp3",
-      type:"audio/mpeg"
-      //https://www.bensound.com/bensound-img/epic.jpg
-    },
-    {
-      title:"Epic",
-      album:"Bensound",
-      author:"Benjamin Tissot",
-      source:"https://www.bensound.com/bensound-music/bensound-epic.mp3",
-      type:"audio/mpeg"
-    }
-  ];
+
+
+
+
+
   let bar = document.getElementById("bar");
   let currentTime = document.getElementById("current-time");
   let currentAudio;
@@ -84,14 +124,15 @@ let audioList = [
   let musicInfoChilds = [...musicInfo.children];
   
   function loadAudio(audio){
+    //console.log("play");
     audio = audio || 0;
     if(currentAudio){
       currentAudio.pause();
       currentAudio.currentTime = 0;
     }
-    musicInfoChilds[0].innerHTML = audioList[audio].title;
+    musicInfoChilds[0].innerHTML = "Name: " + audioList[audio].title;
     //musicInfoChilds[1].innerHTML = "Author: " + audioList[audio].author;
-    musicInfoChilds[2].innerHTML = "Album: " + audioList[audio].album;
+    musicInfoChilds[2].innerHTML = "Genus: " + audioList[audio].album;
     currentAudio = new Audio(audioList[audio].source);
   }
   

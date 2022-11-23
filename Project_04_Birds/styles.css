@@ -30,7 +30,7 @@ canvas {
     border: 0.5px solid rgba(255, 255, 255, 0.7);
 }
 .formContainer {
-    margin-top: 350px;
+    margin-top: 330px;
 }
 .formContainer label {
     margin-top: 350px;
@@ -41,6 +41,11 @@ canvas {
     margin-left: 5px;
     width: 47%;
     outline: none;
+}
+.formContainer p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
 }
 .formContainer button {
     color: rgb(249, 252, 249);
