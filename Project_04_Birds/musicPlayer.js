@@ -18,7 +18,9 @@ let audioList = [
   }
 ];
 document.getElementById("bird").value = "";
-let birdLoaded = false;
+let birdLoaded = false; //If a bird has been found, and is fetched.
+let birdName = ""; //The user input search string.
+let birdArrayEntry = 0; //What array entry recording is loaded (0-99).
 const url = "https://api.unsplash.com/search/photos?query=coffee&per_page=20&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
 
 let finalBirdEngName = "";
@@ -38,11 +40,16 @@ let playing;
 let musicInfo = document.getElementById("music-info");
 let musicInfoChilds = [...musicInfo.children];
 
+let forward = document.getElementById("forward");
+let backward = document.getElementById("backward");
+let random = document.getElementById("random");
+
+
 //Listens to search button, and catches input value.
 let button = document.getElementById("button");
 button.addEventListener("click", function(e){
   e.preventDefault()
-  let birdName = "";
+  birdArrayEntry = 0; //When searching, the first recording will be loaded.
   birdName = document.getElementById("bird").value;
   //document.getElementById("bird").value = "";
   document.getElementById("infoText").innerHTML = "Please wait 1-5 seconds ...";
@@ -96,7 +103,7 @@ fetch(unsplashUrl)
     }
   console.log(audioList);
   document.getElementById('music-info').style.backgroundImage = 'url(' + audioList[0].image + ')';
-  loadAudio(0); //Loads the first bird object;
+  loadAudio(birdArrayEntry); //Loads the first bird object;
   birdLoaded = true;
   document.getElementById('play').style.color = '#ddd';
   document.getElementById('mute').style.color = '#ddd';
@@ -260,4 +267,63 @@ fetch(unsplashUrl)
   
   currentAudio.addEventListener("ended", function(){
     play.innerHTML = '<i class="fas fa-play"></i>';
+  });
+
+
+  forward.addEventListener("click", function(){  
+      if (birdLoaded === true){
+        if (birdArrayEntry < 100){
+          currentAudio.pause();
+          birdArrayEntry += 1;
+          loadAudio(birdArrayEntry);
+          forward.innerHTML = '<i class="fas fa-forward"></i>';
+          
+          //mute.innerHTML = '<i class="fas fa-volume-up"></i>';
+          //currentAudio.muted = false;
+          
+          currentAudio.play();
+          play.innerHTML = '<i class="fas fa-pause"></i>';
+          document.getElementById("infoText").innerHTML = "Recording number: " + (birdArrayEntry + 1).toString();
+        }
+      }    
+  });
+
+
+  backward.addEventListener("click", function(){      
+      if (birdLoaded === true){
+        if (birdArrayEntry > 0){
+          //console.log("backwarrd");
+          currentAudio.pause();
+          birdArrayEntry -= 1;
+          loadAudio(birdArrayEntry);
+          backward.innerHTML = '<i class="fas fa-backward"></i>';
+
+          mute.innerHTML = '<i class="fas fa-volume-up"></i>';
+          currentAudio.muted = false;
+
+          currentAudio.play();
+          play.innerHTML = '<i class="fas fa-pause"></i>';
+          document.getElementById("infoText").innerHTML = "Recording number: " + (birdArrayEntry + 1).toString();
+        }
+      }    
+  });
+
+
+  random.addEventListener("click", function(){      
+      if (birdLoaded === true){
+        //if (birdArrayEntry > 0){
+          //console.log("backwarrd");
+          currentAudio.pause();
+          birdArrayEntry = Math.floor(Math.random() * 100);
+          loadAudio(birdArrayEntry);
+          random.innerHTML = '<i class="fas fa-random"></i>';
+
+          mute.innerHTML = '<i class="fas fa-volume-up"></i>';
+          currentAudio.muted = false;
+
+          currentAudio.play();
+          play.innerHTML = '<i class="fas fa-pause"></i>';
+          document.getElementById("infoText").innerHTML = "Recording number: " + (birdArrayEntry + 1).toString();
+        //}
+      }    
   });
