@@ -37,19 +37,19 @@
     left:calc(50% - 250px);
     box-shadow:6px 6px 15px rgba(51,51,51,0.5);
     overflow:hidden;
-    background:#fff;
+    background:rgb(255, 255, 255);
     top: 50%;
     left: 50%;
     width: 300px;
     height: 320px;
     transform: translate(-50%, -50%);
     border: 1px solid #666;
-    background-color: rgba(105, 135, 103, 0.5);
+    background-color: rgb(48, 68, 49);
   
   }
   .player #music-info{
     padding: 15px;
-    background-image:url("https://www.bensound.com/bensound-img/evolution.jpg");
+    background-image:url("");
     height: 238px;
     background-repeat:no-repeat;
     background-size:100%;
@@ -87,7 +87,7 @@
     bottom: 0;
     width: 0;
     height: var(--bar-height);
-    background: #5453af;
+    background: #a5a5ba;
     pointer-events:none;
   }
   .player .timestamp #current-time:after{
@@ -138,5 +138,5 @@
   }
   .player .buttons .button-small:hover, .player .buttons .button-medium:hover, .player .buttons .button-large:hover{
     background: #4d7053;
-    color: rgb(204, 225, 205);
+    
   }

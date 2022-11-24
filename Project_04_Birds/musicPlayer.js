@@ -17,7 +17,8 @@ let audioList = [
     type:"audio/mpeg"
   }
 ];
-
+document.getElementById("bird").value = "";
+let birdLoaded = false;
 const url = "https://api.unsplash.com/search/photos?query=coffee&per_page=20&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
 
 let finalBirdEngName = "";
@@ -25,12 +26,23 @@ let finalBirdGenName = "";
 let finalBirdCountryName = "";
 let finalBirdSoundLink = "";
 
+let bar = document.getElementById("bar");
+let currentTime = document.getElementById("current-time");
+let currentAudio;
+let player = document.getElementById("player");
+let play = document.getElementById("play");
+let barPosition = player.offsetLeft;
+let overlay = document.getElementById("overlay");
+let mute = document.getElementById("mute");
+let playing;
+let musicInfo = document.getElementById("music-info");
+let musicInfoChilds = [...musicInfo.children];
+
 //Listens to search button, and catches input value.
 let button = document.getElementById("button");
 button.addEventListener("click", function(e){
   e.preventDefault()
   let birdName = "";
-  let correctBirdName = "";
   birdName = document.getElementById("bird").value;
   document.getElementById("bird").value = "Please wait 1-5 seconds";
   const soundUrl = "https://xeno-canto.org/api/2/recordings?query=" + birdName;
@@ -62,31 +74,57 @@ button.addEventListener("click", function(e){
       }
       console.log(audioList);
 
+
+//Hämtar bild-data från Unsplash.
+const unsplashUrl = "https://api.unsplash.com/search/photos?query=" + birdName + "&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
+
+fetch(unsplashUrl)
+.then(response => response.json())
+.then(data => { 
+  if (data === undefined) { //Kollar om objectet (staden) finns, och gör val därefter.
+    //alert("Image of the bird does cant be found.");
+    console.log("Image of bird not found!");
+    
+  } else {
+    console.log(data.results[0].links.download); //image link of the bird.
+    console.log("Image of bird found!");
+    for (let i = 0; i < 100; i++){
+      audioList[i].image = data.results[0].links.download;
+    }
+  console.log(audioList);
+  document.getElementById('music-info').style.backgroundImage = 'url(' + audioList[0].image + ')';
+  loadAudio(0); //Loads the first bird object;
+  birdLoaded = true;
+  document.getElementById('play').style.color = '#ddd';
+  document.getElementById('mute').style.color = '#ddd';
+  document.getElementById('forward').style.color = '#ddd';
+  document.getElementById('backward').style.color = '#ddd';
+  document.getElementById('random').style.color = '#ddd';
+
+
+
+  }
+})
+
+
     } else {
       //alert("Please check the spelling, or try another bird name.");
       //console.log(birdName + "not found!");
       document.getElementById("bird").value = "It wasn´t found ..";
+      birdLoaded = false;
+      document.getElementById('play').style.color = '#333';
+      document.getElementById('mute').style.color = '#333';
+      document.getElementById('forward').style.color = '#333';
+      document.getElementById('backward').style.color = '#333';
+      document.getElementById('random').style.color = '#333';
+      document.getElementById('music-info').style.backgroundImage = 'url()';
+      musicInfoChilds[0].innerHTML = "Name: ";
+      musicInfoChilds[2].innerHTML = "Genus: ";
+
+
+
     }
-    //Hämtar bild-data från Unsplash.
-    const unsplashUrl = "https://api.unsplash.com/search/photos?query=" + birdName + "&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
-
-    fetch(unsplashUrl)
-    .then(response => response.json())
-    .then(data => { 
-      if (data === undefined) { //Kollar om objectet (staden) finns, och gör val därefter.
-        //alert("Image of the bird does cant be found.");
-        console.log("Image of bird not found!");
-      } else {
-        console.log(data.results[0].links.download); //image link of the bird.
-        console.log("Image of bird found!");
-        for (let i = 0; i < 100; i++){
-          audioList[i].image = data.results[0].links.download;
-        }
-      console.log(audioList);
-      loadAudio(0); //Loads the first bird object;
-
-      }
-    })
+    
   //console.log("submitted");  
   //console.log(document.getElementById("bird").value);
 
@@ -111,17 +149,7 @@ button.addEventListener("click", function(e){
 
 
 
-  let bar = document.getElementById("bar");
-  let currentTime = document.getElementById("current-time");
-  let currentAudio;
-  let player = document.getElementById("player");
-  let play = document.getElementById("play");
-  let barPosition = player.offsetLeft;
-  let overlay = document.getElementById("overlay");
-  let mute = document.getElementById("mute");
-  let playing;
-  let musicInfo = document.getElementById("music-info");
-  let musicInfoChilds = [...musicInfo.children];
+
   
   function loadAudio(audio){
     //console.log("play");
@@ -191,9 +219,14 @@ button.addEventListener("click", function(e){
   }
   
   play.addEventListener("click", function(){
+    console.log(birdLoaded);
     if(currentAudio.paused){
-      play.innerHTML = '<i class="fas fa-pause"></i>';
-      currentAudio.play();
+      if (birdLoaded === true){
+        
+        play.innerHTML = '<i class="fas fa-pause"></i>';
+        currentAudio.play();
+      }
+
     }else{
       play.innerHTML = '<i class="fas fa-play"></i>';
       currentAudio.pause();
