@@ -44,7 +44,8 @@ button.addEventListener("click", function(e){
   e.preventDefault()
   let birdName = "";
   birdName = document.getElementById("bird").value;
-  document.getElementById("bird").value = "Please wait 1-5 seconds";
+  //document.getElementById("bird").value = "";
+  document.getElementById("infoText").innerHTML = "Please wait 1-5 seconds ...";
   const soundUrl = "https://xeno-canto.org/api/2/recordings?query=" + birdName;
   fetch(soundUrl)
   .then(response => response.json())
@@ -62,7 +63,9 @@ button.addEventListener("click", function(e){
 
       
       //console.log(birdName + "found!");
-      document.getElementById("bird").value = "We found it!";
+      document.getElementById("bird").value = "";
+      document.getElementById("infoText").innerHTML = "Image result when searching for: " + birdName + ".";
+
 
       //correctBirdName = data.recordings[0].en;
       //Fills the array with all search results.
@@ -110,7 +113,8 @@ fetch(unsplashUrl)
     } else {
       //alert("Please check the spelling, or try another bird name.");
       //console.log(birdName + "not found!");
-      document.getElementById("bird").value = "It wasn´t found ..";
+      document.getElementById("bird").value = "";
+      document.getElementById("infoText").innerHTML = "No bird found, please try again."
       birdLoaded = false;
       document.getElementById('play').style.color = '#333';
       document.getElementById('mute').style.color = '#333';

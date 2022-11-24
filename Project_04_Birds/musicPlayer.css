@@ -1,5 +1,6 @@
 *{
     box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   :root{
     --small: 35px;
@@ -54,6 +55,7 @@
     background-repeat:no-repeat;
     background-size:100%;
     color: #fff;
+    border: 0.5px solid white;
   }
   .player #music-info .title{
     font-size: 23px;
@@ -104,8 +106,8 @@
   }
   .player .buttons{
     position: absolute;
-    bottom: 0px;
-    border-top: 1px solid #ddd;
+    bottom: -15px;
+    
     width:100%;
     height:110px;
     display:flex;
@@ -118,6 +120,7 @@
     text-align:center;
     margin:7px;
     color: #333;
+    margin-top: 10px;
   }
   .player .buttons .button-small{
     width: var(--small);
@@ -135,6 +138,8 @@
     height: var(--large);
     line-height: var(--large);
     font-size: 35px;
+    margin-bottom: 10px;
+
   }
   .player .buttons .button-small:hover, .player .buttons .button-medium:hover, .player .buttons .button-large:hover{
     background: #4d7053;

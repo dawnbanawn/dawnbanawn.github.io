@@ -14,11 +14,7 @@ canvas {
     transform: translate(-50%, -50%);
     position: fixed;    
 }
-@media only screen and (max-width: 600px) {
-    #main {
-        top: 40%;
-    }
-  }
+
 .mainContainer {
     display: flex;
     width: 100%; 
@@ -56,4 +52,21 @@ canvas {
 .formContainer button:active {
     background-color: rgb(53, 55, 54);
 }
+h1 {
+    margin-top: -150px;
+    margin-bottom: 75px;
+    font-size: 3.5em;
+    text-align: center;
+    color: rgba(206, 233, 213, 0.7);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+@media only screen and (max-width: 600px) {
+    #main {
+        top: 40%;
+    }
+    h1 {
+        margin-top: -120px;
+        margin-bottom: 45px;
+    }
+  }
 
