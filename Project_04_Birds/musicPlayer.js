@@ -43,7 +43,7 @@ let musicInfoChilds = [...musicInfo.children];
 let forward = document.getElementById("forward");
 let backward = document.getElementById("backward");
 let random = document.getElementById("random");
-
+let muted = false;
 
 //Listens to search button, and catches input value.
 let button = document.getElementById("button");
@@ -248,6 +248,7 @@ fetch(unsplashUrl)
     if(!currentAudio.muted){
       this.innerHTML = '<i class="fas fa-volume-mute"></i>';
       currentAudio.muted = true;
+      //console.log(currentAudio.muted);
     }else{
       this.innerHTML = '<i class="fas fa-volume-up"></i>';
       currentAudio.muted = false;
@@ -273,15 +274,23 @@ fetch(unsplashUrl)
   forward.addEventListener("click", function(){  
       if (birdLoaded === true){
         if (birdArrayEntry < 100){
+          muted = currentAudio.muted;
           currentAudio.pause();
           birdArrayEntry += 1;
           loadAudio(birdArrayEntry);
+          //console.log(currentAudio.muted);
           forward.innerHTML = '<i class="fas fa-forward"></i>';
-          
+          if (muted === true) {
+            currentAudio.play();           
+            currentAudio.muted = true;
+          } else {
+            currentAudio.play();      
+
+          }
           //mute.innerHTML = '<i class="fas fa-volume-up"></i>';
           //currentAudio.muted = false;
           
-          currentAudio.play();
+          
           play.innerHTML = '<i class="fas fa-pause"></i>';
           document.getElementById("infoText").innerHTML = "Recording number: " + (birdArrayEntry + 1).toString();
         }
@@ -292,14 +301,20 @@ fetch(unsplashUrl)
   backward.addEventListener("click", function(){      
       if (birdLoaded === true){
         if (birdArrayEntry > 0){
+          muted = currentAudio.muted;
           //console.log("backwarrd");
           currentAudio.pause();
           birdArrayEntry -= 1;
           loadAudio(birdArrayEntry);
           backward.innerHTML = '<i class="fas fa-backward"></i>';
 
-          mute.innerHTML = '<i class="fas fa-volume-up"></i>';
-          currentAudio.muted = false;
+          if (muted === true) {
+            currentAudio.play();           
+            currentAudio.muted = true;
+          } else {
+            currentAudio.play();      
+
+          }
 
           currentAudio.play();
           play.innerHTML = '<i class="fas fa-pause"></i>';
@@ -311,6 +326,7 @@ fetch(unsplashUrl)
 
   random.addEventListener("click", function(){      
       if (birdLoaded === true){
+        muted = currentAudio.muted;
         //if (birdArrayEntry > 0){
           //console.log("backwarrd");
           currentAudio.pause();
@@ -318,8 +334,13 @@ fetch(unsplashUrl)
           loadAudio(birdArrayEntry);
           random.innerHTML = '<i class="fas fa-random"></i>';
 
-          mute.innerHTML = '<i class="fas fa-volume-up"></i>';
-          currentAudio.muted = false;
+          if (muted === true) {
+            currentAudio.play();           
+            currentAudio.muted = true;
+          } else {
+            currentAudio.play();      
+
+          }
 
           currentAudio.play();
           play.innerHTML = '<i class="fas fa-pause"></i>';
