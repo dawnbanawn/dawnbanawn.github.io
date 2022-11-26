@@ -59,8 +59,6 @@ function init(){
     cube.rotation.y += 4;            
 }
 
-
-
 function animate() {
     requestAnimationFrame(animate);
     cube.rotation.y += 0.0005;

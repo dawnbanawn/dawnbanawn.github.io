@@ -22,7 +22,6 @@ document.getElementById("bird").value = "";
 let birdLoaded = false; //If a bird has been found, and is fetched.
 let birdName = ""; //The user input search string.
 let birdArrayEntry = 0; //What array entry recording is loaded (0-99).
-const url = "https://api.unsplash.com/search/photos?query=coffee&per_page=20&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
 
 let finalBirdEngName = "";
 let finalBirdGenName = "";
@@ -55,6 +54,8 @@ button.addEventListener("click", function(e){
   birdArrayEntry = 0; //When searching, the first recording will be loaded.
   birdName = document.getElementById("bird").value;
   document.getElementById("infoText").innerHTML = "Please wait 1-5 seconds ...";
+
+  //Api for recorded bird sounds.
   const soundUrl = "https://xeno-canto.org/api/2/recordings?query=" + birdName;
   fetch(soundUrl)
   .then(response => response.json())
@@ -63,13 +64,13 @@ button.addEventListener("click", function(e){
 
       finalBirdEngName = data.recordings[0].en;
       finalBirdGenName = data.recordings[0].gen;
-      finalBirdCountryName = data.recordings[0].cnt;
+      //finalBirdCountryName = data.recordings[0].cnt; (Country), not used at the moment.
       finalBirdSoundLink = data.recordings[0].file;
 
       document.getElementById("bird").value = "";
       document.getElementById("infoText").innerHTML = "Image result when searching for: " + birdName + ".";
-      console.log(data);
-      numOfRecordings = data.recordings.length;
+
+      numOfRecordings = data.recordings.length; //Checks number of found bird recordings.
       //Fills the array with all search results.
       for (let i = 0; i < numOfRecordings; i++){
         audioList[i] = {title: data.recordings[i].en,
@@ -78,22 +79,20 @@ button.addEventListener("click", function(e){
           image: ""}; //For later adding of unsplash link results.
       }
 
-//Hämtar bild-data från Unsplash.
+//Fetch from Unsplash api.
 const unsplashUrl = "https://api.unsplash.com/search/photos?query=" + birdName + "&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
 
 fetch(unsplashUrl)
 .then(response => response.json())
 .then(data => { 
-  if (data === undefined) { //Kollar om objectet (staden) finns, och gör val därefter.
-    //alert("Image of the bird does cant be found.");
-    console.log("Image of bird not found!");
+  if (data === undefined) {
     
   } else {
     for (let i = 0; i < numOfRecordings; i++){
       audioList[i].image = data.results[0].links.download;
     }
   document.getElementById('music-info').style.backgroundImage = 'url(' + audioList[0].image + ')';
-  loadAudio(birdArrayEntry); //Loads the first bird object;
+  loadAudio(birdArrayEntry); //Loads (first) bird object.
   birdLoaded = true;
   document.getElementById('play').style.color = '#ddd';
   document.getElementById('mute').style.color = '#ddd';
@@ -184,7 +183,6 @@ fetch(unsplashUrl)
   }
   
   play.addEventListener("click", function(){
-    console.log(birdLoaded);
     if(currentAudio.paused){
       if (birdLoaded === true){        
         play.innerHTML = '<i class="fas fa-pause"></i>';
@@ -265,8 +263,6 @@ fetch(unsplashUrl)
   random.addEventListener("click", function(){      
       if (birdLoaded === true){
         muted = currentAudio.muted;
-        //if (birdArrayEntry > 0){
-          //console.log("backwarrd");
           currentAudio.pause();
           birdArrayEntry = Math.floor(Math.random() * 100);
           loadAudio(birdArrayEntry);
@@ -278,6 +274,7 @@ fetch(unsplashUrl)
           } else {
             currentAudio.play(); 
           }
+          
           currentAudio.play();
           play.innerHTML = '<i class="fas fa-pause"></i>';
           document.getElementById("infoText").innerHTML = "Recording number: " + (birdArrayEntry + 1).toString();
