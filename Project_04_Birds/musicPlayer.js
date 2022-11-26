@@ -1,5 +1,4 @@
-//Search APIs for use with musicplayer ->
-//const unsplash = createApi({ accessKey: 'G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q' });
+//Original music player audio list array (it will be overwritten).
 let audioList = [
   {
     title:"",
@@ -17,7 +16,9 @@ let audioList = [
     type:"audio/mpeg"
   }
 ];
+
 document.getElementById("bird").value = "";
+
 let birdLoaded = false; //If a bird has been found, and is fetched.
 let birdName = ""; //The user input search string.
 let birdArrayEntry = 0; //What array entry recording is loaded (0-99).
@@ -40,50 +41,42 @@ let playing;
 let musicInfo = document.getElementById("music-info");
 let musicInfoChilds = [...musicInfo.children];
 
+let button = document.getElementById("button");
 let forward = document.getElementById("forward");
 let backward = document.getElementById("backward");
 let random = document.getElementById("random");
 let muted = false;
 
+let numOfRecordings = 0;
+
 //Listens to search button, and catches input value.
-let button = document.getElementById("button");
 button.addEventListener("click", function(e){
   e.preventDefault()
   birdArrayEntry = 0; //When searching, the first recording will be loaded.
   birdName = document.getElementById("bird").value;
-  //document.getElementById("bird").value = "";
   document.getElementById("infoText").innerHTML = "Please wait 1-5 seconds ...";
   const soundUrl = "https://xeno-canto.org/api/2/recordings?query=" + birdName;
   fetch(soundUrl)
   .then(response => response.json())
   .then(data => { 
     if (data.recordings[0] !== undefined) { //Kollar om objectet (staden) finns, och gör val därefter.
-      //console.log(data.recordings[0].file); //sound file link
-      //console.log(data.recordings[0].en); //bird name
-      //console.log(data.recordings[0].gen); //latin name
-      //console.log(data.recordings[0].cnt); //county name
+
       finalBirdEngName = data.recordings[0].en;
       finalBirdGenName = data.recordings[0].gen;
       finalBirdCountryName = data.recordings[0].cnt;
       finalBirdSoundLink = data.recordings[0].file;
-      console.log(data); //county name
 
-      
-      //console.log(birdName + "found!");
       document.getElementById("bird").value = "";
       document.getElementById("infoText").innerHTML = "Image result when searching for: " + birdName + ".";
-
-
-      //correctBirdName = data.recordings[0].en;
+      console.log(data);
+      numOfRecordings = data.recordings.length;
       //Fills the array with all search results.
-      for (let i = 0; i < 100; i++){
+      for (let i = 0; i < numOfRecordings; i++){
         audioList[i] = {title: data.recordings[i].en,
           album: data.recordings[i].gen,
           source: data.recordings[i].file,
           image: ""}; //For later adding of unsplash link results.
       }
-      console.log(audioList);
-
 
 //Hämtar bild-data från Unsplash.
 const unsplashUrl = "https://api.unsplash.com/search/photos?query=" + birdName + "&client_id=G0mr-66Lw3xTWMv-JJSLTRpxFAG7vASteAdWyLx0x4Q";
@@ -96,12 +89,9 @@ fetch(unsplashUrl)
     console.log("Image of bird not found!");
     
   } else {
-    console.log(data.results[0].links.download); //image link of the bird.
-    console.log("Image of bird found!");
-    for (let i = 0; i < 100; i++){
+    for (let i = 0; i < numOfRecordings; i++){
       audioList[i].image = data.results[0].links.download;
     }
-  console.log(audioList);
   document.getElementById('music-info').style.backgroundImage = 'url(' + audioList[0].image + ')';
   loadAudio(birdArrayEntry); //Loads the first bird object;
   birdLoaded = true;
@@ -110,16 +100,10 @@ fetch(unsplashUrl)
   document.getElementById('forward').style.color = '#ddd';
   document.getElementById('backward').style.color = '#ddd';
   document.getElementById('random').style.color = '#ddd';
-
-
-
   }
 })
 
-
     } else {
-      //alert("Please check the spelling, or try another bird name.");
-      //console.log(birdName + "not found!");
       document.getElementById("bird").value = "";
       document.getElementById("infoText").innerHTML = "No bird found, please try again."
       birdLoaded = false;
@@ -131,46 +115,17 @@ fetch(unsplashUrl)
       document.getElementById('music-info').style.backgroundImage = 'url()';
       musicInfoChilds[0].innerHTML = "Name: ";
       musicInfoChilds[2].innerHTML = "Genus: ";
-
-
-
     }
-    
-  //console.log("submitted");  
-  //console.log(document.getElementById("bird").value);
-
-  
-
-  
-
   })
 });
-// document.getElementById("submitForm").addEventListener("submit", function(e){
-    
-//     console.log("submitted");
-  
-// });
 
-
-
-//Musicplayer ->
-
-
-
-
-
-
-
-  
   function loadAudio(audio){
-    //console.log("play");
     audio = audio || 0;
     if(currentAudio){
       currentAudio.pause();
       currentAudio.currentTime = 0;
     }
     musicInfoChilds[0].innerHTML = "Name: " + audioList[audio].title;
-    //musicInfoChilds[1].innerHTML = "Author: " + audioList[audio].author;
     musicInfoChilds[2].innerHTML = "Genus: " + audioList[audio].album;
     currentAudio = new Audio(audioList[audio].source);
   }
@@ -219,8 +174,7 @@ fetch(unsplashUrl)
       window.grabbing = false;
       currentAudio.muted = false;
       currentAudio.currentTime = Number(currentTime.style.width.replace("px","")) / pixelPerSecond();
-      overlay.style.display = "none";
-      
+      overlay.style.display = "none";      
       if(event.type == 'touchstart'){
         window.removeEventListener("touchmove", currentGrabTimeUpdate);
       }else{
@@ -232,8 +186,7 @@ fetch(unsplashUrl)
   play.addEventListener("click", function(){
     console.log(birdLoaded);
     if(currentAudio.paused){
-      if (birdLoaded === true){
-        
+      if (birdLoaded === true){        
         play.innerHTML = '<i class="fas fa-pause"></i>';
         currentAudio.play();
       }
@@ -248,7 +201,6 @@ fetch(unsplashUrl)
     if(!currentAudio.muted){
       this.innerHTML = '<i class="fas fa-volume-mute"></i>';
       currentAudio.muted = true;
-      //console.log(currentAudio.muted);
     }else{
       this.innerHTML = '<i class="fas fa-volume-up"></i>';
       currentAudio.muted = false;
@@ -256,8 +208,7 @@ fetch(unsplashUrl)
   })
   
   window.addEventListener("mousedown", barStart);
-  window.addEventListener("mouseup", barEnd);
-  
+  window.addEventListener("mouseup", barEnd);  
   window.addEventListener("touchstart", barStart);
   window.addEventListener("touchend", barEnd);
   
@@ -270,7 +221,6 @@ fetch(unsplashUrl)
     play.innerHTML = '<i class="fas fa-play"></i>';
   });
 
-
   forward.addEventListener("click", function(){  
       if (birdLoaded === true){
         if (birdArrayEntry < 100){
@@ -278,51 +228,39 @@ fetch(unsplashUrl)
           currentAudio.pause();
           birdArrayEntry += 1;
           loadAudio(birdArrayEntry);
-          //console.log(currentAudio.muted);
           forward.innerHTML = '<i class="fas fa-forward"></i>';
           if (muted === true) {
             currentAudio.play();           
             currentAudio.muted = true;
           } else {
-            currentAudio.play();      
-
+            currentAudio.play();
           }
-          //mute.innerHTML = '<i class="fas fa-volume-up"></i>';
-          //currentAudio.muted = false;
-          
-          
           play.innerHTML = '<i class="fas fa-pause"></i>';
           document.getElementById("infoText").innerHTML = "Recording number: " + (birdArrayEntry + 1).toString();
         }
       }    
   });
 
-
   backward.addEventListener("click", function(){      
       if (birdLoaded === true){
         if (birdArrayEntry > 0){
           muted = currentAudio.muted;
-          //console.log("backwarrd");
           currentAudio.pause();
           birdArrayEntry -= 1;
           loadAudio(birdArrayEntry);
           backward.innerHTML = '<i class="fas fa-backward"></i>';
-
           if (muted === true) {
             currentAudio.play();           
             currentAudio.muted = true;
           } else {
-            currentAudio.play();      
-
+            currentAudio.play();
           }
-
           currentAudio.play();
           play.innerHTML = '<i class="fas fa-pause"></i>';
           document.getElementById("infoText").innerHTML = "Recording number: " + (birdArrayEntry + 1).toString();
         }
       }    
   });
-
 
   random.addEventListener("click", function(){      
       if (birdLoaded === true){
@@ -338,13 +276,10 @@ fetch(unsplashUrl)
             currentAudio.play();           
             currentAudio.muted = true;
           } else {
-            currentAudio.play();      
-
+            currentAudio.play(); 
           }
-
           currentAudio.play();
           play.innerHTML = '<i class="fas fa-pause"></i>';
           document.getElementById("infoText").innerHTML = "Recording number: " + (birdArrayEntry + 1).toString();
-        //}
       }    
   });
