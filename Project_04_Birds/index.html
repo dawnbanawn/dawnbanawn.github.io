@@ -1,63 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="musicPlayer.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="musicPlayer.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <title>Bird Sounds</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="container"></div>
-    <div id="webgl">
-    </div>    
+    <div id="webgl"></div>
     <div id="main">
-        <h1>Bird Sounds</h1>
-        <div class="mainContainer">
-            <!-- Omarbetad musikspelare från https://codepen.io/markvaaz/pen/QWELdzN -->
-            <script src="https://kit.fontawesome.com/7c33dff1d8.js" crossorigin="anonymous"></script>
-            <div id="overlay"></div>
-                <div class="container">
-                    <div class="player" id="player">
-                        <div id="music-info">
-                        <div class="title"></div>
-                        <div class="author"></div>
-                        <div class="album"></div>
-                        <div class="bg"></div>
-                    </div>
-                    <div class="timestamp">
-                        <div id="bar"></div>
-                        <div id="current-time"></div>                        
-                    </div>
-                    <div class="buttons">
-                        <div class="button button-small" id="random"><i class="fas fa-random"></i></div>
-                        <div class="button button-medium" id="backward"><i class="fas fa-step-backward"></i></div>
-                        <div class="button button-large" id="play"><i class="fas fa-play"></i></div>
-                        <div class="button button-medium" id="forward"><i class="fas fa-step-forward"></i></div>
-                        <div class="button button-small" id="mute"><i class="fas fa-volume-up"></i></div>
-                    </div>
-                </div>
+      <h1>Bird Sounds</h1>
+      <div class="mainContainer">
+        <!-- Omarbetad musikspelare från https://codepen.io/markvaaz/pen/QWELdzN -->
+        <script
+          src="https://kit.fontawesome.com/7c33dff1d8.js"
+          crossorigin="anonymous"
+        ></script>
+        <div id="overlay"></div>
+        <div class="container">
+          <div class="player" id="player">
+            <div id="music-info">
+              <div class="title"></div>
+              <div class="author"></div>
+              <div class="album"></div>
+              <div class="bg"></div>
             </div>
-            <div class="searchContainer">
-                <div class="formContainer">
-                    <form id="submitForm" >
-                        <label htmlFor="bird">Bird name:</label>
-                        <input type="text" id="bird">
-                        <button id="button" type="submit">Search</button>
-                    </form>
-                    <p id="infoText">(Image search results may vary.)</p>
-                </div>
+            <div class="timestamp">
+              <div id="bar"></div>
+              <div id="current-time"></div>
             </div>
+            <div class="buttons">
+              <div class="button button-small" id="random">
+                <i class="fas fa-random"></i>
+              </div>
+              <div class="button button-medium" id="backward">
+                <i class="fas fa-step-backward"></i>
+              </div>
+              <div class="button button-large" id="play">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="button button-medium" id="forward">
+                <i class="fas fa-step-forward"></i>
+              </div>
+              <div class="button button-small" id="mute">
+                <i class="fas fa-volume-up"></i>
+              </div>
+            </div>
+          </div>
         </div>
-
+        <div class="searchContainer">
+          <div class="formContainer">
+            <form id="submitForm">
+              <label htmlFor="bird">Bird name:</label>
+              <input type="text" id="bird" />
+              <button id="button" type="submit">Search</button>
+            </form>
+            <p id="infoText">(Image search results may vary.)</p><br>
+            <p id="copyright">Copyright © Dan Heikenberg 2022 </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>
     <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/renderers/CSS3DRenderer.js"></script>
-    <script src="main.js"></script> 
-    <script src="musicPlayer.js"></script>    
-
-</body>
+    <script src="main.js"></script>
+    <script src="musicPlayer.js"></script>
+  </body>
 </html>

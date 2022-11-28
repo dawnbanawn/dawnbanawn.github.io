@@ -59,6 +59,9 @@ h1 {
     color: rgba(206, 233, 213, 0.7);
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
+#copyright {
+    color: grey;
+}
 @media only screen and (max-width: 600px) {
     #main {
         top: 35%;
