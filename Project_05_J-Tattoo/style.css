@@ -31,7 +31,7 @@ body {
     text-align: left;
 }
 .fa-bars {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 30px !important;    
 }
 .navbar-toggler {
@@ -117,9 +117,12 @@ body {
         width: 3.5px;
         height: 3.5px;
       }
-  } 
-
+  }
+  #banner {
+    margin-bottom: -7px;
+  }
 /*--section 1-*/
+
 #section_1 {
     background-image: linear-gradient(to right, #363037, #7b7c54);
     color: white;
@@ -130,4 +133,10 @@ body {
     font-size: 40px;
     font-weight: 600;
     margin-top: 100px;
+}
+.line {
+    z-index: 2;
+    margin-top: 0px;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
 }
