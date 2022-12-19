@@ -11,9 +11,9 @@ body {
     z-index: 10;
 }
 .navbar {
-    background-image: linear-gradient(to right, rgb(74, 71, 74), rgb(203, 204, 127));
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
     padding: 0 !important;
-    opacity: 0.9;
+    opacity: 0.4;
 }
 .navbar-brand {
     height: auto;
@@ -21,17 +21,18 @@ body {
 .navbar-brand img {
     height: 40px;
 }
+
 .navbar-nav li {
     padding: 0 10px;
 }
 .navbar-nav li a {
-    color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
     font-weight: 600;
     float: right;
     text-align: left;
 }
 .fa-bars {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 30px !important;    
 }
 .navbar-toggler {
@@ -55,8 +56,7 @@ body {
     width: 100%;
     height: auto;
     z-index: -1;
-    margin-top: -50px;
-
+    margin-top: -50px; 
 }
 .image_skull {
     z-index: 1;
@@ -102,7 +102,7 @@ body {
     }
   @-webkit-keyframes glowing {
     from {
-      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #f0f, 0 0 4px #0ff, 0 0 5px #e60073, 0 0 6px #e60073, 0 0 7px #e60073;
     }
     to {
       box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
@@ -120,6 +120,13 @@ body {
   }
   #banner {
     margin-bottom: -7px;
+    background-attachment: fixed;
+	background-position: left top;
+	background-size: 100% 750px;
+	color: white;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
   }
 /*--section 1-*/
 
@@ -140,3 +147,20 @@ body {
     height: 10px;
     background-color: rgb(0, 0, 0);
 }
+
+li {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0px 15px 0px 15px;
+}
+ul {
+    position: absolute;
+    width: 97%;
+    z-index: 4;
+}
+.navbar-nav {
+    justify-content: center;
+}
+
+
+
