@@ -4,10 +4,12 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x:hidden; 
 }
 body {
   font-family: sans-serif;
 }
+
 #nav-bar {
   position: sticky;
   top: 0;
@@ -73,6 +75,20 @@ body {
   align-items: center;
   opacity: 0.6;
 }
+.logoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoName{
+  z-index: 5;
+  position: absolute;
+  width: 60%;
+
+  margin-top: 45%;
+  opacity: 0.75;
+}
 .glowing-circle_1 {
   z-index: 2;
   position: absolute;
@@ -131,13 +147,11 @@ body {
   background-position: left top;
   background-size: 100% 750px;
   color: white;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+
 }
 /*--section 1-*/
 
-#about_us {
+#about-us {
   background-image: linear-gradient(to right, #363037, #4e4f38);
   color: white;
   padding-top: 5%;
@@ -179,14 +193,7 @@ ul {
   padding: 0;
   margin-right: 10px;
 }
-.logoName {
-  z-index: 5;
-  position: absolute;
-  width: 60%;
-  margin-left: 19%;
-  margin-top: 15%;
-  opacity: 0.75;
-}
+
 
 
 
