@@ -2,12 +2,16 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
-  overflow-x:hidden; 
+  white-space: nowrap;
+  background-color: black;
+  
 }
 body {
   font-family: sans-serif;
+  
 }
 
 #nav-bar {
@@ -18,7 +22,7 @@ body {
 .navbar {
   background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
   padding: 0 !important;
-  opacity: 0.4;
+  opacity: 0.8;
   height: 40px;
 }
 .navbar-brand {
@@ -41,9 +45,9 @@ body {
   color: rgb(254, 248, 185);
   font-size: 30px !important;
 }
+
 .navbar-toggler {
   outline: none !important;
-  margin-left: 90%;
 }
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -59,14 +63,14 @@ body {
   right: 0%;
   bottom: 0%;
   min-width: 100%;
-  min-height: 100%;
+  min-height: auto;
   width: 100%;
   height: auto;
-  z-index: -1;
+  z-index: 1;
   margin-top: -50px;
 }
 .image_skull {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   width: 22%;
   left: 40%;
@@ -85,12 +89,11 @@ body {
   z-index: 5;
   position: absolute;
   width: 60%;
-
   margin-top: 45%;
   opacity: 0.75;
 }
 .glowing-circle_1 {
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   left: 47.7%;
   width: 7px;
@@ -106,7 +109,7 @@ body {
   animation: glowing 1s ease-in-out infinite alternate;
 }
 .glowing-circle_2 {
-  z-index: 1;
+  z-index: 3;
   position: absolute;
   left: 54%;
   width: 7px;
@@ -121,7 +124,7 @@ body {
   -moz-animation: glowing 1s ease-in-out infinite alternate;
   animation: glowing 1s ease-in-out infinite alternate;
 }
-@-webkit-keyframes glowing {
+@keyframes glowing {
   from {
     box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #f0f, 0 0 4px #0ff,
       0 0 5px #e60073, 0 0 6px #e60073, 0 0 7px #e60073;
@@ -147,7 +150,6 @@ body {
   background-position: left top;
   background-size: 100% 750px;
   color: white;
-
 }
 /*--section 1-*/
 
@@ -177,9 +179,10 @@ body {
 }
 li {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: 0px 15px 0px 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  /*margin: -3px 0px 0px 15px;  */
 }
+
 ul {
   position: absolute;
   width: 100%;
@@ -189,10 +192,12 @@ ul {
   justify-content: center;
   padding: 0;
 }
+/*
 .container-fluid {
   padding: 0;
   margin-right: 10px;
-}
+}*/
+
 
 
 
@@ -201,7 +206,7 @@ ul {
 
 .photo-gallery {
   color: #313437;
-  background-color: rgb(33, 31, 31);
+  background-color: rgb(33, 31, 31);  
 }
 
 .photo-gallery p {
@@ -223,6 +228,19 @@ ul {
     font-size: 24px;
   }
 }
+
+@media (max-width: 740px) {
+  li{
+    margin: auto;
+  }
+  .navbar-nav{
+    background-color: black;
+  }
+}
+
+
+
+
 
 .photo-gallery .intro {
   font-size: 16px;
