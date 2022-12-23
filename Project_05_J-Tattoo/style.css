@@ -153,17 +153,74 @@ a:hover {
   margin-bottom: -7px;
   background-attachment: fixed;
   background-position: left top;
-  background-size: 1000% 750px;
+  background-size: 100% 750px;
   color: white;
 }
+
+
 /*--section 1-*/
 
 #about-us {
   background-image: linear-gradient(to right, #363037, #4e4f38);
   color: white;
   padding-top: 5%;
-  height: 900px;
+  height: 1000px;
   width: 100%;
+}
+@media only screen and (max-width: 1200px) {
+  #about-us {
+    height: 800px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #about-us {
+    height: 700px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #about-us {
+    height: 650px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  #about-us {
+    height: 1000px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  #about-us {
+    height: 900px;
+  }
+}
+
+#testimonials {
+  background-image: linear-gradient(to right, #1d1d1d, #434343);
+  color: white;
+  padding-top: 5%;
+  height: 600px;
+  width: 100%;
+}
+.testimonialsText{
+  color: rgba(254, 248, 185, 0.4);
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.testimonialsText p{
+  width: 80%;
+  margin: auto;
+}
+.testimonialsName {
+  text-align: right;
+}
+@media only screen and (max-width: 1200px) {
+  #testimonials {
+    height: 600px;
+  }
+}
+@media only screen and (max-width: 560px) {
+  #testimonials {
+    height: 800px;
+  }
 }
 .promo-title {
   font-size: 40px;
@@ -265,12 +322,13 @@ h2 {
   background-image: none;
   text-align: center;
   text-shadow: 1px 1px 1px #000000;
-  margin: auto;
-  
+  margin: auto;  
 }
 #about-p{
   margin: 0px 30px 30px 30px; 
-  
+  width: 85%;
+  margin: auto;
+  text-align: center;
 }
 
 .aboutImg{
@@ -288,4 +346,30 @@ h2 {
 }
 .col-md-4 {
   padding: 0;
+}
+
+#contact {
+  background-image: linear-gradient(to right, #262724, #5b5c55);
+  color: white;
+  padding-top: 5%;
+  height: 1000px;
+  width: 100%;
+}
+.contactText{
+  color: rgba(254, 248, 185, 0.4);
+  text-shadow: 1px 1px 1px #000000;
+  margin: auto;  
+}
+.contactText p{
+  text-align: left;
+  margin-left: 50px;
+}
+
+.footer{
+  height: 25px;
+  background-color: rgb(35, 33, 33);
+}
+.footer p{
+  text-align: center;
+  margin-bottom: 15px;
 }
