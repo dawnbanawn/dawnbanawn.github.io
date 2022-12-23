@@ -265,7 +265,10 @@ ul {
   color: #313437;
   background-color: rgb(33, 31, 31);
 }
-
+.photo-gallery br{
+  color: #313437;
+  background-color: rgb(33, 31, 31);
+}
 p {
   color: rgba(254, 248, 185, 0.4);
 }
