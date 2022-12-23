@@ -22,13 +22,7 @@ body {
   opacity: 0.5;
   height: 40px;
 }
-.navbar:hover {
-  opacity: 0.8;
-}
-a:hover {
-  color: rgb(255, 255, 0);
-  opacity: 0.8;
-}
+
 .navbar-brand {
   height: auto;
 }
@@ -415,4 +409,11 @@ h2 {
 }
 .logo {
   margin-top: 20px;
+}
+.navbar:hover {
+  opacity: 0.8;
+}
+a:hover {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(240, 240, 240, 0.19);
+  border: 1px solid white;
 }
