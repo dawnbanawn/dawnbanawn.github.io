@@ -128,7 +128,7 @@
         padding: 4rem;
         justify-content: center;
         align-items: center;
-        background-color: #c6c6c6;
+        background-color: #b1b1b1;
         margin-top: -5rem;
       }
 
@@ -188,7 +188,7 @@
 
       .footer-social {
         display: flex;
-        justify-content: left;
+        justify-content: right;
         margin-bottom: 1rem;
       }
 
@@ -201,6 +201,13 @@
 
       .footer-social a:hover {
         color: #007bff;
+      }
+
+      @media screen and (max-width: 1120px) {
+        .feature:hover {
+          height: auto;
+          padding-bottom: 6px;
+        }
       }
 
       @media screen and (max-width: 768px) {
@@ -230,6 +237,7 @@
           flex-basis: 100%;
         }
       }
+
       @media screen and (max-width: 576px) {
         .hero h1 {
           font-size: 2.5rem;
@@ -278,6 +286,17 @@
       }
       .nav-link {
         text-align: left;
+      }
+      .step-links {
+        color: black;
+      }
+      .step-links:hover {
+        color: black;
+      }
+      .feature:hover {
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-top: 10px;
       }
     </style>
   </head>
@@ -328,44 +347,48 @@
       <section class="hero">
         <h1>A website by OpenAI.</h1>
 
-        <p>OpenAI will help creating innovative products easier.</p>
+        <p>How OpenAI may help creating innovative products easier.</p>
 
         <!-- <button>Learn More</button> -->
       </section>
 
       <section class="features">
         <div class="feature">
-          <img src="images/step1.jpg" alt="Product 1" />
-          <h3>Step 1</h3>
-          <p>
-            In the first step, I asked chatGPT to make a landing page for a
-            startup company. After two iterations, I got what I wanted.
-          </p>
+          <a href="step01.html" class="step-links">
+            <img src="images/step1.jpg" alt="Product 1" />
+            <h3>Step 1</h3>
+            <p>
+              In the first step, I asked chatGPT to make a landing page for a
+              startup company. After two iterations, I got what I wanted.
+            </p>
+          </a>
         </div>
 
         <div class="feature">
-          <img
-            src="images/step2.jpg"
-            alt="Product 
+          <a href="step02.html" class="step-links">
+            <img
+              src="images/step2.jpg"
+              alt="Product 
                 2"
-          />
-          <h3>Step 2</h3>
-          <p>
-            In the second step, I asked DALL-E 2 for images of friendly looking
-            robots, and after a few iterations, I included two of them.
-          </p>
+            />
+            <h3>Step 2</h3>
+            <p>
+              In the second step, I asked DALL-E 2 for images of friendly
+              looking robots, and after a few iterations, I included two of
+              them.
+            </p>
+          </a>
         </div>
 
         <div class="feature">
-          <img
-            src="https://dummyimage.com/300x200/007bff/fff"
-            alt="Product 3"
-          />
-          <h3>Step 3</h3>
-          <p>
-            In the third step, I put my own finishing touches on the code,
-            aswell as fixing the red eye of the hero image robot in Photoshop.
-          </p>
+          <a href="step03.html" class="step-links">
+            <img src="images/step3.jpg" alt="Product 3" />
+            <h3>Step 3</h3>
+            <p>
+              In the third step, I put my own finishing touches on the code,
+              aswell as fixing the red eye of the hero image robot in Photoshop.
+            </p>
+          </a>
         </div>
       </section>
     </main>
