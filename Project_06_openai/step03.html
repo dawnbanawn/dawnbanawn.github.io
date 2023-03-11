@@ -4,10 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatGPT and DALL-E 2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
     <style>
       /* Global styles */
       body {
@@ -26,12 +36,12 @@
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         display: flex;
         justify-content: space-between;
-        padding: .5rem .5rem;
+        padding: 0.5rem 0.5rem;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        z-index: 1000;
+        z-index: 1;
       }
 
       header img {
@@ -53,21 +63,20 @@
       }
 
       /* Hero styles */
-      
+
       .hero {
         align-items: center;
         background-image: url("images/hero3v2.jpg");
         background-color: #000000;
-        
+
         background-repeat: no-repeat;
         width: 100%;
         display: flex;
         flex-direction: column;
         height: calc(100vh - 150px);
         justify-content: center;
-        text-align: center;   
-        background-size:cover;     
-        
+        text-align: center;
+        background-size: cover;
       }
 
       .hero h1 {
@@ -77,7 +86,6 @@
         margin-right: 50%;
         margin-left: 5%;
         text-shadow: 1px 1px 2px white, 0 0 2em white, 0 0 0.2em white;
-
       }
 
       .hero p {
@@ -87,8 +95,6 @@
         text-shadow: 1px 1px 2px white, 0 0 2em white, 0 0 0.2em white;
         margin-right: 50%;
         margin-left: 5%;
-
-
       }
 
       .hero button {
@@ -114,7 +120,7 @@
         padding: 4rem;
         justify-content: center;
         align-items: center;
-        background-color: #c5c5c5;
+        background-color: #c6c6c6;
         margin-top: -5rem;
       }
 
@@ -198,7 +204,6 @@
 
         .hero p {
           font-size: 1.3rem;
-
         }
 
         .hero button {
@@ -229,8 +234,35 @@
           margin-right: 10%;
           margin-left: 10%;
         }
+
+      }
+      .navbar-toggler {
+        margin-top: -15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        
+      }
+      .navbar-toggler:focus{    
+        outline: none;    
+        box-shadow: none;
       }
 
+      .navbar-nav {
+        color: #000000;
+      }
+
+      @media screen and (min-width: 980px) {
+        header {
+          height: 70px;
+        }
+
+      }
+
+
+
+      
+
+    
     </style>
   </head>
   <body>
@@ -239,25 +271,51 @@
         <img src="images/logo1v2.png" alt="logo image" />
         <img src="images/logo_text.png" alt="chatGPT and Dall-e 2" />
       </div>
-      <nav>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+
+          <button
+            class="navbar-toggler"
+            
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse top_nav"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mx-auto" >
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 1</a>
+               
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 3</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Link 4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
       <section class="hero">
         <h1>A website by OpenAI.</h1>
-       
-          <p>
-            OpenAI will help creating innovative products easier.
-          </p>
-       
+
+        <p>OpenAI will help creating innovative products easier.</p>
 
         <button>Learn More</button>
       </section>
-      
+
       <section class="features">
         <div class="feature">
           <img
@@ -266,7 +324,8 @@
           />
           <h3>Step 1</h3>
           <p>
-            In the first step, I asked chatGPT to make a landing page for a startup company. After two iterations, I got what I wanted. 
+            In the first step, I asked chatGPT to make a landing page for a
+            startup company. After two iterations, I got what I wanted.
           </p>
         </div>
 
@@ -278,7 +337,8 @@
           />
           <h3>Step 2</h3>
           <p>
-            In the second step, I asked DALL-E 2 for images of friendly looking robots, and after a few iterations, I included two of them.
+            In the second step, I asked DALL-E 2 for images of friendly looking
+            robots, and after a few iterations, I included two of them.
           </p>
         </div>
 
@@ -289,7 +349,8 @@
           />
           <h3>Step 3</h3>
           <p>
-            In the third step, I put my own finishing touches on the code, aswell as fixing the red eye of the hero image robot in Photoshop.
+            In the third step, I put my own finishing touches on the code,
+            aswell as fixing the red eye of the hero image robot in Photoshop.
           </p>
         </div>
       </section>
