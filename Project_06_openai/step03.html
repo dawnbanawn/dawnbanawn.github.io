@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT and DALL-E 2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      /* Global styles */
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* Header styles */
+      header {
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem .5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+
+      header img {
+        height: 50px;
+      }
+      nav {
+        margin-top: 15px;
+        margin-right: 15px;
+      }
+      nav a {
+        color: #333;
+        margin-left: 1.5rem;
+        transition: color 0.2s ease;
+        font-size: 1.2rem;
+      }
+
+      nav a:hover {
+        color: #007bff;
+      }
+
+      /* Hero styles */
+      
+      .hero {
+        align-items: center;
+        background-image: url("images/hero3v2.jpg");
+        background-color: #000000;
+        
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 150px);
+        justify-content: center;
+        text-align: center;   
+        background-size:cover;     
+        
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        color: rgba(0, 0, 0, 0.9);
+        margin-right: 50%;
+        margin-left: 5%;
+        text-shadow: 1px 1px 2px white, 0 0 2em white, 0 0 0.2em white;
+
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: rgb(0, 0, 0);
+        text-shadow: 1px 1px 2px white, 0 0 2em white, 0 0 0.2em white;
+        margin-right: 50%;
+        margin-left: 5%;
+
+
+      }
+
+      .hero button {
+        background-color: #fff;
+        border: none;
+        border-radius: 25px;
+        color: #007bff;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .hero button:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      /* Features styles */
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 4rem;
+        justify-content: center;
+        align-items: center;
+        background-color: #c5c5c5;
+        margin-top: -5rem;
+      }
+
+      .feature {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        margin: 1rem;
+        max-width: 300px;
+        overflow: hidden;
+      }
+
+      .feature img {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .feature h3 {
+        font-size: 1.5rem;
+        margin: 1rem;
+      }
+
+      .feature p {
+        margin: 1rem;
+        text-align: justify;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .footer-col {
+        flex-basis: 50%;
+        margin-bottom: 2rem;
+      }
+
+      .footer-col h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-col ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer-col li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
+      .footer-social a {
+        color: #fff;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        transition: color 0.2s ease;
+      }
+
+      .footer-social a:hover {
+        color: #007bff;
+      }
+
+      @media screen and (max-width: 768px) {
+        .hero h1 {
+          font-size: 3rem;
+        }
+
+        .hero p {
+          font-size: 1.3rem;
+
+        }
+
+        .hero button {
+          font-size: 1rem;
+          padding: 0.8rem 1.5rem;
+        }
+
+        .features {
+          padding: 2rem;
+        }
+
+        .feature {
+          margin: 1rem 0;
+          max-width: 100%;
+        }
+
+        .footer-col {
+          flex-basis: 100%;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        .hero h1 {
+          font-size: 2.5rem;
+          margin-right: 10%;
+          margin-left: 10%;
+        }
+        .hero p {
+          margin-right: 10%;
+          margin-left: 10%;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="images/logo1v2.png" alt="logo image" />
+        <img src="images/logo_text.png" alt="chatGPT and Dall-e 2" />
+      </div>
+      <nav>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>A website by OpenAI.</h1>
+       
+          <p>
+            OpenAI will help creating innovative products easier.
+          </p>
+       
+
+        <button>Learn More</button>
+      </section>
+      
+      <section class="features">
+        <div class="feature">
+          <img
+            src="https://dummyimage.com/300x200/007bff/fff"
+            alt="Product 1"
+          />
+          <h3>Step 1</h3>
+          <p>
+            In the first step, I asked chatGPT to make a landing page for a startup company. After two iterations, I got what I wanted. 
+          </p>
+        </div>
+
+        <div class="feature">
+          <img
+            src="https://dummyimage.com/300x200/007bff/fff"
+            alt="Product 
+                2"
+          />
+          <h3>Step 2</h3>
+          <p>
+            In the second step, I asked DALL-E 2 for images of friendly looking robots, and after a few iterations, I included two of them.
+          </p>
+        </div>
+
+        <div class="feature">
+          <img
+            src="https://dummyimage.com/300x200/007bff/fff"
+            alt="Product 3"
+          />
+          <h3>Step 3</h3>
+          <p>
+            In the third step, I put my own finishing touches on the code, aswell as fixing the red eye of the hero image robot in Photoshop.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 My Startup Company</p>
+
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+
+      <p>Follow us on social media:</p>
+
+      <ul>
+        <li>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
