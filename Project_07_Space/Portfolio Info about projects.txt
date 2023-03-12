@@ -1,0 +1,76 @@
+Name: Dan Heikenberg
+Born: 1983
+
+Education:
+2023 - Programmering för mobiler 7.5hp (currently studying)
+2023 - Webbdesigner 60hp (currently studying)
+2022 - Webbutveckling II 7.5hp
+2014 - Programmering med C# 7.5hp
+2015 - Webbutveckling 7.5hp
+2009 - Lärare, gymnasie, matematik
+
+Hi! 
+
+In case the portfolio danheikenberg.com is not working, info and links to the individual projects are further down in this document.
+
+I´m a creative soul who loves problem solving, new technologies and challenges almost as much as I love coffee and cookies.
+On my spare time I make websites, paint, write music, and make games (both digital and physical card games).
+
+I work in a factory, but even though I try to fill upp my spare time with lots of creative projects,
+I still find myself bored at work, and so I finally decided to make a portfolio so that I could start searching for my future job.
+
+Hopefully the diversity of the portfolio shows a potential side of me that might be useful for your company, that
+I truly love the creative and explorative side of this world.
+
+More about me, I love mario kart, ping pong, and karaoke. I jog/gym to try to stay active.
+I´m a licensed math teacher, but I´d like an even more creative job than that.
+
+I´m movable, but can also work from home.
+
+Thanks for giving me the time, and have a nice day!
+
+//Dan Heikenberg
+
+
+
+Bird Sounds
+(ThreeJS, 2 APIs)
+A website for searching and getting recorded bird sounds, and
+simultaneously an image of that bird (altough not always the
+correct subfamily).
+https://dawnbanawn.github.io/Project_04_Birds
+
+City Weather
+(React, 2 APIs)
+A simple website for searching and getting the currect weather of a city,
+and simultaneously a (random) image of that city. 
+It was an exam assignment in the course Webbutveckling II.
+https://dawnbanawn.github.io/Project_03_Weather
+
+Draug Tattoo
+(HTML, CSS, BOOTSTRAP)
+A website I made from scratch by request of a tatoo artist friend.
+I first made a layout example, and he got to approve and add input along
+the way. He painted the skull, and that inspired me to add
+smoke and glowing eyes. 
+https://dawnbanawn.github.io/Project_05_J-Tattoo 
+
+Todo List
+(React)
+A simple website for "todo" -entries. Add, edit, and delete.
+It was an exam assignment in the course Webbutveckling II.
+https://dawnbanawn.github.io/Project_02_Todo
+
+Wintergrim Entertainment
+(HTML, CSS, JS, BOOTSTRAP) - (Edited template)
+A website for some of my personal projects.
+I edited and added code to a template called tm-483-lumino
+at http://www.templatemo.com/.
+https://dawnbanawn.github.io/wintergrim.github.io/
+
+Musical Mushroom
+(WebGL, Unity)
+A casual Unity game I made for mobile and steam, and now also with WebGL to make it playable in the browser.
+https://dawnbanawn.github.io/MM
+
+
