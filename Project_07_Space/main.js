@@ -45,7 +45,7 @@ scene.add(pointLight, ambientLight);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
-  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const geometry = new THREE.SphereGeometry(0.15, 24, 24);
   const material = new THREE.MeshStandardMaterial({color: 0xffffff});
   const star = new THREE.Mesh(geometry, material);
 
@@ -57,7 +57,7 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('public/bg2.png');
+const spaceTexture = new THREE.TextureLoader().load('public/bg2v3.jpg');
 scene.background = spaceTexture;
 
 //avatar
@@ -69,7 +69,7 @@ const dan = new THREE.Mesh(
 //scene.add(dan);
 
 //planet
-const planetTexture = new THREE.TextureLoader().load('public/bg.png');
+const planetTexture = new THREE.TextureLoader().load('public/moon.jpg');
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3,32,32),
   new THREE.MeshBasicMaterial({map: planetTexture})
@@ -114,11 +114,67 @@ const videoMaterial01 =  new THREE.MeshBasicMaterial( {map: videoTexture01, side
 const Texture01 = new THREE.TextureLoader().load('public/bg.png');
 const Material01 = new THREE.MeshBasicMaterial( {map: Texture01} );
 
+//Spacedoor textures
+const doorTexture01 = new THREE.TextureLoader().load('public/doorLeft.jpg');
+const doorMaterial01 = new THREE.MeshBasicMaterial( {map: doorTexture01} );
+const doorTexture02 = new THREE.TextureLoader().load('public/doorRight.jpg');
+const doorMaterial02 = new THREE.MeshBasicMaterial( {map: doorTexture02} );
+
+//Floor and roof textures
+const floorTexture01 = new THREE.TextureLoader().load('public/floor.jpg');
+const floorMaterial01 = new THREE.MeshBasicMaterial( {map: floorTexture01} );
+const roofTexture01 = new THREE.TextureLoader().load('public/roof.jpg');
+const roofMaterial01 = new THREE.MeshBasicMaterial( {map: roofTexture01} );
+
 //Create screen
 const screen = new THREE.PlaneGeometry(1.7, 1);
 const videoScreen01 = new THREE.Mesh(screen, videoMaterial01);
 const imgScreen01 = new THREE.Mesh(screen, Material01);
-scene.add(videoScreen01, imgScreen01);
+const door01 = new THREE.Mesh(screen, doorMaterial01);
+const door02 = new THREE.Mesh(screen, doorMaterial02);
+const floor01 = new THREE.Mesh(screen, floorMaterial01);
+const roof01 = new THREE.Mesh(screen, roofMaterial01);
+
+
+scene.add(videoScreen01, imgScreen01, door01, door02,floor01, roof01);
+
+floor01.position.y = 39.1;
+floor01.position.z = 42.8;
+floor01.position.x = 0.5;
+floor01.rotation.x = -1.95;
+floor01.rotation.z = 0.025;
+
+floor01.scale.x = 6;
+floor01.scale.y = 6;
+
+roof01.position.y = 44;
+roof01.position.z = 42;
+roof01.position.x = 0.4;
+roof01.rotation.x = 0.7;
+roof01.rotation.z = 0.025;
+
+roof01.scale.x = 8;
+roof01.scale.y = 9;
+
+
+
+
+door01.position.x = -2;
+door01.position.z = 39;
+door01.position.y = 39;
+door01.rotation.x = -0.75;
+door01.rotation.z = 0.008;
+door01.scale.y = 3;
+door01.scale.x = 3;
+
+door02.position.x = 3.1;
+door02.position.z = 39;
+door02.position.y = 39.05;
+door02.rotation.x = -0.75;
+door02.rotation.z = 0.008;
+door02.scale.y = 3;
+door02.scale.x = 3;
+
 videoScreen01.position.x = 1.1;
 videoScreen01.rotation.x = -0.75;
 videoScreen01.rotation.y = -0.5;
@@ -136,6 +192,8 @@ function moveCamera(){
   const t = document.body.getBoundingClientRect().top;
   //moon.rotation.x += 0.05;
   //moon.rotation.y += 0.075;
+  //scene.rotation.z = 0.025;
+  //scene.position.x = 1;
   //moon.rotation.z += 0.05;
   //dan.rotation.y += 0.01;
   //dan.rotation.z += 0.01;
@@ -144,7 +202,16 @@ function moveCamera(){
   camera.position.x = t * -0.0002;
   camera.position.y = t * -0.01;
 
-  
+  //Door opens.
+  if (camera.position.z > 39 && camera.position.z < 41.5){
+  door01.position.x -= (41.5 - camera.position.z) / 8;
+  door02.position.x += (41.5 - camera.position.z) / 8;
+
+  } else {
+    door01.position.x = -2;
+    door02.position.x = 3.1;
+
+  }
 
   console.log(camera.position.z);
   if (camera.position.z > 15 && camera.position.z < 16){
@@ -153,9 +220,7 @@ function moveCamera(){
   } else if (camera.position.z > 16 && camera.position.z < 17){
     let text01 = document.querySelector(".text01");
     text01.style.opacity = 17 - camera.position.z;
-  } 
-  
-  else {
+  } else {
     let text01 = document.querySelector(".text01");
     text01.style.opacity = 0; 
   }
