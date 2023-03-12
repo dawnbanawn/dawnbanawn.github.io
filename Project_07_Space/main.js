@@ -13,7 +13,7 @@ const sizes = {
   width: window.innerWidth,
   height: window.innerHeight,
 }
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100);
+const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100);
 
 const renderer = new THREE.WebGL1Renderer({
   canvas: document.querySelector('#bg'),
@@ -107,21 +107,29 @@ window.addEventListener('resize', () => {
 
 //Get the video element:
 const video01 = document.getElementById('video01');
-
 //Create your video texture:
 const videoTexture01 = new THREE.VideoTexture(video01);
 const videoMaterial01 =  new THREE.MeshBasicMaterial( {map: videoTexture01, side: THREE.FrontSide, toneMapped: false} );
+
+const Texture01 = new THREE.TextureLoader().load('public/bg.png');
+const Material01 = new THREE.MeshBasicMaterial( {map: Texture01} );
+
 //Create screen
 const screen = new THREE.PlaneGeometry(1.7, 1);
 const videoScreen01 = new THREE.Mesh(screen, videoMaterial01);
-scene.add(videoScreen01);
-videoScreen01.position.x = 1.2;
+const imgScreen01 = new THREE.Mesh(screen, Material01);
+scene.add(videoScreen01, imgScreen01);
+videoScreen01.position.x = 1.1;
 videoScreen01.rotation.x = -0.75;
 videoScreen01.rotation.y = -0.5;
 videoScreen01.position.z = 15;
 videoScreen01.position.y = 15;
 
-
+imgScreen01.position.x = 1.8;
+imgScreen01.rotation.x = -0.8;
+imgScreen01.rotation.y = -0.5;
+imgScreen01.position.z = 40.5;
+imgScreen01.position.y = 40.5;
 
 function moveCamera(){
   //how far from the top of the page has been scrolled
