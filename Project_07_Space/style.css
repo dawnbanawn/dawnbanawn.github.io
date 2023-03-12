@@ -21,17 +21,34 @@ main {
   position: absolute;
   width: 100%;
   margin: 0px auto;
-  padding: 120px 0px;
+  padding: 0px 0px;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 header {
   grid-column: 2 / span 5;
-
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 30%;
+  z-index: 100;
 }
 
 section {
   grid-column: 2 / 8;
   background: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0);
+  height: 3000px;
+}
+.info {
+  grid-column: 2 / 8;
+}
+.text01 {
+  opacity: 0;
+  position: absolute;
+}
+.text02 {
+  opacity: 0;
+
+  position: absolute;
 }
