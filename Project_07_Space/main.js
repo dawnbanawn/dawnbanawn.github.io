@@ -96,14 +96,7 @@ animate();
 
 
 
-//Resize
-window.addEventListener('resize', () => {
-  sizes.width = window.innerWidth;
-  sizes.height = window.innerHeight;
-  camera.updateProjectionMatrix();
-  camera.aspect = sizes.width / sizes.height;
-  renderer.setSize(sizes.width, sizes.height);
-});
+
 
 //Get the video element:
 const video01 = document.getElementById('video01');
@@ -138,11 +131,11 @@ const roof01 = new THREE.Mesh(screen, roofMaterial01);
 
 scene.add(videoScreen01, imgScreen01, door01, door02,floor01, roof01);
 
-floor01.position.y = 39.1;
-floor01.position.z = 42.8;
+floor01.position.y = 40;
+floor01.position.z = 42.7;
 floor01.position.x = 0.5;
-floor01.rotation.x = -1.95;
-floor01.rotation.z = 0.025;
+floor01.rotation.x = -2.1;
+floor01.rotation.z = 0.03;
 
 floor01.scale.x = 6;
 floor01.scale.y = 6;
@@ -151,7 +144,7 @@ roof01.position.y = 44;
 roof01.position.z = 42;
 roof01.position.x = 0.4;
 roof01.rotation.x = 0.7;
-roof01.rotation.z = 0.025;
+roof01.rotation.z = 0.027;
 
 roof01.scale.x = 8;
 roof01.scale.y = 9;
@@ -160,16 +153,16 @@ roof01.scale.y = 9;
 
 
 door01.position.x = -2;
-door01.position.z = 39;
-door01.position.y = 39;
+door01.position.z = 39.2;
+door01.position.y = 39.2;
 door01.rotation.x = -0.75;
 door01.rotation.z = 0.008;
 door01.scale.y = 3;
 door01.scale.x = 3;
 
 door02.position.x = 3.1;
-door02.position.z = 39;
-door02.position.y = 39.05;
+door02.position.z = 39.2;
+door02.position.y = 39.2;
 door02.rotation.x = -0.75;
 door02.rotation.z = 0.008;
 door02.scale.y = 3;
@@ -213,6 +206,18 @@ function moveCamera(){
 
   }
 
+  //Intro text animation
+  if (camera.position.z > 41 && camera.position.z < 43){
+    let intro = document.querySelector(".intro");
+    intro.style.opacity = camera.position.z -41;
+  } else if (camera.position.z > 42 && camera.position.z < 43){
+    let intro = document.querySelector(".intro");
+    intro.style.opacity = 43 - camera.position.z;
+  } else {
+    let intro = document.querySelector(".intro");
+    intro.style.opacity = 0; 
+  }
+
   console.log(camera.position.z);
   if (camera.position.z > 15 && camera.position.z < 16){
     let text01 = document.querySelector(".text01");
@@ -224,5 +229,17 @@ function moveCamera(){
     let text01 = document.querySelector(".text01");
     text01.style.opacity = 0; 
   }
+
+
+
 }
 document.body.onscroll = moveCamera;
+
+//Updates screen when resizing.
+window.addEventListener('resize', () => {
+  sizes.width = window.innerWidth;
+  sizes.height = window.innerHeight;
+  camera.updateProjectionMatrix();
+  camera.aspect = sizes.width / sizes.height;
+  renderer.setSize(sizes.width, sizes.height);
+});
