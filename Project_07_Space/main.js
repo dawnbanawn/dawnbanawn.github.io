@@ -61,7 +61,7 @@ const spaceTexture = new THREE.TextureLoader().load('public/bg2v3.jpg');
 scene.background = spaceTexture;
 
 //avatar
-const danTexture = new THREE.TextureLoader().load('public/bg.png');
+const danTexture = new THREE.TextureLoader().load('public/bg.jpg');
 const dan = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
   new THREE.MeshBasicMaterial({map: danTexture})
@@ -69,7 +69,7 @@ const dan = new THREE.Mesh(
 //scene.add(dan);
 
 //planet
-const planetTexture = new THREE.TextureLoader().load('public/moon.jpg');
+const planetTexture = new THREE.TextureLoader().load('public/moon.png');
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3,32,32),
   new THREE.MeshBasicMaterial({map: planetTexture})
@@ -99,16 +99,21 @@ animate();
 
 
 //Get the video element:
+const danVideo01 = document.getElementById('videoDan');
+
 const video01 = document.getElementById('video01');
 //Create your video texture:
+const danVideoTexture01 = new THREE.VideoTexture(danVideo01);
+const danVideoMaterial01 =  new THREE.MeshBasicMaterial( {map: danVideoTexture01, side: THREE.FrontSide, toneMapped: false} );
+
 const videoTexture01 = new THREE.VideoTexture(video01);
 const videoMaterial01 =  new THREE.MeshBasicMaterial( {map: videoTexture01, side: THREE.FrontSide, toneMapped: false} );
 
-const Texture01 = new THREE.TextureLoader().load('public/bg.png');
-const Material01 = new THREE.MeshBasicMaterial( {map: Texture01} );
+// const Texture01 = new THREE.TextureLoader().load('public/bg.jpg');
+// const Material01 = new THREE.MeshBasicMaterial( {map: Texture01} );
 
 //Spacedoor textures
-const doorTexture01 = new THREE.TextureLoader().load('public/doorLeft.jpg');
+const doorTexture01 = new THREE.TextureLoader().load('public/doorLeft.jpg')
 const doorMaterial01 = new THREE.MeshBasicMaterial( {map: doorTexture01} );
 const doorTexture02 = new THREE.TextureLoader().load('public/doorRight.jpg');
 const doorMaterial02 = new THREE.MeshBasicMaterial( {map: doorTexture02} );
@@ -122,31 +127,31 @@ const roofMaterial01 = new THREE.MeshBasicMaterial( {map: roofTexture01} );
 //Create screen
 const screen = new THREE.PlaneGeometry(1.7, 1);
 const videoScreen01 = new THREE.Mesh(screen, videoMaterial01);
-const imgScreen01 = new THREE.Mesh(screen, Material01);
+const danVideoScreen01 = new THREE.Mesh(screen, danVideoMaterial01);
 const door01 = new THREE.Mesh(screen, doorMaterial01);
 const door02 = new THREE.Mesh(screen, doorMaterial02);
 const floor01 = new THREE.Mesh(screen, floorMaterial01);
 const roof01 = new THREE.Mesh(screen, roofMaterial01);
 
 
-scene.add(videoScreen01, imgScreen01, door01, door02,floor01, roof01);
+scene.add(videoScreen01, danVideoScreen01, door01, door02,floor01, roof01);
 
 floor01.position.y = 40;
 floor01.position.z = 42.7;
-floor01.position.x = 0.5;
+floor01.position.x = 1;
 floor01.rotation.x = -2.1;
 floor01.rotation.z = 0.03;
 
-floor01.scale.x = 6;
+floor01.scale.x = 5;
 floor01.scale.y = 6;
 
 roof01.position.y = 44;
 roof01.position.z = 42;
-roof01.position.x = 0.4;
+roof01.position.x = 0.5;
 roof01.rotation.x = 0.7;
 roof01.rotation.z = 0.027;
 
-roof01.scale.x = 8;
+roof01.scale.x = 4;
 roof01.scale.y = 9;
 
 
@@ -174,11 +179,11 @@ videoScreen01.rotation.y = -0.5;
 videoScreen01.position.z = 15;
 videoScreen01.position.y = 15;
 
-imgScreen01.position.x = 1.8;
-imgScreen01.rotation.x = -0.8;
-imgScreen01.rotation.y = -0.5;
-imgScreen01.position.z = 40.5;
-imgScreen01.position.y = 40.5;
+danVideoScreen01.position.x = 1.8;
+danVideoScreen01.rotation.x = -0.8;
+danVideoScreen01.rotation.y = -0.5;
+danVideoScreen01.position.z = 40.5;
+danVideoScreen01.position.y = 40.5;
 
 function moveCamera(){
   //how far from the top of the page has been scrolled
