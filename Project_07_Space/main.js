@@ -57,11 +57,11 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('/bg2v3.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./bg2v3.jpg');
 scene.background = spaceTexture;
 
 //avatar
-const danTexture = new THREE.TextureLoader().load('/bg.jpg');
+const danTexture = new THREE.TextureLoader().load('./bg.jpg');
 const dan = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
   new THREE.MeshBasicMaterial({map: danTexture})
@@ -69,7 +69,7 @@ const dan = new THREE.Mesh(
 //scene.add(dan);
 
 //planet
-const planetTexture = new THREE.TextureLoader().load('/moon.png');
+const planetTexture = new THREE.TextureLoader().load('./moon.png');
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3,32,32),
   new THREE.MeshBasicMaterial({map: planetTexture})
@@ -113,15 +113,15 @@ const videoMaterial01 =  new THREE.MeshBasicMaterial( {map: videoTexture01, side
 // const Material01 = new THREE.MeshBasicMaterial( {map: Texture01} );
 
 //Spacedoor textures
-const doorTexture01 = new THREE.TextureLoader().load('/doorLeft.jpg')
+const doorTexture01 = new THREE.TextureLoader().load('./doorLeft.jpg')
 const doorMaterial01 = new THREE.MeshBasicMaterial( {map: doorTexture01} );
-const doorTexture02 = new THREE.TextureLoader().load('/doorRight.jpg');
+const doorTexture02 = new THREE.TextureLoader().load('./doorRight.jpg');
 const doorMaterial02 = new THREE.MeshBasicMaterial( {map: doorTexture02} );
 
 //Floor and roof textures
-const floorTexture01 = new THREE.TextureLoader().load('/floor.jpg');
+const floorTexture01 = new THREE.TextureLoader().load('./floor.jpg');
 const floorMaterial01 = new THREE.MeshBasicMaterial( {map: floorTexture01} );
-const roofTexture01 = new THREE.TextureLoader().load('/roof.jpg');
+const roofTexture01 = new THREE.TextureLoader().load('./roof.jpg');
 const roofMaterial01 = new THREE.MeshBasicMaterial( {map: roofTexture01} );
 
 //Create screen
