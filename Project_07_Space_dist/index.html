@@ -5,19 +5,18 @@
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script type="module" type="application/javascript" crossorigin src="./assets/index-5bc18e27.js"></script>
-
-    <link rel="stylesheet" href="./assets/index-1d7a4cc3.css">
+    <script type="module" type="application/javascript" crossorigin src="./assets/index-86f87fd8.js"></script>
+    <link rel="stylesheet" href="./assets/index-98abe3de.css">
   </head>
   <body>
-
     <canvas id="bg"></canvas>
+
     <main>
       <header>
-        <div class="buttons">
-          <button>back</button>
-          <button>front</button>
-        </div>
+        <!--<div class="buttons">
+          <button id="buttonBack">Back</button>
+          <button id="buttonNext">Next</button>
+        </div>-->
         <div class="text01">
           <h1>Bird Sounds</h1>
           <h3>(ThreeJS, 2 APIs)</h3>
@@ -26,32 +25,112 @@
             simultaneously an image of that bird (altough not always the correct
             subfamily).
           </p>
+          <form
+            action="https://dawnbanawn.github.io/Project_04_Birds/"
+            method="get"
+            target="_blank"
+          >
+            <button type="submit">Visit</button>
+          </form>
+        </div>
+        <div class="text02">
+          <h1>Open AI</h1>
+          <h3>(ChatGPT, DALL-E 2, HTML, CSS)</h3>
+          <p>
+            A website made with Open AI, that shows that same progress.
+          </p>
+          <form
+            action="https://dawnbanawn.github.io/Project_06_openai/"
+            method="get"
+            target="_blank"
+          >
+            <button type="submit">Visit</button>
+          </form>
+        </div>
+        <div class="text03">
+          <h1>Draug Tattoo</h1>
+          <h3>(HTML, CSS, BOOTSTRAP)</h3>
+          <p>
+            A website made for a tatoo artist.
+The tatoo artist painted the skull, and that inspired me to add
+smoke and glowing eyes. 
+          </p>
+          <form
+            action="https://dawnbanawn.github.io/Project_05_J-Tattoo"
+            method="get"
+            target="_blank"
+          >
+            <button type="submit">Visit</button>
+          </form>
+        </div>
+        <div class="text04">
+          <h1>City Weather</h1>
+          <h3>(React, 2 APIs)</h3>
+          <p>
+            A simple website for searching and getting the currect weather of a city,
+and simultaneously a (random) image of that city. 
+It was an exam assignment in the course Webbutveckling II.
+          </p>
+          <form
+            action="https://dawnbanawn.github.io/Project_03_Weather"
+            method="get"
+            target="_blank"
+          >
+            <button type="submit">Visit</button>
+          </form>
+        </div>
+        <div class="text05">
+          <h1>Todo List</h1>
+          <h3>(React)</h3>
+          <p>
+            A simple website for "todo" -entries. Add, edit, and delete.
+            It was an exam assignment in the course Webbutveckling II.
+          </p>
+          <form
+            action="https://dawnbanawn.github.io/Project_02_Todo"
+            method="get"
+            target="_blank"
+          >
+            <button type="submit">Visit</button>
+          </form>
+        </div>
+        <div class="text06">
+          <h1>Mushroom Musical</h1>
+          <h3>(WebGL, Unity)</h3>
+          <p>
+            A casual Unity game I made for mobile and steam, and now also with WebGL to make it playable in the browser.
+            
+          </p>
+          <form
+            action="https://dawnbanawn.github.io/MM"
+            method="get"
+            target="_blank"
+          >
+            <button type="submit">Play</button>
+          </form>
         </div>
         <div class="intro">
           <h1>Welcome to my portfolio!</h1>
           <p>
-            My name is Dan Heikenberg, and I'm a web developer, game developer, musician, 2D artist, and math teacher.
-          </p>
-          <p>
-            What I´ve used: ChatGPT, DALL-E 2, THREE JS, HTML, CSS, Javascript, React, APIs, Bootstrap, WebGL/Unity.
-          </p>
-          <p>
-            please navigate by scrolling, or by using the buttons on the top left.
+            My name is Dan Heikenberg, and I'm a web developer, game developer,
+            musician, 2D artist, and a math teacher. What I´ve used: ChatGPT,
+            DALL-E 2, THREE JS, HTML, CSS, Javascript, React, APIs, Bootstrap,
+            WebGL/Unity. Please navigate by scrolling.
           </p>
         </div>
       </header>
       <video
-      id="videoDan"
-      playsinline
-      webkit-playsinline
-      muted
-      loop
-      autoplay
-      width="320"
-      height="180"
-      src="./danmagix.mp4"
-      style="display: none"
-    ></video>
+        id="videoDan"
+        playsinline
+        webkit-playsinline
+        muted
+        loop
+        autoplay
+        width="320"
+        height="180"
+        src="./danmagix.mp4"
+        style="display: none"
+      ></video>
       <video
         id="video01"
         playsinline
@@ -64,6 +143,66 @@
         src="./birdsounds.mp4"
         style="display: none"
       ></video>
+      <video
+      id="videoTodo"
+      playsinline
+      webkit-playsinline
+      muted
+      loop
+      autoplay
+      width="320"
+      height="180"
+      src="./todo.mp4"
+      style="display: none"
+    ></video>
+    <video
+    id="videoMM"
+    playsinline
+    webkit-playsinline
+    muted
+    loop
+    autoplay
+    width="320"
+    height="180"
+    src="./MM32018044164kbit.mp4"
+    style="display: none"
+  ></video>
+  <video
+  id="videoJTattoo"
+  playsinline
+  webkit-playsinline
+  muted
+  loop
+  autoplay
+  width="320"
+  height="180"
+  src="./JTattoo.mp4"
+  style="display: none"
+></video>
+<video
+id="videoOpenai"
+playsinline
+webkit-playsinline
+muted
+loop
+autoplay
+width="320"
+height="180"
+src="./openai.mp4"
+style="display: none"
+></video>
+<video
+id="videoWeather"
+playsinline
+webkit-playsinline
+muted
+loop
+autoplay
+width="320"
+height="180"
+src="./weather.mp4"
+style="display: none"
+></video>
 
       <section>
         <p>
