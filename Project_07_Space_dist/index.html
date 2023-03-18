@@ -6,8 +6,8 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script type="module" type="application/javascript" crossorigin src="./assets/index-0548c978.js"></script>
-    <link rel="stylesheet" href="./assets/index-3a5fdbd9.css">
+    <script type="module" type="application/javascript" crossorigin src="./assets/index-fad5ea02.js"></script>
+    <link rel="stylesheet" href="./assets/index-7662552f.css">
   </head>
   <body>
     <canvas id="bg"></canvas>
@@ -17,6 +17,8 @@
         <div class="buttons">
           <button id="buttonBack">Back</button>
           <button id="buttonNext">Next</button>
+          <button id="buttonVideos">Play videos</button>
+
         </div>
         <div class="text01">
           <h1>Bird Sounds</h1>
@@ -110,25 +112,25 @@
         <div class="intro">
           <h1>Welcome to my portfolio!</h1>
           <p>
-            My name is Dan Heikenberg, and I'm a web developer, game developer,
-            musician, 2D artist, and a math teacher. What I´ve used: ChatGPT,
+            My name is Dan Heikenberg, and I'm a web & game developer,
+            musician, painter and a math teacher. I´ve used: ChatGPT,
             DALL-E 2, THREE JS, HTML, CSS, Javascript, React, APIs, Bootstrap,
-            WebGL/Unity. Please navigate by scrolling.
+            WebGL/Unity. If your browser doesn´t play the videos, press the button above.
           </p>
         </div>
       </header>
       <video
         id="videoDan"
+        crossOrigin="anonymous"
         playsinline
         webkit-playsinline
         muted
         loop
         autoplay
         width="320"
-        height="180"
-        src="./danmagix.mp4"
+        height="180"        
         style="display: none"
-      ></video>
+      ><source src="./danmagix.mp4" type="video/mp4"> </video>
       <video
         id="video01"
         playsinline
@@ -140,6 +142,7 @@
         height="180"
         src="./birdsounds.mp4"
         style="display: none"
+        type="video/mp4"
       ></video>
       <video
         id="videoTodo"
@@ -152,6 +155,7 @@
         height="180"
         src="./todo.mp4"
         style="display: none"
+        type="video/mp4"
       ></video>
       <video
         id="videoMM"
@@ -164,6 +168,7 @@
         height="180"
         src="./MM32018044164kbit.mp4"
         style="display: none"
+        type="video/mp4"
       ></video>
       <video
         id="videoJTattoo"
@@ -176,6 +181,7 @@
         height="180"
         src="./JTattoo.mp4"
         style="display: none"
+        type="video/mp4"
       ></video>
       <video
         id="videoOpenai"
@@ -188,6 +194,7 @@
         height="180"
         src="./openai.mp4"
         style="display: none"
+        type="video/mp4"
       ></video>
       <video
         id="videoWeather"
@@ -200,6 +207,7 @@
         height="180"
         src="./weather.mp4"
         style="display: none"
+        type="video/mp4"
       ></video>
 
       <section style="opacity: 0">
