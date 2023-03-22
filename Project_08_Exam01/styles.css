@@ -39,6 +39,25 @@ p {
   background-position: center center;
   height: 400px;
 }
+#processAnalysHeader {
+  /*Header justering för processanalys-sidan*/
+  height: 75px;
+}
+.processAnalysContainer {
+  /*Container för processanalys-text*/
+  margin: 10px;
+  height: 800px;
+  background-color: rgb(193, 193, 193);
+}
+.processAnalysContainer h2 {
+  /*h2 justering*/
+  text-align: center;
+  margin-bottom: 5px;
+}
+.processAnalysContainer p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 .header h1 {
   /*Logo-texten*/
@@ -119,7 +138,6 @@ p {
   /*Sprider ut 3 divs med info*/
   background-color: rgb(124, 167, 216);
   height: 100px;
-  margin-bottom: -10px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -157,6 +175,7 @@ p {
     display: block;
     text-align: center;
     height: auto;
+    margin-bottom: -10px;
   }
   .footer h2 {
     margin-top: 10px;
