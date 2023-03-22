@@ -1,130 +1,155 @@
 * {
-    margin: 0;
-    padding: 0; 
+  margin: 0;
+  padding: 0;
 }
 body {
-    width: 100%;
-    height: auto;
-    background-color: rgb(211, 211, 211);
+  width: 100%;
+  height: auto;
+  background-color: rgb(211, 211, 211);
 }
 .nav {
-    height: auto;
-    display: flex;    
-    justify-content: space-between;
-    z-index: 5;
-    background-color: rgba(231, 231, 231, 0.2);
-       
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+  background-color: rgba(231, 231, 231, 0.2);
 }
 .links a {
-    text-decoration: none; 
-    color: rgb(39, 39, 39);
-    margin-right: 5px;
-    margin-left: 5px;
-
+  text-decoration: none;
+  color: rgb(39, 39, 39);
+  margin-right: 5px;
+  margin-left: 5px;
 }
 .header {
-    /*background-color: rgb(124, 167, 216);*/
-    background-image: url(./images/hero.jpg);
-    background-size: 100%;
-    background-position: center center;
-    height: 400px;
+  /*background-color: rgb(124, 167, 216);*/
+  background-image: url(./images/hero.jpg);
+  background-size: 100%;
+  background-position: center center;
+  height: 400px;
 }
 .header span {
-    background-color: rgb(64, 64, 117);
-    color: white;
-    display: inline-block;
-    width: 200px;
-    height: 50px;
-    text-align: center;
+  background-color: rgb(64, 64, 117);
+  color: white;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  text-align: center;
 }
 .logo {
-    margin-left: 100px;    
+  margin-left: 100px;
 }
 .header span h1 {
-   margin-top: 5%;
+  margin-top: 5%;
 }
 
-
 .links {
-    margin-right: 100px;
-    margin-top: 15px;
+  margin-right: 100px;
+  margin-top: 15px;
 }
 
 .heroInfo01 {
-    margin-top: 50px;
-   margin-left: 50%;
-   margin-right: 10%;
-   text-align: center;
+  margin-top: 100px;
+  margin-left: 50%;
+  margin-right: 10%;
+  text-align: center;
 }
-.main {    
-    height: auto;
-    display: flex;
-    justify-content: center;
+.main {
+  height: auto;
 }
 .cardsContainer {
-    z-index: 10;
-    width: 250px;
-    margin-top: -50px; 
-
-
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
-.cardTop img{
-    width: 150px;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin-left: 45px;
+.cardContainer {
+  z-index: 10;
+  width: 250px;
+  margin-top: -50px;
 }
-.cardBottom{
-    background-color: white;
-    margin-top: -85px;
+
+.cardTop img {
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-left: 45px;
+}
+#card01 img {
+  margin-left: 0px;
+}
+
+#card03 img {
+  margin-left: 90px;
+}
+
+.cardBottom {
+  background-color: white;
+  margin-top: -85px;
 }
 .emptyCardSpace {
-    height: 100px;
+  height: 100px;
 }
 .cardBottom p {
- margin: 5px;
+  margin: 5px;
 }
 .cardBottomFirstText {
-    font-size: 20px;
+  font-size: 20px;
 }
 .footer {
-    background-color: rgb(124, 167, 216);
-    height: 100px;
-    z-index: 20;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: space-evenly;
-
+  background-color: rgb(124, 167, 216);
+  height: 100px;
+  z-index: 20;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
 }
 .footerInfo {
-    margin: 10px 50px;
+  margin: 10px 50px;
 }
 @media screen and (max-width: 700px) {
-    .heroInfo01 {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    .header {
-        height: 240px;
-    }
-    .nav {
-        display: block;
-        text-align: center;
-    }
-    .logo {
-        margin-left: 0;
-    }
-    .links {
-        margin-right: 0;
-        margin-top: 5px;
-    }
-    .footer {
-        display: block;
-        text-align: center;
-        height: auto;
-    }
-    .footer h2 {
-        margin-top: 10px;
-    }
-
+  .heroInfo01 {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .header {
+    height: 240px;
+  }
+  .nav {
+    display: block;
+    text-align: center;
+  }
+  .logo {
+    margin-left: 0;
+  }
+  .links {
+    margin-right: 0;
+    margin-top: 5px;
+  }
+  .footer {
+    display: block;
+    text-align: center;
+    height: auto;
+  }
+  .footer h2 {
+    margin-top: 10px;
+  }
+  #card01 img {
+    margin-left: 45px;
+  }
+  #card03 img {
+    margin-left: 45px;
+  }
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #card01card {
+    margin-bottom: 50px;
+  }
+  #card02card {
+    margin-bottom: 50px;
+    order: -1; /*Mittenkortet får första platsen i kolumn-flex containern.*/
+  }
+  .heroInfo01 {
+    margin-top: 50px;
+  }
 }
