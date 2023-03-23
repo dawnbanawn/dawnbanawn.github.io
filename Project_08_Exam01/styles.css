@@ -64,7 +64,7 @@ p {
   font-size: 35px;
   background-color: rgb(64, 64, 117);
   color: white;
-  width: 260px;
+  width: 280px;
   height: 45px;
   text-align: center;
 }
@@ -146,12 +146,12 @@ p {
   margin: 10px 50px;
 }
 @media screen and (max-width: 700px) {
-  /*Vid denna mindre skärmstorlek görs justeringar, jag tycker att det nu ser bra ut på alla skärmstorlekar, så jag tror inte att jag behöver fler .*/
+  /*Vid denna mindre skärmstorlek görs justeringar, jag tycker att det nu ser bra ut på alla skärmstorlekar, så jag tror inte att jag behöver fler, men jag kanske har fel.*/
   .heroInfo01 {
     /*Hero-texten flyttas till mitten av skärmen.*/
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 50px;
+    margin-top: 30px;
   }
   .header {
     /*Header height minskas*/
@@ -202,7 +202,7 @@ p {
     margin-bottom: 50px;
     order: -1;
   }
-  h1 {
+  .header h1 {
     /*Centrerar h1, och respekterar width och height jämfört med enbart inline */
     display: inline-block;
   }
