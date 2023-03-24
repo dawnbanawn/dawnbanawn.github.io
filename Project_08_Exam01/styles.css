@@ -16,7 +16,8 @@ body {
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.2);
 }
-p {
+p,
+.processAnalysText {
   /*Fonter till p*/
   font-family: helvetica, arial, sans-serif;
 }
