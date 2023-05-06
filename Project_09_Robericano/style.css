@@ -1,0 +1,110 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: Playbill;
+    src: url('./fonts/Playbill_Regular.ttf')  format('truetype');
+  }
+
+  #mainBody {
+    background-color: black;
+   background: url("./images/bg01.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+}
+
+#mainContainer {
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+
+   
+}
+
+
+#mainContainer h1 {
+    font-family: Playbill;
+    font-size: 80px;
+    color: rgb(255, 153, 0);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    z-index: 3;
+
+}
+
+#mainContainer p {
+    color: rgb(255, 218, 162);
+    margin-top: -10px;
+    font-size: 22px;
+    font-weight: 400;
+    /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+    z-index: 3;
+
+}
+#blackBackground {
+    position: absolute;
+    background-color: black;
+    z-index: 2;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    opacity: 0.7;
+  border-radius: 25px;
+
+
+}
+#button01 {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    color: rgb(255, 153, 0);
+    background-color: black;
+    border: 1.5px solid rgba(255, 153, 0, 0.737);
+    z-index: 3;
+  cursor: pointer;
+
+
+  border-radius: 8px;
+  
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  
+}
+
+#button01:hover,
+#button01:focus {
+  background-color: #2f2f2f;
+}
+#button01Div {
+    position: absolute;
+    top: 550px;
+    z-index: 3;
+
+}
+
+    
+
+@media (min-width: 768px) {
+    #mainContainer h1 {
+        font-size: 120px;
+    
+    }
+    #mainContainer p {
+    font-size: 32px;
+
+    }
+    #button01Div {
+        top: 550px;
+    }
+  }
+  
