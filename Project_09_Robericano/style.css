@@ -37,6 +37,17 @@ html {
 
 }
 
+#mainContainer h2 {
+  font-family: Playbill;
+  font-size: 40px;
+  color: rgb(255, 153, 0);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  z-index: 3;
+  margin-left: -90%;
+  margin-right: -120px;
+
+}
+
 #mainContainer p {
     color: rgb(255, 218, 162);
     margin-top: -10px;
@@ -91,6 +102,29 @@ html {
     z-index: 3;
 
 }
+#page02Container {
+  z-index: 3;
+  margin-top: 40px;
+  text-align: center;
+}
+#numberOfPlayersDropDown {
+  color: rgb(255, 153, 0);
+  background-color: black;
+  border: 1.5px solid rgba(255, 153, 0, 0.737);
+
+}
+#gameTime{
+
+  color: rgb(255, 153, 0);
+  background-color: black;
+  border: 1.5px solid rgba(255, 153, 0, 0.737);
+
+}
+#page02Container p{
+  z-index: 3;
+  margin: auto;
+}
+
 
     
 
