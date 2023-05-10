@@ -14,6 +14,7 @@ html {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        
 
 }
 
@@ -55,6 +56,10 @@ html {
     font-weight: 400;
     /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
     z-index: 3;
+  width: 85%;
+  text-align: center;
+  
+
 
 }
 #blackBackground {
@@ -64,7 +69,7 @@ html {
     top: 5%;
     left: 5%;
     width: 90%;
-    height: 90%;
+    height: 650px;
     opacity: 0.7;
   border-radius: 25px;
 
@@ -123,6 +128,8 @@ html {
 #page02Container p{
   z-index: 3;
   margin: auto;
+  font-size: 22px;
+  width: 85%;
 }
 
 
@@ -135,10 +142,17 @@ html {
     }
     #mainContainer p {
     font-size: 32px;
+    width: 100%;
+   
 
     }
     #button01Div {
         top: 550px;
     }
+    #page02Container p{
+
+      width: 100%;
+    }
+
   }
   

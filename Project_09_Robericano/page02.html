@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Robericano</title>
-</head>
-<body id="mainBody">
+  </head>
+  <body id="mainBody">
     <div id="mainContainer">
-        <h2>Robericano</h2>
-        <div id="page02Container">
-            <p>Please choose the number of players.</p><br><br>
-            <select name="playerNumber" id="numberOfPlayersDropDown">
-                <option value="4">4 players</option>
-                <option value="5">5 players</option>
-                <option value="6">6 players</option>
-              </select>
-              
-            <p></p><br><br><br>
-            <p>Please enter your preferred game time (min).</p><br><br>
+      <h2>Robericano</h2>
+      <div id="page02Container">
+        <p>Please choose the number of players.</p>
+        <br /><br />
+        <select name="playerNumber" id="numberOfPlayersDropDown">
+          <option value="4">4 players</option>
+          <option value="5">5 players</option>
+          <option selected value="6">6 players</option>
+        </select>
 
-<input placeholder="120" type="text" id="gameTime" name="name" required
-       minlength="0" maxlength="8" size="9">
-        </div>
-        <div id="button01Div"><button id="button01">Next</button></div>
+        <p></p>
+        <br /><br /><br />
+        <p>Please enter your preferred game time (min).</p>
+        <br /><br />
 
-        
+        <input
+          placeholder="120"
+          type="text"
+          id="gameTime"
+          name="name"
+          required
+          minlength="0"
+          maxlength="8"
+          size="9"
+        />
+      </div>
+      <div id="button01Div"><button id="button01">Next</button></div>
+      <div id="blackBackground"></div>
     </div>
-    <div id="blackBackground"></div>
+    
     <script type="text/javascript" src="script.js"></script>
-</body>
+  </body>
 </html>
