@@ -11,6 +11,25 @@ let newTurnedCards = 0;
 //Array som håller koll på vilka kort (i spel) som vänts upp.
 let newTurnedCardsArray = [];
 
+let startButton = document.querySelector("#startButton");
+
+//Eventlyssnare till knappen.
+startButton.addEventListener("click", () => {
+  let cardInput = document.querySelector("#cards");
+  let playerInput = document.querySelector("#players");
+  if (cardInput.value < 4 || cardInput.value > 20){
+    alert("Please have 4-20 cards.");
+  } else if (playerInput.value < 1 || playerInput.value > 4){
+    alert("Please have 1-4 players.");
+  } else {
+    createCardArray();
+  }
+
+  
+
+});
+
+function createCardArray(){
 //For loop för att skapa en array av siffer-par.
 for (let i = 1; i <= cards; i++) {
   cardArray[i - 1] = i;
@@ -20,8 +39,12 @@ for (let i = 1; i <= cards; i++) {
     cardArray[i - 1] = i - 1;
   }
 }
+shuffleCardArray();
+}
 
 //console.log(cardArray);
+
+function shuffleCardArray(){
 
 //En "negativt gående" for loop för att skapa en shufflad array av sifferpars-arrayen,
 //detta för att sifferpars-arrayen kommer att minska efterhand som element tas från den till den nya shufflade arrayen.
@@ -38,8 +61,11 @@ for (let j = cards; j > 0; j--) {
     shuffledArray[j - 1] = cardArray[0];
   }
 }
-
+distributeCardArray();
+}
 //console.log(shuffledArray);
+
+function distributeCardArray(){
 
 //Returnerar rätt element.
 const cardContainer = document.querySelector("#cardContainer");
@@ -64,7 +90,8 @@ for (let k = 0; k < cards; k++) {
       //Detta id har kortet som vänts.
       newTurnedCardsArray[newTurnedCards -1] = cardDiv.getAttribute('id');
 
-      console.log("click", cardDiv.getAttribute('id'));      
+      //console.log("click", cardDiv.getAttribute('id'));      
+
       cardDiv.style.backgroundColor = "green";
       let p = document.createElement("p");
       p.innerHTML = shuffledArray[k];
@@ -79,7 +106,8 @@ for (let k = 0; k < cards; k++) {
           console.log(newTurnedCardsArray);
           console.log(shuffledArray[newTurnedCardsArray[0].charAt(3)], shuffledArray[newTurnedCardsArray[1].charAt(3)]);
 
-
+          //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
+          window.setTimeout(wait, 2000);
 
       }
 
@@ -88,18 +116,9 @@ for (let k = 0; k < cards; k++) {
   cardContainer.appendChild(cardDiv);
 
 }
+}
 
-// class Card {
-//   constructor(id, order, image, clicked, inGame) {
-//     this.id = id;
-//     this.order = order;
-//     this.image = image;
-//     this.clicked = clicked;
-//     this.inGame = inGame;
-//   }
+function wait(){
+  console.log("eee");
+}
 
-//   cardDiv.addEventListener("click", () => {
-//   })
-// }
-
-// let card = new Card();
