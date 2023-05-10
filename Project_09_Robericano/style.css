@@ -48,6 +48,17 @@ html {
   margin-right: -120px;
 
 }
+#mainContainer h4 {
+  position: absolute;
+  font-size: 16px;
+  color: rgb(255, 153, 0);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  z-index: 3;
+  margin-left: -92%;
+  margin-right: -100px;
+  margin-bottom: -1020px;
+
+}
 
 #mainContainer p {
     color: rgb(255, 218, 162);
@@ -152,6 +163,11 @@ html {
     #page02Container p{
 
       width: 100%;
+    }
+    #mainContainer h4 {
+
+      margin-bottom: -890px;
+    
     }
 
   }
