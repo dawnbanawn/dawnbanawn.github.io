@@ -85,7 +85,7 @@ h4 {
 
 
 }
-#button01 {
+#button01, #button02{
     width: 100px;
     height: 40px;
     font-size: 16px;
