@@ -1,5 +1,8 @@
 const buttonPage01 = document.querySelector("#button01");
-const buttonPage02 = document.querySelector("#button02");;
+const buttonPage02 = document.querySelector("#button02");
+const buttonPage03 = document.querySelector("#button03");
+const buttonPage03Back = document.querySelector("#button04");
+
 const gameTimeField = document.querySelector("#gameTime");
 let gameTime;
 page02Container = document.querySelector("#page02Container");
@@ -8,23 +11,29 @@ mainContainer = document.querySelector("#mainContainer");
 
 const nameInputContainer = document.querySelector("#nameInputContainer");
 
-
 const playerNumberDropdown = document.querySelector("#numberOfPlayersDropDown");
 let numberOfPlayers;
 
+buttonPage03Back.addEventListener("click", () => {
+  page03Container.style.display = "none";
+  page02Container.style.display = "block";
+  numberOfPlayers = 0;
+  while (nameInputContainer.hasChildNodes()) {
+    nameInputContainer.removeChild(nameInputContainer.firstChild);
+  }
+
+});
 buttonPage01.addEventListener("click", () => {
+  //buttonPage02.style.backgroundColor  = "white";
   mainContainer.style.display = "none";
   page02Container.style.display = "block";
-
-
+  //buttonPage02.style.backgroundColor  = "black";
 });
 
 buttonPage02.addEventListener("click", () => {
   page02Container.style.display = "none";
   page03Container.style.display = "block";
   //page03Container.style.display = "block";
-
-
 });
 
 buttonPage02.addEventListener("click", () => {
@@ -46,29 +55,22 @@ buttonPage02.addEventListener("click", () => {
     //window.setTimeout(loadNameInputs, 2000);
     //window.open("./page03.html","_self");
     //window.location.href = './page03.html';
-    
+
     loadNameInputs();
   }
 });
 
-
 function loadNameInputs() {
   for (let i = 1; i <= numberOfPlayers; i++) {
-      
     let inputElement = document.createElement("input");
     inputElement.type = "text";
-    inputElement.size="9";
-    inputElement.placeholder="Player " + i;
+    inputElement.size = "9";
+    inputElement.placeholder = "Player " + i;
 
     inputElement.required;
-    inputElement.minlength="0";
-    inputElement.maxlength="10";
+    inputElement.minlength = "0";
+    inputElement.maxlength = "10";
     nameInputContainer.appendChild(inputElement);
-console.log("page03" + numberOfPlayers);
-
+    console.log("page03" + numberOfPlayers);
+  }
 }
-}
-
-
-
-

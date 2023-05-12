@@ -1,12 +1,13 @@
 html {
   margin: 0;
   padding: 0;
+  
 }
 @font-face {
   font-family: Playbill;
   src: url("./fonts/Playbill_Regular.ttf") format("truetype");
 }
-
+input:focus {outline:none;}
 #mainBody {
   background-color: black;
   background: url("./images/bg01.jpg") no-repeat center center fixed;
@@ -14,7 +15,6 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
 }
 
 #mainContainer {
@@ -23,7 +23,6 @@ html {
   align-items: center;
   flex-direction: column;
   text-align: center;
-
 }
 #page02Container {
   display: flex;
@@ -35,7 +34,6 @@ html {
   text-align: center;
 }
 
-
 #page03Container {
   display: flex;
   justify-content: center;
@@ -43,12 +41,10 @@ html {
   flex-direction: column;
   display: none;
 
-
-    z-index: 5;
-    margin-top: 40px;
-    text-align: center;
-    display: none;
-
+  z-index: 5;
+  margin-top: 40px;
+  text-align: center;
+  display: none;
 }
 
 #mainContainer h1 {
@@ -80,9 +76,6 @@ h4 {
   margin-left: 22px;
 }
 
-
-
-
 #page02Container p {
   color: rgb(255, 218, 162);
   margin-top: -10px;
@@ -95,7 +88,18 @@ h4 {
   font-size: 22px;
   width: 85%;
 }
+#page03Container p {
+  color: rgb(255, 218, 162);
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 400;
 
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  width: 85%;
+}
 #mainContainer p {
   color: rgb(255, 218, 162);
   margin-top: -10px;
@@ -118,7 +122,9 @@ h4 {
   border-radius: 25px;
 }
 #button01,
-#button02, #button03 {
+#button02,
+#button03,
+#button04 {
   width: 100px;
   height: 40px;
   font-size: 16px;
@@ -134,15 +140,33 @@ h4 {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin: 0px 10px;
 }
 
-#button01:hover,
-#button01:focus {
+#button01:hover {
   background-color: #2f2f2f;
 }
-
-
-
+#button01:focus {
+  background-color: #5f5f5f;
+}
+#button02:hover {
+  background-color: #2f2f2f;
+}
+#button02:focus {
+  background-color: #5f5f5f;
+}
+#button03:hover {
+  background-color: #2f2f2f;
+}
+#button03:focus {
+  background-color: #5f5f5f;
+}
+#button04:hover {
+  background-color: #2f2f2f;
+}
+#button04:focus {
+  background-color: #5f5f5f;
+}
 .button01Div {
   position: absolute;
   top: 550px;
@@ -150,14 +174,11 @@ h4 {
   left: 0;
   right: 0;
   margin: 0 auto;
-  
-  
 }
 #numberOfPlayersDropDown {
   color: rgb(255, 153, 0);
   background-color: black;
   border: 1.5px solid rgba(255, 153, 0, 0.737);
-
 }
 #gameTime {
   color: rgb(255, 153, 0);
@@ -167,16 +188,17 @@ h4 {
 #nameInputContainer {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 260px;
   margin: auto;
+  margin-top: 20px;
+
 }
-#nameInputContainer input{
+#nameInputContainer input {
   margin-bottom: 10px;
   color: black;
   background-color: lightgray;
   border: 1px solid darkgray;
   border-bottom: 1.5px solid black;
-
 }
 
 @media (min-width: 768px) {
@@ -194,6 +216,10 @@ h4 {
     width: 100%;
 
     font-size: 32px;
+  }
+  #page03Container p {
+    width: 100%;
 
+    font-size: 32px;
   }
 }
