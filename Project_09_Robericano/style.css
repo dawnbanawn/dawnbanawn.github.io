@@ -1,126 +1,157 @@
 html {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 @font-face {
-    font-family: Playbill;
-    src: url('./fonts/Playbill_Regular.ttf')  format('truetype');
-  }
+  font-family: Playbill;
+  src: url("./fonts/Playbill_Regular.ttf") format("truetype");
+}
 
-  #mainBody {
-    background-color: black;
-   background: url("./images/bg01.jpg") no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        
+#mainBody {
+  background-color: black;
+  background: url("./images/bg01.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 }
 
 #mainContainer {
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 
-
-   
+}
+#page02Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  display: none;
+  text-align: center;
 }
 
+
+#page03Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+
+
+    z-index: 5;
+    margin-top: 40px;
+    text-align: center;
+    display: none;
+
+}
 
 #mainContainer h1 {
-    font-family: Playbill;
-    font-size: 80px;
-    color: rgb(255, 153, 0);
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    z-index: 3;
-
+  font-family: Playbill;
+  font-size: 80px;
+  color: rgb(255, 153, 0);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  z-index: 3;
 }
 
-#mainContainer h2 {
+h2 {
   font-family: Playbill;
   font-size: 40px;
   color: rgb(255, 153, 0);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   z-index: 3;
-  margin-left: -90%;
-  margin-right: -120px;
-
+  text-align: left;
+  margin-left: 6%;
 }
 h4 {
   font-size: 16px;
   color: rgb(255, 153, 0);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   z-index: 3;
   margin-top: 630px;
   margin-left: 22px;
+}
 
 
+
+
+#page02Container p {
+  color: rgb(255, 218, 162);
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 400;
+
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  width: 85%;
 }
 
 #mainContainer p {
-    color: rgb(255, 218, 162);
-    margin-top: -10px;
-    font-size: 22px;
-    font-weight: 400;
-    /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
-    z-index: 3;
+  color: rgb(255, 218, 162);
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 400;
+  /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+  z-index: 4;
   width: 85%;
   text-align: center;
-  
-
-
 }
 #blackBackground {
-    position: absolute;
-    background-color: black;
-    z-index: 2;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 650px;
-    opacity: 0.7;
+  position: absolute;
+  background-color: black;
+  z-index: -1;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 650px;
+  opacity: 0.7;
   border-radius: 25px;
-
-
 }
-#button01, #button02{
-    width: 100px;
-    height: 40px;
-    font-size: 16px;
-    color: rgb(255, 153, 0);
-    background-color: black;
-    border: 1.5px solid rgba(255, 153, 0, 0.737);
-    z-index: 3;
+#button01,
+#button02, #button03 {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  color: rgb(255, 153, 0);
+  background-color: black;
+  border: 1.5px solid rgba(255, 153, 0, 0.737);
+  z-index: 3;
   cursor: pointer;
-
-
   border-radius: 8px;
-  
+
   transition: color 100ms;
   vertical-align: baseline;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-
-  
 }
 
 #button01:hover,
 #button01:focus {
   background-color: #2f2f2f;
 }
-#button01Div {
-    position: absolute;
-    top: 550px;
-    z-index: 3;
 
-}
-#page02Container {
+
+
+.button01Div {
+  position: absolute;
+  top: 550px;
   z-index: 3;
-  margin-top: 40px;
-  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  
+  
 }
 #numberOfPlayersDropDown {
   color: rgb(255, 153, 0);
@@ -128,42 +159,41 @@ h4 {
   border: 1.5px solid rgba(255, 153, 0, 0.737);
 
 }
-#gameTime{
-
+#gameTime {
   color: rgb(255, 153, 0);
   background-color: black;
   border: 1.5px solid rgba(255, 153, 0, 0.737);
-
 }
-#page02Container p{
-  z-index: 3;
+#nameInputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
   margin: auto;
-  font-size: 22px;
-  width: 85%;
 }
+#nameInputContainer input{
+  margin-bottom: 10px;
+  color: black;
+  background-color: lightgray;
+  border: 1px solid darkgray;
+  border-bottom: 1.5px solid black;
 
-
-    
+}
 
 @media (min-width: 768px) {
-    #mainContainer h1 {
-        font-size: 120px;
-    
-    }
-    #mainContainer p {
+  #mainContainer h1 {
+    font-size: 120px;
+  }
+  #mainContainer p {
     font-size: 32px;
     width: 100%;
-   
+  }
+  .button01Div {
+    top: 550px;
+  }
+  #page02Container p {
+    width: 100%;
 
-    }
-    #button01Div {
-        top: 550px;
-    }
-    #page02Container p{
-
-      width: 100%;
-    }
-
+    font-size: 32px;
 
   }
-  
+}

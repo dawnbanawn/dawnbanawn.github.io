@@ -1,9 +1,31 @@
-const buttonPage02 = document.querySelector("#button02");
+const buttonPage01 = document.querySelector("#button01");
+const buttonPage02 = document.querySelector("#button02");;
 const gameTimeField = document.querySelector("#gameTime");
 let gameTime;
+page02Container = document.querySelector("#page02Container");
+page03Container = document.querySelector("#page03Container");
+mainContainer = document.querySelector("#mainContainer");
+
+const nameInputContainer = document.querySelector("#nameInputContainer");
+
 
 const playerNumberDropdown = document.querySelector("#numberOfPlayersDropDown");
 let numberOfPlayers;
+
+buttonPage01.addEventListener("click", () => {
+  mainContainer.style.display = "none";
+  page02Container.style.display = "block";
+
+
+});
+
+buttonPage02.addEventListener("click", () => {
+  page02Container.style.display = "none";
+  page03Container.style.display = "block";
+  //page03Container.style.display = "block";
+
+
+});
 
 buttonPage02.addEventListener("click", () => {
   if (gameTimeField.value == "") {
@@ -20,6 +42,33 @@ buttonPage02.addEventListener("click", () => {
     alert("Please re-write the game time.");
   } else {
     numberOfPlayers = playerNumberDropdown.value;
-    console.log("page03" + numberOfPlayers);
+    //console.log("page03" + numberOfPlayers);
+    //window.setTimeout(loadNameInputs, 2000);
+    //window.open("./page03.html","_self");
+    //window.location.href = './page03.html';
+    
+    loadNameInputs();
   }
 });
+
+
+function loadNameInputs() {
+  for (let i = 1; i <= numberOfPlayers; i++) {
+      
+    let inputElement = document.createElement("input");
+    inputElement.type = "text";
+    inputElement.size="9";
+    inputElement.placeholder="Player " + i;
+
+    inputElement.required;
+    inputElement.minlength="0";
+    inputElement.maxlength="10";
+    nameInputContainer.appendChild(inputElement);
+console.log("page03" + numberOfPlayers);
+
+}
+}
+
+
+
+
