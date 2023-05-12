@@ -14,14 +14,20 @@ const nameInputContainer = document.querySelector("#nameInputContainer");
 const playerNumberDropdown = document.querySelector("#numberOfPlayersDropDown");
 let numberOfPlayers;
 
+let playerNamesArray = [];
+
 buttonPage03Back.addEventListener("click", () => {
   page03Container.style.display = "none";
   page02Container.style.display = "block";
+  //saveNames(numberOfPlayers);
   numberOfPlayers = 0;
+  playerNamesArray = [];
+
   while (nameInputContainer.hasChildNodes()) {
+    playerNamesArray.push(nameInputContainer.firstChild.value);
     nameInputContainer.removeChild(nameInputContainer.firstChild);
   }
-
+  console.log(playerNamesArray);
 });
 buttonPage01.addEventListener("click", () => {
   //buttonPage02.style.backgroundColor  = "white";
@@ -30,11 +36,7 @@ buttonPage01.addEventListener("click", () => {
   //buttonPage02.style.backgroundColor  = "black";
 });
 
-buttonPage02.addEventListener("click", () => {
-  page02Container.style.display = "none";
-  page03Container.style.display = "block";
-  //page03Container.style.display = "block";
-});
+
 
 buttonPage02.addEventListener("click", () => {
   if (gameTimeField.value == "") {
@@ -55,7 +57,8 @@ buttonPage02.addEventListener("click", () => {
     //window.setTimeout(loadNameInputs, 2000);
     //window.open("./page03.html","_self");
     //window.location.href = './page03.html';
-
+    page02Container.style.display = "none";
+    page03Container.style.display = "block";
     loadNameInputs();
   }
 });
@@ -70,7 +73,15 @@ function loadNameInputs() {
     inputElement.required;
     inputElement.minlength = "0";
     inputElement.maxlength = "10";
+    if (playerNamesArray[i - 1] != "" && playerNamesArray[i - 1] != undefined ) {
+      inputElement.value = playerNamesArray[i - 1];
+    }
     nameInputContainer.appendChild(inputElement);
-    console.log("page03" + numberOfPlayers);
+    //console.log("page03" + numberOfPlayers);
   }
 }
+
+
+//function saveNames(numberOfPlayers) {
+
+//}
