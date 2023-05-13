@@ -142,7 +142,7 @@ function distributeCardArray() {
         newTurnedCardsArray[newTurnedCards - 1] = cardDiv.getAttribute("id");
 
         //Det vända kortet får färgen grön.
-        cardDiv.style.backgroundColor = "green";
+        //cardDiv.style.backgroundColor = "green";
         //Ett p-element skapas.
         let p = document.createElement("p");
         //p får kortets siffra.
@@ -174,8 +174,9 @@ function distributeCardArray() {
             //Uppdaterar poängen.
             playerThatGetsAPoint.innerHTML =
               Number(playerThatGetsAPoint.innerHTML) + 1;
-              //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
+              startAnimation("win");
 
+              //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
           window.setTimeout(win, 2000);
           }
           
@@ -193,6 +194,8 @@ function distributeCardArray() {
               playerTurn = 1;
               whoseTurnSpan.innerHTML = playerTurn;
             }
+            startAnimation("loss");
+
                       //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
           window.setTimeout(loss, 2000);
           }
@@ -218,7 +221,7 @@ function loss() {
     "#" + newTurnedCardsArray[0].toString()
   );
   //Kortet får sin ursprungliga röda bakgrund.
-  card1.style.backgroundColor = "red";
+  //card1.style.backgroundColor = "red";
   //Kortet är nu "o-vänt"
   card1.setAttribute("turned", "false");
   //P-elementet tas bort, det som visar sifferpars-siffran.
@@ -227,8 +230,60 @@ function loss() {
   let card2 = document.querySelector(
     "#" + newTurnedCardsArray[1].toString()
   );
-  card2.style.backgroundColor = "red";
+  //card2.style.backgroundColor = "red";
   card2.setAttribute("turned", "false");
   card2.removeChild(card2.firstElementChild);
   newTurnedCardsArray = [];
+}
+
+
+
+
+//Ursprungskod modifierad efter att ha hittats på:
+//https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
+const colorChange = [
+  { transform: "", backgroundColor: "red"},
+  { transform: "", backgroundColor: "green" },
+];
+const colorTiming = {
+  duration: 2000
+  
+};
+
+//Ursprungskod modifierad efter att ha hittats på:
+//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_animate_3
+var id = null;
+function startAnimation(result) {
+  let card1 = document.querySelector(
+    "#" + newTurnedCardsArray[0].toString()
+  );  
+  let card2 = document.querySelector(
+    "#" + newTurnedCardsArray[1].toString()
+  );
+  if (result == "win"){
+    card2.animate(colorChange, colorTiming);
+    card1.animate(colorChange, colorTiming);
+  }
+
+
+  var size = 1;
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+    if (size > 1.2) {
+      clearInterval(id);
+      card1.style.scale = 1; 
+      card2.style.scale = 1;
+      if (result == "win"){
+      card1.style.backgroundColor = "green";
+      card2.style.backgroundColor = "green";
+      }
+    } else {
+      size = size + 0.0017; 
+      card1.style.scale = size; 
+      card2.style.scale = size; 
+    }
+    console.log(size);
+  }
+ 
 }
