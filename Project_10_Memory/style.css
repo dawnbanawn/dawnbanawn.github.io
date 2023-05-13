@@ -12,3 +12,9 @@
   font-size: 50px;
 margin-top: 40%;
 }
+#player1,
+#player2,
+#player3,
+#player4, #whoseTurnP {
+  display: none;
+} 
