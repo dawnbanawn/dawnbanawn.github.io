@@ -53,19 +53,21 @@ startButton.addEventListener("click", () => {
     whoseTurnSpan.innerHTML = "1";
     playerTurn = 1;
     player1Points = 0;
-player2Points = 0;
-player3Points = 0;
-player4Points = 0;
-//Returnerar varje DOM-span som visar spelarnas poäng, och nollställer värdet.
-for (let i = 1; i < 4; i++) {
-  let playerPointSpan = document.querySelector("#player" + i + "Span");
-  playerPointSpan.innerHTML = "0";
-}
+    player2Points = 0;
+    player3Points = 0;
+    player4Points = 0;
+    //Returnerar varje DOM-span som visar spelarnas poäng, och nollställer värdet.
+    for (let i = 1; i < 4; i++) {
+      let playerPointSpan = document.querySelector("#player" + i + "Span");
+      playerPointSpan.innerHTML = "0";
+    }
     //P-elementet som visar vems tur det är, syns nu.
     whoseTurnP.style.display = "block";
     //Antalet kort som ska spelas, hämtas från DOM-input-värdet.
     cards = cardInput.value;
     //While loop som tar bort eventuella kort från DOM, före nya skapas.
+    //Koden-stycket framletad här:
+    //https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
     while (cardContainer.lastElementChild) {
       cardContainer.removeChild(cardContainer.lastElementChild);
     }
@@ -160,39 +162,73 @@ function distributeCardArray() {
             shuffledArray[newTurnedCardsArray[1].charAt(3)]
           );
           //Kontroll om de valda korten motsvarar platserna av ett sifferpar i shuffled-arrayen, då är det vinst.
-            if (shuffledArray[newTurnedCardsArray[0].charAt(3)] == shuffledArray[newTurnedCardsArray[1].charAt(3)]) {
-              //console.log("win");
-              //Returnerar element som ger den gällande spelarens poängstatus.
-              let playerThatGetsAPoint = document.querySelector("#player" + playerTurn + "Span");
-              //Uppdaterar poängen.
-              playerThatGetsAPoint.innerHTML = Number(playerThatGetsAPoint.innerHTML) + 1;
-            } 
-            //Om inte vinst, så blir det förlust.
-            else {
-              //console.log("loss");
-              //Kontroll och justering av vilken spelare som står på tur.
-              if (playerTurn < playerInput.value) {
-                playerTurn ++;
-                whoseTurnSpan.innerHTML = playerTurn;
-  
-                //Om det precis var den siste spelaren, så blir det den första spelarens tur.
-              } else if (playerTurn == playerInput.value) {
-                playerTurn = 1;
-                whoseTurnSpan.innerHTML = playerTurn;
-              }
-              
-              
-              
+          if (
+            shuffledArray[newTurnedCardsArray[0].charAt(3)] ==
+            shuffledArray[newTurnedCardsArray[1].charAt(3)]
+          ) {
+            //console.log("win");
+            //Returnerar element som ger den gällande spelarens poängstatus.
+            let playerThatGetsAPoint = document.querySelector(
+              "#player" + playerTurn + "Span"
+            );
+            //Uppdaterar poängen.
+            playerThatGetsAPoint.innerHTML =
+              Number(playerThatGetsAPoint.innerHTML) + 1;
+              //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
+
+          window.setTimeout(win, 2000);
+          }
+          
+
+          //Om inte vinst, så blir det förlust.
+          else {
+            //console.log("loss");
+            //Kontroll och justering av vilken spelare som står på tur.
+            if (playerTurn < playerInput.value) {
+              playerTurn++;
+              whoseTurnSpan.innerHTML = playerTurn;
+
+              //Om det precis var den siste spelaren, så blir det den första spelarens tur.
+            } else if (playerTurn == playerInput.value) {
+              playerTurn = 1;
+              whoseTurnSpan.innerHTML = playerTurn;
             }
-          //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
-          window.setTimeout(wait, 2000);
+                      //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
+          window.setTimeout(loss, 2000);
+          }
+
         }
       }
     }),
+    //Appendar kortet-div till kort-containern.
       cardContainer.appendChild(cardDiv);
   }
 }
-
-function wait() {
-  console.log("eee");
+function win() {
+  //Dragna kort nollställs så att det går att dra på nytt.
+  newTurnedCards = 0;
+  newTurnedCardsArray = [];
+}
+function loss() {
+  //Dragna kort nollställs så att det går att dra på nytt.  
+  newTurnedCards = 0;
+  //console.log(newTurnedCardsArray[0]);
+  //Det första av de två nyligen dragna korten, söks i DOM.
+  let card1 = document.querySelector(
+    "#" + newTurnedCardsArray[0].toString()
+  );
+  //Kortet får sin ursprungliga röda bakgrund.
+  card1.style.backgroundColor = "red";
+  //Kortet är nu "o-vänt"
+  card1.setAttribute("turned", "false");
+  //P-elementet tas bort, det som visar sifferpars-siffran.
+  card1.removeChild(card1.firstElementChild);
+  //Samma procedur som ovan, men med draget kort nummer 2.
+  let card2 = document.querySelector(
+    "#" + newTurnedCardsArray[1].toString()
+  );
+  card2.style.backgroundColor = "red";
+  card2.setAttribute("turned", "false");
+  card2.removeChild(card2.firstElementChild);
+  newTurnedCardsArray = [];
 }
