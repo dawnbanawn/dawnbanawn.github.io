@@ -2,6 +2,13 @@
 
 //Antalet kort i spel.
 let cards;
+//Vilken spelare som är på tur.
+let playerTurn;
+//Spelarnas poäng.
+let player1Points = 0;
+let player2Points = 0;
+let player3Points = 0;
+let player4Points = 0;
 //Array som ska innehålla o-shufflade siffer-par.
 let cardArray = [];
 //Array som ska innehålla siffer-paren, shufflade.
@@ -23,30 +30,37 @@ const cardContainer = document.querySelector("#cardContainer");
 const whoseTurnP = document.querySelector("#whoseTurnP");
 const whoseTurnSpan = document.querySelector("#whoseTurnSpan");
 
-
-
 //Eventlyssnare till start-knappen.
 startButton.addEventListener("click", () => {
   //If sats som kontrollerar antalet valda kort. Jag valde bara 4-20.
   if (cardInput.value < 4 || cardInput.value > 20) {
     alert("Please have 4-20 cards.");
     //Om det är godkänt, så är här nästa kontroll, om det är ett jämnt antal kort.
-
   } else if (cardInput.value % 2 != 0) {
     alert("Please use an even number of cards.");
     //Om inte, så minskas antalet med 1, så att 7 t.ex. blir 6 kort.
     cardInput.value -= 1;
     //Om det är godkänt, så är här nästa kontroll, av spelarantal.
-
   } else if (playerInput.value < 1 || playerInput.value > 4) {
     alert("Please have 1-4 players.");
-  } else { //Allt är godkänt.
+  } else {
+    //Allt är godkänt.
     //Variabler blir av med sina eventuella värden / får sina startvärden.
     cardArray = [];
     shuffledArray = [];
     newTurnedCards = 0;
     newTurnedCardsArray = [];
     whoseTurnSpan.innerHTML = "1";
+    playerTurn = 1;
+    player1Points = 0;
+player2Points = 0;
+player3Points = 0;
+player4Points = 0;
+//Returnerar varje DOM-span som visar spelarnas poäng, och nollställer värdet.
+for (let i = 1; i < 4; i++) {
+  let playerPointSpan = document.querySelector("#player" + i + "Span");
+  playerPointSpan.innerHTML = "0";
+}
     //P-elementet som visar vems tur det är, syns nu.
     whoseTurnP.style.display = "block";
     //Antalet kort som ska spelas, hämtas från DOM-input-värdet.
@@ -145,7 +159,31 @@ function distributeCardArray() {
             shuffledArray[newTurnedCardsArray[0].charAt(3)],
             shuffledArray[newTurnedCardsArray[1].charAt(3)]
           );
-
+          //Kontroll om de valda korten motsvarar platserna av ett sifferpar i shuffled-arrayen, då är det vinst.
+            if (shuffledArray[newTurnedCardsArray[0].charAt(3)] == shuffledArray[newTurnedCardsArray[1].charAt(3)]) {
+              //console.log("win");
+              //Returnerar element som ger den gällande spelarens poängstatus.
+              let playerThatGetsAPoint = document.querySelector("#player" + playerTurn + "Span");
+              //Uppdaterar poängen.
+              playerThatGetsAPoint.innerHTML = Number(playerThatGetsAPoint.innerHTML) + 1;
+            } 
+            //Om inte vinst, så blir det förlust.
+            else {
+              //console.log("loss");
+              //Kontroll och justering av vilken spelare som står på tur.
+              if (playerTurn < playerInput.value) {
+                playerTurn ++;
+                whoseTurnSpan.innerHTML = playerTurn;
+  
+                //Om det precis var den siste spelaren, så blir det den första spelarens tur.
+              } else if (playerTurn == playerInput.value) {
+                playerTurn = 1;
+                whoseTurnSpan.innerHTML = playerTurn;
+              }
+              
+              
+              
+            }
           //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
           window.setTimeout(wait, 2000);
         }
