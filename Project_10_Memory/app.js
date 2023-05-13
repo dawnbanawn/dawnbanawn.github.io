@@ -174,12 +174,11 @@ function distributeCardArray() {
             //Uppdaterar poängen.
             playerThatGetsAPoint.innerHTML =
               Number(playerThatGetsAPoint.innerHTML) + 1;
-              startAnimation("win");
+            startAnimation("win");
 
-              //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
-          window.setTimeout(win, 2000);
+            //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
+            window.setTimeout(win, 2000);
           }
-          
 
           //Om inte vinst, så blir det förlust.
           else {
@@ -196,14 +195,13 @@ function distributeCardArray() {
             }
             startAnimation("loss");
 
-                      //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
-          window.setTimeout(loss, 2000);
+            //window.setTimeout-kod tagen ifrån https://www.w3schools.com/js/js_timing.asp
+            window.setTimeout(loss, 2000);
           }
-
         }
       }
     }),
-    //Appendar kortet-div till kort-containern.
+      //Appendar kortet-div till kort-containern.
       cardContainer.appendChild(cardDiv);
   }
 }
@@ -213,13 +211,11 @@ function win() {
   newTurnedCardsArray = [];
 }
 function loss() {
-  //Dragna kort nollställs så att det går att dra på nytt.  
+  //Dragna kort nollställs så att det går att dra på nytt.
   newTurnedCards = 0;
   //console.log(newTurnedCardsArray[0]);
   //Det första av de två nyligen dragna korten, söks i DOM.
-  let card1 = document.querySelector(
-    "#" + newTurnedCardsArray[0].toString()
-  );
+  let card1 = document.querySelector("#" + newTurnedCardsArray[0].toString());
   //Kortet får sin ursprungliga röda bakgrund.
   //card1.style.backgroundColor = "red";
   //Kortet är nu "o-vänt"
@@ -227,63 +223,60 @@ function loss() {
   //P-elementet tas bort, det som visar sifferpars-siffran.
   card1.removeChild(card1.firstElementChild);
   //Samma procedur som ovan, men med draget kort nummer 2.
-  let card2 = document.querySelector(
-    "#" + newTurnedCardsArray[1].toString()
-  );
+  let card2 = document.querySelector("#" + newTurnedCardsArray[1].toString());
   //card2.style.backgroundColor = "red";
   card2.setAttribute("turned", "false");
   card2.removeChild(card2.firstElementChild);
   newTurnedCardsArray = [];
 }
 
-
-
-
-//Ursprungskod modifierad efter att ha hittats på:
-//https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
-const colorChange = [
-  { transform: "", backgroundColor: "red"},
-  { transform: "", backgroundColor: "green" },
-];
-const colorTiming = {
-  duration: 2000
-  
-};
-
-//Ursprungskod modifierad efter att ha hittats på:
+//Ursprungskod (id, setInterval, clearInterval) modifierad efter att ha hittats på:
 //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_animate_3
-var id = null;
 function startAnimation(result) {
-  let card1 = document.querySelector(
-    "#" + newTurnedCardsArray[0].toString()
-  );  
-  let card2 = document.querySelector(
-    "#" + newTurnedCardsArray[1].toString()
-  );
-  if (result == "win"){
+  //Ursprungskod (animate, colorChange, colorTiming) modifierad efter att ha hittats på:
+  //https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
+  //Keyframe objects för att styra animation här i JS.
+  const colorChange = [
+    { backgroundColor: "red" },
+    { backgroundColor: "green" },
+  ];
+  //Animationen ska vara lika länge som pausen för att kunna klicka på nya kort.
+  const colorTiming = {
+    duration: 2000,
+  };
+  //En variabel som kommer att användas till setInterval id.
+  var id = null;
+  //Element hämtas.
+  let card1 = document.querySelector("#" + newTurnedCardsArray[0].toString());
+  let card2 = document.querySelector("#" + newTurnedCardsArray[1].toString());
+  //Om det var ett vinnande par, skiftas färgen på korten från röd till grön.
+  if (result == "win") {
     card2.animate(colorChange, colorTiming);
     card1.animate(colorChange, colorTiming);
   }
-
-
+  //Variabel som kommer att användas för kortens skala.
   var size = 1;
+  //Stoppar eventuellt intervall.
   clearInterval(id);
+  //frame funktionen kallas var 10ms, och returnerar ett id.
   id = setInterval(frame, 10);
+  //Funktionen som kallas kontinuerligt.
   function frame() {
+    //När kortens skala är över gränsen, så återställs skalan.
     if (size > 1.2) {
       clearInterval(id);
-      card1.style.scale = 1; 
+      card1.style.scale = 1;
       card2.style.scale = 1;
-      if (result == "win"){
-      card1.style.backgroundColor = "green";
-      card2.style.backgroundColor = "green";
+      //Om det var ett vinnande par, så stannar de två kortens gröna nyanimerade bakgrundsfärg.
+      if (result == "win") {
+        card1.style.backgroundColor = "green";
+        card2.style.backgroundColor = "green";
       }
     } else {
-      size = size + 0.0017; 
-      card1.style.scale = size; 
-      card2.style.scale = size; 
+      //Om skalan inte är över gränsen, så ökas skalan lite i taget (var 10ms).
+      size = size + 0.0017;
+      card1.style.scale = size;
+      card2.style.scale = size;
     }
-    console.log(size);
   }
- 
 }
