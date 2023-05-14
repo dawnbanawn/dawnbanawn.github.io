@@ -10,7 +10,6 @@ html {
   width: 80%;
   margin: auto;
   margin-top: 20px;
-
 }
 .cardDiv {
   background-color: red;
@@ -22,18 +21,18 @@ html {
 .cardP {
   text-align: center;
   font-size: 50px;
-margin-top: 40%;
+  margin-top: 40%;
 }
 #player1,
 #player2,
 #player3,
-#player4, #whoseTurnP {
+#player4,
+#whoseTurnP {
   display: none;
   text-align: center;
-} 
+}
 h1 {
   text-align: center;
-
 }
 #settingsContainer {
   text-align: center;
