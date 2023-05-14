@@ -117,7 +117,7 @@ function shuffleCardArray() {
     //Original-arrayen med sifferpar blir nu av med elementet som precis tagits ifrån, så att detta inte kan råka framslumpas igen i nästa loop.
     cardArray.splice(randomNumber, 1);
   }
-  console.log(shuffledArray);
+  //console.log(shuffledArray);
   distributeCardArray();
 }
 
