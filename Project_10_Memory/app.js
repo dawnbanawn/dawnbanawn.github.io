@@ -86,6 +86,7 @@ startButton.addEventListener("click", () => {
   }
 });
 
+//Funktion för att skapa en array med siffer-par.
 function createCardArray() {
   //For loop för att skapa en array av siffer-par.
   for (let i = 1; i <= cards; i++) {
@@ -96,36 +97,38 @@ function createCardArray() {
       cardArray[i - 1] = i - 1;
     }
   }
+  //console.log(cardArray);
   //Kallar funktion.
   shuffleCardArray();
 }
 
+//Funktion för att shuffla siffer-pars-arrayen till en ny array.
 function shuffleCardArray() {
   //En "negativt gående" for loop för att skapa en shufflad array av sifferpars-arrayen,
   //detta för att sifferpars-arrayen kommer att minska efterhand som element tas från den till den nya shufflade arrayen.
   for (let j = cards; j > 0; j--) {
     //Ett randomiserat (shufflat) nummer beroende på hur många element som finns kvar i siffer-pars-arrayen.
-    let randomNumber = cardArray[Math.floor(Math.random() * (j - 1))];
+    let randomNumber = Math.floor(Math.random() * j);
+    //console.log(j, randomNumber);
+    //console.log("test", Math.floor(Math.random() * j))
+    //console.log(cardArray);
     //Den nya snart shufflade arrayen, får värdet i det framslumpade sifferpar-array-elementet.
     shuffledArray[j - 1] = cardArray[randomNumber];
     //Original-arrayen med sifferpar blir nu av med elementet som precis tagits ifrån, så att detta inte kan råka framslumpas igen i nästa loop.
     cardArray.splice(randomNumber, 1);
-    //Detta fungerade väl till jag fick en undefined, detta sker vid sista elementet.
-    //Jag löste det genom en if-sats som fångar undefined och ger elementet dess rätta värde.
-    if (shuffledArray[j - 1] == undefined) {
-      shuffledArray[j - 1] = cardArray[0];
-    }
   }
+  console.log(shuffledArray);
   distributeCardArray();
-  console.log(cards, shuffledArray);
 }
 
+//Funktion för att bland annat skapa "korten" i DOM, och ge dem eventlyssnare (klick) och attribut (id m.m.).
 function distributeCardArray() {
   //En for loop som skapar korten.
   for (let k = 0; k < cards; k++) {
     let cardDiv = document.createElement("div");
     //korten får id för att hålla isär dem.
     cardDiv.setAttribute("id", "div" + k.toString());
+    //console.log(cardDiv.getAttribute("id"));
     //Korten får en klass för att kunna styla dem.
     cardDiv.setAttribute("class", "cardDiv");
     //Korten får attribut som liknar boolean, men som inte är det egentligen.
@@ -154,17 +157,18 @@ function distributeCardArray() {
 
         //If-sats som kontrollerar om två kort (i spel) är vända, och vad som sker då.
         if (newTurnedCards == 2) {
-          console.log("two cards picked");
-          console.log(newTurnedCards);
-          console.log(newTurnedCardsArray);
-          console.log(
-            shuffledArray[newTurnedCardsArray[0].charAt(3)],
-            shuffledArray[newTurnedCardsArray[1].charAt(3)]
-          );
+          //console.log(newTurnedCards);
+          // console.log(newTurnedCardsArray);
+          // console.log("shuffledarray", shuffledArray);
+
+          // console.log(
+          //   shuffledArray[Number(newTurnedCardsArray[0].slice(3, 5))],
+          //   shuffledArray[Number(newTurnedCardsArray[1].slice(3, 5))]
+          // );
           //Kontroll om de valda korten motsvarar platserna av ett sifferpar i shuffled-arrayen, då är det vinst.
           if (
-            shuffledArray[newTurnedCardsArray[0].charAt(3)] ==
-            shuffledArray[newTurnedCardsArray[1].charAt(3)]
+            shuffledArray[Number(newTurnedCardsArray[0].slice(3, 5))] ==
+            shuffledArray[Number(newTurnedCardsArray[1].slice(3, 5))] 
           ) {
             //console.log("win");
             //Returnerar element som ger den gällande spelarens poängstatus.
@@ -205,11 +209,15 @@ function distributeCardArray() {
       cardContainer.appendChild(cardDiv);
   }
 }
+
+//Funktion som kallas när spelaren klickat på ett siffer-par.
 function win() {
   //Dragna kort nollställs så att det går att dra på nytt.
   newTurnedCards = 0;
   newTurnedCardsArray = [];
 }
+
+//Funktion som kallas när spelaren klickat med inte fått ett siffer-par.
 function loss() {
   //Dragna kort nollställs så att det går att dra på nytt.
   newTurnedCards = 0;
@@ -230,6 +238,7 @@ function loss() {
   newTurnedCardsArray = [];
 }
 
+//Funktion som kallas när det andra kortet dras. (result är en string-variabel som har "win" eller "loss" som värde).
 //Ursprungskod (id, setInterval, clearInterval) modifierad efter att ha hittats på:
 //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_animate_3
 function startAnimation(result) {
