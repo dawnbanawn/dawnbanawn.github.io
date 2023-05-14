@@ -1,6 +1,8 @@
 html {
   margin: 0;
   padding: 0;
+  overflow-y: hidden;
+
 }
 body {
   height: 100%;
@@ -183,7 +185,7 @@ h4 {
   top: 5%;
   left: 5%;
   width: 90%;
-  height: 90%;
+  height: 2000px;
   opacity: 0.7;
   border-radius: 25px;
 
@@ -337,18 +339,7 @@ h4 {
 }
 
 @media (max-height: 500px) {
-#blackBackground {
-  position: absolute;
-  
-
-  background-color: black;
-  z-index: -1;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  opacity: 0.7;
-  border-radius: 25px;
-  height: 1000px;
+html {
+  overflow-y: visible;
 
 }}
