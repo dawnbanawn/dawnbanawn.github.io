@@ -168,7 +168,7 @@ function distributeCardArray() {
           //Kontroll om de valda korten motsvarar platserna av ett sifferpar i shuffled-arrayen, då är det vinst.
           if (
             shuffledArray[Number(newTurnedCardsArray[0].slice(3, 5))] ==
-            shuffledArray[Number(newTurnedCardsArray[1].slice(3, 5))] 
+            shuffledArray[Number(newTurnedCardsArray[1].slice(3, 5))]
           ) {
             //console.log("win");
             //Returnerar element som ger den gällande spelarens poängstatus.
@@ -271,7 +271,7 @@ function startAnimation(result) {
   id = setInterval(frame, 10);
   //Funktionen som kallas kontinuerligt.
   function frame() {
-    //När kortens skala är över gränsen, så återställs skalan.
+    //När kortens skala är över gränsen, så återställs skalan till 1 igen.
     if (size > 1.2) {
       clearInterval(id);
       card1.style.scale = 1;
@@ -283,7 +283,7 @@ function startAnimation(result) {
       }
     } else {
       //Om skalan inte är över gränsen, så ökas skalan lite i taget (var 10ms).
-      size = size + 0.0017;
+      size = size + 0.0016;
       card1.style.scale = size;
       card2.style.scale = size;
     }
