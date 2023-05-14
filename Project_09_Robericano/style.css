@@ -336,7 +336,7 @@ h4 {
   }
 }
 
-@media (max-height: 400px) {
+@media (max-height: 500px) {
 #blackBackground {
   position: absolute;
   
