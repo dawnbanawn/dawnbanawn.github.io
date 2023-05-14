@@ -2,18 +2,14 @@ const buttonPage01 = document.querySelector("#button01");
 const buttonPage02 = document.querySelector("#button02");
 const buttonPage03 = document.querySelector("#button03");
 const buttonPage03Back = document.querySelector("#button04");
-
 const gameTimeField = document.querySelector("#gameTime");
 let gameTime;
 page02Container = document.querySelector("#page02Container");
 page03Container = document.querySelector("#page03Container");
 mainContainer = document.querySelector("#mainContainer");
-
 const nameInputContainer = document.querySelector("#nameInputContainer");
-
 const playerNumberDropdown = document.querySelector("#numberOfPlayersDropDown");
 let numberOfPlayers;
-
 let playerNamesArray = [];
 
 buttonPage03Back.addEventListener("click", () => {

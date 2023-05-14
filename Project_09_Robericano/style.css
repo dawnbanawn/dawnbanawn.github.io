@@ -179,26 +179,38 @@ h4 {
   color: rgb(255, 153, 0);
   background-color: black;
   border: 1.5px solid rgba(255, 153, 0, 0.737);
+  scale: 1.2;
 }
 #gameTime {
   color: rgb(255, 153, 0);
   background-color: black;
   border: 1.5px solid rgba(255, 153, 0, 0.737);
+  scale: 1.2;
+
 }
 #nameInputContainer {
   display: flex;
   flex-direction: column;
   width: 260px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 40px;
+  scale: 1.2;
+
 
 }
 #nameInputContainer input {
   margin-bottom: 10px;
-  color: black;
-  background-color: lightgray;
-  border: 1px solid darkgray;
-  border-bottom: 1.5px solid black;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgb(79, 79, 79);
+  border: 1px solid rgb(170, 170, 170);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.737);
+  border-right: 1.5px solid rgba(0, 0, 0, 0.737);
+
+
+}
+::placeholder { /* Most modern browsers support this now. */
+  color: rgba(255, 255, 255, 1);
+
 }
 
 @media (min-width: 768px) {
