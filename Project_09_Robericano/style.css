@@ -1,13 +1,14 @@
 html {
   margin: 0;
   padding: 0;
-  
 }
 @font-face {
   font-family: Playbill;
   src: url("./fonts/Playbill_Regular.ttf") format("truetype");
 }
-input:focus {outline:none;}
+input:focus {
+  outline: none;
+}
 #mainBody {
   background-color: black;
   background: url("./images/bg01.jpg") no-repeat center center fixed;
@@ -35,6 +36,18 @@ input:focus {outline:none;}
 }
 
 #page03Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+
+  z-index: 5;
+  margin-top: 40px;
+  text-align: center;
+  display: none;
+}
+#page04Container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +113,18 @@ h4 {
   font-size: 22px;
   width: 85%;
 }
+#page04Container p {
+  color: rgb(255, 218, 162);
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 400;
+
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  width: 85%;
+}
 #mainContainer p {
   color: rgb(255, 218, 162);
   margin-top: -10px;
@@ -124,7 +149,7 @@ h4 {
 #button01,
 #button02,
 #button03,
-#button04 {
+#button04, #button04back, #button04next {
   width: 100px;
   height: 40px;
   font-size: 16px;
@@ -186,7 +211,6 @@ h4 {
   background-color: black;
   border: 1.5px solid rgba(255, 153, 0, 0.737);
   scale: 1.2;
-
 }
 #nameInputContainer {
   display: flex;
@@ -195,23 +219,21 @@ h4 {
   margin: auto;
   margin-top: 40px;
   scale: 1.2;
-
-
+  margin-bottom: 60px;
 }
 #nameInputContainer input {
   margin-bottom: 10px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255, 255, 255);
   background-color: rgb(79, 79, 79);
   border: 1px solid rgb(170, 170, 170);
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.737);
   border-right: 1.5px solid rgba(0, 0, 0, 0.737);
-
-
 }
-::placeholder { /* Most modern browsers support this now. */
-  color: rgba(255, 255, 255, 1);
-
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: rgb(255, 255, 255);
 }
+
 
 @media (min-width: 768px) {
   #mainContainer h1 {
