@@ -31,10 +31,14 @@ let matchOrders = {
 
       },
       {
-        1: 0,
-        5: 0,
-        6: 0,
-        3: 0,
+        "a": 1,
+        "b": 5,
+        "c": 6,
+        "d": 3,
+        "1": 0,
+        "3": 0,
+        "5": 0,
+        "6": 0
       },
     ],
   },
@@ -47,6 +51,30 @@ const nameInputContainer = document.querySelector("#nameInputContainer");
 const playerNumberDropdown = document.querySelector("#numberOfPlayersDropDown");
 
 button04next.addEventListener("click", () => {
+  // playerNamesArray = [];
+  // let count = 0;
+  // while (nameInputContainer.hasChildNodes()) {
+  //   count++;
+  //   if (nameInputContainer.firstChild.value == "") {
+  //     nameInputContainer.firstChild.value = "Player " + count.toString();
+  //   }
+  //   playerNamesArray.push(nameInputContainer.firstChild.value);
+  //   nameInputContainer.removeChild(nameInputContainer.firstChild);
+  // }
+  page04Container.style.display = "none";
+  page05Container.style.display = "block";
+  // chosenMatchOrder = 1; //This will randomize later.
+  // console.log(playerNamesArray);
+  loadFirstScreen();
+});
+button04back.addEventListener("click", () => {
+  page04Container.style.display = "none";
+  page03Container.style.display = "block";
+  loadNameInputs();
+});
+buttonPage03.addEventListener("click", () => {
+  page03Container.style.display = "none";
+  page04Container.style.display = "block";
   playerNamesArray = [];
   let count = 0;
   while (nameInputContainer.hasChildNodes()) {
@@ -57,19 +85,9 @@ button04next.addEventListener("click", () => {
     playerNamesArray.push(nameInputContainer.firstChild.value);
     nameInputContainer.removeChild(nameInputContainer.firstChild);
   }
-  page04Container.style.display = "none";
-  page05Container.style.display = "block";
   chosenMatchOrder = 1; //This will randomize later.
   console.log(playerNamesArray);
   loadFirstScreen();
-});
-button04back.addEventListener("click", () => {
-  page04Container.style.display = "none";
-  page03Container.style.display = "block";
-});
-buttonPage03.addEventListener("click", () => {
-  page03Container.style.display = "none";
-  page04Container.style.display = "block";
 });
 buttonPage03Back.addEventListener("click", () => {
   page03Container.style.display = "none";
@@ -83,6 +101,7 @@ buttonPage03Back.addEventListener("click", () => {
     nameInputContainer.removeChild(nameInputContainer.firstChild);
   }
   console.log(playerNamesArray);
+  //loadNameInputs();
 });
 buttonPage01.addEventListener("click", () => {
   //buttonPage02.style.backgroundColor  = "white";
@@ -151,10 +170,30 @@ function loadNameInputs() {
 
 function loadFirstScreen() {
   match = 1;
+  
+  previewCurrentPlayerA = document.querySelector("#previewCurrentPlayerA");
+  previewCurrentPlayerB = document.querySelector("#previewCurrentPlayerB");
+  previewCurrentPlayerC = document.querySelector("#previewCurrentPlayerC");
+  previewCurrentPlayerD = document.querySelector("#previewCurrentPlayerD");
+
   currentPlayerA = document.querySelector("#currentPlayerA");
   currentPlayerB = document.querySelector("#currentPlayerB");
   currentPlayerC = document.querySelector("#currentPlayerC");
   currentPlayerD = document.querySelector("#currentPlayerD");
+  nextPlayerA = document.querySelector("#nextPlayerA");
+  nextPlayerB = document.querySelector("#nextPlayerB");
+  nextPlayerC = document.querySelector("#nextPlayerC");
+  nextPlayerD = document.querySelector("#nextPlayerD");
+
+  previewCurrentPlayerA.innerHTML =
+  playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["a"] - 1];
+  previewCurrentPlayerB.innerHTML =
+  playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["b"] - 1];
+  previewCurrentPlayerC.innerHTML =
+  playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["c"] - 1];
+  previewCurrentPlayerD.innerHTML =
+  playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["d"] - 1];
+
   currentPlayerA.innerHTML =
   playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["a"] - 1];
   currentPlayerB.innerHTML =
@@ -163,6 +202,15 @@ function loadFirstScreen() {
   playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["c"] - 1];
   currentPlayerD.innerHTML =
   playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["d"] - 1];
+
+  nextPlayerA.innerHTML =
+  playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]["a"] - 1];
+  nextPlayerB.innerHTML =
+  playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]["b"] - 1];
+  nextPlayerC.innerHTML =
+  playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]["c"] - 1];
+  nextPlayerD.innerHTML =
+  playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]["d"] - 1];
 //spear ds poäng
-  console.log(matchOrders[numberOfPlayers][chosenMatchOrder][match -1][(matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["d"]).toString()]);
+  console.log("points" + matchOrders[numberOfPlayers][chosenMatchOrder][match -1][(matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["d"]).toString()]);
 }
