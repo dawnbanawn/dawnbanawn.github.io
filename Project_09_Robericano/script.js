@@ -1,3 +1,8 @@
+document.body.addEventListener('touchmove', function(event) {
+  console.log(event.source);
+  event.preventDefault();
+}, false);
+
 const buttonPage01 = document.querySelector("#button01");
 const buttonPage02 = document.querySelector("#button02");
 const buttonPage03 = document.querySelector("#button03");
@@ -27,7 +32,7 @@ let playerNamesArray = [];
 let timePerGame; //gametime divided by matches.
 //What the random match order is.
 let chosenMatchOrder;
-//which players meet which.
+//which players meet which. Setup version.
 let matchOrders = {
   //6 players, setup version 1-3.
   "6": {
