@@ -7,6 +7,19 @@ const button04next = document.querySelector("#button04next");
 const pauseButton = document.querySelector("#pauseButton");
 const resultButton = document.querySelector("#resultButton");
 const gameTimeField = document.querySelector("#gameTime");
+previewCurrentPlayerA = document.querySelector("#previewCurrentPlayerA");
+previewCurrentPlayerB = document.querySelector("#previewCurrentPlayerB");
+previewCurrentPlayerC = document.querySelector("#previewCurrentPlayerC");
+previewCurrentPlayerD = document.querySelector("#previewCurrentPlayerD");
+
+currentPlayerA = document.querySelector("#currentPlayerA");
+currentPlayerB = document.querySelector("#currentPlayerB");
+currentPlayerC = document.querySelector("#currentPlayerC");
+currentPlayerD = document.querySelector("#currentPlayerD");
+nextPlayerA = document.querySelector("#nextPlayerA");
+nextPlayerB = document.querySelector("#nextPlayerB");
+nextPlayerC = document.querySelector("#nextPlayerC");
+nextPlayerD = document.querySelector("#nextPlayerD");
 
 let gameTime;
 let numberOfPlayers;
@@ -16,29 +29,466 @@ let timePerGame; //gametime divided by matches.
 let chosenMatchOrder;
 //which players meet which.
 let matchOrders = {
-  //6 players, setup version 1.
+  //6 players, setup version 1-3.
   "6": {
     "1": [
-      {
+      {//1
         "a": 3,
         "b": 4,
         "c": 1,
         "d": 2,
-        "1": 0,
-        "2": 0,
         "3": 0,
-        "4": 0
+        "4": 0,
+        "1": 0,
+        "2": 0
 
       },
-      {
+      {//2
         "a": 1,
         "b": 5,
         "c": 6,
         "d": 3,
         "1": 0,
+        "5": 0,
+        "6": 0,
+        "3": 0
+      },
+      {//3
+        "a": 2,
+        "b": 5,
+        "c": 4,
+        "d": 6,
+        "2": 0,
+        "5": 0,
+        "4": 0,
+        "6": 0
+      },
+      {//4
+        "a": 1,
+        "b": 6,
+        "c": 2,
+        "d": 3,
+        "1": 0,
+        "6": 0,
+        "2": 0,
+        "3": 0
+      },
+      {//5
+        "a": 1,
+        "b": 4,
+        "c": 5,
+        "d": 3,
+        "1": 0,
+        "4": 0,
+        "5": 0,
+        "3": 0
+      },
+      {//6
+        "a": 6,
+        "b": 3,
+        "c": 2,
+        "d": 4,
+        "6": 0,
+        "3": 0,
+        "2": 0,
+        "4": 0
+      },
+      {//7
+        "a": 5,
+        "b": 6,
+        "c": 1,
+        "d": 2,
+        "5": 0,
+        "6": 0,
+        "1": 0,
+        "2": 0
+      },
+      {//8
+        "a": 2,
+        "b": 3,
+        "c": 5,
+        "d": 4,
+        "2": 0,
         "3": 0,
         "5": 0,
+        "4": 0
+      },
+      {//9
+        "a": 1,
+        "b": 3,
+        "c": 4,
+        "d": 6,
+        "1": 0,
+        "3": 0,
+        "4": 0,
         "6": 0
+      },
+      {//10
+        "a": 4,
+        "b": 2,
+        "c": 1,
+        "d": 5,
+        "4": 0,
+        "2": 0,
+        "1": 0,
+        "5": 0
+      },
+      {//11
+        "a": 2,
+        "b": 6,
+        "c": 5,
+        "d": 3,
+        "2": 0,
+        "6": 0,
+        "5": 0,
+        "3": 0
+      },
+      {//12
+        "a": 2,
+        "b": 6,
+        "c": 1,
+        "d": 4,
+        "2": 0,
+        "6": 0,
+        "1": 0,
+        "4": 0
+      },
+      {//13
+        "a": 6,
+        "b": 5,
+        "c": 3,
+        "d": 4,
+        "6": 0,
+        "5": 0,
+        "3": 0,
+        "4": 0
+      },
+      {//14
+        "a": 1,
+        "b": 3,
+        "c": 2,
+        "d": 5,
+        "1": 0,
+        "3": 0,
+        "2": 0,
+        "5": 0
+      },
+      {//15
+        "a": 4,
+        "b": 5,
+        "c": 1,
+        "d": 6,
+        "4": 0,
+        "5": 0,
+        "1": 0,
+        "6": 0
+      },
+    ],
+    "2": [
+      
+      {//15
+        "a": 4,
+        "b": 5,
+        "c": 1,
+        "d": 6,
+        "4": 0,
+        "5": 0,
+        "1": 0,
+        "6": 0
+      },
+      {//14
+        "a": 1,
+        "b": 3,
+        "c": 2,
+        "d": 5,
+        "1": 0,
+        "3": 0,
+        "2": 0,
+        "5": 0
+      },
+      {//13
+        "a": 6,
+        "b": 5,
+        "c": 3,
+        "d": 4,
+        "6": 0,
+        "5": 0,
+        "3": 0,
+        "4": 0
+      },
+      {//12
+        "a": 2,
+        "b": 6,
+        "c": 1,
+        "d": 4,
+        "2": 0,
+        "6": 0,
+        "1": 0,
+        "4": 0
+      },
+      {//11
+        "a": 2,
+        "b": 6,
+        "c": 5,
+        "d": 3,
+        "2": 0,
+        "6": 0,
+        "5": 0,
+        "3": 0
+      },
+      {//10
+        "a": 4,
+        "b": 2,
+        "c": 1,
+        "d": 5,
+        "4": 0,
+        "2": 0,
+        "1": 0,
+        "5": 0
+      },
+      {//9
+        "a": 1,
+        "b": 3,
+        "c": 4,
+        "d": 6,
+        "1": 0,
+        "3": 0,
+        "4": 0,
+        "6": 0
+      },
+      {//8
+        "a": 2,
+        "b": 3,
+        "c": 5,
+        "d": 4,
+        "2": 0,
+        "3": 0,
+        "5": 0,
+        "4": 0
+      },
+      {//7
+        "a": 5,
+        "b": 6,
+        "c": 1,
+        "d": 2,
+        "5": 0,
+        "6": 0,
+        "1": 0,
+        "2": 0
+      },
+      {//6
+        "a": 6,
+        "b": 3,
+        "c": 2,
+        "d": 4,
+        "6": 0,
+        "3": 0,
+        "2": 0,
+        "4": 0
+      },
+      {//5
+        "a": 1,
+        "b": 4,
+        "c": 5,
+        "d": 3,
+        "1": 0,
+        "4": 0,
+        "5": 0,
+        "3": 0
+      },
+      {//4
+        "a": 1,
+        "b": 6,
+        "c": 2,
+        "d": 3,
+        "1": 0,
+        "6": 0,
+        "2": 0,
+        "3": 0
+      },
+      {//3
+        "a": 2,
+        "b": 5,
+        "c": 4,
+        "d": 6,
+        "2": 0,
+        "5": 0,
+        "4": 0,
+        "6": 0
+      },
+      {//2
+        "a": 1,
+        "b": 5,
+        "c": 6,
+        "d": 3,
+        "1": 0,
+        "5": 0,
+        "6": 0,
+        "3": 0
+      },
+      {//1
+        "a": 3,
+        "b": 4,
+        "c": 1,
+        "d": 2,
+        "3": 0,
+        "4": 0,
+        "1": 0,
+        "2": 0
+
+      },
+    ],
+    "3": [
+      {//2
+        "a": 1,
+        "b": 5,
+        "c": 6,
+        "d": 3,
+        "1": 0,
+        "5": 0,
+        "6": 0,
+        "3": 0
+      },
+      {//3
+        "a": 2,
+        "b": 5,
+        "c": 4,
+        "d": 6,
+        "2": 0,
+        "5": 0,
+        "4": 0,
+        "6": 0
+      },
+      {//4
+        "a": 1,
+        "b": 6,
+        "c": 2,
+        "d": 3,
+        "1": 0,
+        "6": 0,
+        "2": 0,
+        "3": 0
+      },
+      {//5
+        "a": 1,
+        "b": 4,
+        "c": 5,
+        "d": 3,
+        "1": 0,
+        "4": 0,
+        "5": 0,
+        "3": 0
+      },
+      {//6
+        "a": 6,
+        "b": 3,
+        "c": 2,
+        "d": 4,
+        "6": 0,
+        "3": 0,
+        "2": 0,
+        "4": 0
+      },
+      {//7
+        "a": 5,
+        "b": 6,
+        "c": 1,
+        "d": 2,
+        "5": 0,
+        "6": 0,
+        "1": 0,
+        "2": 0
+      },
+      {//8
+        "a": 2,
+        "b": 3,
+        "c": 5,
+        "d": 4,
+        "2": 0,
+        "3": 0,
+        "5": 0,
+        "4": 0
+      },
+      {//9
+        "a": 1,
+        "b": 3,
+        "c": 4,
+        "d": 6,
+        "1": 0,
+        "3": 0,
+        "4": 0,
+        "6": 0
+      },
+      {//10
+        "a": 4,
+        "b": 2,
+        "c": 1,
+        "d": 5,
+        "4": 0,
+        "2": 0,
+        "1": 0,
+        "5": 0
+      },
+      {//11
+        "a": 2,
+        "b": 6,
+        "c": 5,
+        "d": 3,
+        "2": 0,
+        "6": 0,
+        "5": 0,
+        "3": 0
+      },
+      {//12
+        "a": 2,
+        "b": 6,
+        "c": 1,
+        "d": 4,
+        "2": 0,
+        "6": 0,
+        "1": 0,
+        "4": 0
+      },
+      {//13
+        "a": 6,
+        "b": 5,
+        "c": 3,
+        "d": 4,
+        "6": 0,
+        "5": 0,
+        "3": 0,
+        "4": 0
+      },
+      {//14
+        "a": 1,
+        "b": 3,
+        "c": 2,
+        "d": 5,
+        "1": 0,
+        "3": 0,
+        "2": 0,
+        "5": 0
+      },
+      {//15
+        "a": 4,
+        "b": 5,
+        "c": 1,
+        "d": 6,
+        "4": 0,
+        "5": 0,
+        "1": 0,
+        "6": 0
+      },
+      {//1
+        "a": 3,
+        "b": 4,
+        "c": 1,
+        "d": 2,
+        "3": 0,
+        "4": 0,
+        "1": 0,
+        "2": 0
+
       },
     ],
   },
@@ -49,6 +499,24 @@ page03Container = document.querySelector("#page03Container");
 mainContainer = document.querySelector("#mainContainer");
 const nameInputContainer = document.querySelector("#nameInputContainer");
 const playerNumberDropdown = document.querySelector("#numberOfPlayersDropDown");
+
+//Randomizerbutton
+button04randomize = document.querySelector("#button04randomize");
+button04randomize.addEventListener("click", () => {
+  if (numberOfPlayers == 6) {
+  if (chosenMatchOrder == 1) {
+    chosenMatchOrder = 2; 
+  } else if (chosenMatchOrder == 2){
+    chosenMatchOrder = 3; 
+  } else {
+    chosenMatchOrder = 1; 
+  }
+  
+
+}
+reloadPreviewPlayerOrder();
+});
+
 
 button04next.addEventListener("click", () => {
   // playerNamesArray = [];
@@ -86,7 +554,14 @@ buttonPage03.addEventListener("click", () => {
     nameInputContainer.removeChild(nameInputContainer.firstChild);
   }
   chosenMatchOrder = 1; //This will randomize later.
+  //Randomizing between available options.
+  if (numberOfPlayers == 6) {//randomizer for 6 players! Make new ones for different player numbers.
+
+    chosenMatchOrder = Math.floor(Math.random() * 3) + 1;
+    console.log(chosenMatchOrder);
+  }
   console.log(playerNamesArray);
+  match = 1;
   loadFirstScreen();
 });
 buttonPage03Back.addEventListener("click", () => {
@@ -168,23 +643,7 @@ function loadNameInputs() {
 
 //}
 
-function loadFirstScreen() {
-  match = 1;
-  
-  previewCurrentPlayerA = document.querySelector("#previewCurrentPlayerA");
-  previewCurrentPlayerB = document.querySelector("#previewCurrentPlayerB");
-  previewCurrentPlayerC = document.querySelector("#previewCurrentPlayerC");
-  previewCurrentPlayerD = document.querySelector("#previewCurrentPlayerD");
-
-  currentPlayerA = document.querySelector("#currentPlayerA");
-  currentPlayerB = document.querySelector("#currentPlayerB");
-  currentPlayerC = document.querySelector("#currentPlayerC");
-  currentPlayerD = document.querySelector("#currentPlayerD");
-  nextPlayerA = document.querySelector("#nextPlayerA");
-  nextPlayerB = document.querySelector("#nextPlayerB");
-  nextPlayerC = document.querySelector("#nextPlayerC");
-  nextPlayerD = document.querySelector("#nextPlayerD");
-
+function reloadPreviewPlayerOrder() {
   previewCurrentPlayerA.innerHTML =
   playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["a"] - 1];
   previewCurrentPlayerB.innerHTML =
@@ -193,6 +652,20 @@ function loadFirstScreen() {
   playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["c"] - 1];
   previewCurrentPlayerD.innerHTML =
   playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["d"] - 1];
+}
+
+function loadFirstScreen() { 
+  
+
+  reloadPreviewPlayerOrder();
+  // previewCurrentPlayerA.innerHTML =
+  // playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["a"] - 1];
+  // previewCurrentPlayerB.innerHTML =
+  // playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["b"] - 1];
+  // previewCurrentPlayerC.innerHTML =
+  // playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["c"] - 1];
+  // previewCurrentPlayerD.innerHTML =
+  // playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["d"] - 1];
 
   currentPlayerA.innerHTML =
   playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["a"] - 1];
