@@ -4,7 +4,7 @@ html {
 }
 body {
   height: 100%;
-  overscroll-behavior: contain;
+  overscroll-behavior-y: none;
 
 }
 @font-face {
