@@ -599,8 +599,8 @@ buttonPage02.addEventListener("click", () => {
   console.log(gameTime);
   if (isNaN(gameTime) == true) {
     alert("Please use numbers.");
-  } else if (parseInt(gameTime) < 10 || parseInt(gameTime) > 1000) {
-    alert("Please have a game time between 10 and 1000 min.");
+  } else if (parseInt(gameTime) < 90 || parseInt(gameTime) > 120) {
+    alert("Please have a game time between 90 and 120 min.");
   } else if (gameTime.length > 1 && gameTime.charAt(0) == "0") {
     alert("Please re-write the game time.");
   } else {
@@ -617,7 +617,11 @@ buttonPage02.addEventListener("click", () => {
     let page03PlayerNumberSpan = document.querySelector(
       "#page03PlayerNumberSpan"
     );
-
+    let page03MatchTime = document.querySelector(
+      "#page03MatchTime"
+    );
+    page03MatchTime.innerHTML = calculateMatchTime("matchTime");
+    
     page03PlayerNumberSpan.innerHTML = numberOfPlayers;
 
     page02Container.style.display = "none";
@@ -625,6 +629,20 @@ buttonPage02.addEventListener("click", () => {
     loadNameInputs();
   }
 });
+
+function calculateMatchTime(message) {
+  if (message == "matchTime" && numberOfPlayers == 6) {
+
+    return (
+      ((parseInt(gameTime) / 15) - parseInt(gameTime) / 15 * (0.0625))
+    );
+  } else if (message == "breakTime" && numberOfPlayers == 6) {
+
+    return (
+      (parseInt(gameTime) / 15 * (0.0625))
+    );
+  }
+}
 
 function loadNameInputs() {
   for (let i = 1; i <= numberOfPlayers; i++) {

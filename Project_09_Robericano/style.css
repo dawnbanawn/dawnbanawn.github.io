@@ -8,6 +8,7 @@ body {
   height: 100%;
   overscroll-behavior-y: none;
   overflow: auto;
+  touch-action: pan-down;
 
 }
 @font-face {
@@ -251,7 +252,7 @@ h4 {
 }
 .button01Div {
   position: absolute;
-  top: 550px;
+  top: 580px;
   z-index: 3;
   left: 0;
   right: 0;
