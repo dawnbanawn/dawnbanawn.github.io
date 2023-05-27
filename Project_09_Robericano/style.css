@@ -11,6 +11,18 @@ body {
   touch-action: pan-down;
 
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}
 @font-face {
   font-family: Playbill;
   src: url("./fonts/Playbill_Regular.ttf") format("truetype");
@@ -316,6 +328,7 @@ h4 {
   border: 1.5px solid rgba(255, 153, 0, 0.737);
   width: 80%;
   margin: auto;
+  margin-top: -15px;
 }
 #previousMatchDiv p {
   font-size: 16px;
@@ -328,8 +341,9 @@ justify-content: space-between;
   color: orange;
   border: 1px solid rgba(255, 153, 0, 0.737);
   scale: 1.3;
-  margin-right: 10px;
- width: 40px;
+ width: 20px;
+ margin: 0px 5px;
+ text-align: center;
 
 }
 #buttonAcceptScore {
@@ -338,14 +352,21 @@ justify-content: space-between;
   border: 1px solid rgba(255, 153, 0, 0.737);
 margin-right: 0px;
 margin-left: 5px;
+font-size: 16px;
+width: 40px;
 
-width: 45px;
 }
 #pointsInfo01 {
   justify-content: center;
   margin: auto;
 }
-
+.plusAndMinusButtons {
+  background-color: black;
+  border: 1px solid rgba(255, 153, 0, 0.737);
+color: white;
+width: 20px;
+scale: 1.3;
+}
 
 @media (min-width: 768px) {
   #mainContainer h1 {

@@ -26,6 +26,17 @@ nextPlayerB = document.querySelector("#nextPlayerB");
 nextPlayerC = document.querySelector("#nextPlayerC");
 nextPlayerD = document.querySelector("#nextPlayerD");
 
+const minusButton01 = document.querySelector("#minusButton01");
+const plusButton01 = document.querySelector("#plusButton01");
+const minusButton02 = document.querySelector("#minusButton02");
+const plusButton02 = document.querySelector("#plusButton02");
+const points = document.querySelector("#points");
+const points2 = document.querySelector("#points2");
+
+
+let page04Points = 0;
+let page04Points02 = 0;
+
 let gameTime;
 let numberOfPlayers;
 let playerNamesArray = [];
@@ -710,3 +721,24 @@ function loadFirstScreen() {
 //spear ds poäng
   console.log("points" + matchOrders[numberOfPlayers][chosenMatchOrder][match -1][(matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["d"]).toString()]);
 }
+//Buttons for changing points on page 4.
+minusButton01.addEventListener("click", () => {
+  if (page04Points > 0) {
+    page04Points--;
+    points.value = page04Points;
+  }
+});
+minusButton02.addEventListener("click", () => {
+  if (page04Points02 > 0) {
+    page04Points02--;
+    points2.value = page04Points02;
+  }
+});
+plusButton01.addEventListener("click", () => {
+    page04Points++;
+    points.value = page04Points;
+});
+plusButton02.addEventListener("click", () => {
+  page04Points02++;
+  points2.value = page04Points02;
+});
