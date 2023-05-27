@@ -71,19 +71,27 @@
       <h2>Robericano</h2>
 
       <p>The first players will be:</p>
-      <br /><br>
-      <p><span id="previewCurrentPlayerA">Player</span> and <span id="previewCurrentPlayerB">Player</span></p>
-      <br>
-      <p style="line-height: 10%;">vs</p><br>
-      <p><span id="previewCurrentPlayerC">Player</span> and <span id="previewCurrentPlayerD">Player</span></p>
-      <br><br>
-      <p>Press Randomize to change start positions, 
-       <br> or Confirm to continue.</p>
+      <br /><br />
+      <p>
+        <span id="previewCurrentPlayerA">Player</span> and
+        <span id="previewCurrentPlayerB">Player</span>
+      </p>
+      <br />
+      <p style="line-height: 10%">vs</p>
+      <br />
+      <p>
+        <span id="previewCurrentPlayerC">Player</span> and
+        <span id="previewCurrentPlayerD">Player</span>
+      </p>
+      <br /><br />
+      <p>
+        Press Randomize to change start positions, <br />
+        or Confirm to continue.
+      </p>
 
       <div class="button01Div">
         <button id="button04back">Back</button>
         <button id="button04randomize">Randomize</button
-
         ><button id="button04next">Confirm</button>
       </div>
     </div>
@@ -95,20 +103,67 @@
       <p id="timeLeftP">Time left:</p>
       <br />
       <div id="currentPlayersDiv">
-        <p><span id="currentPlayerA">Player</span> and <span id="currentPlayerB">Player</span></p>
+        <p>
+          <span id="currentPlayerA">Player</span> and
+          <span id="currentPlayerB">Player</span>
+        </p>
         <p>vs</p>
-        <p><span id="currentPlayerC">Player</span> and <span id="currentPlayerD">Player</span></p>
+        <p>
+          <span id="currentPlayerC">Player</span> and
+          <span id="currentPlayerD">Player</span>
+        </p>
       </div>
       <div id="nextPlayersDiv">
-        <br>
         <p>Next match</p>
 
-        <p><span id="nextPlayerA">Player</span> and <span id="nextPlayerB">Player</span></p>
-        <p style="line-height: 10%;">vs</p>
-        <p><span id="nextPlayerC">Player</span> and <span id="nextPlayerD">Player</span></p>
+        <p>
+          <span id="nextPlayerA">Player</span> and
+          <span id="nextPlayerB">Player</span>
+        </p>
+        <p style="line-height: 10%">vs</p>
+        <p>
+          <span id="nextPlayerC">Player</span> and
+          <span id="nextPlayerD">Player</span>
+        </p>
+      </div>
+      <div id="previousMatchDiv">
+        <p><span id="pointsInfo01">Points (match 1)    <button id="buttonAcceptScore">Ok</button></span></p>
+        
+
+        <p>
+          <span>
+          <span id="previousPlayerA">Player</span>,
+          <span id="previousPlayerB">Player</span>
+        </span>
+          <input
+            type="number"
+            id="points"
+            name="point"
+            placeholder="0"
+            required
+            minlength="1"
+            maxlength="2"
+            size="3"
+          />
+        </p>
+
+        <p><span>
+
+          <span id="previousPlayerC">Player</span>,
+          <span id="previousPlayerD">Player</span></span>
+          <input
+          type="number"
+          id="points2"
+          name="point"
+          placeholder="0"
+          required
+          minlength="1"
+          maxlength="2"
+          size="3"
+        />
+        </p>
       </div>
 
-      
       <div class="button01Div">
         <button id="pauseButton">Start</button
         ><button id="resultButton">Results</button>
