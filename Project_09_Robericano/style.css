@@ -252,7 +252,7 @@ h4 {
 }
 .button01Div {
   position: absolute;
-  top: 560px;
+  top: 580px;
   z-index: 3;
   left: 0;
   right: 0;
@@ -329,7 +329,7 @@ justify-content: space-between;
   border: 1px solid rgba(255, 153, 0, 0.737);
   scale: 1.3;
   margin-right: 10px;
-
+ width: 40px;
 
 }
 #buttonAcceptScore {
