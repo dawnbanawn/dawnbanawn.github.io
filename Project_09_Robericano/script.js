@@ -36,6 +36,8 @@ const points2 = document.querySelector("#points2");
 const page04PreviousMatch = document.querySelector("#page04PreviousMatch");
 
 const timeLeftP = document.querySelector("#timeLeftP");
+const timeLeftSpan = document.querySelector("#timeLeftSpan");
+
 
 
 
@@ -695,7 +697,7 @@ function reloadPreviewPlayerOrder() {
 
 function loadFirstScreen() { 
   
-  timeLeftP.innerHTML = "Time left: " + calculateMatchTime("matchTime") + " min";
+  timeLeftSpan.innerHTML = calculateMatchTime("matchTime") + " min";
 
   reloadPreviewPlayerOrder();
   // previewCurrentPlayerA.innerHTML =
@@ -750,21 +752,41 @@ plusButton02.addEventListener("click", () => {
 });
 
 //Timer
-// 
-
-
 let seconds = calculateMatchTime("matchTime") * 60;
+var myTimer;
+let pause = false;
+let initializeClock = false;
 pauseButton.addEventListener("click", () => {
   if (pauseButton.innerHTML == "Start") {
     pauseButton.innerHTML = "Pause";
-    var timer = setInterval(startTimer, {
-     }, 1000);
+    pause = false;
+    if (initializeClock == false) {
+      initializeClock = true;
+    clock();
+    }
   } else {
-    pauseButton.innerHTML = "Start"
+    pauseButton.innerHTML = "Start";
+    pause = true;
   }
 });
-function startTimer() {
-  console.log(seconds);
-
-  seconds--;
+function clock() {
+    myTimer = setInterval(myClock, 1000);
+    var c = 450; //Initially set to 1 hour
+    function myClock() {
+      if (pause == false){
+        --c
+      }
+        var seconds = c % 60; // Seconds that cannot be written in minutes
+        var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
+        var minutes = secondsInMinutes % 60; // Minutes that cannot be written in hours
+        //var hours = (secondsInMinutes - minutes) / 60;
+        // Now in hours, minutes and seconds, you have the time you need.
+        console.clear();
+        console.log((minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds));
+        timeLeftSpan.innerHTML = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+        if (c == 0) {
+            clearInterval(myTimer);
+        }
+    }
 }
+
