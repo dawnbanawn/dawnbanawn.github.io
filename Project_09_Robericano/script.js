@@ -39,11 +39,12 @@ const timeLeftP = document.querySelector("#timeLeftP");
 const timeLeftSpan = document.querySelector("#timeLeftSpan");
 
 
+const currentMatchId = document.querySelector("#currentMatchId");
 
 
 let page04Points = 0;
 let page04Points02 = 0;
-
+let currentMatch = 1;
 let gameTime;
 let numberOfPlayers;
 let playerNamesArray = [];
@@ -638,7 +639,7 @@ buttonPage02.addEventListener("click", () => {
     let page03MatchTime = document.querySelector(
       "#page03MatchTime"
     );
-    page03MatchTime.innerHTML = calculateMatchTime("matchTime");
+    page03MatchTime.innerHTML = calculateMatchTime("matchTime00:00");
     
     page03PlayerNumberSpan.innerHTML = numberOfPlayers;
 
@@ -659,7 +660,26 @@ function calculateMatchTime(message) {
     return (
       (parseInt(gameTime) / 15 * (0.0625))
     );
+
   }
+  else if (message == "matchTime00:00" && numberOfPlayers == 6) {
+    let tempTime = ((parseInt(gameTime) / 15) - parseInt(gameTime) / 15 * (0.0625));
+    let totalSeconds = Math.floor(tempTime * 60);
+    var seconds = totalSeconds % 60; // Seconds that cannot be written in minutes
+    var secondsInMinutes = (totalSeconds - seconds) / 60; // Gives the seconds that COULD be given in minutes
+    var minutes = secondsInMinutes % 60;
+    
+
+    return (
+      (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds)
+    );
+    }
+    else if (message == "timeInSeconds" && numberOfPlayers == 6) {
+      return (
+        Math.floor((((parseInt(gameTime) / 15) - parseInt(gameTime) / 15 * (0.0625)) * 60))
+      );
+  
+    }
 }
 
 function loadNameInputs() {
@@ -696,8 +716,11 @@ function reloadPreviewPlayerOrder() {
 }
 
 function loadFirstScreen() { 
-  
-  timeLeftSpan.innerHTML = calculateMatchTime("matchTime") + " min";
+  if (numberOfPlayers == 6) {
+    currentMatchId.innerHTML = "Match: " + currentMatch + "/15";
+  }
+  console.log( Math.floor(((parseInt(gameTime) / 15) - parseInt(gameTime) / 15 * (0.0625)) * 60));
+  timeLeftSpan.innerHTML = calculateMatchTime("matchTime00:00") ;
 
   reloadPreviewPlayerOrder();
   // previewCurrentPlayerA.innerHTML =
@@ -771,7 +794,7 @@ pauseButton.addEventListener("click", () => {
 });
 function clock() {
     myTimer = setInterval(myClock, 1000);
-    var c = 450; //Initially set to 1 hour
+    var c = calculateMatchTime("timeInSeconds"); //Initially set to 1 hour
     function myClock() {
       if (pause == false){
         --c
@@ -789,4 +812,3 @@ function clock() {
         }
     }
 }
-
