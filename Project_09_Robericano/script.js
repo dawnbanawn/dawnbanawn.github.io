@@ -33,6 +33,11 @@ const plusButton02 = document.querySelector("#plusButton02");
 const points = document.querySelector("#points");
 const points2 = document.querySelector("#points2");
 
+const page04PreviousMatch = document.querySelector("#page04PreviousMatch");
+
+const timeLeftP = document.querySelector("#timeLeftP");
+
+
 
 let page04Points = 0;
 let page04Points02 = 0;
@@ -690,6 +695,7 @@ function reloadPreviewPlayerOrder() {
 
 function loadFirstScreen() { 
   
+  timeLeftP.innerHTML = "Time left: " + calculateMatchTime("matchTime") + " min";
 
   reloadPreviewPlayerOrder();
   // previewCurrentPlayerA.innerHTML =
@@ -742,3 +748,23 @@ plusButton02.addEventListener("click", () => {
   page04Points02++;
   points2.value = page04Points02;
 });
+
+//Timer
+// 
+
+
+let seconds = calculateMatchTime("matchTime") * 60;
+pauseButton.addEventListener("click", () => {
+  if (pauseButton.innerHTML == "Start") {
+    pauseButton.innerHTML = "Pause";
+    var timer = setInterval(startTimer, {
+     }, 1000);
+  } else {
+    pauseButton.innerHTML = "Start"
+  }
+});
+function startTimer() {
+  console.log(seconds);
+
+  seconds--;
+}
