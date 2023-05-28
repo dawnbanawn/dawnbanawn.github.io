@@ -807,11 +807,14 @@ pauseButton.addEventListener("click", () => {
 });
 function clock() {
     myTimer = setInterval(myClock, 1000);
-    var totalGameTime = gameTime * 60;
+    if (numberOfPlayers == 6) {
+      var totalGameTime = calculateMatchTime("timeInSeconds") * 15;
+
+    }
     let gameOn = true;
     var c = calculateMatchTime("timeInSeconds"); //Initially set to 1 hour
     function myClock() {
-      if (pause == false && c > 0){
+      if (pause == false){
         --c;
         --totalGameTime;
       }
@@ -829,7 +832,6 @@ function clock() {
               timeLeftP.style.color = "yellow";
               timeLeftSpan.style.color = "yellow";
               //play sound.
-              console.log(timeLeftP.style.color);
             }
             if (c == 2) {
               //play sound.
@@ -843,10 +845,11 @@ function clock() {
               timeLeftSpan.style.color = "red";
 
               c = calculateMatchTime("breakInSeconds"); 
-        timeLeftSpan.innerHTML = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
 
               gameOn = false;
               timeLeftP.innerHTML = "Break: "
+        
+
 
             }}
         if (gameOn == false) {        
@@ -872,11 +875,12 @@ function clock() {
 
                 gameOn = true;
                 timeLeftP.innerHTML = "Time left: "
+                currentMatch++;
               }
         }
 
         if (totalGameTime == 0) { //Game ended.
-          //clearInterval(myTimer);
+          clearInterval(myTimer);
           console.log("end game");
       }
     }
