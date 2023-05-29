@@ -35,6 +35,9 @@ const points2 = document.querySelector("#points2");
 
 const page04PreviousMatch = document.querySelector("#page04PreviousMatch");
 
+const previousMatchDiv = document.querySelector("#previousMatchDiv");
+previousMatchDiv.style.display = "none";
+
 const timeLeftSpan = document.querySelector("#timeLeftSpan");
 const timeLeftSpanText = document.querySelector("#timeLeftSpanText");
 
@@ -619,7 +622,7 @@ buttonPage02.addEventListener("click", () => {
   console.log(gameTime);
   if (isNaN(gameTime) == true) {
     alert("Please use numbers.");
-  } else if (parseInt(gameTime) < 8 || parseInt(gameTime) > 120) {
+  } else if (parseInt(gameTime) < 4 || parseInt(gameTime) > 120) {
     alert("Please have a game time between 90 and 120 min.");
   } else if (gameTime.length > 1 && gameTime.charAt(0) == "0") {
     alert("Please re-write the game time.");
@@ -857,17 +860,22 @@ function clock() {
             }
             if (c == 0) {
               //play sound.
-              timeLeftSpan.style.color = "red";
-              timeLeftSpanText.style.color = "red";
-
-              c = calculateMatchTime("breakInSeconds"); 
-
-              gameOn = false;
-              timeLeftSpanText.innerHTML = "Break: "
-              var seconds = c % 60; // Seconds that cannot be written in minutes
-              var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
-              var minutes = secondsInMinutes % 60; // 
-              timeLeftSpan.innerHTML = ((minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds));
+              // if (numberOfPlayers == 6 && currentMatch == 15) {
+              //   gameOn == false
+              // } else {
+                timeLeftSpan.style.color = "red";
+                timeLeftSpanText.style.color = "red";
+  
+                c = calculateMatchTime("breakInSeconds"); 
+  
+                gameOn = false;
+                timeLeftSpanText.innerHTML = "Break: "
+                var seconds = c % 60; // Seconds that cannot be written in minutes
+                var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
+                var minutes = secondsInMinutes % 60; // 
+                timeLeftSpan.innerHTML = ((minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds));
+  //
+   //           }
 
 
             }}
@@ -902,13 +910,23 @@ function clock() {
                 if (numberOfPlayers == 6) {
                   currentMatchId.innerHTML = "Match: " + currentMatch + "/15";
                 }
+                if (currentMatch == 16) { //Game ended.
+                  clearInterval(myTimer);
+                  currentMatchId.innerHTML = "Match: " + (currentMatch -1) + "/15";
+              timeLeftSpanText.innerHTML = "Time´s Out!"
+              timeLeftSpan.innerHTML = "";
+
+                  console.log("end game");
+                  
+              }
+                //PointsDiv
+                previousMatchDiv.style.display = "block";
+                page04PreviousMatch.innerHTML = currentMatch - 1;
+
 
               }
         }
 
-        if (totalGameTime == 0) { //Game ended.
-          clearInterval(myTimer);
-          console.log("end game");
-      }
+
     }
 }
