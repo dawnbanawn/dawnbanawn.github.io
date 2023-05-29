@@ -35,12 +35,13 @@ const points2 = document.querySelector("#points2");
 
 const page04PreviousMatch = document.querySelector("#page04PreviousMatch");
 
-const timeLeftP = document.querySelector("#timeLeftP");
 const timeLeftSpan = document.querySelector("#timeLeftSpan");
+const timeLeftSpanText = document.querySelector("#timeLeftSpanText");
 
 
 const currentMatchId = document.querySelector("#currentMatchId");
-
+let gameOn = true;
+var c = 10;
 let colorGreen = "rgb(0, 211, 0)";
 let page04Points = 0;
 let page04Points02 = 0;
@@ -730,8 +731,8 @@ function loadFirstScreen() {
 
   reloadPreviewPlayerOrder();
 
-  timeLeftP.style.color = "yellow";
   timeLeftSpan.style.color = "yellow";
+  timeLeftSpanText.style.color = "yellow";
   // previewCurrentPlayerA.innerHTML =
   // playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["a"] - 1];
   // previewCurrentPlayerB.innerHTML =
@@ -790,8 +791,20 @@ let pause = false;
 let initializeClock = false;
 pauseButton.addEventListener("click", () => {
   if (pauseButton.innerHTML == "Start") {
-    timeLeftP.style.color = colorGreen;
-    timeLeftSpan.style.color = colorGreen;
+    if (gameOn == true) {
+      if (c > 3) {
+        timeLeftSpan.style.color = colorGreen;
+        timeLeftSpanText.style.color = colorGreen;
+      } else {
+        timeLeftSpan.style.color = "yellow";
+        timeLeftSpanText.style.color = "yellow";      
+      }
+
+    } else {
+      timeLeftSpan.style.color = "red";
+      timeLeftSpanText.style.color = "red";      
+    }
+
     pauseButton.innerHTML = "Pause";
     pause = false;
     if (initializeClock == false) {
@@ -799,8 +812,9 @@ pauseButton.addEventListener("click", () => {
     clock();
     }
   } else {
-    timeLeftP.style.color = "yellow";
+
     timeLeftSpan.style.color = "yellow";
+    timeLeftSpanText.style.color = "yellow";
     pauseButton.innerHTML = "Start";
     pause = true;
   }
@@ -811,8 +825,7 @@ function clock() {
       var totalGameTime = calculateMatchTime("timeInSeconds") * 15;
 
     }
-    let gameOn = true;
-    var c = calculateMatchTime("timeInSeconds"); //Initially set to 1 hour
+    c = calculateMatchTime("timeInSeconds"); //Initially set to 1 hour
     function myClock() {
       if (pause == false){
         --c;
@@ -825,12 +838,15 @@ function clock() {
         //var hours = (secondsInMinutes - minutes) / 60;
         // Now in hours, minutes and seconds, you have the time you need.
         //console.clear();
-        console.log((minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds));
-        timeLeftSpan.innerHTML = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+        
+        
+        //console.log((minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds));
+        timeLeftSpan.innerHTML = ((minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds));
+        console.log(timeLeftSpan.innerHTML);
         if (gameOn == true) {        
             if (c == 3) {
-              timeLeftP.style.color = "yellow";
               timeLeftSpan.style.color = "yellow";
+              timeLeftSpanText.style.color = "yellow";
               //play sound.
             }
             if (c == 2) {
@@ -841,21 +857,24 @@ function clock() {
             }
             if (c == 0) {
               //play sound.
-              timeLeftP.style.color = "red";
               timeLeftSpan.style.color = "red";
+              timeLeftSpanText.style.color = "red";
 
               c = calculateMatchTime("breakInSeconds"); 
 
               gameOn = false;
-              timeLeftP.innerHTML = "Break: "
-        
+              timeLeftSpanText.innerHTML = "Break: "
+              var seconds = c % 60; // Seconds that cannot be written in minutes
+              var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
+              var minutes = secondsInMinutes % 60; // 
+              timeLeftSpan.innerHTML = ((minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds));
 
 
             }}
         if (gameOn == false) {        
               if (c == 3) {
-                timeLeftP.style.color = "yellow";
-              timeLeftSpan.style.color = "yellow";
+                timeLeftSpan.style.color = "yellow";
+                timeLeftSpanText.style.color = "yellow";
 
                 //play sound.
               }
@@ -867,15 +886,23 @@ function clock() {
               }
               if (c == 0) {
                 //play sound.
-                timeLeftP.style.color = colorGreen;
-              timeLeftSpan.style.color = colorGreen;
+                timeLeftSpan.style.color = colorGreen;
+                timeLeftSpanText.style.color = colorGreen;
 
                 c = calculateMatchTime("timeInSeconds"); 
-        timeLeftSpan.innerHTML = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
 
                 gameOn = true;
-                timeLeftP.innerHTML = "Time left: "
+                timeLeftSpanText.innerHTML = "Time left: "
+                var seconds = c % 60; // Seconds that cannot be written in minutes
+                var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
+                var minutes = secondsInMinutes % 60; // 
+        timeLeftSpan.innerHTML = ((minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds));
+
                 currentMatch++;
+                if (numberOfPlayers == 6) {
+                  currentMatchId.innerHTML = "Match: " + currentMatch + "/15";
+                }
+
               }
         }
 
