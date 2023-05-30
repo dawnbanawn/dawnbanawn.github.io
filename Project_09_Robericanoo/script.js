@@ -673,7 +673,7 @@ buttonPage03Back.addEventListener("click", () => {
 });
 buttonPage01.addEventListener("click", () => {
   //buttonPage02.style.backgroundColor  = "white";
-  //openFullscreen(); //For fullscreen.
+  openFullscreen(); //For fullscreen.
   mainContainer.style.display = "none";
   page02Container.style.display = "block";
   //buttonPage02.style.backgroundColor  = "black";
@@ -1029,6 +1029,8 @@ function clock() {
 
 function reloadMainMatchPage() {
   //Score div
+  page04Points = 0;
+  page04Points02 = 0;
   previousMatchDiv.style.display = "block";
   previousPlayerA.innerHTML =
     playerNamesArray[
@@ -1134,6 +1136,9 @@ buttonResultBack.addEventListener("click", () => {
 //Switch to main page
 function switchToMainMatchPage() {
   page05Container.style.display = "block";
+
+  //none to all match score pages aswell
+
   pageResultContainer.style.display = "none";
 
 }
