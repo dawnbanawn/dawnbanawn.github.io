@@ -22,7 +22,9 @@ function openFullscreen() {
     elem.msRequestFullscreen();
   }
 }
-
+const pageResultContainer = document.querySelector("#pageResultContainer");
+const buttonResultBack = document.querySelector("#buttonResultBack");
+pageResultContainer.style.display = "none";
 const buttonPage01 = document.querySelector("#button01");
 const buttonPage02 = document.querySelector("#button02");
 const buttonPage03 = document.querySelector("#button03");
@@ -933,6 +935,8 @@ function clock() {
       if (c == 3) {
         timeLeftSpan.style.color = "yellow";
         timeLeftSpanText.style.color = "yellow";
+        switchToMainMatchPage();
+
         //play sound.
       }
       if (c == 2) {
@@ -943,6 +947,7 @@ function clock() {
       }
       if (c == 0) {
         //play sound.
+
         // if (numberOfPlayers == 6 && currentMatch == 15) {
         //   gameOn == false
         // } else {
@@ -950,6 +955,7 @@ function clock() {
         timeLeftSpanText.style.color = "red";
 
         c = calculateMatchTime("breakInSeconds");
+        switchToMainMatchPage();
 
         gameOn = false;
         timeLeftSpanText.innerHTML = "Break: ";
@@ -968,6 +974,8 @@ function clock() {
       if (c == 3) {
         timeLeftSpan.style.color = "yellow";
         timeLeftSpanText.style.color = "yellow";
+        switchToMainMatchPage();
+
 
         //play sound.
       }
@@ -997,6 +1005,7 @@ function clock() {
         match++;
 
         reloadMainMatchPage();
+        switchToMainMatchPage();
 
         if (numberOfPlayers == 6) {
           currentMatchId.innerHTML = "Match: " + match + "/15";
@@ -1111,3 +1120,20 @@ buttonAcceptScore.addEventListener("click", () => {
   points2.value = 0;
   console.log(matchOrders);
 });
+
+//Resultpage
+resultButton.addEventListener("click", () => {
+  page05Container.style.display = "none";
+  pageResultContainer.style.display = "block";
+});
+buttonResultBack.addEventListener("click", () => {
+  page05Container.style.display = "block";
+  pageResultContainer.style.display = "none";
+});
+
+//Switch to main page
+function switchToMainMatchPage() {
+  page05Container.style.display = "block";
+  pageResultContainer.style.display = "none";
+
+}
