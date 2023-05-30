@@ -45,6 +45,10 @@ nextPlayerA = document.querySelector("#nextPlayerA");
 nextPlayerB = document.querySelector("#nextPlayerB");
 nextPlayerC = document.querySelector("#nextPlayerC");
 nextPlayerD = document.querySelector("#nextPlayerD");
+previousPlayerA = document.querySelector("#previousPlayerA");
+previousPlayerB = document.querySelector("#previousPlayerB");
+previousPlayerC = document.querySelector("#previousPlayerC");
+previousPlayerD = document.querySelector("#previousPlayerD");
 
 const minusButton01 = document.querySelector("#minusButton01");
 const plusButton01 = document.querySelector("#plusButton01");
@@ -58,6 +62,7 @@ const page04PreviousMatch = document.querySelector("#page04PreviousMatch");
 const previousMatchDiv = document.querySelector("#previousMatchDiv");
 previousMatchDiv.style.display = "none";
 
+const buttonAcceptScore = document.querySelector("#buttonAcceptScore");
 const timeLeftSpan = document.querySelector("#timeLeftSpan");
 const timeLeftSpanText = document.querySelector("#timeLeftSpanText");
 
@@ -989,7 +994,7 @@ function clock() {
           ":" +
           (seconds < 10 ? "0" + seconds : seconds);
 
-          match++;
+        match++;
 
         reloadMainMatchPage();
 
@@ -1014,46 +1019,95 @@ function clock() {
 }
 
 function reloadMainMatchPage() {
-  
+  //Score div
+  previousMatchDiv.style.display = "block";
+  previousPlayerA.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["a"] - 1
+    ];
+  previousPlayerB.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["b"] - 1
+    ];
+  previousPlayerC.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["c"] - 1
+    ];
+  previousPlayerD.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["d"] - 1
+    ];
+
   if (numberOfPlayers == 6 && match < 16) {
-  currentPlayerA.innerHTML =
-    playerNamesArray[
-      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["a"] - 1
-    ];
-  currentPlayerB.innerHTML =
-    playerNamesArray[
-      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["b"] - 1
-    ];
-  currentPlayerC.innerHTML =
-    playerNamesArray[
-      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["c"] - 1
-    ];
-  currentPlayerD.innerHTML =
-    playerNamesArray[
-      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["d"] - 1
-    ];
- if (match < 15) {
-  nextPlayerA.innerHTML =
-    playerNamesArray[
-      matchOrders[numberOfPlayers][chosenMatchOrder][match]["a"] - 1
-    ];
-  nextPlayerB.innerHTML =
-    playerNamesArray[
-      matchOrders[numberOfPlayers][chosenMatchOrder][match]["b"] - 1
-    ];
-  nextPlayerC.innerHTML =
-    playerNamesArray[
-      matchOrders[numberOfPlayers][chosenMatchOrder][match]["c"] - 1
-    ];
-  nextPlayerD.innerHTML =
-    playerNamesArray[
-      matchOrders[numberOfPlayers][chosenMatchOrder][match]["d"] - 1
-    ];
-  } else {
-    nextPlayerA.innerHTML = "---";
-    nextPlayerB.innerHTML = "---";
-    nextPlayerC.innerHTML = "---";
-    nextPlayerD.innerHTML = "---";
-  }
+    currentPlayerA.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["a"] - 1
+      ];
+    currentPlayerB.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["b"] - 1
+      ];
+    currentPlayerC.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["c"] - 1
+      ];
+    currentPlayerD.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["d"] - 1
+      ];
+    if (match < 15) {
+      nextPlayerA.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["a"] - 1
+        ];
+      nextPlayerB.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["b"] - 1
+        ];
+      nextPlayerC.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["c"] - 1
+        ];
+      nextPlayerD.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["d"] - 1
+        ];
+    } else {
+      nextPlayerA.innerHTML = "---";
+      nextPlayerB.innerHTML = "---";
+      nextPlayerC.innerHTML = "---";
+      nextPlayerD.innerHTML = "---";
+    }
   }
 }
+
+//Save score
+buttonAcceptScore.addEventListener("click", () => {
+  previousMatchDiv.style.display = "none";
+  console.log(
+    "points" +
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1][
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1][
+          "d"
+        ].toString()
+      ]
+  );
+  //console.log(points.value);
+
+  matchOrders[numberOfPlayers][chosenMatchOrder][match - 2][
+    matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["a"]
+  ] = points.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][match - 2][
+    matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["b"]
+  ] = points.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][match - 2][
+    matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["c"]
+  ] = points2.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][match - 2][
+    matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["d"]
+  ] = points2.value;
+
+  points.value = 0;
+  points2.value = 0;
+  console.log(matchOrders);
+});
