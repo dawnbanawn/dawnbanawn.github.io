@@ -38,6 +38,8 @@ previewCurrentPlayerA = document.querySelector("#previewCurrentPlayerA");
 previewCurrentPlayerB = document.querySelector("#previewCurrentPlayerB");
 previewCurrentPlayerC = document.querySelector("#previewCurrentPlayerC");
 previewCurrentPlayerD = document.querySelector("#previewCurrentPlayerD");
+const tableDiv = document.querySelector("#tableDiv");
+let table = document.createElement("table");
 
 currentPlayerA = document.querySelector("#currentPlayerA");
 currentPlayerB = document.querySelector("#currentPlayerB");
@@ -69,6 +71,13 @@ const timeLeftSpan = document.querySelector("#timeLeftSpan");
 const timeLeftSpanText = document.querySelector("#timeLeftSpanText");
 
 const currentMatchId = document.querySelector("#currentMatchId");
+let player01points = 0;
+let player02points = 0;
+let player03points = 0;
+let player04points = 0;
+let player05points = 0;
+let player06points = 0;
+
 let gameOn = true;
 var c = 10;
 let colorGreen = "rgb(0, 211, 0)";
@@ -1127,6 +1136,7 @@ buttonAcceptScore.addEventListener("click", () => {
 resultButton.addEventListener("click", () => {
   page05Container.style.display = "none";
   pageResultContainer.style.display = "block";
+  loadResultTable();
 });
 buttonResultBack.addEventListener("click", () => {
   page05Container.style.display = "block";
@@ -1141,4 +1151,97 @@ function switchToMainMatchPage() {
 
   pageResultContainer.style.display = "none";
 
+}
+
+
+
+//Result table
+function loadResultTable() {
+
+  player01points = 0;
+  player02points = 0;
+  player03points = 0;
+  player04points = 0;
+  player05points = 0;
+  player06points = 0;
+  table.remove();
+   table = document.createElement("table");
+
+for (let i = 0; i < 15; i++) {
+//console.log(matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"]);
+
+  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"] != undefined) {
+    player01points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"]);
+  }
+  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["2"] != undefined) {
+    player02points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["2"]);
+  }
+  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["3"] != undefined) {
+    player03points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["3"]);
+  }
+  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"] != undefined) {
+    player04points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"]);
+  }
+  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["5"] != undefined) {
+    player05points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["5"]);
+  }
+  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["6"] != undefined) {
+    player06points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["6"]);
+  }
+
+
+}
+//console.log(player01points);
+//console.log(matchOrders[numberOfPlayers][chosenMatchOrder][0]["1"]);
+
+
+const results = [
+  ["Spelare", "Matcher spelade", "Poäng", "---"],
+  [playerNamesArray[0], "n/a", player01points, "n/a"],
+  [playerNamesArray[1], "n/a", player02points, "n/a"],
+  [playerNamesArray[2], "n/a", player03points, "n/a"],
+  [playerNamesArray[3], "n/a", player04points, "n/a"],
+  [playerNamesArray[4], "n/a", player05points, "n/a"],
+  [playerNamesArray[5], "n/a", player06points, "n/a"],
+
+];
+//Skapar ett table element.
+//let table = document.createElement("table");
+//Två for-loopar, den förste för den yttre arrayen och den inne för arrayerna i arrayen.
+for (let i = 0; i < results.length; i++) {
+  //Ett table row skapas för varje element i den yttre arrayen.
+  let tr = document.createElement("tr");
+  //Här loopas var inre array för sig, med med <= för att kunna addera ett extra table data-element i varje rad.
+  for (let j = 0; j <= results[i].length; j++) {
+    //Ser om loopen är i slutet (efter arrayen är slut).
+    if (j == results[i].length) {
+      //Om det är den första inre arrayen, så ska table data fyllas med texten "medel".
+      if (i == 0) {
+        let td = document.createElement("td");
+        td.innerHTML = "";
+        tr.appendChild(td);
+      } else {
+        //Om det inte är den första inre arrayen, så ska table data fyllas med uträknat medelvärde.
+        let td = document.createElement("td");
+        //Medelvärde räknas ut från den inre array som håller på att loopas igenom, och de element som innehåller värdena vi vill åt.
+        //Detta får man ändra om man skulle vilja göra om ursprungsarrayen, t.ex. om man vill lägga till mindre/fler tidsintervall.
+        td.innerHTML =
+          Math.round(
+            ((results[i][1] + results[i][2] + results[i][3]) / 3) * 10.0
+          ) / 10.0;
+        tr.appendChild(td);
+      }
+    } else {
+      //om det inte är efter slutet på den inre arrayen, så hämtas rätt värde till en skapad table data-element, som sedan appendas till tr-elementet.
+
+      let td = document.createElement("td");
+      td.innerHTML = results[i][j];
+      tr.appendChild(td);
+    }
+  }
+  //Varje nyskapat och fyllt med table-data tr-element appendas här till table-elementet.
+  table.appendChild(tr);
+}
+//Tillslut appendas table till tableDiv (div-element i html-dokumentet).
+tableDiv.appendChild(table);
 }
