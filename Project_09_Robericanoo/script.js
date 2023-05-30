@@ -78,6 +78,15 @@ let player04points = 0;
 let player05points = 0;
 let player06points = 0;
 
+let player01MatchCount = 0;
+let player02MatchCount = 0;
+let player03MatchCount = 0;
+let player04MatchCount = 0;
+let player05MatchCount = 0;
+let player06MatchCount = 0;
+
+let playerMatchCount = [0, 0, 0, 0, 0, 0, 0];
+
 let gameOn = true;
 var c = 10;
 let colorGreen = "rgb(0, 211, 0)";
@@ -1037,6 +1046,28 @@ function clock() {
 }
 
 function reloadMainMatchPage() {
+
+  //Check how many matches a player has played.
+  for (let i = 1; i < 7; i++){
+    if (
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["a"] == i){
+        playerMatchCount[i] += 1;
+      }
+      if (
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["b"] == i){
+          playerMatchCount[i] += 1;
+        }
+        if (
+          matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["c"] == i){
+            playerMatchCount[i] += 1;
+          }
+          if (
+            matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["d"] == i){
+              playerMatchCount[i] += 1;
+            }
+  }
+
+console.log(playerMatchCount);
   //Score div
   page04Points = 0;
   page04Points02 = 0;
@@ -1196,13 +1227,13 @@ for (let i = 0; i < 15; i++) {
 
 
 const results = [
-  ["Spelare", "Matcher spelade", "Poäng", "---"],
-  [playerNamesArray[0], "n/a", player01points, "n/a"],
-  [playerNamesArray[1], "n/a", player02points, "n/a"],
-  [playerNamesArray[2], "n/a", player03points, "n/a"],
-  [playerNamesArray[3], "n/a", player04points, "n/a"],
-  [playerNamesArray[4], "n/a", player05points, "n/a"],
-  [playerNamesArray[5], "n/a", player06points, "n/a"],
+  ["Spelare  ", "Matcher", "Poäng", "---"],
+  [playerNamesArray[0], playerMatchCount[1], player01points, "n/a"],
+  [playerNamesArray[1], playerMatchCount[2], player02points, "n/a"],
+  [playerNamesArray[2], playerMatchCount[3], player03points, "n/a"],
+  [playerNamesArray[3], playerMatchCount[4], player04points, "n/a"],
+  [playerNamesArray[4], playerMatchCount[5], player05points, "n/a"],
+  [playerNamesArray[5], playerMatchCount[6], player06points, "n/a"],
 
 ];
 //Skapar ett table element.

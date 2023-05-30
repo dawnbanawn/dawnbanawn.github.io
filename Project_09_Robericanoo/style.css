@@ -399,14 +399,14 @@ scale: 1.3;
   margin: auto;
 }
 td {
-  border: 0.5px solid rgba(255, 153, 0, 0.737);
+  border: 0.1px solid rgba(255, 153, 0, 0.737);
   
 }
 /*ramen runt table ligger dock inte kloss med någon annan cell, så här måste jag lägga på 0.5px så det blir 1px totalt*/
 /*border-spacing är 0 så att cellerna ligger kloss o kloss.*/
 table {
   border-spacing: 0;
-  border: 0.5px solid rgba(255, 153, 0, 0.737);
+  border: 0.1px solid rgba(255, 153, 0, 0.737);
   z-index: 5;
   margin: auto;
   color: rgb(255, 218, 162);
