@@ -779,7 +779,7 @@ function reloadPreviewPlayerOrder() {
 
 function loadFirstScreen() {
   if (numberOfPlayers == 6) {
-    currentMatchId.innerHTML = "Match: " + currentMatch + "/15";
+    currentMatchId.innerHTML = "Match: " + match + "/15";
   }
   console.log(
     Math.floor(
@@ -989,17 +989,17 @@ function clock() {
           ":" +
           (seconds < 10 ? "0" + seconds : seconds);
 
-        currentMatch++;
+          match++;
 
         reloadMainMatchPage();
 
         if (numberOfPlayers == 6) {
-          currentMatchId.innerHTML = "Match: " + currentMatch + "/15";
+          currentMatchId.innerHTML = "Match: " + match + "/15";
         }
-        if (currentMatch == 16) {
+        if (match == 16) {
           //Game ended.
           clearInterval(myTimer);
-          currentMatchId.innerHTML = "Match: " + (currentMatch - 1) + "/15";
+          currentMatchId.innerHTML = "Match: " + (match - 1) + "/15";
           timeLeftSpanText.innerHTML = "Time´s Out!";
           timeLeftSpan.innerHTML = "";
 
@@ -1007,7 +1007,7 @@ function clock() {
         }
         //PointsDiv
         previousMatchDiv.style.display = "block";
-        page04PreviousMatch.innerHTML = currentMatch - 1;
+        page04PreviousMatch.innerHTML = match - 1;
       }
     }
   }
@@ -1015,6 +1015,7 @@ function clock() {
 
 function reloadMainMatchPage() {
   
+  if (numberOfPlayers == 6 && match < 16) {
   currentPlayerA.innerHTML =
     playerNamesArray[
       matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["a"] - 1
@@ -1031,7 +1032,7 @@ function reloadMainMatchPage() {
     playerNamesArray[
       matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["d"] - 1
     ];
-
+ if (match < 15) {
   nextPlayerA.innerHTML =
     playerNamesArray[
       matchOrders[numberOfPlayers][chosenMatchOrder][match]["a"] - 1
@@ -1048,4 +1049,11 @@ function reloadMainMatchPage() {
     playerNamesArray[
       matchOrders[numberOfPlayers][chosenMatchOrder][match]["d"] - 1
     ];
+  } else {
+    nextPlayerA.innerHTML = "---";
+    nextPlayerB.innerHTML = "---";
+    nextPlayerC.innerHTML = "---";
+    nextPlayerD.innerHTML = "---";
+  }
+  }
 }
