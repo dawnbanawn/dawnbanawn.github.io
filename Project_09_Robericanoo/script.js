@@ -1218,7 +1218,7 @@ for (let i = 0; i < results.length; i++) {
       //Om det är den första inre arrayen, så ska table data fyllas med texten "medel".
       if (i == 0) {
         let td = document.createElement("td");
-        td.innerHTML = "";
+        td.innerHTML = "---";
         tr.appendChild(td);
       } else {
         //Om det inte är den första inre arrayen, så ska table data fyllas med uträknat medelvärde.
