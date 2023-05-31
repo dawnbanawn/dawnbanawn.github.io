@@ -66,11 +66,30 @@ const page04PreviousMatch = document.querySelector("#page04PreviousMatch");
 const previousMatchDiv = document.querySelector("#previousMatchDiv");
 previousMatchDiv.style.display = "none";
 
+
+const buttonFixBack = document.querySelector("#buttonFixBack");
+
+
+const fixButton = document.querySelector("#fixButton");
+fixButton.style.display = "none";
+const pageFixContainer = document.querySelector("#pageFixContainer");
+pageFixContainer.style.display = "none";
 const buttonAcceptScore = document.querySelector("#buttonAcceptScore");
 const timeLeftSpan = document.querySelector("#timeLeftSpan");
 const timeLeftSpanText = document.querySelector("#timeLeftSpanText");
 
 const currentMatchId = document.querySelector("#currentMatchId");
+
+const leftArrow = document.querySelector("#leftArrow");
+const rightArrow = document.querySelector("#rightArrow");
+const fixSpanMatchNumber = document.querySelector("#fixSpanMatchNumber");
+
+
+
+
+
+let fixNumber = 1;
+
 let player01points = 0;
 let player02points = 0;
 let player03points = 0;
@@ -1047,6 +1066,7 @@ function clock() {
 
 function reloadMainMatchPage() {
 
+
   //Check how many matches a player has played.
   for (let i = 1; i < 7; i++){
     if (
@@ -1072,6 +1092,8 @@ console.log(playerMatchCount);
   page04Points = 0;
   page04Points02 = 0;
   previousMatchDiv.style.display = "block";
+fixButton.style.display = "none";
+
   previousPlayerA.innerHTML =
     playerNamesArray[
       matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["a"] - 1
@@ -1134,6 +1156,9 @@ console.log(playerMatchCount);
 
 //Save score
 buttonAcceptScore.addEventListener("click", () => {
+  //Display fix button for the first time.
+fixButton.style.display = "block";
+//Hides the score div
   previousMatchDiv.style.display = "none";
   console.log(
     "points" +
@@ -1177,6 +1202,7 @@ buttonResultBack.addEventListener("click", () => {
 //Switch to main page
 function switchToMainMatchPage() {
   page05Container.style.display = "block";
+  pageFixContainer.style.display = "none";
 
   //none to all match score pages aswell
 
@@ -1276,3 +1302,36 @@ for (let i = 0; i < results.length; i++) {
 //Tillslut appendas table till tableDiv (div-element i html-dokumentet).
 tableDiv.appendChild(table);
 }
+
+
+//Fix button that opens fix page.
+fixButton.addEventListener("click", () => {
+  pageFixContainer.style.display = "block";
+  page05Container.style.display = "none";
+  fixSpanMatchNumber.innerHTML = (match - 1);
+  fixNumber = (match - 1);
+});
+//Backbutton from fix page.
+buttonFixBack.addEventListener("click", () => {
+  pageFixContainer.style.display = "none";
+  page05Container.style.display = "block";
+});
+leftArrow.addEventListener("click", () => {
+  if (fixNumber < match -1) {
+    fixNumber ++;
+  fixSpanMatchNumber.innerHTML = fixNumber;
+
+  }
+});
+rightArrow.addEventListener("click", () => {
+  if (fixNumber > 1) {
+    fixNumber --;
+  fixSpanMatchNumber.innerHTML = fixNumber;
+
+  }
+});
+
+
+
+fixSpanMatchNumber
+
