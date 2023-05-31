@@ -1310,6 +1310,7 @@ fixButton.addEventListener("click", () => {
   page05Container.style.display = "none";
   fixSpanMatchNumber.innerHTML = (match - 1);
   fixNumber = (match - 1);
+  loadPlayersToFix();
 });
 //Backbutton from fix page.
 buttonFixBack.addEventListener("click", () => {
@@ -1320,6 +1321,7 @@ leftArrow.addEventListener("click", () => {
   if (fixNumber < match -1) {
     fixNumber ++;
   fixSpanMatchNumber.innerHTML = fixNumber;
+  loadPlayersToFix();
 
   }
 });
@@ -1327,11 +1329,47 @@ rightArrow.addEventListener("click", () => {
   if (fixNumber > 1) {
     fixNumber --;
   fixSpanMatchNumber.innerHTML = fixNumber;
+  loadPlayersToFix();
 
   }
 });
 
 
+const fixpreviousMatchDiv = document.querySelector("#fixpreviousMatchDiv");
+const fixpointsInfo01 = document.querySelector("#fixpointsInfo01");
+const fixpage04PreviousMatch = document.querySelector("#fixpage04PreviousMatch");
+const fixbuttonAcceptScore = document.querySelector("#fixbuttonAcceptScore");
+const fixpreviousPlayerA = document.querySelector("#fixpreviousPlayerA");
+const fixpreviousPlayerB = document.querySelector("#fixpreviousPlayerB");
+const fixminusButton01 = document.querySelector("#fixminusButton01");
+const fixplusButton01 = document.querySelector("#fixplusButton01");
+const fixpage4PointsBorder = document.querySelector("#fixpage4PointsBorder");
+const fixpreviousPlayerC = document.querySelector("#fixpreviousPlayerC");
+const fixpreviousPlayerD = document.querySelector("#fixpreviousPlayerD");
+const fixminusButton02 = document.querySelector("#fixminusButton02");
+const fixplusButton02 = document.querySelector("#fixplusButton02");
+const points3 = document.querySelector("#points3");
+const points4 = document.querySelector("#points4");
 
-fixSpanMatchNumber
+//Fix div
 
+function loadPlayersToFix() {
+  fixpreviousPlayerA.innerHTML =
+  playerNamesArray[
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"] - 1
+  ];
+fixpreviousPlayerB.innerHTML =
+  playerNamesArray[
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["b"] - 1
+  ];
+fixpreviousPlayerC.innerHTML =
+  playerNamesArray[
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["c"] - 1
+  ];
+fixpreviousPlayerD.innerHTML =
+  playerNamesArray[
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["d"] - 1
+  ];
+
+
+}
