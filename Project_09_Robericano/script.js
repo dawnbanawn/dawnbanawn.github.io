@@ -7,6 +7,15 @@ document.body.addEventListener(
   false
 );
 
+window.onbeforeunload = confirmExit;
+function confirmExit() {
+    return "You have attempted to leave this page. Are you sure?";
+}
+// window.addEventListener('beforeunload', function (e) {
+//   e.preventDefault();
+//   e.returnValue = '';
+// });
+
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
@@ -22,6 +31,8 @@ function openFullscreen() {
     elem.msRequestFullscreen();
   }
 }
+let timeWindowOn = false;
+
 const pageResultContainer = document.querySelector("#pageResultContainer");
 const buttonResultBack = document.querySelector("#buttonResultBack");
 pageResultContainer.style.display = "none";
@@ -67,8 +78,15 @@ const previousMatchDiv = document.querySelector("#previousMatchDiv");
 previousMatchDiv.style.display = "none";
 
 
-const buttonFixBack = document.querySelector("#buttonFixBack");
+const fullscreenDiv = document.querySelector("#fullscreenDiv");
+fullscreenDiv.style.display = "none";
 
+const buttonFixBack = document.querySelector("#buttonFixBack");
+const fullscreenButton = document.querySelector("#fullscreenButton");
+
+
+const fulltimeDiv = document.querySelector("#fulltimeDiv");
+fulltimeDiv.style.display = "none";
 
 const fixButton = document.querySelector("#fixButton");
 fixButton.style.display = "none";
@@ -662,6 +680,8 @@ button04next.addEventListener("click", () => {
   // }
   page04Container.style.display = "none";
   page05Container.style.display = "block";
+fulltimeDiv.style.display = "block";
+
   // chosenMatchOrder = 1; //This will randomize later.
   // console.log(playerNamesArray);
   loadFirstScreen();
@@ -715,6 +735,7 @@ buttonPage01.addEventListener("click", () => {
   openFullscreen(); //For fullscreen.
   mainContainer.style.display = "none";
   page02Container.style.display = "block";
+  fullscreenDiv.style.display = "block";
   //buttonPage02.style.backgroundColor  = "black";
 });
 
@@ -1209,11 +1230,15 @@ fixButton.style.display = "block";
 resultButton.addEventListener("click", () => {
   page05Container.style.display = "none";
   pageResultContainer.style.display = "block";
+fulltimeDiv.style.display = "none";
+
   loadResultTable();
 });
 buttonResultBack.addEventListener("click", () => {
   page05Container.style.display = "block";
   pageResultContainer.style.display = "none";
+fulltimeDiv.style.display = "block";
+
 });
 
 //Switch to main page
@@ -1224,6 +1249,7 @@ function switchToMainMatchPage() {
   //none to all match score pages aswell
 
   pageResultContainer.style.display = "none";
+  
 
 }
 
@@ -1325,6 +1351,8 @@ tableDiv.appendChild(table);
 fixButton.addEventListener("click", () => {
   pageFixContainer.style.display = "block";
   page05Container.style.display = "none";
+fulltimeDiv.style.display = "none";
+
   fixSpanMatchNumber.innerHTML = (match - 1);
   fixNumber = (match - 1);
   loadPlayersToFix();
@@ -1333,6 +1361,8 @@ fixButton.addEventListener("click", () => {
 buttonFixBack.addEventListener("click", () => {
   pageFixContainer.style.display = "none";
   page05Container.style.display = "block";
+fulltimeDiv.style.display = "block";
+
 });
 leftArrow.addEventListener("click", () => {
   if (fixNumber < match -1) {
@@ -1460,3 +1490,25 @@ function playBlop() {
   var audio = new Audio('./blop.ogg');
   audio.play();
 }
+//Fullscreen button
+fullscreenButton.addEventListener("click", () => {
+  openFullscreen();
+
+});
+
+
+//Time screen button
+fulltimeDiv.addEventListener("click", () => {
+  timeWindow();
+});
+function timeWindow() {
+  if (timeWindowOn == false) {
+    timeWindowOn = true;
+
+
+  } else {
+    timeWindowOn = false;
+
+  }
+}
+
