@@ -1227,7 +1227,7 @@ for (let i = 0; i < 15; i++) {
 
 
 const results = [
-  ["Spelare  ", "Matcher", "Poäng", "---"],
+  ["Players  ", "Matches", "Points", "---"],
   [playerNamesArray[0], playerMatchCount[1], player01points, "n/a"],
   [playerNamesArray[1], playerMatchCount[2], player02points, "n/a"],
   [playerNamesArray[2], playerMatchCount[3], player03points, "n/a"],
@@ -1243,7 +1243,7 @@ for (let i = 0; i < results.length; i++) {
   //Ett table row skapas för varje element i den yttre arrayen.
   let tr = document.createElement("tr");
   //Här loopas var inre array för sig, med med <= för att kunna addera ett extra table data-element i varje rad.
-  for (let j = 0; j <= results[i].length; j++) {
+  for (let j = 0; j <= results[i].length -2; j++) {
     //Ser om loopen är i slutet (efter arrayen är slut).
     if (j == results[i].length) {
       //Om det är den första inre arrayen, så ska table data fyllas med texten "medel".
