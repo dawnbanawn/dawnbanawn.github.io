@@ -111,6 +111,8 @@ var c = 10;
 let colorGreen = "rgb(0, 211, 0)";
 let page04Points = 0;
 let page04Points02 = 0;
+let fixpage04Points = 0;
+let fixpage04Points02 = 0;
 let currentMatch = 1;
 let gameTime;
 let numberOfPlayers;
@@ -1354,6 +1356,10 @@ const points4 = document.querySelector("#points4");
 //Fix div
 
 function loadPlayersToFix() {
+
+  fixpreviousMatchDiv.style.display = "block";
+
+
   fixpreviousPlayerA.innerHTML =
   playerNamesArray[
     matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"] - 1
@@ -1370,6 +1376,62 @@ fixpreviousPlayerD.innerHTML =
   playerNamesArray[
     matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["d"] - 1
   ];
+  fixpage04PreviousMatch.innerHTML = fixNumber;
 
+  //Load the current scores  
+  points3.value = matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"]
+  ];
+  points4.value = matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["c"]
+  ];
+
+  fixpage04Points = points3.value;
+  fixpage04Points02 = points4.value; 
 
 }
+
+//Buttons for changing points on the fix page.
+fixminusButton01.addEventListener("click", () => {
+  if (fixpage04Points > 0) {
+    fixpage04Points--;
+    points3.value = fixpage04Points;
+  }
+});
+fixminusButton02.addEventListener("click", () => {
+  if (fixpage04Points02 > 0) {
+    fixpage04Points02--;
+    points4.value = fixpage04Points02;
+  }
+});
+fixplusButton01.addEventListener("click", () => {
+  fixpage04Points++;
+  points3.value = fixpage04Points;
+});
+fixplusButton02.addEventListener("click", () => {
+  fixpage04Points02++;
+  points4.value = fixpage04Points02;
+});
+
+//Save fixed score
+fixbuttonAcceptScore.addEventListener("click", () => {
+ 
+  fixpreviousMatchDiv.style.display = "none";
+
+  //console.log(points.value);
+
+  matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"]
+  ] = points3.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["b"]
+  ] = points3.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["c"]
+  ] = points4.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["d"]
+  ] = points4.value;
+
+ 
+});
