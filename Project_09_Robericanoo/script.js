@@ -977,15 +977,22 @@ function clock() {
         switchToMainMatchPage();
 
         //play sound.
+        playBlip();
       }
       if (c == 2) {
         //play sound.
+        playBlip();
+
       }
       if (c == 1) {
         //play sound.
+        playBlip();
+
       }
       if (c == 0) {
         //play sound.
+        playBlop();
+
 
         // if (numberOfPlayers == 6 && currentMatch == 15) {
         //   gameOn == false
@@ -1017,15 +1024,23 @@ function clock() {
 
 
         //play sound.
+        playBlip();
+
       }
       if (c == 2) {
         //play sound.
+        playBlip();
+
       }
       if (c == 1) {
         //play sound.
+        playBlip();
+
       }
       if (c == 0) {
         //play sound.
+        playBlop();
+
         timeLeftSpan.style.color = colorGreen;
         timeLeftSpanText.style.color = colorGreen;
 
@@ -1435,3 +1450,13 @@ fixbuttonAcceptScore.addEventListener("click", () => {
 
  
 });
+
+//Play audio
+function playBlip() {
+  var audio = new Audio('./blip.ogg');
+  audio.play();
+}
+function playBlop() {
+  var audio = new Audio('./blop.ogg');
+  audio.play();
+}
