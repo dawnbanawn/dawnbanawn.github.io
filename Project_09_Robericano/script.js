@@ -728,7 +728,7 @@ buttonPage02.addEventListener("click", () => {
   if (isNaN(gameTime) == true) {
     alert("Please use numbers.");
   } else if (parseInt(gameTime) < 4 || parseInt(gameTime) > 120) {
-    alert("Please have a game time between 90 and 120 min.");
+    alert("Please have a game time between 4 and 120 min.");
   } else if (gameTime.length > 1 && gameTime.charAt(0) == "0") {
     alert("Please re-write the game time.");
   } else {
