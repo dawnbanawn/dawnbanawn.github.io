@@ -71,7 +71,6 @@ input:focus {
   display: none;
   text-align: center;
 
-
 }
 
 #page03Container {
@@ -80,11 +79,13 @@ input:focus {
   align-items: center;
   flex-direction: column;
   display: none;
-
   z-index: 5;
   margin-top: 40px;
   text-align: center;
   display: none;
+
+
+
 }
 #page04Container {
   display: flex;
@@ -231,7 +232,7 @@ h4 {
   top: 5%;
   left: 5%;
   width: 90%;
-  height: 90%;
+  height: 2000px;
   opacity: 0.7;
   border-radius: 25px;
 
@@ -294,7 +295,7 @@ h4 {
 }
 .button01Div {
   position: absolute;
-  top: 580px;
+  bottom: 20px;
   z-index: 3;
   left: 0;
   right: 0;
@@ -515,7 +516,8 @@ table {
     width: 100%;
   }
   .button01Div {
-    top: 607px;
+    bottom: 20px;
+
   }
   #page02Container p {
     width: 100%;
@@ -578,7 +580,7 @@ table {
 }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 600px) {
   #blackBackground {
 
     height: 2000px;
@@ -592,6 +594,10 @@ table {
   
     
     
+  }
+  #id03 {
+    scale: 0.8;
+    margin-top: -60px;
   }
 
 }
