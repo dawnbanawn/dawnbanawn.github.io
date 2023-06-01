@@ -11,6 +11,12 @@ body {
   touch-action: pan-down;
 
 }
+canvas {
+  margin-top: -400px;
+  height: 100%;
+  width: 99%;
+
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -210,10 +216,7 @@ h4 {
   width: 85%;
   text-align: center;
 }
-#timeLeftP {
-  color: rgb(0, 211, 0);
-  font-size: 30px !important;
-}
+
 #blackBackground {
   position: absolute;
   
@@ -385,6 +388,7 @@ font-size: 16px;
 width: 50px;
 
 }
+
 #pointsInfo01, #fixpointsInfo01  {
   justify-content: center;
   margin: auto;
@@ -469,6 +473,13 @@ table {
   scale: 0.9;
   background-color: black;
 }
+#timeLeftP {
+  color: rgb(0, 211, 0);
+  font-size: 30px;
+}
+#timeLeftSpanText, #timeLeftSpan {
+  font-size: 30px;
+}
 
 @media (min-width: 768px) {
   #fullscreenButton {
@@ -536,7 +547,10 @@ table {
   } 
   #timeLeftP {
     color: rgb(0, 211, 0);
-    font-size: 50px !important;
+    font-size: 50px;
+  }
+  #timeLeftSpanText, #timeLeftSpan {
+    font-size: 50px;
   }
   #previousMatchDiv {
   font-size: 16px;
