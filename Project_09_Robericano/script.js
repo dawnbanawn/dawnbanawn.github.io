@@ -1501,18 +1501,29 @@ fullscreenButton.addEventListener("click", () => {
 
 });
 
+let fulltime = 1;
+const timeLeftP = document.querySelector("#timeLeftP");
 
 //Time screen button
 fulltimeDiv.addEventListener("click", () => {
   timeWindow();
 });
 function timeWindow() {
-  if (timeWindowOn == false) {
-    timeWindowOn = true;
+  if (fulltime < 3) {
+    fulltime += 0.4;
+    timeLeftP.style.scale = fulltime.toString();
+    timeLeftP.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+
+
 
 
   } else {
-    timeWindowOn = false;
+    timeLeftP.style.scale = "1";
+    timeLeftP.style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+
+    fulltime = 1;
+
+
 
   }
 }

@@ -3,12 +3,17 @@ html {
   padding: 0;
   overflow: hidden;
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+
 }
 body {
   height: 100%;
   overscroll-behavior-y: none;
   overflow: auto;
   touch-action: pan-down;
+  max-width: 100%;
+  overflow-x: hidden;
 
 }
 canvas {
@@ -476,6 +481,7 @@ table {
 #timeLeftP {
   color: rgb(0, 211, 0);
   font-size: 30px;
+  margin: auto;
 }
 #timeLeftSpanText, #timeLeftSpan {
   font-size: 30px;
@@ -548,9 +554,11 @@ table {
   #timeLeftP {
     color: rgb(0, 211, 0);
     font-size: 50px;
+
   }
   #timeLeftSpanText, #timeLeftSpan {
     font-size: 50px;
+    
   }
   #previousMatchDiv {
   font-size: 16px;
