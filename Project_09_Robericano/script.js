@@ -1303,8 +1303,14 @@ const results = [
   [playerNamesArray[3], playerMatchCount[4], player04points, "n/a"],
   [playerNamesArray[4], playerMatchCount[5], player05points, "n/a"],
   [playerNamesArray[5], playerMatchCount[6], player06points, "n/a"],
-
 ];
+
+//Sort the array after highest points.
+results.sort(function(a, b) {
+  return b[2] - a[2];
+});
+//console.log(results);
+
 //Skapar ett table element.
 //let table = document.createElement("table");
 //Två for-loopar, den förste för den yttre arrayen och den inne för arrayerna i arrayen.
