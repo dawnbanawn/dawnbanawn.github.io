@@ -1509,7 +1509,7 @@ fulltimeDiv.addEventListener("click", () => {
   timeWindow();
 });
 function timeWindow() {
-  if (fulltime < 3) {
+  if (fulltime < 2.1) {
     fulltime += 0.4;
     timeLeftP.style.scale = fulltime.toString();
     timeLeftP.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
