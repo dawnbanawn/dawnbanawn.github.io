@@ -595,11 +595,25 @@ table {
 @media screen and (min-width: 1024px) {
   #sizeBoxId01 {
     scale: 1.5;
+    margin-bottom: 25%;
   }
 }
-@media screen and (max-width: 768px) and (orientation:landscape) {
+@media screen and (max-height: 550px) and (orientation:landscape) {
+  #sizeBoxId01 {
+    scale: 1;
+    margin-top: 10%;
+  }
+}
+@media screen and (max-height: 500px) and (orientation:landscape) {
+  #sizeBoxId01 {
+    scale: 0.7;
+    margin-top: 10%;
+  }
+}
+@media screen and (max-height: 450px) and (orientation:landscape) {
   #sizeBoxId01 {
     scale: 0.5;
+    margin-top: 10%;
   }
 }
 /*
