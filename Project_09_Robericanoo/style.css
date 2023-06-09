@@ -589,6 +589,19 @@ table {
   width: 55%;
 }
 }
+#sizeBoxId01 p{
+  margin: auto;
+}
+@media screen and (min-width: 1024px) {
+  #sizeBoxId01 {
+    scale: 1.5;
+  }
+}
+@media screen and (max-width: 768px) and (orientation:landscape) {
+  #sizeBoxId01 {
+    scale: 0.5;
+  }
+}
 /*
 @media (max-height: 400px) {
   #blackBackground {
@@ -608,52 +621,12 @@ table {
 
 
 }*/
-@media (max-height: 550px) {
-  #id03 {
-    scale: 0.8;
-    margin-top: -40px;
-  flex-direction: row;
 
-  }
-}
-
-@media (max-height: 500px) {
-  #id03 {
-    scale: 0.7;
-    margin-top: -60px;
-  }
-}
-@media (max-height: 450px) {
-  #id03 {
-    scale: 0.6;
-    margin-top: -80px;
-  }
-}
-@media (max-height: 400px) {
-  #id03 {
-    scale: 0.5;
-    margin-top: -100px;
-  }
-}
-@media (min-width: 1024px) {
-  .sizeBox {
-    scale: 1.5;
     
   
-  }
-}
-@media screen and (max-height: 767px) and (orientation: landscape) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    height: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-}
+  
+
+
 
 
     
