@@ -22,6 +22,10 @@ canvas {
   width: 99%;
 
 }
+#id03 {
+  display: flex;
+  flex-direction: column;
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -585,7 +589,7 @@ table {
   width: 55%;
 }
 }
-
+/*
 @media (max-height: 400px) {
   #blackBackground {
 
@@ -603,11 +607,13 @@ table {
   }
 
 
-}
+}*/
 @media (max-height: 550px) {
   #id03 {
     scale: 0.8;
     margin-top: -40px;
+  flex-direction: row;
+
   }
 }
 
@@ -625,8 +631,27 @@ table {
 }
 @media (max-height: 400px) {
   #id03 {
-    scale: 1;
-    margin-top: 0px;
+    scale: 0.5;
+    margin-top: -100px;
+  }
+}
+@media (min-width: 1024px) {
+  .sizeBox {
+    scale: 1.5;
+    
+  
+  }
+}
+@media screen and (max-height: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
 }
 

@@ -8,31 +8,30 @@
     <title>Robericano</title>
   </head>
   <body id="mainBody">
-
     <div id="fullscreenDiv">
       <button id="fullscreenButton">Fullscreen</button>
     </div>
     <div id="fulltimeDiv">
-
-    <button id="timeButton">Enlarge</button>
-  </div>
-
+      <button id="timeButton">Enlarge</button>
+    </div>
 
     <div id="blackBackground">
-
       <!--<h4>v0.1</h4>-->
     </div>
     <div id="mainContainer">
+      <div class="sizeBox">
       <h1>Robericano</h1>
 
       <p>The ultimate game schedule for 2 on 2.</p>
       <p>4-6 players.</p>
+    </div>
       <!--<p style="font-size: 14px; margin-top: 50px;">To exit fullscreen, press "Esc".</p>-->
       <div class="button01Div"><button id="button01">Next</button></div>
     </div>
 
     <div id="page02Container">
       <h2>Robericano</h2>
+      <div class="sizeBox">
       <p>Please choose the number of players.</p>
       <br /><br />
       <select name="playerNumber" id="numberOfPlayersDropDown">
@@ -57,29 +56,29 @@
         maxlength="8"
         size="9"
       />
+    </div>
       <div class="button01Div"><button id="button02">Next</button></div>
     </div>
 
     <div id="page03Container">
       <h2>Robericano</h2>
-      <div id="id03">
-      <p>
-        Please enter the <span id="page03PlayerNumberSpan">0</span> player
-        names.
-      </p>
-      <div id="nameInputContainer"></div>
+      <div class="sizeBox">
+        <p>
+          Please enter the <span id="page03PlayerNumberSpan">0</span> player
+          names.
+        </p>
+        <div id="nameInputContainer"></div>
 
-
-      <p id="page03chosenGameTime">
-        Chosen game time: <span id="page03chosenGameTimeSpan">0</span> min.
-      </p>
-      <p id="page03chosenGameTime">
-        Match time: <span id="page03MatchTime">0</span>
-      </p>
-    </div>
-    <div class="button01Div">
-      <button id="button04">Back</button><button id="button03">Next</button>
-    </div>
+        <p id="page03chosenGameTime">
+          Chosen game time: <span id="page03chosenGameTimeSpan">0</span> min.
+        </p>
+        <p id="page03chosenGameTime">
+          Match time: <span id="page03MatchTime">0</span>
+        </p>
+      </div>
+      <div class="button01Div">
+        <button id="button04">Back</button><button id="button03">Next</button>
+      </div>
     </div>
     <div id="page04Container">
       <h2>Robericano</h2>
@@ -146,9 +145,9 @@
       <div id="previousMatchDiv">
         <p>
           <span id="pointsInfo01"
-            ><button id="buttonAcceptScore">Save</button> (match <span id="page04PreviousMatch">0</span>) :
-            </span
-          >
+            ><button id="buttonAcceptScore">Save</button> (match
+            <span id="page04PreviousMatch">0</span>) :
+          </span>
         </p>
 
         <p>
@@ -221,13 +220,12 @@
         <button id="leftArrow">⇨</button>
       </div>
 
-
       <div id="fixpreviousMatchDiv">
         <p>
           <span id="fixpointsInfo01"
-            ><button id="fixbuttonAcceptScore">Save</button> (match <span id="fixpage04PreviousMatch">0</span>) :
-            </span
-          >
+            ><button id="fixbuttonAcceptScore">Save</button> (match
+            <span id="fixpage04PreviousMatch">0</span>) :
+          </span>
         </p>
 
         <p>
@@ -273,8 +271,6 @@
           </span>
         </p>
       </div>
-
-      
 
       <div class="button01Div">
         <button id="buttonFixBack">Back</button>
