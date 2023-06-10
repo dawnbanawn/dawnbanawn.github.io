@@ -78,10 +78,14 @@ const gameTimeField = document.querySelector("#gameTime");
 
 // });
 //   let tempValue = gameTimeField.style.scale;
+input01button = document.querySelector("#input01button");
+
 let tempValue = gameTimeField.style.scale;
 function checkDocumentFocus() {
   if (document.activeElement === gameTimeField){
-    
+    input01button.style.marginLeft = "80px";
+    input01button.style.scale = "2";
+
     gameTimeField.style.scale = "2";
     console.log("Input is focused");
     buttonPage02.style.display = "none";
@@ -89,9 +93,19 @@ function checkDocumentFocus() {
     gameTimeField.style.scale = tempValue;
     console.log("Input is not focused");
     buttonPage02.style.display = "block";
+    input01button.style.marginLeft = "20px";
+    input01button.style.scale = "1";
   }
 };
 setInterval(checkDocumentFocus, 300);
+input01button.addEventListener("click", () => {
+  gameTimeField.style.scale = tempValue;
+  console.log("Input is not focused");
+  buttonPage02.style.display = "block";
+  input01button.style.marginLeft = "20px";
+  input01button.style.scale = "1";
+});
+
 
 previewCurrentPlayerA = document.querySelector("#previewCurrentPlayerA");
 previewCurrentPlayerB = document.querySelector("#previewCurrentPlayerB");
