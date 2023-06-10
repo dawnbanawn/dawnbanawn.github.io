@@ -1,4 +1,3 @@
-const buttonPage01 = document.querySelector("#button01");
 
 
 
@@ -39,6 +38,7 @@ function openFullscreen() {
   }
 }
 let timeWindowOn = false;
+const buttonPage01 = document.querySelector("#button01");
 
 const pageResultContainer = document.querySelector("#pageResultContainer");
 const buttonResultBack = document.querySelector("#buttonResultBack");
@@ -51,6 +51,48 @@ const button04next = document.querySelector("#button04next");
 const pauseButton = document.querySelector("#pauseButton");
 const resultButton = document.querySelector("#resultButton");
 const gameTimeField = document.querySelector("#gameTime");
+
+//Check if window is suddenly resized.
+// window.onresize = function() {    
+//   console.log("new rezise");
+//   if (document.activeElement === gameTimeField){
+//     console.log("Input is focused");
+//     buttonPage02.style.display = "none";
+//   } else {
+//     console.log("Input is not focused");
+//     buttonPage02.style.display = "block";
+
+
+//   }
+// };
+
+// if (document.activeElement === gameTimeField){
+//   console.log("Input is focused");
+//   buttonPage02.style.display = "none";
+// } 
+// gameTimeField.addEventListener("input", () => {
+//   let tempValue = gameTimeField.style.scale;
+//   console.log("Typing is done");
+//   gameTimeField.style.scale = "2";
+
+
+// });
+//   let tempValue = gameTimeField.style.scale;
+let tempValue = gameTimeField.style.scale;
+function checkDocumentFocus() {
+  if (document.activeElement === gameTimeField){
+    
+    gameTimeField.style.scale = "2";
+    console.log("Input is focused");
+    buttonPage02.style.display = "none";
+  } else {
+    gameTimeField.style.scale = tempValue;
+    console.log("Input is not focused");
+    buttonPage02.style.display = "block";
+  }
+};
+setInterval(checkDocumentFocus, 300);
+
 previewCurrentPlayerA = document.querySelector("#previewCurrentPlayerA");
 previewCurrentPlayerB = document.querySelector("#previewCurrentPlayerB");
 previewCurrentPlayerC = document.querySelector("#previewCurrentPlayerC");
