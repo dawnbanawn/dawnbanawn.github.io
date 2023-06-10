@@ -596,23 +596,33 @@ table {
   #sizeBoxId01 {
     scale: 1.5;
     margin-bottom: 25%;
+
   }
 }
 @media screen and (max-height: 550px) and (orientation:landscape) {
   #sizeBoxId01 {
     scale: 1;
     margin-bottom: 25%;
+
+    
   }
 }
 @media screen and (max-height: 500px) and (orientation:landscape) {
+  #sizeBoxId01 {
+    scale: 0.8;
+    margin-bottom: 25%;
+
+  }
+}
+@media screen and (max-height: 400px) and (orientation:landscape) {
   #sizeBoxId01 {
     scale: 0.7;
     margin-bottom: 25%;
   }
 }
-@media screen and (max-height: 450px) and (orientation:landscape) {
+@media screen and (max-height: 300px) and (orientation:landscape) {
   #sizeBoxId01 {
-    scale: 0.5;
+    scale: 0.6;
     margin-bottom: 25%;
   }
 }
