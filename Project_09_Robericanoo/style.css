@@ -611,8 +611,7 @@ table {
   }
   #h2Title {
     scale: 1.5;
-    margin-top: -10px;
-
+    margin-top: 0px;
   }
 }
 @media screen and (max-height: 550px) and (orientation:landscape) {
@@ -665,8 +664,8 @@ table {
     margin-bottom: 25%;
   }
   #sizeBoxId02 {
-    scale: 0.3;
-    margin-top: -80px;
+    scale: 0.4;
+    margin-top: -70px;
   }
   #h2Title {
     scale: 0.5;
