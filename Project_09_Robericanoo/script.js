@@ -1,3 +1,7 @@
+const buttonPage01 = document.querySelector("#button01");
+
+
+
 
 
 
@@ -12,7 +16,7 @@ document.body.addEventListener(
 
 window.onbeforeunload = confirmExit;
 function confirmExit() {
-    return "You have attempted to leave this page. Are you sure?";
+  return "You have attempted to leave this page. Are you sure?";
 }
 // window.addEventListener('beforeunload', function (e) {
 //   e.preventDefault();
@@ -39,7 +43,6 @@ let timeWindowOn = false;
 const pageResultContainer = document.querySelector("#pageResultContainer");
 const buttonResultBack = document.querySelector("#buttonResultBack");
 pageResultContainer.style.display = "none";
-const buttonPage01 = document.querySelector("#button01");
 const buttonPage02 = document.querySelector("#button02");
 const buttonPage03 = document.querySelector("#button03");
 const buttonPage03Back = document.querySelector("#button04");
@@ -80,13 +83,11 @@ const page04PreviousMatch = document.querySelector("#page04PreviousMatch");
 const previousMatchDiv = document.querySelector("#previousMatchDiv");
 previousMatchDiv.style.display = "none";
 
-
 const fullscreenDiv = document.querySelector("#fullscreenDiv");
 fullscreenDiv.style.display = "none";
 
 const buttonFixBack = document.querySelector("#buttonFixBack");
 const fullscreenButton = document.querySelector("#fullscreenButton");
-
 
 const fulltimeDiv = document.querySelector("#fulltimeDiv");
 fulltimeDiv.style.display = "none";
@@ -104,10 +105,6 @@ const currentMatchId = document.querySelector("#currentMatchId");
 const leftArrow = document.querySelector("#leftArrow");
 const rightArrow = document.querySelector("#rightArrow");
 const fixSpanMatchNumber = document.querySelector("#fixSpanMatchNumber");
-
-
-
-
 
 let fixNumber = 1;
 
@@ -683,7 +680,7 @@ button04next.addEventListener("click", () => {
   // }
   page04Container.style.display = "none";
   page05Container.style.display = "block";
-fulltimeDiv.style.display = "block";
+  fulltimeDiv.style.display = "block";
 
   // chosenMatchOrder = 1; //This will randomize later.
   // console.log(playerNamesArray);
@@ -1006,12 +1003,10 @@ function clock() {
       if (c == 2) {
         //play sound.
         playBlip();
-
       }
       if (c == 1) {
         //play sound.
         playBlip();
-
       }
       if (c == 0) {
         //play sound.
@@ -1045,20 +1040,16 @@ function clock() {
         timeLeftSpanText.style.color = "yellow";
         switchToMainMatchPage();
 
-
         //play sound.
         playBlip();
-
       }
       if (c == 2) {
         //play sound.
         playBlip();
-
       }
       if (c == 1) {
         //play sound.
         playBlip();
-
       }
       if (c == 0) {
         //play sound.
@@ -1105,34 +1096,28 @@ function clock() {
 }
 
 function reloadMainMatchPage() {
-
-
   //Check how many matches a player has played.
-  for (let i = 1; i < 7; i++){
-    if (
-      matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["a"] == i){
-        playerMatchCount[i] += 1;
-      }
-      if (
-        matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["b"] == i){
-          playerMatchCount[i] += 1;
-        }
-        if (
-          matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["c"] == i){
-            playerMatchCount[i] += 1;
-          }
-          if (
-            matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["d"] == i){
-              playerMatchCount[i] += 1;
-            }
+  for (let i = 1; i < 7; i++) {
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["a"] == i) {
+      playerMatchCount[i] += 1;
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["b"] == i) {
+      playerMatchCount[i] += 1;
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["c"] == i) {
+      playerMatchCount[i] += 1;
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["d"] == i) {
+      playerMatchCount[i] += 1;
+    }
   }
 
-console.log(playerMatchCount);
+  console.log(playerMatchCount);
   //Score div
   page04Points = 0;
   page04Points02 = 0;
   previousMatchDiv.style.display = "block";
-fixButton.style.display = "none";
+  fixButton.style.display = "none";
 
   previousPlayerA.innerHTML =
     playerNamesArray[
@@ -1197,8 +1182,8 @@ fixButton.style.display = "none";
 //Save score
 buttonAcceptScore.addEventListener("click", () => {
   //Display fix button for the first time.
-fixButton.style.display = "block";
-//Hides the score div
+  fixButton.style.display = "block";
+  //Hides the score div
   previousMatchDiv.style.display = "none";
   console.log(
     "points" +
@@ -1232,15 +1217,14 @@ fixButton.style.display = "block";
 resultButton.addEventListener("click", () => {
   page05Container.style.display = "none";
   pageResultContainer.style.display = "block";
-fulltimeDiv.style.display = "none";
+  fulltimeDiv.style.display = "none";
 
   loadResultTable();
 });
 buttonResultBack.addEventListener("click", () => {
   page05Container.style.display = "block";
   pageResultContainer.style.display = "none";
-fulltimeDiv.style.display = "block";
-
+  fulltimeDiv.style.display = "block";
 });
 
 //Switch to main page
@@ -1251,15 +1235,10 @@ function switchToMainMatchPage() {
   //none to all match score pages aswell
 
   pageResultContainer.style.display = "none";
-  
-
 }
-
-
 
 //Result table
 function loadResultTable() {
-
   player01points = 0;
   player02points = 0;
   player03points = 0;
@@ -1267,132 +1246,138 @@ function loadResultTable() {
   player05points = 0;
   player06points = 0;
   table.remove();
-   table = document.createElement("table");
+  table = document.createElement("table");
 
-for (let i = 0; i < 15; i++) {
-//console.log(matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"]);
+  for (let i = 0; i < 15; i++) {
+    //console.log(matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"]);
 
-  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"] != undefined) {
-    player01points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"]);
-  }
-  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["2"] != undefined) {
-    player02points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["2"]);
-  }
-  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["3"] != undefined) {
-    player03points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["3"]);
-  }
-  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"] != undefined) {
-    player04points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"]);
-  }
-  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["5"] != undefined) {
-    player05points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["5"]);
-  }
-  if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["6"] != undefined) {
-    player06points += parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i]["6"]);
-  }
-
-
-}
-//console.log(player01points);
-//console.log(matchOrders[numberOfPlayers][chosenMatchOrder][0]["1"]);
-
-
-const results = [
-  ["Players  ", "Matches", "Points", "---"],
-  [playerNamesArray[0], playerMatchCount[1], player01points, "n/a"],
-  [playerNamesArray[1], playerMatchCount[2], player02points, "n/a"],
-  [playerNamesArray[2], playerMatchCount[3], player03points, "n/a"],
-  [playerNamesArray[3], playerMatchCount[4], player04points, "n/a"],
-  [playerNamesArray[4], playerMatchCount[5], player05points, "n/a"],
-  [playerNamesArray[5], playerMatchCount[6], player06points, "n/a"],
-];
-
-//Sort the array after highest points.
-results.sort(function(a, b) {
-  return b[2] - a[2];
-});
-//console.log(results);
-
-//Skapar ett table element.
-//let table = document.createElement("table");
-//Två for-loopar, den förste för den yttre arrayen och den inne för arrayerna i arrayen.
-for (let i = 0; i < results.length; i++) {
-  //Ett table row skapas för varje element i den yttre arrayen.
-  let tr = document.createElement("tr");
-  //Här loopas var inre array för sig, med med <= för att kunna addera ett extra table data-element i varje rad.
-  for (let j = 0; j <= results[i].length -2; j++) {
-    //Ser om loopen är i slutet (efter arrayen är slut).
-    if (j == results[i].length) {
-      //Om det är den första inre arrayen, så ska table data fyllas med texten "medel".
-      if (i == 0) {
-        let td = document.createElement("td");
-        td.innerHTML = "---";
-        tr.appendChild(td);
-      } else {
-        //Om det inte är den första inre arrayen, så ska table data fyllas med uträknat medelvärde.
-        let td = document.createElement("td");
-        //Medelvärde räknas ut från den inre array som håller på att loopas igenom, och de element som innehåller värdena vi vill åt.
-        //Detta får man ändra om man skulle vilja göra om ursprungsarrayen, t.ex. om man vill lägga till mindre/fler tidsintervall.
-        td.innerHTML =
-          Math.round(
-            ((results[i][1] + results[i][2] + results[i][3]) / 3) * 10.0
-          ) / 10.0;
-        tr.appendChild(td);
-      }
-    } else {
-      //om det inte är efter slutet på den inre arrayen, så hämtas rätt värde till en skapad table data-element, som sedan appendas till tr-elementet.
-
-      let td = document.createElement("td");
-      td.innerHTML = results[i][j];
-      tr.appendChild(td);
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"] != undefined) {
+      player01points += parseInt(
+        matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"]
+      );
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["2"] != undefined) {
+      player02points += parseInt(
+        matchOrders[numberOfPlayers][chosenMatchOrder][i]["2"]
+      );
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["3"] != undefined) {
+      player03points += parseInt(
+        matchOrders[numberOfPlayers][chosenMatchOrder][i]["3"]
+      );
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"] != undefined) {
+      player04points += parseInt(
+        matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"]
+      );
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["5"] != undefined) {
+      player05points += parseInt(
+        matchOrders[numberOfPlayers][chosenMatchOrder][i]["5"]
+      );
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["6"] != undefined) {
+      player06points += parseInt(
+        matchOrders[numberOfPlayers][chosenMatchOrder][i]["6"]
+      );
     }
   }
-  //Varje nyskapat och fyllt med table-data tr-element appendas här till table-elementet.
-  table.appendChild(tr);
-}
-//Tillslut appendas table till tableDiv (div-element i html-dokumentet).
-tableDiv.appendChild(table);
-}
+  //console.log(player01points);
+  //console.log(matchOrders[numberOfPlayers][chosenMatchOrder][0]["1"]);
 
+  const results = [
+    ["Players  ", "Matches", "Points", "---"],
+    [playerNamesArray[0], playerMatchCount[1], player01points, "n/a"],
+    [playerNamesArray[1], playerMatchCount[2], player02points, "n/a"],
+    [playerNamesArray[2], playerMatchCount[3], player03points, "n/a"],
+    [playerNamesArray[3], playerMatchCount[4], player04points, "n/a"],
+    [playerNamesArray[4], playerMatchCount[5], player05points, "n/a"],
+    [playerNamesArray[5], playerMatchCount[6], player06points, "n/a"],
+  ];
+
+  //Sort the array after highest points.
+  results.sort(function (a, b) {
+    return b[2] - a[2];
+  });
+  //console.log(results);
+
+  //Skapar ett table element.
+  //let table = document.createElement("table");
+  //Två for-loopar, den förste för den yttre arrayen och den inne för arrayerna i arrayen.
+  for (let i = 0; i < results.length; i++) {
+    //Ett table row skapas för varje element i den yttre arrayen.
+    let tr = document.createElement("tr");
+    //Här loopas var inre array för sig, med med <= för att kunna addera ett extra table data-element i varje rad.
+    for (let j = 0; j <= results[i].length - 2; j++) {
+      //Ser om loopen är i slutet (efter arrayen är slut).
+      if (j == results[i].length) {
+        //Om det är den första inre arrayen, så ska table data fyllas med texten "medel".
+        if (i == 0) {
+          let td = document.createElement("td");
+          td.innerHTML = "---";
+          tr.appendChild(td);
+        } else {
+          //Om det inte är den första inre arrayen, så ska table data fyllas med uträknat medelvärde.
+          let td = document.createElement("td");
+          //Medelvärde räknas ut från den inre array som håller på att loopas igenom, och de element som innehåller värdena vi vill åt.
+          //Detta får man ändra om man skulle vilja göra om ursprungsarrayen, t.ex. om man vill lägga till mindre/fler tidsintervall.
+          td.innerHTML =
+            Math.round(
+              ((results[i][1] + results[i][2] + results[i][3]) / 3) * 10.0
+            ) / 10.0;
+          tr.appendChild(td);
+        }
+      } else {
+        //om det inte är efter slutet på den inre arrayen, så hämtas rätt värde till en skapad table data-element, som sedan appendas till tr-elementet.
+
+        let td = document.createElement("td");
+        td.innerHTML = results[i][j];
+        tr.appendChild(td);
+      }
+    }
+    //Varje nyskapat och fyllt med table-data tr-element appendas här till table-elementet.
+    table.appendChild(tr);
+  }
+  //Tillslut appendas table till tableDiv (div-element i html-dokumentet).
+  tableDiv.appendChild(table);
+}
 
 //Fix button that opens fix page.
 fixButton.addEventListener("click", () => {
   pageFixContainer.style.display = "block";
   page05Container.style.display = "none";
-fulltimeDiv.style.display = "none";
+  fulltimeDiv.style.display = "none";
 
-  fixSpanMatchNumber.innerHTML = (match - 1);
-  fixNumber = (match - 1);
+  fixSpanMatchNumber.innerHTML = match - 1;
+  fixNumber = match - 1;
   loadPlayersToFix();
 });
 //Backbutton from fix page.
 buttonFixBack.addEventListener("click", () => {
   pageFixContainer.style.display = "none";
   page05Container.style.display = "block";
-fulltimeDiv.style.display = "block";
-
+  fulltimeDiv.style.display = "block";
 });
 leftArrow.addEventListener("click", () => {
-  if (fixNumber < match -1) {
-    fixNumber ++;
-  fixSpanMatchNumber.innerHTML = fixNumber;
-  loadPlayersToFix();
-
+  if (fixNumber < match - 1) {
+    fixNumber++;
+    fixSpanMatchNumber.innerHTML = fixNumber;
+    loadPlayersToFix();
   }
 });
 rightArrow.addEventListener("click", () => {
   if (fixNumber > 1) {
-    fixNumber --;
-  fixSpanMatchNumber.innerHTML = fixNumber;
-  loadPlayersToFix();
-
+    fixNumber--;
+    fixSpanMatchNumber.innerHTML = fixNumber;
+    loadPlayersToFix();
   }
 });
 
-
 const fixpreviousMatchDiv = document.querySelector("#fixpreviousMatchDiv");
 const fixpointsInfo01 = document.querySelector("#fixpointsInfo01");
-const fixpage04PreviousMatch = document.querySelector("#fixpage04PreviousMatch");
+const fixpage04PreviousMatch = document.querySelector(
+  "#fixpage04PreviousMatch"
+);
 const fixbuttonAcceptScore = document.querySelector("#fixbuttonAcceptScore");
 const fixpreviousPlayerA = document.querySelector("#fixpreviousPlayerA");
 const fixpreviousPlayerB = document.querySelector("#fixpreviousPlayerB");
@@ -1409,39 +1394,38 @@ const points4 = document.querySelector("#points4");
 //Fix div
 
 function loadPlayersToFix() {
-
   fixpreviousMatchDiv.style.display = "block";
 
-
   fixpreviousPlayerA.innerHTML =
-  playerNamesArray[
-    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"] - 1
-  ];
-fixpreviousPlayerB.innerHTML =
-  playerNamesArray[
-    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["b"] - 1
-  ];
-fixpreviousPlayerC.innerHTML =
-  playerNamesArray[
-    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["c"] - 1
-  ];
-fixpreviousPlayerD.innerHTML =
-  playerNamesArray[
-    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["d"] - 1
-  ];
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"] - 1
+    ];
+  fixpreviousPlayerB.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["b"] - 1
+    ];
+  fixpreviousPlayerC.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["c"] - 1
+    ];
+  fixpreviousPlayerD.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["d"] - 1
+    ];
   fixpage04PreviousMatch.innerHTML = fixNumber;
 
-  //Load the current scores  
-  points3.value = matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
-    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"]
-  ];
-  points4.value = matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
-    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["c"]
-  ];
+  //Load the current scores
+  points3.value =
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"]
+    ];
+  points4.value =
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["c"]
+    ];
 
   fixpage04Points = points3.value;
-  fixpage04Points02 = points4.value; 
-
+  fixpage04Points02 = points4.value;
 }
 
 //Buttons for changing points on the fix page.
@@ -1468,7 +1452,6 @@ fixplusButton02.addEventListener("click", () => {
 
 //Save fixed score
 fixbuttonAcceptScore.addEventListener("click", () => {
- 
   fixpreviousMatchDiv.style.display = "none";
 
   //console.log(points.value);
@@ -1485,23 +1468,20 @@ fixbuttonAcceptScore.addEventListener("click", () => {
   matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
     matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["d"]
   ] = points4.value;
-
- 
 });
 
 //Play audio
 function playBlip() {
-  var audio = new Audio('./blip.ogg');
+  var audio = new Audio("./blip.ogg");
   audio.play();
 }
 function playBlop() {
-  var audio = new Audio('./blop.ogg');
+  var audio = new Audio("./blop.ogg");
   audio.play();
 }
 //Fullscreen button
 fullscreenButton.addEventListener("click", () => {
   openFullscreen();
-
 });
 
 let fulltime = 1;
@@ -1516,24 +1496,13 @@ function timeWindow() {
     fulltime += 0.4;
     timeLeftP.style.scale = fulltime.toString();
     timeLeftP.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-
-
-
-
   } else {
     timeLeftP.style.scale = "1";
     timeLeftP.style.backgroundColor = "rgba(0, 0, 0, 0.0)";
 
     fulltime = 1;
-
-
-
   }
 }
-
-
-
-
 
 var maxParticleCount = 150; //set max confetti count
 var particleSpeed = 2; //set the particle animation speed
@@ -1541,131 +1510,148 @@ var startConfetti; //call to start confetti animation
 var stopConfetti; //call to stop adding confetti
 var toggleConfetti; //call to start or stop the confetti animation depending on whether it's already running
 var removeConfetti; //call to stop the confetti animation and remove all confetti immediately
-(function() {
-	startConfetti = startConfettiInner;
-	stopConfetti = stopConfettiInner;
-	toggleConfetti = toggleConfettiInner;
-	removeConfetti = removeConfettiInner;
-	var colors = ["DodgerBlue", "OliveDrab", "Gold", "Pink", "SlateBlue", "LightBlue", "Violet", "PaleGreen", "SteelBlue", "SandyBrown", "Chocolate", "Crimson"]
-	var streamingConfetti = false;
-	var animationTimer = null;
-	var particles = [];
-	var waveAngle = 0;
-//startConfettiInner();
+(function () {
+  startConfetti = startConfettiInner;
+  stopConfetti = stopConfettiInner;
+  toggleConfetti = toggleConfettiInner;
+  removeConfetti = removeConfettiInner;
+  var colors = [
+    "DodgerBlue",
+    "OliveDrab",
+    "Gold",
+    "Pink",
+    "SlateBlue",
+    "LightBlue",
+    "Violet",
+    "PaleGreen",
+    "SteelBlue",
+    "SandyBrown",
+    "Chocolate",
+    "Crimson",
+  ];
+  var streamingConfetti = false;
+  var animationTimer = null;
+  var particles = [];
+  var waveAngle = 0;
+  //startConfettiInner();
 
-	
-	function resetParticle(particle, width, height) {
-		particle.color = colors[(Math.random() * colors.length) | 0];
-		particle.x = Math.random() * width;
-		particle.y = Math.random() * height - height;
-		particle.diameter = Math.random() * 10 + 5;
-		particle.tilt = Math.random() * 10 - 10;
-		particle.tiltAngleIncrement = Math.random() * 0.07 + 0.05;
-		particle.tiltAngle = 0;
-		return particle;
-	}
+  function resetParticle(particle, width, height) {
+    particle.color = colors[(Math.random() * colors.length) | 0];
+    particle.x = Math.random() * width;
+    particle.y = Math.random() * height - height;
+    particle.diameter = Math.random() * 10 + 5;
+    particle.tilt = Math.random() * 10 - 10;
+    particle.tiltAngleIncrement = Math.random() * 0.07 + 0.05;
+    particle.tiltAngle = 0;
+    return particle;
+  }
 
-	function startConfettiInner() {
-		var width = window.innerWidth;
-		var height = window.innerHeight;
-		window.requestAnimFrame = (function() {
-			return window.requestAnimationFrame ||
-				window.webkitRequestAnimationFrame ||
-				window.mozRequestAnimationFrame ||
-				window.oRequestAnimationFrame ||
-				window.msRequestAnimationFrame ||
-				function (callback) {
-					return window.setTimeout(callback, 16.6666667);
-				};
-		})();
-		var canvas = document.getElementById("confetti-canvas");
-		if (canvas === null) {
-			canvas = document.createElement("canvas");
-			canvas.setAttribute("id", "confetti-canvas");
-			canvas.setAttribute("style", "display:block;z-index:999999;pointer-events:none");
-			document.body.appendChild(canvas);
-			canvas.width = width;
-			canvas.height = height;
-			window.addEventListener("resize", function() {
-				canvas.width = window.innerWidth;
-				canvas.height = window.innerHeight;
-			}, true);
-		}
-		var context = canvas.getContext("2d");
-		while (particles.length < maxParticleCount)
-			particles.push(resetParticle({}, width, height));
-		streamingConfetti = true;
-		if (animationTimer === null) {
-			(function runAnimation() {
-				context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-				if (particles.length === 0)
-					animationTimer = null;
-				else {
-					updateParticles();
-					drawParticles(context);
-					animationTimer = requestAnimFrame(runAnimation);
-				}
-			})();
-		}
-	}
+  function startConfettiInner() {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    window.requestAnimFrame = (function () {
+      return (
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (callback) {
+          return window.setTimeout(callback, 16.6666667);
+        }
+      );
+    })();
+    var canvas = document.getElementById("confetti-canvas");
+    if (canvas === null) {
+      canvas = document.createElement("canvas");
+      canvas.setAttribute("id", "confetti-canvas");
+      canvas.setAttribute(
+        "style",
+        "display:block;z-index:999999;pointer-events:none"
+      );
+      document.body.appendChild(canvas);
+      canvas.width = width;
+      canvas.height = height;
+      window.addEventListener(
+        "resize",
+        function () {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        },
+        true
+      );
+    }
+    var context = canvas.getContext("2d");
+    while (particles.length < maxParticleCount)
+      particles.push(resetParticle({}, width, height));
+    streamingConfetti = true;
+    if (animationTimer === null) {
+      (function runAnimation() {
+        context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        if (particles.length === 0) animationTimer = null;
+        else {
+          updateParticles();
+          drawParticles(context);
+          animationTimer = requestAnimFrame(runAnimation);
+        }
+      })();
+    }
+  }
 
-	function stopConfettiInner() {
-		streamingConfetti = false;
-	}
+  function stopConfettiInner() {
+    streamingConfetti = false;
+  }
 
-	function removeConfettiInner() {
-		stopConfetti();
-		particles = [];
-	}
+  function removeConfettiInner() {
+    stopConfetti();
+    particles = [];
+  }
 
-	function toggleConfettiInner() {
-		if (streamingConfetti)
-			stopConfettiInner();
-		else
-			startConfettiInner();
-	}
+  function toggleConfettiInner() {
+    if (streamingConfetti) stopConfettiInner();
+    else startConfettiInner();
+  }
 
-	function drawParticles(context) {
-		var particle;
-		var x;
-		for (var i = 0; i < particles.length; i++) {
-			particle = particles[i];
-			context.beginPath();
-			context.lineWidth = particle.diameter;
-			context.strokeStyle = particle.color;
-			x = particle.x + particle.tilt;
-			context.moveTo(x + particle.diameter / 2, particle.y);
-			context.lineTo(x, particle.y + particle.tilt + particle.diameter / 2);
-			context.stroke();
-		}
-	}
+  function drawParticles(context) {
+    var particle;
+    var x;
+    for (var i = 0; i < particles.length; i++) {
+      particle = particles[i];
+      context.beginPath();
+      context.lineWidth = particle.diameter;
+      context.strokeStyle = particle.color;
+      x = particle.x + particle.tilt;
+      context.moveTo(x + particle.diameter / 2, particle.y);
+      context.lineTo(x, particle.y + particle.tilt + particle.diameter / 2);
+      context.stroke();
+    }
+  }
 
-	function updateParticles() {
-		var width = window.innerWidth;
-		var height = window.innerHeight;
-		var particle;
-		waveAngle += 0.01;
-		for (var i = 0; i < particles.length; i++) {
-			particle = particles[i];
-			if (!streamingConfetti && particle.y < -15)
-				particle.y = height + 100;
-			else {
-				particle.tiltAngle += particle.tiltAngleIncrement;
-				particle.x += Math.sin(waveAngle);
-				particle.y += (Math.cos(waveAngle) + particle.diameter + particleSpeed) * 0.5;
-				particle.tilt = Math.sin(particle.tiltAngle) * 15;
-			}
-			if (particle.x > width + 20 || particle.x < -20 || particle.y > height) {
-				if (streamingConfetti && particles.length <= maxParticleCount)
-					resetParticle(particle, width, height);
-				else {
-					particles.splice(i, 1);
-					i--;
-				}
-			}
-		}
-	}
+  function updateParticles() {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var particle;
+    waveAngle += 0.01;
+    for (var i = 0; i < particles.length; i++) {
+      particle = particles[i];
+      if (!streamingConfetti && particle.y < -15) particle.y = height + 100;
+      else {
+        particle.tiltAngle += particle.tiltAngleIncrement;
+        particle.x += Math.sin(waveAngle);
+        particle.y +=
+          (Math.cos(waveAngle) + particle.diameter + particleSpeed) * 0.5;
+        particle.tilt = Math.sin(particle.tiltAngle) * 15;
+      }
+      if (particle.x > width + 20 || particle.x < -20 || particle.y > height) {
+        if (streamingConfetti && particles.length <= maxParticleCount)
+          resetParticle(particle, width, height);
+        else {
+          particles.splice(i, 1);
+          i--;
+        }
+      }
+    }
+  }
 })();
-
 
 //startConfetti();

@@ -14,6 +14,7 @@ body {
   touch-action: pan-down;
   max-width: 100%;
   overflow-x: hidden;
+  
 
 }
 canvas {
@@ -594,6 +595,9 @@ table {
 }
 #sizeBoxId02 {
   margin-top: 25%;
+  
+
+  
 }
 #h2Title {
   position: absolute;
@@ -666,12 +670,15 @@ table {
   #sizeBoxId02 {
     scale: 0.4;
     margin-top: -70px;
+
+
   }
   #h2Title {
     scale: 0.5;
     margin-top: -50px;
 
   }
+
 }
 /*
 @media (max-height: 400px) {
