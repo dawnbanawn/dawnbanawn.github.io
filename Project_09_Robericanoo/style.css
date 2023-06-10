@@ -589,28 +589,58 @@ table {
   width: 55%;
 }
 }
-#sizeBoxId01 p{
+#sizeBoxId01 p, #sizeBoxId02 p{
   margin: auto;
+}
+#sizeBoxId02 {
+  margin-top: 25%;
+}
+#h2Title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1024px) {
   #sizeBoxId01 {
     scale: 1.5;
     margin-bottom: 25%;
+  }
+  #sizeBoxId02 {
+    scale: 1.4;
+  }
+  #h2Title {
+    scale: 1.5;
+    margin-top: -10px;
 
   }
 }
 @media screen and (max-height: 550px) and (orientation:landscape) {
   #sizeBoxId01 {
     scale: 1.3;
-    margin-bottom: 25%;
+    margin-bottom: 25%;    
+  }
+  #sizeBoxId02 {
+    scale: 1;
+  }
+  #h2Title {
+    scale: 1;
+    margin-top: -20px;
 
-    
   }
 }
 @media screen and (max-height: 500px) and (orientation:landscape) {
   #sizeBoxId01 {
     scale: 1;
     margin-bottom: 25%;
+  }
+  #sizeBoxId02 {
+    scale: 0.8;
+    margin-top: 30px;
+  }
+  #h2Title {
+    scale: 0.7;
+    margin-top: -30px;
 
   }
 }
@@ -619,11 +649,29 @@ table {
     scale: 0.7;
     margin-bottom: 25%;
   }
+  #sizeBoxId02 {
+    scale: 0.6;
+    margin-top: -20px;
+  }
+  #h2Title {
+    scale: 0.6;
+    margin-top: -40px;
+
+  }
 }
 @media screen and (max-height: 300px) and (orientation:landscape) {
   #sizeBoxId01 {
     scale: 0.6;
     margin-bottom: 25%;
+  }
+  #sizeBoxId02 {
+    scale: 0.3;
+    margin-top: -80px;
+  }
+  #h2Title {
+    scale: 0.5;
+    margin-top: -50px;
+
   }
 }
 /*
