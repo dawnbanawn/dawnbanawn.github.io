@@ -498,8 +498,39 @@ table {
 #timeLeftSpanText, #timeLeftSpan {
   font-size: 30px;
 }
+#sizeBoxId01 p, #sizeBoxId02 p{
+  margin: auto;
+}
+#sizeBoxId02 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%;
+  
+  
+
+ 
+
+
+  
+}
+#h2Title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
 
 @media (min-width: 768px) {
+#sizeBoxId02 {
+  top: 25%;
+
+}
   #fullscreenButton {
     scale: 1;
   
@@ -590,21 +621,7 @@ table {
   width: 55%;
 }
 }
-#sizeBoxId01 p, #sizeBoxId02 p{
-  margin: auto;
-}
-#sizeBoxId02 {
-  margin-top: 25%;
-  
 
-  
-}
-#h2Title {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
 @media screen and (min-width: 1024px) {
   #sizeBoxId01 {
     scale: 1.5;
@@ -612,12 +629,16 @@ table {
   }
   #sizeBoxId02 {
     scale: 1.4;
+  top: 30%;
+
+
   }
   #h2Title {
     scale: 1.5;
     margin-top: 0px;
   }
 }
+
 @media screen and (max-height: 550px) and (orientation:landscape) {
   #sizeBoxId01 {
     scale: 1.3;
@@ -625,6 +646,8 @@ table {
   }
   #sizeBoxId02 {
     scale: 1;
+  top: 20%;
+
   }
   #h2Title {
     scale: 1;
@@ -640,6 +663,7 @@ table {
   #sizeBoxId02 {
     scale: 0.8;
     margin-top: 30px;
+    
   }
   #h2Title {
     scale: 0.7;
