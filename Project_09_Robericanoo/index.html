@@ -9,10 +9,10 @@
   </head>
   <body id="mainBody">
     <div id="fullscreenDiv">
-      <button id="fullscreenButton">Fullscreen</button>
+      <!--<button id="fullscreenButton">Fullscreen</button>-->
     </div>
     <div id="fulltimeDiv">
-      <button id="timeButton">Enlarge</button>
+      <!--<button id="timeButton">Enlarge</button>-->
     </div>
 
     <div id="blackBackground">
@@ -30,23 +30,10 @@
     </div>
 
     <div id="page02Container">
-      
-      <h2 id="h2Title">Robericano</h2>
+      <h2 class="h2Title">Robericano</h2>
       <div id="sizeBoxId02">
-        <p>Please choose the number of players.</p>
-        <br /><br />
-        <select name="playerNumber" id="numberOfPlayersDropDown">
-          <option selected value="6">6 players</option>
-          <!--<option value="5">5 players</option>
-
-        <option value="4">4 players</option>-->
-        </select>
-
-        <p></p>
-        <br /><br /><br />
         <p>Please enter your preferred game time (min).</p>
         <br /><br />
-        
         <input
           placeholder="120"
           type="text"
@@ -56,56 +43,72 @@
           minlength="0"
           maxlength="8"
           size="9"
-          
         />
-        <!--<button  id="input01button">Ok</button>-->
+
+        <p></p>
+        <br /><br /><br />
+        <p>Please choose the number of players.</p>
         
+        <br /><br />
+        <select name="playerNumber" id="numberOfPlayersDropDown">
+          <option selected value="6">6 players</option>
+          <!--<option value="5">5 players</option>
+
+        <option value="4">4 players</option>-->
+        </select>
+        
+        <!--<button  id="input01button">Ok</button>-->
       </div>
       <div class="button01Div"><button id="button02">Next</button></div>
     </div>
 
     <div id="page03Container">
-      <h2>Robericano</h2>
-      <div class="sizeBox">
-        <p>
-          Please enter the <span id="page03PlayerNumberSpan">0</span> player
-          names.
-        </p>
-        <div id="nameInputContainer"></div>
+      
+        <h2 class="h2Title">Robericano</h2>
+        <div id="sizeBoxId03">
+        <div class="sizeBox">
+          <p>
+            Please enter the <span id="page03PlayerNumberSpan">0</span> player
+            names.
+          </p>
+          <div id="nameInputContainer"></div>
 
-        <p id="page03chosenGameTime">
-          Chosen game time: <span id="page03chosenGameTimeSpan">0</span> min.
-        </p>
-        <p id="page03chosenGameTime">
-          Match time: <span id="page03MatchTime">0</span>
-        </p>
+          <p id="page03chosenGameTime">
+            Chosen game time: <span id="page03chosenGameTimeSpan">0</span> min.
+          </p>
+          <p id="page03chosenGameTime">
+            Match time: <span id="page03MatchTime">0</span>
+          </p>
+        </div>
       </div>
       <div class="button01Div">
         <button id="button04">Back</button><button id="button03">Next</button>
       </div>
     </div>
     <div id="page04Container">
-      <h2>Robericano</h2>
+      <h2 class="h2Title">Robericano</h2>
+      <div id="sizeBoxId04">
+        
 
-      <p>The first players will be:</p>
-      <br /><br />
-      <p>
-        <span id="previewCurrentPlayerA">Player</span> and
-        <span id="previewCurrentPlayerB">Player</span>
-      </p>
-      <br />
-      <p style="line-height: 10%">vs</p>
-      <br />
-      <p>
-        <span id="previewCurrentPlayerC">Player</span> and
-        <span id="previewCurrentPlayerD">Player</span>
-      </p>
-      <br /><br />
-      <p>
-        Press Randomize to change start positions, <br />
-        or Confirm to continue.
-      </p>
-
+        <p>The first players will be:</p>
+        <br /><br />
+        <p>
+          <span id="previewCurrentPlayerA">Player</span> and
+          <span id="previewCurrentPlayerB">Player</span>
+        </p>
+        <br />
+        <p style="line-height: 10%">vs</p>
+        <br />
+        <p>
+          <span id="previewCurrentPlayerC">Player</span> and
+          <span id="previewCurrentPlayerD">Player</span>
+        </p>
+        <br /><br />
+        <p>
+          Press Randomize to change start positions, <br />
+          or Confirm to continue.
+        </p>
+      </div>
       <div class="button01Div">
         <button id="button04back">Back</button>
         <button id="button04randomize">Randomize</button
@@ -113,91 +116,93 @@
       </div>
     </div>
     <div id="page05Container">
-      <h2>Robericano</h2>
+      <h2 class="h2Title">Robericano</h2>
+      <div id="sizeBoxId05">
+        
 
-      <p id="currentMatchId">Match:</p>
-      <br />
-      <p id="timeLeftP">
-        <span id="timeLeftSpanText">Time left: </span>
-        <span id="timeLeftSpan">00</span>
-      </p>
-      <br />
-      <div id="currentPlayersDiv">
-        <p>
-          <span id="currentPlayerA">Player</span> and
-          <span id="currentPlayerB">Player</span>
+        <p id="currentMatchId">Match:</p>
+        <br />
+        <p id="timeLeftP">
+          <span id="timeLeftSpanText">Time left: </span>
+          <span id="timeLeftSpan">00</span>
         </p>
-        <p>vs</p>
-        <p>
-          <span id="currentPlayerC">Player</span> and
-          <span id="currentPlayerD">Player</span>
-        </p>
+        <br />
+        <div id="currentPlayersDiv">
+          <p>
+            <span id="currentPlayerA">Player</span> and
+            <span id="currentPlayerB">Player</span>
+          </p>
+          <p>vs</p>
+          <p>
+            <span id="currentPlayerC">Player</span> and
+            <span id="currentPlayerD">Player</span>
+          </p>
+        </div>
+        <div id="nextPlayersDiv">
+          <p>Next match</p>
+
+          <p>
+            <span id="nextPlayerA">Player</span> and
+            <span id="nextPlayerB">Player</span>
+          </p>
+          <p style="line-height: 10%">vs</p>
+          <p>
+            <span id="nextPlayerC">Player</span> and
+            <span id="nextPlayerD">Player</span>
+          </p>
+        </div>
+        <div id="previousMatchDiv">
+          <p>
+            <span id="pointsInfo01"
+              ><button id="buttonAcceptScore">Save</button> (match
+              <span id="page04PreviousMatch">0</span>) :
+            </span>
+          </p>
+
+          <p>
+            <span>
+              <span id="previousPlayerA">Player</span>,
+              <span id="previousPlayerB">Player</span>
+            </span>
+            <span>
+              <button id="minusButton01" class="plusAndMinusButtons">-</button>
+
+              <input
+                type="number"
+                id="points"
+                name="point"
+                placeholder="0"
+                required
+                minlength="1"
+                maxlength="2"
+                size="3"
+              />
+              <button id="plusButton01" class="plusAndMinusButtons">+</button>
+            </span>
+          </p>
+          <div id="page4PointsBorder"></div>
+          <p>
+            <span>
+              <span id="previousPlayerC">Player</span>,
+              <span id="previousPlayerD">Player</span></span
+            >
+            <span>
+              <button id="minusButton02" class="plusAndMinusButtons">-</button>
+              <input
+                type="number"
+                id="points2"
+                name="point"
+                placeholder="0"
+                required
+                minlength="1"
+                maxlength="2"
+                size="3"
+              />
+              <button id="plusButton02" class="plusAndMinusButtons">+</button>
+            </span>
+          </p>
+        </div>
       </div>
-      <div id="nextPlayersDiv">
-        <p>Next match</p>
-
-        <p>
-          <span id="nextPlayerA">Player</span> and
-          <span id="nextPlayerB">Player</span>
-        </p>
-        <p style="line-height: 10%">vs</p>
-        <p>
-          <span id="nextPlayerC">Player</span> and
-          <span id="nextPlayerD">Player</span>
-        </p>
-      </div>
-      <div id="previousMatchDiv">
-        <p>
-          <span id="pointsInfo01"
-            ><button id="buttonAcceptScore">Save</button> (match
-            <span id="page04PreviousMatch">0</span>) :
-          </span>
-        </p>
-
-        <p>
-          <span>
-            <span id="previousPlayerA">Player</span>,
-            <span id="previousPlayerB">Player</span>
-          </span>
-          <span>
-            <button id="minusButton01" class="plusAndMinusButtons">-</button>
-
-            <input
-              type="number"
-              id="points"
-              name="point"
-              placeholder="0"
-              required
-              minlength="1"
-              maxlength="2"
-              size="3"
-            />
-            <button id="plusButton01" class="plusAndMinusButtons">+</button>
-          </span>
-        </p>
-        <div id="page4PointsBorder"></div>
-        <p>
-          <span>
-            <span id="previousPlayerC">Player</span>,
-            <span id="previousPlayerD">Player</span></span
-          >
-          <span>
-            <button id="minusButton02" class="plusAndMinusButtons">-</button>
-            <input
-              type="number"
-              id="points2"
-              name="point"
-              placeholder="0"
-              required
-              minlength="1"
-              maxlength="2"
-              size="3"
-            />
-            <button id="plusButton02" class="plusAndMinusButtons">+</button>
-          </span>
-        </p>
-      </div>
-
       <div class="button01Div">
         <button id="pauseButton">Start</button
         ><button id="resultButton">Results</button>
@@ -205,77 +210,89 @@
       </div>
     </div>
     <div id="pageResultContainer">
-      <h2>Robericano</h2>
+      <h2 class="h2Title">Robericano</h2>
+      <div id="sizeBoxId06">
+        
 
-      <p>Results</p>
-      <div id="tableDiv"></div>
-
+        <p>Results</p>
+        <div id="tableDiv"></div>
+      </div>
       <div class="button01Div">
         <button id="buttonResultBack">Back</button>
       </div>
     </div>
     <div id="pageFixContainer">
-      <h2>Robericano</h2>
+      <h2 class="h2Title">Robericano</h2>
 
-      <p>Fix the scores here.</p>
-      <div id="scoreFixArrowsDiv">
-        <button id="rightArrow">⇦</button>
-        <p>Match: <span id="fixSpanMatchNumber">0</span></p>
-        <button id="leftArrow">⇨</button>
+      <div id="sizeBoxId07">
+
+        <p>Fix the scores here.</p>
+        <div id="scoreFixArrowsDiv">
+          <button id="rightArrow">⇦</button>
+          <p>Match: <span id="fixSpanMatchNumber">0</span></p>
+          <button id="leftArrow">⇨</button>
+        </div>
+
+        <div id="fixpreviousMatchDiv">
+          <p>
+            <span id="fixpointsInfo01"
+              ><button id="fixbuttonAcceptScore">Save</button> (match
+              <span id="fixpage04PreviousMatch">0</span>) :
+            </span>
+          </p>
+
+          <p>
+            <span>
+              <span id="fixpreviousPlayerA">Player</span>,
+              <span id="fixpreviousPlayerB">Player</span>
+            </span>
+            <span>
+              <button id="fixminusButton01" class="plusAndMinusButtons">
+                -
+              </button>
+
+              <input
+                type="number"
+                id="points3"
+                name="point"
+                placeholder="0"
+                required
+                minlength="1"
+                maxlength="2"
+                size="3"
+              />
+              <button id="fixplusButton01" class="plusAndMinusButtons">
+                +
+              </button>
+            </span>
+          </p>
+          <div id="fixpage4PointsBorder"></div>
+          <p>
+            <span>
+              <span id="fixpreviousPlayerC">Player</span>,
+              <span id="fixpreviousPlayerD">Player</span></span
+            >
+            <span>
+              <button id="fixminusButton02" class="plusAndMinusButtons">
+                -
+              </button>
+              <input
+                type="number"
+                id="points4"
+                name="point"
+                placeholder="0"
+                required
+                minlength="1"
+                maxlength="2"
+                size="3"
+              />
+              <button id="fixplusButton02" class="plusAndMinusButtons">
+                +
+              </button>
+            </span>
+          </p>
+        </div>
       </div>
-
-      <div id="fixpreviousMatchDiv">
-        <p>
-          <span id="fixpointsInfo01"
-            ><button id="fixbuttonAcceptScore">Save</button> (match
-            <span id="fixpage04PreviousMatch">0</span>) :
-          </span>
-        </p>
-
-        <p>
-          <span>
-            <span id="fixpreviousPlayerA">Player</span>,
-            <span id="fixpreviousPlayerB">Player</span>
-          </span>
-          <span>
-            <button id="fixminusButton01" class="plusAndMinusButtons">-</button>
-
-            <input
-              type="number"
-              id="points3"
-              name="point"
-              placeholder="0"
-              required
-              minlength="1"
-              maxlength="2"
-              size="3"
-            />
-            <button id="fixplusButton01" class="plusAndMinusButtons">+</button>
-          </span>
-        </p>
-        <div id="fixpage4PointsBorder"></div>
-        <p>
-          <span>
-            <span id="fixpreviousPlayerC">Player</span>,
-            <span id="fixpreviousPlayerD">Player</span></span
-          >
-          <span>
-            <button id="fixminusButton02" class="plusAndMinusButtons">-</button>
-            <input
-              type="number"
-              id="points4"
-              name="point"
-              placeholder="0"
-              required
-              minlength="1"
-              maxlength="2"
-              size="3"
-            />
-            <button id="fixplusButton02" class="plusAndMinusButtons">+</button>
-          </span>
-        </p>
-      </div>
-
       <div class="button01Div">
         <button id="buttonFixBack">Back</button>
       </div>

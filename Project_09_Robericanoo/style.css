@@ -515,11 +515,12 @@ table {
   color: rgb(0, 211, 0);
   font-size: 30px;
   margin: auto;
+  scale: 1.4;
 }
 #timeLeftSpanText, #timeLeftSpan {
   font-size: 30px;
 }
-#sizeBoxId01 p, #sizeBoxId02 p{
+#sizeBoxId01 p, #sizeBoxId02 p, #sizeBoxId03 p, #sizeBoxId04 p, #sizeBoxId05 p, #sizeBoxId06 p, #sizeBoxId07 p{
   margin: auto;
 }
 #sizeBoxId02 {
@@ -531,26 +532,96 @@ margin-right: auto;
 left: 0;
 right: 0;
 text-align: center;
-  top: 20%;
-  
-  
-
- 
-
-
-  
+  top: 20%; 
 }
-#h2Title {
+#sizeBoxId03 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%; 
+}
+#sizeBoxId04 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%; 
+}
+#sizeBoxId05 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%; 
+
+}
+#sizeBoxId06 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%; 
+}
+#sizeBoxId07 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%; 
+}
+.h2Title {
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
 }
+.plusAndMinusButtons  {
+  scale: 1.3;
+  margin: 5px;
+}
 
 @media (min-width: 768px) {
 #sizeBoxId02 {
   top: 25%;
+}
+#sizeBoxId03 {
+  top: 20%;
+}
+#sizeBoxId04 {
+  top: 25%;
+}
+#sizeBoxId05 {
+  top: 10%;
+  scale: 0.8;
+  
 
+}
+#sizeBoxId06 {
+  top: 25%;
+}
+#sizeBoxId07 {
+  top: 25%;
 }
   #fullscreenButton {
     scale: 1;
@@ -641,9 +712,13 @@ text-align: center;
 }#page4PointsBorder, #fixpage4PointsBorder {
   width: 55%;
 }
-#h2Title {
+.h2Title {
   scale: 1.3;
   margin-top: 0px;
+}
+.plusAndMinusButtons  {
+  scale: 1.3;
+  margin: 5px;
 }
 }
 
@@ -658,12 +733,52 @@ text-align: center;
   #sizeBoxId02 {
     scale: 1.4;
   top: 30%;
+  }
+  #sizeBoxId03 {
+    scale: 0.9;
+  top: 20%;
+  }
+  #sizeBoxId04 {
+    scale: 1.1;
+  top: 25%;
+  }
+  #sizeBoxId05 {
+    scale: 0.8;
+  top: 15%;
 
+  
 
   }
-  #h2Title {
+  #sizeBoxId05 .plusAndMinusButtons{
+    scale: 1.3;
+  }
+  #sizeBoxId06 {
+    scale: 1.4;
+  top: 30%;
+  }
+  #sizeBoxId07 {
+    scale: 1;
+  top: 30%;
+  }
+  .h2Title {
     scale: 1.5;
     margin-top: 0px;
+  }
+  .plusAndMinusButtons  {
+    scale: 1.3;
+    margin: 5px;
+  }
+  #nameInputContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height:100px;    
+    width: 400px;
+    scale: 1.5;
+  }
+  #nameInputContainer input{
+    margin: 5px;  
+    
   }
 }
 
@@ -676,12 +791,35 @@ text-align: center;
   #sizeBoxId02 {
     scale: 1;
   top: 20%;
-
   }
-  #h2Title {
+  #sizeBoxId03 {
+    scale: 0.9;
+  top: 15%;
+  }
+  #sizeBoxId04 {
+    scale: 1;
+  top: 20%;
+  }
+  #sizeBoxId05 {
+    scale: 0.7;
+  top: 10%;
+  }
+  #sizeBoxId06 {
+    scale: 1;
+  top: 20%;
+  }
+  #sizeBoxId07 {
+    scale: 1;
+  top: 20%;
+  }
+  .h2Title {
     scale: 1;
     margin-top: -20px;
 
+  }
+  .plusAndMinusButtons  {
+    scale: 1.3;
+    margin: 5px;
   }
 }
 @media screen and (max-height: 500px) and (orientation:landscape) {
@@ -691,13 +829,38 @@ text-align: center;
   }
   #sizeBoxId02 {
     scale: 0.8;
-    margin-top: 30px;
-    
+    margin-top: 30px;    
   }
-  #h2Title {
+  #sizeBoxId03 {
+    scale: 0.7;
+    margin-top: -50px;    
+  }
+  #sizeBoxId04 {
+    scale: 0.8;
+    margin-top: 0px;    
+  }
+  #sizeBoxId05 {
+    scale: 0.6;
+    margin-top: -60px;  
+  top: 15%;
+
+  }
+  #sizeBoxId06 {
+    scale: 0.8;
+    margin-top: 30px;    
+  }
+  #sizeBoxId07 {
+    scale: 0.8;
+    margin-top: 30px;    
+  }
+  .h2Title {
     scale: 0.7;
     margin-top: -30px;
 
+  }
+  .plusAndMinusButtons  {
+    scale: 1.3;
+    margin: 5px;
   }
 }
 @media screen and (max-height: 400px) and (orientation:landscape) {
@@ -709,7 +872,28 @@ text-align: center;
     scale: 0.6;
     margin-top: -20px;
   }
-  #h2Title {
+  #sizeBoxId03 {
+    scale: 0.5;
+    margin-top: -70px;
+  }
+  #sizeBoxId04 {
+    scale: 0.6;
+    margin-top: -20px;
+  }
+  #sizeBoxId05 {
+    scale: 0.5;
+    margin-top: -70px;
+    top: 15%;
+  }
+  #sizeBoxId06 {
+    scale: 0.6;
+    margin-top: -20px;
+  }
+  #sizeBoxId07 {
+    scale: 0.6;
+    margin-top: -20px;
+  }
+  .h2Title {
     scale: 0.6;
     margin-top: -40px;
 
@@ -723,10 +907,29 @@ text-align: center;
   #sizeBoxId02 {
     scale: 0.4;
     margin-top: -70px;
-
-
   }
-  #h2Title {
+  #sizeBoxId03 {
+    scale: 0.3;
+    margin-top: -110px;
+  }
+  #sizeBoxId04 {
+    scale: 0.4;
+    margin-top: -70px;
+  }
+  #sizeBoxId05 {
+    scale: 0.3;
+    margin-top: -90px;
+    top: 15%;
+  }
+  #sizeBoxId06 {
+    scale: 0.4;
+    margin-top: -70px;
+  }
+  #sizeBoxId07 {
+    scale: 0.4;
+    margin-top: -70px;
+  }
+  .h2Title {
     scale: 0.5;
     margin-top: -50px;
 
@@ -753,6 +956,27 @@ text-align: center;
 
 }*/
 
+@media screen and (min-width: 1199px) {
+  
+  #sizeBoxId03 {
+    scale: 1;
+  top: 20%;
+  }
+
+#sizeBoxId04 {
+  scale: 1;
+top: 20%;
+}
+#sizeBoxId05 {
+  scale: 0.9;
+top: 15%;
+
+}
+.plusAndMinusButtons  {
+  scale: 1.3;
+  margin: 5px;
+}
+}
 
   
   
@@ -764,14 +988,34 @@ text-align: center;
   #sizeBoxId02 {
     scale: 1.7;
   top: 40%;
-
-
   }
-  #h2Title {
+  #sizeBoxId03 {
+    scale: 1.7;
+  top: 40%;
+  }
+  #sizeBoxId04 {
+    scale: 1.7;
+  top: 40%;
+  }
+  #sizeBoxId05 {
+    scale: 1.7;
+  top: 40%;
+  }
+  #sizeBoxId06 {
+    scale: 1.7;
+  top: 40%;
+  }
+  #sizeBoxId07 {
+    scale: 1.7;
+  top: 40%;
+  }
+  .h2Title {
     scale: 2;
     margin-top: 30px;
   }
 }
+
+
 
 
 
