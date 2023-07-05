@@ -1,6 +1,16 @@
+window.addEventListener('resize', function(){
+  if (window.innerWidth > window.innerHeight) {
+console.log("force landscape");
+screen.orientation.lock('landscape');
+
+  } else {
+    console.log("force portrait");
+screen.orientation.lock('portrait');
 
 
-
+  }
+});
+//screen.orientation.lock('landscape');
 
 
 
@@ -1047,7 +1057,7 @@ function clock() {
       ":" +
       (seconds < 10 ? "0" + seconds : seconds);
     console.log(timeLeftSpan.innerHTML);
-    if (gameOn == true) {
+    if (gameOn == true && pause == false) {
       if (c == 3) {
         timeLeftSpan.style.color = "yellow";
         timeLeftSpanText.style.color = "yellow";
@@ -1090,7 +1100,7 @@ function clock() {
         //           }
       }
     }
-    if (gameOn == false) {
+    if (gameOn == false && pause == false) {
       if (c == 3) {
         timeLeftSpan.style.color = "yellow";
         timeLeftSpanText.style.color = "yellow";
@@ -1140,7 +1150,7 @@ function clock() {
           currentMatchId.innerHTML = "Match: " + (match - 1) + "/15";
           timeLeftSpanText.innerHTML = "Time´s Out!";
           timeLeftSpan.innerHTML = "";
-          startConfetti();
+          //startConfetti();
           console.log("end game");
         }
         //PointsDiv
@@ -1536,9 +1546,9 @@ function playBlop() {
   audio.play();
 }
 //Fullscreen button
-fullscreenButton.addEventListener("click", () => {
-  openFullscreen();
-});
+// fullscreenButton.addEventListener("click", () => {
+//   openFullscreen();
+// });
 
 let fulltime = 1;
 const timeLeftP = document.querySelector("#timeLeftP");
