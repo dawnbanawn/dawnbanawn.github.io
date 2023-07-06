@@ -1,15 +1,15 @@
-window.addEventListener('resize', function(){
-  if (window.innerWidth > window.innerHeight) {
-console.log("force landscape");
-screen.orientation.lock('landscape');
+// window.addEventListener('resize', function(){
+//   if (window.innerWidth > window.innerHeight) {
+// console.log("force landscape");
+// screen.orientation.lock('landscape');
 
-  } else {
-    console.log("force portrait");
-screen.orientation.lock('portrait');
+//   } else {
+//     console.log("force portrait");
+// screen.orientation.lock('portrait');
 
 
-  }
-});
+//   }
+// });
 //screen.orientation.lock('landscape');
 
 
@@ -115,7 +115,8 @@ const gameTimeField = document.querySelector("#gameTime");
 //   input01button.style.marginLeft = "20px";
 //   input01button.style.scale = "1";
 // });
-
+nextPlayersDiv = document.querySelector("#nextPlayersDiv");
+currentPlayersDiv = document.querySelector("#currentPlayersDiv");
 
 previewCurrentPlayerA = document.querySelector("#previewCurrentPlayerA");
 previewCurrentPlayerB = document.querySelector("#previewCurrentPlayerB");
@@ -143,7 +144,8 @@ const minusButton02 = document.querySelector("#minusButton02");
 const plusButton02 = document.querySelector("#plusButton02");
 const points = document.querySelector("#points");
 const points2 = document.querySelector("#points2");
-
+points.value = 0;
+points2.value = 0;
 const page04PreviousMatch = document.querySelector("#page04PreviousMatch");
 
 const previousMatchDiv = document.querySelector("#previousMatchDiv");
@@ -1152,6 +1154,8 @@ function clock() {
           timeLeftSpan.innerHTML = "";
           //startConfetti();
           console.log("end game");
+          nextPlayersDiv.style.display = "none";
+          currentPlayersDiv.style.display = "none";
         }
         //PointsDiv
         previousMatchDiv.style.display = "block";
@@ -1251,14 +1255,14 @@ buttonAcceptScore.addEventListener("click", () => {
   fixButton.style.display = "block";
   //Hides the score div
   previousMatchDiv.style.display = "none";
-  console.log(
-    "points" +
-      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1][
-        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1][
-          "d"
-        ].toString()
-      ]
-  );
+  // console.log(
+  //   "points" +
+  //     matchOrders[numberOfPlayers][chosenMatchOrder][match - 1][
+  //       matchOrders[numberOfPlayers][chosenMatchOrder][match - 1][
+  //         "d"
+  //       ].toString()
+  //     ]
+  // );
   //console.log(points.value);
 
   matchOrders[numberOfPlayers][chosenMatchOrder][match - 2][
