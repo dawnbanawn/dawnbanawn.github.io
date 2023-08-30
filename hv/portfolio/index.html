@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dan Heikenberg</title>
+  </head>
+  <body>
+    <div class="header">
+      <!--Delat in allt i 3 huvud-sektioner (divs), header, main och footer, och sedan alla mindre sektioner i divs-->
+      <div class="nav">
+        <!--Nav känns som ett givet namn för div som ska innehålla logga och meny-->
+        <div class="logo">
+          <h1>Dan Heikenberg</h1>
+        </div>
+        <div class="links">
+          <!--Alla länkarna hamnade i sin egen div-->
+          <a href="#">Home</a>
+          <a href="./processanalys.html">Processanalys</a>
+          <a href="https://www.hv.se/">HSV</a>
+        </div>
+      </div>
+      <div class="hero">
+        <!--Jag tänkte ha bakgrundsbilden här, men ändrade mig till .headerför att det var snyggare att ha den under nav-->
+        <div class="heroInfo01">
+          <!--"Kort text om mig"-->
+          <p>
+            Blo bli blo bli blo bli blo bli blo bli blo bli blo bli blo bli blo
+            bli blo bli blo bli blo bli blo .
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <!--Huvudsektionen, den enda som skrivs ut vid print-->
+      <div class="cardsContainer">
+        <!--Container för de 3 korten-->
+        <div id="card01card" class="cardContainer">
+          <!--Container för ett kort, med id till flex box ordning-->
+          <div id="card01" class="cardTop">
+            <!--Id för att styra ändring av margin av bilden vid olika skärmstorlekar-->
+            <img src="./images/image01.jpg" alt="A clown." />
+          </div>
+          <div class="cardBottom">
+            <div class="emptyCardSpace"></div>
+            <!--Tom ytan för att fylla halva undre bilden, det finns säkert bättre sätt att lösa det på, men detta funkade.-->
+            <p class="cardBottomFirstText">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+              repudiandae minima unde accusantium exercitationem atque vitae?
+              Laborum, non quibusdam saepe, ipsa quasi neque a at necessitatibus
+              omnis culpa possimus commodi.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+              repudiandae minima unde accusantium exercitationem atque vitae?
+              Laborum, non quibusdam saepe, ipsa quasi neque a at necessitatibus
+              omnis culpa possimus commodi.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+              repudiandae minima unde accusantium exercitationem atque vitae?
+              Laborum, non quibusdam saepe, ipsa quasi neque a at necessitatibus
+              omnis culpa possimus commodi.
+            </p>
+          </div>
+        </div>
+        <div id="card02card" class="cardContainer">
+          <!--Kortnummer 2, detta är kortet som är i mitten, och ska vara högst i flexbox ordning vid ändring av skärmstorlek-->
+          <div id="card02" class="cardTop">
+            <img src="./images/image02.jpg" alt="Another clown." />
+          </div>
+          <div class="cardBottom">
+            <div class="emptyCardSpace"></div>
+            <p class="cardBottomFirstText">
+              MITTEN, ipsum dolor sit amet consectetur adipisicing elit. Aut
+              repudiandae minima unde accusantium exercitationem atque vitae?
+              Laborum, non quibusdam saepe, ipsa quasi neque a at necessitatibus
+              omnis culpa possimus commodi.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+              repudiandae minima unde accusantium exercitationem atque vitae?
+              Laborum, non quibusdam saepe, ipsa quasi neque a at necessitatibus
+              omnis culpa possimus commodi.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+              repudiandae minima unde accusantium exercitationem atque vitae?
+              Laborum, non quibusdam saepe, ipsa quasi neque a at necessitatibus
+              omnis culpa possimus commodi.
+            </p>
+          </div>
+        </div>
+        <div id="card03card" class="cardContainer">
+          <!--Kort nummer 3-->
+          <div id="card03" class="cardTop">
+            <img src="./images/image03.jpg" alt="Yet another clown." />
+          </div>
+          <div class="cardBottom">
+            <div class="emptyCardSpace"></div>
+            <p class="cardBottomFirstText">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+              repudiandae minima unde accusantium exercitationem atque vitae?
+              Laborum, non quibusdam saepe, ipsa quasi neque a at necessitatibus
+              omnis culpa possimus commodi.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+              repudiandae minima unde accusantium exercitationem atque vitae?
+              Laborum, non quibusdam saepe, ipsa quasi neque a at necessitatibus
+              omnis culpa possimus commodi.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+              repudiandae minima unde accusantium exercitationem atque vitae?
+              Laborum, non quibusdam saepe, ipsa quasi neque a at necessitatibus
+              omnis culpa possimus commodi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <!--Footer sektionen-->
+      <div class="footerInfo">
+        <!--All info i footer delas in i 3 divs-->
+        <h2>Adress</h2>
+        <p>Storgatan 1</p>
+        <p>12345 Båstad</p>
+      </div>
+      <div class="footerInfo">
+        <h2>Telefon</h2>
+        <p>0431-12345</p>
+        <p>073 123 456 78</p>
+      </div>
+      <div class="footerInfo">
+        <h2>E-post</h2>
+        <p>bli@info.se</p>
+        <p>blo@sales.se</p>
+      </div>
+    </div>
+  </body>
+</html>

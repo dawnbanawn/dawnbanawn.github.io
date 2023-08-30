@@ -1,0 +1,217 @@
+* {
+  /*Tar bort onödig/oönskad margin och padding.*/
+  margin: 0;
+  padding: 0;
+}
+body {
+  /*sidans height ska vara flexibel*/
+  width: 100%;
+  height: auto;
+  background-color: rgb(211, 211, 211);
+}
+.nav {
+  /*nav får space between för att sprida ut loggan och menyn, för vidare justering.*/
+
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+p,
+.processAnalysText {
+  /*Fonter till p*/
+  font-family: helvetica, arial, sans-serif;
+}
+.links {
+  /*Justering i höjdled av länk div*/
+  height: 25px;
+}
+.links a {
+  /*Länkarna fick en google font (kanske inte det bästa, men jag kontrollerade att det inte blir för tokigt med olika skärmstorlekar.)*/
+  font-family: "Trade Winds", arial, sans-serif;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.header {
+  /*hela sektionen fick en bakgrundsbild som håller sig centrerad och anpassar sig delvis till skärmbredden*/
+  background-image: url(./images/hero2.jpg);
+  background-size: 100%;
+  background-position: center center;
+  height: 400px;
+}
+#processAnalysHeader {
+  /*Header justering för processanalys-sidan*/
+  height: 75px;
+}
+.processAnalysContainer {
+  /*Container för processanalys-text*/
+  margin: 10px;
+  height: 800px;
+  background-color: rgb(193, 193, 193);
+}
+.processAnalysContainer h2 {
+  /*h2 justering*/
+  text-align: center;
+  margin-bottom: 5px;
+}
+.processAnalysContainer p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header h1 {
+  /*Logo-texten*/
+  font-size: 35px;
+  background-color: rgb(64, 64, 117);
+  color: white;
+  width: 280px;
+  height: 45px;
+  text-align: center;
+}
+.logo {
+  /*Justerar vidare loggans plats*/
+  margin-left: 60px;
+}
+
+.links {
+  /*Justerar vidare länkarnas plats*/
+  margin-right: 100px;
+  margin-top: 15px;
+}
+
+.heroInfo01 {
+  /*Justerar "hero"-textens plats*/
+  margin-top: 100px;
+  margin-left: 50%;
+  margin-right: 10%;
+  text-align: center;
+  color: white;
+}
+.main {
+  /*Viktigt att main sektionens height är auto, speciellt när korten blir en kolumn*/
+  height: auto;
+}
+.cardsContainer {
+  /*Sprider ut korten med luft emellan*/
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.cardContainer {
+  /*Flyttar bland annat upp korten så att bilden hamnar delvis över header*/
+  width: 250px;
+  margin-top: -50px;
+}
+
+.cardTop img {
+  /*Anpassar bilden, gör den rund, och ger den en vit border*/
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-left: 45px;
+}
+#card01 img {
+  /*Flyttar bilden till vänstra sidan av kortet*/
+  margin-left: 0px;
+}
+
+#card03 img {
+  /*Flyttar bilden till höger sida av kortet*/
+  margin-left: 90px;
+}
+
+.cardBottom {
+  /*Färg och plats-justeringar*/
+  background-color: white;
+  margin-top: -85px;
+}
+.emptyCardSpace {
+  height: 100px;
+}
+.cardBottom p {
+  margin: 5px;
+}
+.cardBottomFirstText {
+  font-size: 20px;
+}
+.footer {
+  /*Sprider ut 3 divs med info*/
+  background-color: rgb(124, 167, 216);
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footerInfo {
+  /*Justering av margin runt divs med info*/
+  margin: 10px 50px;
+}
+@media screen and (max-width: 700px) {
+  /*Vid denna mindre skärmstorlek görs justeringar, jag tycker att det nu ser bra ut på alla skärmstorlekar, så jag tror inte att jag behöver fler, men jag kanske har fel.*/
+  .heroInfo01 {
+    /*Hero-texten flyttas till mitten av skärmen.*/
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+  }
+  .header {
+    /*Header height minskas*/
+    height: 240px;
+  }
+  .nav {
+    /*display block för att logo och meny ska kunna hamna vertikalt*/
+    display: block;
+    text-align: center;
+  }
+  .logo {
+    /*Justering för att ha centrering*/
+    margin-left: 0;
+  }
+  .links {
+    margin-right: 0;
+    margin-top: 5px;
+  }
+  .footer {
+    /*Justering för att divs ska kunna hamna vertikalt*/
+    display: block;
+    text-align: center;
+    height: auto;
+    margin-bottom: -10px;
+  }
+  .footer h2 {
+    margin-top: 10px;
+  }
+  #card01 img {
+    /*Justerar bilden till mitten av kortet*/
+    margin-left: 45px;
+  }
+  #card03 img {
+    /*Justerar bilden till mitten av kortet*/
+    margin-left: 45px;
+  }
+  .cardsContainer {
+    /*Korten ska nu lägga sig som en kolumn.*/
+    flex-direction: column;
+    align-items: center;
+  }
+  #card01card {
+    /*Justering så att inte bilden hamnar ovanpå ovanstående kort, pga tidigare ändrad margin.*/
+    margin-bottom: 50px;
+  }
+  #card02card {
+    /*Mittenkortet får flex-order första platsen i kolumn-flex containern.*/
+    margin-bottom: 50px;
+    order: -1;
+  }
+  .header h1 {
+    /*Centrerar h1, och respekterar width och height jämfört med enbart inline */
+    display: inline-block;
+  }
+}
+@media print {
+  /*Gömmer header och footer vid print.*/
+  .header,
+  .footer {
+    display: none !important;
+  }
+}
