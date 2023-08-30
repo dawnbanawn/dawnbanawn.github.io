@@ -107,6 +107,7 @@ p,
 .cardTop img {
   /*Anpassar bilden, gör den rund, och ger den en vit border*/
   width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 5px solid white;
   margin-left: 45px;
