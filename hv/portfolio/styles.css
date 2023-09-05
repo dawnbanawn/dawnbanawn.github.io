@@ -29,7 +29,6 @@ p,
   /*Länkarna fick en google font (kanske inte det bästa, men jag kontrollerade att det inte blir för tokigt med olika skärmstorlekar.)*/
   font-family: "Trade Winds", arial, sans-serif;
   text-decoration: none;
-  color: rgb(255, 255, 255);
   margin-right: 5px;
   margin-left: 5px;
 }
@@ -60,11 +59,14 @@ p,
   margin-right: 10px;
 }
 
+.navAndHeroTextColor {
+  color: white;
+}
+
 .header h1 {
   /*Logo-texten*/
   font-size: 35px;
   background-color: rgb(64, 64, 117);
-  color: white;
   width: 280px;
   height: 45px;
   text-align: center;
@@ -86,7 +88,6 @@ p,
   margin-left: 50%;
   margin-right: 10%;
   text-align: center;
-  color: white;
 }
 .main {
   /*Viktigt att main sektionens height är auto, speciellt när korten blir en kolumn*/
