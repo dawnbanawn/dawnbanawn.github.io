@@ -1,0 +1,58 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(232, 209, 209);
+}
+#nav-bar {
+  position: sticky;
+  z-index: 10;
+}
+.nav-item {
+  background-color: rgb(232, 209, 209);
+}
+.navbar {
+  background-image: linear-gradient(
+    to right,
+    rgb(232, 209, 209),
+    rgb(232, 209, 209)
+  );
+  opacity: 0.9;
+}
+
+.back_video {
+  right: 0%;
+  bottom: 0%;
+  min-width: 100%;
+  min-height: auto;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  margin-top: -50px;
+}
+
+.logoContainer {
+  width: 100%;
+}
+
+.logoName {
+  z-index: 5;
+  width: 60%;
+  margin-top: 45%;
+  opacity: 0.75;
+}
+
+li {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+ul {
+  z-index: 4;
+}
+
+.dropdown-menu {
+  background-color: rgb(232, 209, 209);
+}
+
+#om_ronnbar,
+#recensioner {
+  background-color: white;
+}

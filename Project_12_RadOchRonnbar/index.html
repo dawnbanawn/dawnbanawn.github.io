@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Råd&Rönnbär</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--fluid för full sid-bredd-->
+    <div class="container-fluid">      
+      <div class="row">
+        <!--Id-tagg till meny-länk-->
+        <section id="start"></section>
+      </div>
+      <!--Navbar modifierad från-->
+      <!--https://getbootstrap.com/docs/4.0/components/navbar/-->
+      <div class="row g-0 fixed-top px-2">
+        <section id="nav-bar">
+          <!--Vid md är kolumnen 12 bred-->
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+              <a class="navbar-brand" href="#"
+                ><img src="./images/logoNameSmall.png" alt=""
+              /></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!--justify-content-end Placerar menyn till höger i navbar-->
+              <div
+                class="collapse navbar-collapse d-lg-flex justify-content-end"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav d-flex justify-content-center">
+                  <li class="nav-item active text-center">
+                    <a class="nav-link mainLink" href="#start">Start</a>
+                  </li>
+                  <li class="nav-item dropdown text-center">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Meny
+                    </a>
+                    <div
+                      class="dropdown-menu text-center"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <a class="dropdown-item" href="#om_ronnbar">Om Rönnbär</a>
+                      <a class="dropdown-item" href="#om_mig">Om Mig</a>
+
+                      <a class="dropdown-item" href="#recensioner"
+                        >Recensioner</a
+                      >
+                    </div>
+                  </li>
+                  <li class="nav-item text-center">
+                    <a class="nav-link mainLink" href="#kontakt">Kontakt</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </section>
+      </div>
+
+      <!--Hero-->
+
+      <div class="row">
+        <section id="hero">
+          <div class="col-md-12">
+            <div class="logo">
+              <div class="logoContainer d-flex justify-content-center align-items-center">
+                <img
+                  class="logoName position-absolute"
+                  src="images/logoName.png"
+                  alt="logo name"
+                />
+              </div>
+            </div>
+            <!--Autoplay, muted o.s.v. för att fungera i fler webbläsare-->
+            <video class="back_video position-relative" autoplay muted loop>
+              <source src="videos/ronnbar.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </section>
+      </div>
+      <div class="row">
+        <section>
+          <div class="col-md-12">
+            <div class="line"></div>
+          </div>
+        </section>
+      </div>
+
+      <!--Om Rönnbär-->
+      <!--gutter som visar bakgrundsfärgen på sidorna-->
+      <div class="row g-0">
+        <section id="om_ronnbar">
+          <div class="col-md-12">
+            <div>
+              <!--Justering av margin med m/mt-->
+              <h2 class="text-center mt-5">Om Rönnbär</h2>
+              <p class="m-4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Laudantium dolore neque autem voluptate commodi corrupti, nihil
+                omnis ipsum iusto maxime hic reiciendis cum odio, maiores,
+                pariatur minima exercitationem alias voluptatum?
+              </p>
+              <br /><br />
+            </div>
+            <div class="container-fluid">
+              <div class="row d-flex align-items-center">
+                <div class="col-md-4 text-center">
+                  <p>✓ Rönnbär är röda</p>
+                  <p>✓ Rönnbär är bär</p>
+                  <p>✓ Rönnbär</p>
+                  <p>✓ Rönnbär?</p>
+                  <p>✓ Rönnbär!</p>
+                  <br />
+                </div>
+
+                <div class="col-md-8 mx-auto text-center">
+                  <img
+                    class="img-fluid"
+                    src="images/ronnbar1.jpg"
+                    alt="ronnbar image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!--Om Mig-->
+
+      <div class="row g-0 mb-5">
+        <section id="om_mig">
+          <div class="col-md-12">
+            <div>
+              <h2 class="text-center mt-5">Om Mig</h2>
+              <p class="m-4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Laudantium dolore neque autem voluptate commodi corrupti, nihil
+                omnis ipsum iusto maxime hic reiciendis cum odio, maiores,
+                pariatur minima exercitationem alias voluptatum?
+              </p>
+              <br /><br />
+            </div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                  <img
+                    class="img-fluid"
+                    src="images/ronnbar2.jpg"
+                    alt="ronnbar image"
+                  />
+                </div>
+                <div class="col-md-4 mt-2 text-center">
+                  <p>Kunskap om Rönnbär</p>
+                  <!--Kod till progress bars hittad här:-->
+                  <!--https://getbootstrap.com/docs/5.3/components/progress/-->
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar" style="width: 95%"></div>
+                  </div>
+                  <br />
+                  <p>Kunskap om alla bär.</p>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar" style="width: 70%"></div>
+                  </div>
+                  <br />
+                  <p>Kunskap om alla frukt.</p>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar" style="width: 55%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!--Recensioner-->
+
+      <div class="row g-0 mb-5">
+        <section id="recensioner">
+          <div class="col-md-12 text-center">
+            <div class="intro">
+              <h2 class="text-center mt-5">Recensioner</h2>
+              <br />
+            </div>
+            <div class="container-fluid d-flex justify-content-around">
+              <div class="row">
+                <div class="col-12 col-sm-6 d-flex justify-content-around mt-2">
+                  <br />
+                  <!--Kod till cards (före modifiering), hittad här-->
+                  <!--https://getbootstrap.com/docs/5.3/components/card/-->
+                  <div class="card" style="width: 18rem">
+                    <img
+                      src="./images/ronnbar1.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Lennart</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                  </div>
+
+                  <br />
+                </div>
+
+                <div class="col-12 col-sm-6 d-flex justify-content-around mt-2">
+                  <br />
+                  <div class="card" style="width: 18rem">
+                    <img
+                      src="./images/ronnbar1.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Lisa</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                  </div>
+
+                  <br />
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid d-flex justify-content-around">
+              <div class="row">
+                <div class="col-12 col-sm-6 d-flex justify-content-around mt-2">
+                  <br />
+                  <!--Kod till cards (före modifiering), hittad här-->
+                  <!--https://getbootstrap.com/docs/5.3/components/card/-->
+                  <div class="card" style="width: 18rem">
+                    <img
+                      src="./images/ronnbar1.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Lennart</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                  </div>
+
+                  <br />
+                </div>
+
+                <div class="col-12 col-sm-6 d-flex justify-content-around mt-2">
+                  <br />
+                  <div class="card" style="width: 18rem">
+                    <img
+                      src="./images/ronnbar1.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Lisa</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                  </div>
+
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!--Kontakt -->
+
+      <div class="row g-0">
+        <section id="kontakt">
+          <div class="col-md-12">
+            <div>
+              <h2 class="text-center mt-5">Kontakt</h2>
+
+              <br />
+            </div>
+            <div class="container-fluid">
+              <!--Kod tagen och modifierad från-->
+              <!--https://mdbootstrap.com/docs/b4/jquery/forms/contact/-->
+              <div class="row d-flex align-items-center">
+                <!--Section description-->
+                <p class="text-center w-responsive mx-auto mb-5">
+                  Använd kontaktformuläret för att kontakta oss.
+                </p>
+                <div class="d-flex justify-content-center">
+                  <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-12 mb-md-0 mb-5">
+                      <form
+                        id="contact-form"
+                        name="contact-form"
+                        action="mail.php"
+                        method="POST"
+                      >
+                        <!--Grid row-->
+                        <div class="row">
+                          <!--Grid column-->
+                          <div class="col-md-6">
+                            <div class="md-form mb-0">
+                              <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="form-control"
+                              />
+                              <label for="name" class="">Your name</label>
+                            </div>
+                          </div>
+                          <!--Grid column-->
+
+                          <!--Grid column-->
+                          <div class="col-md-6">
+                            <div class="md-form mb-0">
+                              <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                class="form-control"
+                              />
+                              <label for="email" class="">Your email</label>
+                            </div>
+                          </div>
+                          <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="md-form mb-0">
+                              <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                class="form-control"
+                              />
+                              <label for="subject" class="">Subject</label>
+                            </div>
+                          </div>
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+                          <!--Grid column-->
+                          <div class="col-md-12">
+                            <div class="md-form">
+                              <textarea
+                                type="text"
+                                id="message"
+                                name="message"
+                                rows="2"
+                                class="form-control md-textarea"
+                              ></textarea>
+                              <label for="message">Your message</label>
+                            </div>
+                          </div>
+                        </div>
+                        <!--Grid row-->
+                      </form>
+                    </div>
+                    <div class="text-center text-md-center pb-4">
+                      <a
+                        class="btn btn-primary"
+                        onclick="document.getElementById('contact-form').submit();"
+                        >Send</a
+                      >
+                    </div>
+                    <div class="status"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-8 mx-auto text-center">
+                <img
+                  class="img-fluid"
+                  src="images/ronnbar3.jpg"
+                  alt="ronnbar image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="row g-0">
+        <section>
+          <div class="col-md-12">
+            <div class="footer text-center">
+              <p>Dan Heikenberg 2023</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!--Jquery kräver: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <!--Funktion som kollapsar eventuell meny, vid klick.-->
+    <script>
+      $(document).ready(function () {
+        $(".dropdown-item").click(function () {
+          $(".navbar-collapse").collapse("hide");
+        });
+        $(".mainLink").click(function () {
+          $(".navbar-collapse").collapse("hide");
+        });
+      });
+    </script>
+  </body>
+</html>
