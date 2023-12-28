@@ -9,8 +9,8 @@ html {
 }
 body {
   /* height: 100%; */
-  /* overscroll-behavior-y: none;
-  overflow: auto; */
+  overscroll-behavior-x: none;
+  overflow: auto; 
   touch-action: pan-down;
   width: 100%;
   overflow-x: hidden;
