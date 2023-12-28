@@ -9,7 +9,7 @@
   </head>
   <body id="mainBody">
     <div id="fullscreenDiv">
-      <!--<button id="fullscreenButton">Fullscreen</button>-->
+      <button id="fullscreenButton"><img id="menuIcon" src="images/menu.png" alt="menu"/></button>
     </div>
     <div id="fulltimeDiv">
       <!--<button id="timeButton">Enlarge</button>-->
@@ -23,7 +23,11 @@
         <h1>Robericano</h1>
 
         <p>The ultimate game schedule for 2 on 2.</p>
-        <p>4-6 players.</p>
+        <p>For 4-6 players.</p>
+        <br>
+
+        <p style="scale: 0.7;">More options will be available in future updates!</p>
+
       </div>
       <!--<p style="font-size: 14px; margin-top: 50px;">To exit fullscreen, press "Esc".</p>-->
       <div class="button01Div"><button id="button01">Next</button></div>
@@ -48,24 +52,23 @@
         <p></p>
         <br /><br /><br />
         <p>Please choose the number of players.</p>
-        
-        <br /><br />
+        <p style="scale: 0.7;">4-6 players.</p>
+
+        <br />
         <select name="playerNumber" id="numberOfPlayersDropDown">
           <option selected value="6">6 players</option>
-          <!--<option value="5">5 players</option>
-
-        <option value="4">4 players</option>-->
+          <option value="5">5 players</option>
+          <option value="4">4 players</option>
         </select>
-        
+
         <!--<button  id="input01button">Ok</button>-->
       </div>
       <div class="button01Div"><button id="button02">Next</button></div>
     </div>
 
     <div id="page03Container">
-      
-        <h2 class="h2Title">Robericano</h2>
-        <div id="sizeBoxId03">
+      <h2 class="h2Title">Robericano</h2>
+      <div id="sizeBoxId03">
         <div class="sizeBox">
           <p>
             Please enter the <span id="page03PlayerNumberSpan">0</span> player
@@ -73,12 +76,12 @@
           </p>
           <div id="nameInputContainer"></div>
 
-          <p id="page03chosenGameTime">
+          <!-- <p id="page03chosenGameTime">
             Chosen game time: <span id="page03chosenGameTimeSpan">0</span> min.
           </p>
           <p id="page03chosenGameTime">
             Match time: <span id="page03MatchTime">0</span>
-          </p>
+          </p> -->
         </div>
       </div>
       <div class="button01Div">
@@ -88,38 +91,37 @@
     <div id="page04Container">
       <h2 class="h2Title">Robericano</h2>
       <div id="sizeBoxId04">
-        
-
         <p>The first players will be:</p>
         <br /><br />
         <p>
-          <span id="previewCurrentPlayerA">Player</span> and
+          <span id="previewCurrentPlayerA">Player</span> -
           <span id="previewCurrentPlayerB">Player</span>
         </p>
         <br />
-        <p style="line-height: 10%">vs</p>
+        <p style="line-height: 10%">VS</p>
         <br />
         <p>
-          <span id="previewCurrentPlayerC">Player</span> and
+          <span id="previewCurrentPlayerC">Player</span> -
           <span id="previewCurrentPlayerD">Player</span>
         </p>
         <br /><br />
-        <p>
-          Press Randomize to change start positions, <br />
-          or Confirm to continue.
+        <p id="page03chosenGameTime">
+          Chosen game time: <span id="page03chosenGameTimeSpan">0</span> min.
         </p>
+        <p id="page03chosenGameTime">
+          Match time: <span id="page03MatchTime">0</span>
+        </p>
+        <br />
       </div>
       <div class="button01Div">
         <button id="button04back">Back</button>
         <button id="button04randomize">Randomize</button
-        ><button id="button04next">Confirm</button>
+        ><button id="button04next">Next</button>
       </div>
     </div>
     <div id="page05Container">
       <h2 class="h2Title">Robericano</h2>
       <div id="sizeBoxId05">
-        
-
         <p id="currentMatchId">Match:</p>
         <br />
         <p id="timeLeftP">
@@ -129,12 +131,26 @@
         <br />
         <div id="currentPlayersDiv">
           <p>
-            <span id="currentPlayerA">Player</span> and
+            <img
+              src="./images/sun.png"
+              alt="sun icon"
+              height="20px"
+              width="20px"
+            />
+
+            <span id="currentPlayerA">Player</span> -
             <span id="currentPlayerB">Player</span>
           </p>
-          <p>vs</p>
+          <p>VS</p>
           <p>
-            <span id="currentPlayerC">Player</span> and
+            <img
+              src="./images/moon.png"
+              alt="sun icon"
+              height="20px"
+              width="20px"
+            />
+
+            <span id="currentPlayerC">Player</span> -
             <span id="currentPlayerD">Player</span>
           </p>
         </div>
@@ -142,12 +158,12 @@
           <p>Next match</p>
 
           <p>
-            <span id="nextPlayerA">Player</span> and
+            <span id="nextPlayerA">Player</span> -
             <span id="nextPlayerB">Player</span>
           </p>
-          <p style="line-height: 10%">vs</p>
+          <p style="line-height: 10%">VS</p>
           <p>
-            <span id="nextPlayerC">Player</span> and
+            <span id="nextPlayerC">Player</span> -
             <span id="nextPlayerD">Player</span>
           </p>
         </div>
@@ -160,12 +176,14 @@
           </p>
 
           <p>
-            <span>
-              <span id="previousPlayerA">Player</span>,
+            <span class="scoreInputSpanNames">
+              <span id="previousPlayerA">Player</span><br>
               <span id="previousPlayerB">Player</span>
             </span>
             <span>
-              <button id="minusButton01" class="plusAndMinusButtons"><span>-</span></button>
+              <button id="minusButton01" class="plusAndMinusButtons">
+                <span>-</span>
+              </button>
 
               <input
                 type="number"
@@ -177,17 +195,21 @@
                 maxlength="2"
                 size="3"
               />
-              <button id="plusButton01" class="plusAndMinusButtons"><span>+</span></button>
+              <button id="plusButton01" class="plusAndMinusButtons">
+                <span>+</span>
+              </button>
             </span>
           </p>
           <div id="page4PointsBorder"></div>
           <p>
-            <span>
-              <span id="previousPlayerC">Player</span>,
+            <span class="scoreInputSpanNames">
+              <span id="previousPlayerC">Player</span><br>
               <span id="previousPlayerD">Player</span></span
             >
             <span>
-              <button id="minusButton02" class="plusAndMinusButtons"><span>-</span></button>
+              <button id="minusButton02" class="plusAndMinusButtons">
+                <span>-</span>
+              </button>
               <input
                 type="number"
                 id="points2"
@@ -198,12 +220,15 @@
                 maxlength="2"
                 size="3"
               />
-              <button id="plusButton02" class="plusAndMinusButtons"><span>+</span></button>
+              <button id="plusButton02" class="plusAndMinusButtons">
+                <span>+</span>
+              </button>
             </span>
           </p>
         </div>
       </div>
       <div class="button01Div">
+        <button id="LastBackButton">Back</button>
         <button id="pauseButton">Start</button
         ><button id="resultButton">Results</button>
         <button id="fixButton">Fix</button>
@@ -212,8 +237,6 @@
     <div id="pageResultContainer">
       <h2 class="h2Title">Robericano</h2>
       <div id="sizeBoxId06">
-        
-
         <p>Results</p>
         <div id="tableDiv"></div>
       </div>
@@ -225,11 +248,10 @@
       <h2 class="h2Title">Robericano</h2>
 
       <div id="sizeBoxId07">
-
         <p>Fix the scores here.</p>
         <div id="scoreFixArrowsDiv">
           <button id="rightArrow">⇦</button>
-          <p>Match: <span id="fixSpanMatchNumber">0</span></p>
+          <p>Match: <span id="fixSpanMatchNumber">00</span></p>
           <button id="leftArrow">⇨</button>
         </div>
 
@@ -242,11 +264,11 @@
           </p>
 
           <p>
-            <span>
-              <span id="fixpreviousPlayerA">Player</span>,
+            <span class="scoreInputSpanNames">
+              <span id="fixpreviousPlayerA">Player</span><br>
               <span id="fixpreviousPlayerB">Player</span>
             </span>
-            <span>
+            <span class="scoreInputSpanScores">
               <button id="fixminusButton01" class="plusAndMinusButtons">
                 <span>-</span>
               </button>
@@ -267,12 +289,12 @@
             </span>
           </p>
           <div id="fixpage4PointsBorder"></div>
-          <p>
-            <span>
-              <span id="fixpreviousPlayerC">Player</span>,
+          <p >
+            <span class="scoreInputSpanNames">
+              <span id="fixpreviousPlayerC">Player</span><br>
               <span id="fixpreviousPlayerD">Player</span></span
             >
-            <span>
+            <span class="scoreInputSpanScores">
               <button id="fixminusButton02" class="plusAndMinusButtons">
                 <span>-</span>
               </button>
@@ -295,6 +317,55 @@
       </div>
       <div class="button01Div">
         <button id="buttonFixBack">Back</button>
+      </div>
+    </div>
+    <div id="pageMenuContainer">
+      <div id="sizeBoxId08">
+        <h1>Info</h1>
+        <p>
+          If there is a sun side of the court, this symbol represents it:
+          <img
+            src="./images/sun.png"
+            alt="sun icon"
+            height="20px"
+            width="20px"
+          />
+        </p>
+        <div id="pdfLinks">
+          <a href="http://dawnbanawn.github.io/Robericano_PDF/Robericano_6_players_eng_v1_0.pdf" target="_blank"><p>Instructions  <img
+            src="./images/arrow.png"
+            alt="arrow icon"
+            height="12px"
+            width="12px"
+          /> </p>          </a>
+         
+          <a href="https://dawnbanawn.github.io/wintergrim.github.io/pdf/policy_robericano.html" target="_blank"><p>Privacy Policy  <img
+            src="./images/arrow.png"
+            alt="arrow icon"
+            height="12px"
+            width="12px"
+          /></p></a>
+          <a href="http://dawnbanawn.github.io/Robericano_PDF/Terms_and_conditions_v1_0.pdf" target="_blank"><p>Terms and conditions  <img
+            src="./images/arrow.png"
+            alt="arrow icon"
+            height="12px"
+            width="12px"
+          /></p></a>
+          
+        </div>
+
+        <!--<button>Click to copy the playstore link.</button>-->
+
+        <p id="resetText">
+          Caution: This button resets the app and all results!
+          <br />
+        </p>
+        <button id="buttonReset">Reset</button>
+        <div id="resetButtonsYesNo"> 
+          <button id="buttonResetYes">Yes</button>
+          <button id="buttonResetNo">No</button>
+        </div>
+
       </div>
     </div>
     <script type="text/javascript" src="script.js"></script>
