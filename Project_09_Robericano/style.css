@@ -56,6 +56,8 @@ input:focus {
   display: flex;
   justify-content: center;
  flex-direction: row;
+
+
   
   
 }
@@ -256,6 +258,7 @@ h4 {
 #button01,
 #button02,
 #button03,
+#buttonFullscreen,
 #LastBackButton,
 #button04, #button04back, #buttonReset, #buttonResetYes, #buttonResetNo, #leftArrow, #rightArrow, #timeButton, #fullscreenButton, #buttonFixBack, #fixButton, #buttonResultBack, #button04next, #pauseButton, #resultButton, #button04randomize {
   width: 100px;
@@ -275,7 +278,12 @@ h4 {
   touch-action: manipulation;
   margin: 0px 5px;
 
+
+
 }
+
+
+
 #input01button {
 width: 40px;
 height: 25px;
@@ -321,16 +329,19 @@ margin: 0px 5px;
 #button04:focus{
   background-color: #5f5f5f;
 }
-#button04randomize:hover, #buttonReset:hover, #buttonResetYes:hover, #buttonResetNo:hover, #LastBackButton:hover, #button04back:hover, #button04next:hover {
+#button04randomize:hover, #buttonReset:hover, #buttonFullscreen:hover,#buttonResetYes:hover, #buttonResetNo:hover, #LastBackButton:hover, #button04back:hover, #button04next:hover {
   background-color: #2f2f2f;
 }
-#button04back:focus, #buttonReset:focus, #buttonResetYes:focus, #buttonResetNo:focus, #button04next:focus, #LastBackButton:focus {
+#button04back:focus, #buttonReset:focus, #buttonFullscreen:focus, #buttonResetYes:focus, #buttonResetNo:focus, #button04next:focus, #LastBackButton:focus {
   background-color: #5f5f5f;
 }
 #button04randomize:active {
   background-color: #5f5f5f;
 
 }
+/* #buttonFullscreen {
+  margin-bottom: 10px;
+} */
 .button01Div {
   position: absolute;
   bottom: 20px;
