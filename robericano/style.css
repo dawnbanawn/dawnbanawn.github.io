@@ -9,14 +9,15 @@ html {
 }
 body {
   height: 100%;
-  overscroll-behavior-x: none;
-  overflow: auto; 
-  touch-action: pan-down;
+  /* overscroll-behavior-x: none; */
+  /* overflow: auto; 
+  touch-action: pan-down; */
   width: 100%;
   overflow-x: hidden;
   
 
 }
+html, body {width: auto!important; overflow-x: hidden!important} 
 canvas {
   margin-top: -600px;
   height: 100%;
@@ -48,7 +49,7 @@ input:focus {
 }
 #mainBody {
   background-color: black;
-  background: url("./images/bg01.jpg") no-repeat center center fixed;
+  background: url("./images/bg01.jpg") no-repeat center center ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -56,8 +57,8 @@ input:focus {
   display: flex;
   justify-content: center;
  flex-direction: row;
- 
- position: sticky;
+
+
   
   
 }
