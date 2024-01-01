@@ -17,6 +17,7 @@ body {
   
 
 }
+
 html, body {width: auto!important; overflow-x: hidden!important} 
 canvas {
   margin-top: -600px;
@@ -744,6 +745,32 @@ button {
   margin-right: 5px;
   margin-left: 5px; 
   width: 35%;
+}
+
+.sportImages {
+  position: absolute;
+  margin-top: -65px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.sportImages img{
+  height: 60px;
+  width: 70px;
+}
+.sportImagesLogo {
+  display: flex;
+}
+.sportImagesLogo img{
+  height: 70px;
+  width: 80px;
+  margin-top: 10%;
+  margin-left: 20px;
+  margin-right: 20px;
+
+
 }
 @media (min-width: 768px) {
   #sizeBoxId08{
