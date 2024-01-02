@@ -764,6 +764,8 @@ button {
 }
 .sportImagesLogo {
   display: flex;
+  justify-content: center;
+
 }
 .sportImagesLogo img{
   height: 60px;
