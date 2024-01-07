@@ -1,0 +1,1276 @@
+html {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  background-color: black;
+
+
+}
+body {
+
+  /* overscroll-behavior-x: none; */
+  /* overflow: auto; 
+  touch-action: pan-down; */
+  width: 100%;
+
+  
+
+}
+
+html, body {width: auto!important; overflow-x: hidden!important} 
+canvas {
+  margin-top: -600px;
+  height: 100%;
+  width: 99%;
+
+}
+#id03 {
+  display: flex;
+  flex-direction: column;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}
+@font-face {
+  font-family: Playbill;
+  src: url("./fonts/Playbill_Regular.ttf") format("truetype");
+}
+input:focus {
+  outline: none;
+}
+#mainBody {
+  background-color: black;
+  background: url("./images/bg01.jpg") no-repeat center center ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+ flex-direction: row;
+
+
+  
+  
+}
+
+#mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+
+}
+#page02Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  display: none;
+  text-align: center;
+
+}
+
+#page03Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  z-index: 5;
+  margin-top: 40px;
+  text-align: center;
+  display: none;
+
+
+
+}
+#page04Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+
+  z-index: 5;
+  margin-top: 40px;
+  text-align: center;
+  display: none;
+}
+#page05Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+
+  z-index: 5;
+  margin-top: 40px;
+  text-align: center;
+  display: none;
+}
+#pageResultContainer, #pageFixContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+
+  z-index: 5;
+  margin-top: 40px;
+  text-align: center;
+  display: none;
+}
+#mainContainer h1 {
+  font-family: Playbill;
+  font-size: 80px;
+  color: rgb(255, 153, 0);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  z-index: 3;
+}
+
+h2 {
+  font-family: Playbill;
+  /*font-size: 40px;*/
+  font-size: 80px;
+
+  color: rgb(255, 153, 0);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  z-index: 3;
+  text-align: center;
+  /*scale: 1.5;*/
+  margin: auto;
+   
+  /*margin-left: 6%;*/
+}
+.h2Title {
+  font-size: 80px;
+  scale: 1.2;
+}
+h4 {
+  font-size: 16px;
+  color: rgb(255, 153, 0);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  z-index: 3;
+  margin-top: 630px;
+  margin-left: 22px;
+}
+
+#page02Container p {
+  color: rgb(255, 218, 162);
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 400;
+
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  width: 85%;
+}
+#page03Container p {
+  color: rgb(255, 218, 162);
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 400;
+
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  width: 85%;
+}
+#page04Container p {
+  color: rgb(255, 218, 162);
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 400;
+
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  width: 85%;
+}
+#page05Container p {
+  color: rgb(255, 218, 162);
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 400;
+
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  width: 85%;
+}
+#pageResultContainer p, #pageFixContainer p {
+  color: rgb(255, 218, 162);
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 400;
+
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  width: 85%;
+}
+#mainContainer p {
+  color: rgb(255, 218, 162);
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 400;
+  /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+  z-index: 4;
+  width: 85%;
+  text-align: center;
+}
+
+#blackBackground {
+  position: absolute;
+  
+
+  background-color: black;
+  z-index: -1;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 100%;
+  opacity: 0.7;
+  border-radius: 25px;
+
+}
+#button01,
+#button02,
+#button03,
+#buttonFullscreen,
+#LastBackButton,
+#button04, #button04back, #buttonReset, #buttonResetYes, #buttonResetNo, #leftArrow, #rightArrow, #timeButton, #fullscreenButton, #buttonFixBack, #fixButton, #buttonResultBack, #button04next, #pauseButton, #resultButton, #button04randomize {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  color: rgb(255, 153, 0);
+  background-color: black;
+  border: 1.5px solid rgba(255, 153, 0, 0.737);
+  z-index: 3;
+  cursor: pointer;
+  border-radius: 8px;
+
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 0px 5px;
+
+
+
+}
+
+
+
+#input01button {
+width: 40px;
+height: 25px;
+font-size: 14px;
+color: rgb(255, 153, 0);
+background-color: black;
+border: 1.5px solid rgba(255, 153, 0, 0.737);
+z-index: 3;
+cursor: pointer;
+border-radius: 8px;
+
+transition: color 100ms;
+vertical-align: baseline;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+margin: 0px 5px;
+}
+#input01button:active {
+  background-color: #5f5f5f;
+}
+#button01:hover {
+  background-color: #2f2f2f;
+}
+#button01:focus {
+  background-color: #5f5f5f;
+}
+#button02:hover {
+  background-color: #2f2f2f;
+}
+#button02:focus {
+  background-color: #5f5f5f;
+}
+#button03:hover {
+  background-color: #2f2f2f;
+}
+#button03:focus {
+  background-color: #5f5f5f;
+}
+#button04:hover {
+  background-color: #2f2f2f;
+}
+#button04:focus{
+  background-color: #5f5f5f;
+}
+#button04randomize:hover, #buttonReset:hover, #buttonFullscreen:hover,#buttonResetYes:hover, #buttonResetNo:hover, #LastBackButton:hover, #button04back:hover, #button04next:hover {
+  background-color: #2f2f2f;
+}
+#button04back:focus, #buttonReset:focus, #buttonFullscreen:focus, #buttonResetYes:focus, #buttonResetNo:focus, #button04next:focus, #LastBackButton:focus {
+  background-color: #5f5f5f;
+}
+#button04randomize:active {
+  background-color: #5f5f5f;
+
+}
+/* #buttonFullscreen {
+  margin-bottom: 10px;
+} */
+.button01Div {
+  position: absolute;
+  bottom: 20px;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+
+}
+#numberOfPlayersDropDown {
+  color: rgb(255, 153, 0);
+  background-color: black;
+  border: 1.5px solid rgba(255, 153, 0, 0.737);
+  scale: 1.3;
+}
+#gameTime {
+  color: rgb(255, 153, 0);
+  background-color: black;
+  border: 1.5px solid rgba(255, 153, 0, 0.737);
+  scale: 1.3;
+}
+#nameInputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: auto;
+  margin-top: 50px;
+  scale: 1.5;
+  margin-bottom: 60px;
+
+}
+
+#nameInputContainer input {
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(79, 79, 79);
+  border: 1px solid rgb(170, 170, 170);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.737);
+  border-right: 1.5px solid rgba(0, 0, 0, 0.737);
+}
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: rgb(255, 255, 255);
+}
+#currentPlayersDiv {
+
+  
+  margin: auto;
+
+}
+#nextPlayersDiv {
+  border-top: 1.5px solid rgba(255, 153, 0, 0.737);
+  width: 80%;
+  margin: 20px auto;
+
+
+
+}
+
+#pageMenuContainer {
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  height: 100vh;  
+  
+}
+#sizeBoxId08 {
+margin: auto;
+  width: 80%;
+}
+#buttonFixBack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pageMenuContainer h1{
+  color: rgb(255, 218, 162);
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+
+}
+#pageMenuContainer p{
+  color: rgb(255, 218, 162);
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+
+}
+#nextPlayersDiv p {
+  font-size: 20px;
+  padding: 5px;
+}
+#previousMatchDiv {
+  font-size: 16px;
+  border-top: 1.5px solid rgba(255, 153, 0, 0.737);
+  width: 80%;
+  margin: auto;
+  margin-top: 45px;
+  scale: 1.6;
+}
+#fixpreviousMatchDiv  {
+  font-size: 16px;
+  /* border-top: 1.5px solid rgba(255, 153, 0, 0.737); */
+  width: 90%;
+  margin: auto;
+  margin-top: 25px;
+
+}
+#previousMatchDiv p, #fixpreviousMatchDiv p  {
+  font-size: 16px;
+  padding: 5px;
+  display: flex;
+justify-content: space-between;
+
+}
+#points, #points2, #points3, #points4 {
+  background-color: black;
+  color: orange;
+  border: 1px solid rgba(255, 153, 0, 0.737);
+  scale: 1.3;
+ width: 20px;
+ margin: 0px 5px;
+ text-align: center;
+
+}
+#buttonAcceptScore, #fixbuttonAcceptScore  {
+  background-color: black;
+  color: orange;
+  border: 1px solid rgba(255, 153, 0, 0.737);
+margin-right: 5px;
+margin-left: 5px;
+font-size: 24px;
+width: 80px;
+scale: 1;
+
+}
+
+#pointsInfo01, #fixpointsInfo01  {
+  justify-content: center;
+  margin: auto;
+}
+.plusAndMinusButtons {
+  background-color: black;
+  border: 1px solid rgba(255, 153, 0, 0.737);
+color: white;
+width: 30px;
+height: 30px;
+scale: 1;
+font-size: 24px;
+font-weight: bold;
+
+}
+.plusAndMinusButtons span{
+
+ position: relative;
+ margin-top: -5px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.plusAndMinusButtons:active, #leftArrow:active, #timeButton:active, #fullscreenButton:active, #rightArrow:active, #pauseButton:active, #fixButton:active, #buttonFixBack:active,#resultButton:active, #buttonAcceptScore:active, #buttonResultBack:active {
+  background-color: #5f5f5f;
+
+}
+#page4PointsBorder, #fixpage4PointsBorder {
+  border-bottom: 1px solid rgba(255, 153, 0, 0.737);
+  width: 87%;
+  margin: auto;
+}
+td {
+  border: 0.1px solid rgba(255, 153, 0, 0.737);
+  
+}
+/*ramen runt table ligger dock inte kloss med någon annan cell, så här måste jag lägga på 0.5px så det blir 1px totalt*/
+/*border-spacing är 0 så att cellerna ligger kloss o kloss.*/
+table {
+  border-spacing: 0;
+  border: 0.1px solid rgba(255, 153, 0, 0.737);
+  z-index: 5;
+  margin: auto;
+  color: rgb(255, 218, 162);
+  margin-top: 70px;
+  scale: 1.3;
+  width: 60%;
+
+}
+#scoreFixArrowsDiv {
+  display: flex;
+  width: 250px;
+  margin: auto;
+  margin-top: 20px;
+}
+#leftArrow, #rightArrow{
+  background-color: black;
+  border: 0.1px solid orange;
+  color: white;
+  width: 50px;
+  height: 30px;
+  font-size: 24px;
+  text-align: center;
+  display: inline-flex;
+  align-items: flex-end; 
+  justify-content: center;
+  scale: 1.2;
+
+
+}
+#fullscreenDiv {
+  z-index: 100;
+  position:absolute;
+  right:6%;
+  top:5px;
+}
+#fullscreenButton {
+  margin-top: 50px;
+  margin-right: 5%;
+  text-align: center;
+  scale: 0.9;
+  background-color: black;
+  width: 45px;
+}
+#fulltimeDiv {
+  z-index: 91;
+  position:absolute;
+  right:6%;
+  top:5px;
+}
+#menuIcon {
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+}
+#pdfLinks a:link, a:visited, a:hover{
+  color: orange;
+}
+#resetButtonsYesNo {
+  display: flex;
+}
+#timeButton {
+  margin-top: 90px;
+  margin-right: 5%;
+  text-align: center;
+  scale: 0.9;
+  background-color: black;
+}
+#timeLeftP {
+  color: rgb(0, 211, 0);
+  font-size: 30px;
+  margin: auto;
+  scale: 1.4;
+}
+#timeLeftSpanText, #timeLeftSpan {
+  font-size: 30px;
+}
+#sizeBoxId01 p, #sizeBoxId02 p, #sizeBoxId03 p, #sizeBoxId04 p, #sizeBoxId05 p, #sizeBoxId06 p, #sizeBoxId07 p{
+  margin: auto;
+}
+#sizeBoxId02 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%; 
+}
+#sizeBoxId03 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%; 
+}
+#sizeBoxId04 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%; 
+}
+#sizeBoxId05 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%; 
+}
+#sizeBoxId06 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 10%; 
+
+}
+.scoreInputSpanNames {
+  margin-right: auto;
+  margin-top: 8px;
+}
+
+#sizeBoxId07 {
+  /*margin-top: 25%;*/
+ /*border: 3px solid green;*/
+  position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+  top: 20%; 
+}
+.h2Title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.plusAndMinusButtons  {
+  scale: 1.1;
+  margin: 2px;
+}
+button {
+  scale: 0.9;
+
+}
+#fullscreenButton {
+  scale: 0.8;
+}
+#tableDiv {
+  scale: 1;
+  margin-top: -40px;
+}#previousMatchDiv{
+  margin-top: 45px;
+  scale: 0.9;
+  width: 100%;
+  }
+#sizeBoxId08{
+  scale: 0.8;
+  margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sizeBoxId08 button{
+  scale: 1;
+
+}
+#sizeBoxId08 p{
+  margin-top: 20px;
+
+}
+
+#nameInputContainer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  height:100px;    
+  width: 200px; 
+  padding-bottom: 40px;
+  align-items: center;
+
+
+}
+.scoreInputSpanScores{
+  margin-top: 5px;
+}
+.scoreInputSpanNames{
+  margin-top: 0px;
+}
+
+#nameInputContainer input{
+  margin-right: 5px;
+  margin-left: 5px; 
+  width: 35%;
+}
+
+.sportImages {
+  position: absolute;
+  margin-top: -70px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.sportImages img{
+  height: 50px;
+  width: 60px;
+  visibility: hidden;
+
+}
+.sportImagesLogo {
+  display: flex;
+  justify-content: center;
+
+}
+.sportImagesLogo img{
+  height: 60px;
+  width: 70px;
+  margin-top: 10%;
+  margin-left: 10px;
+  margin-right: 10px;
+  visibility: hidden;
+
+
+}
+@media (min-width: 768px) {
+  .sportImagesLogo img{
+    visibility: visible;
+  }
+  .sportImages img{
+    visibility: visible;
+
+  }
+
+  #sizeBoxId08{
+    scale: 1;
+    margin-top: 0px;
+  }
+  #button01,
+#button02,
+#button03,
+#LastBackButton,
+#button04, #button04back, #leftArrow, #rightArrow, #timeButton, #fullscreenButton, #buttonFixBack, #fixButton, #buttonResultBack, #button04next, #pauseButton, #resultButton, #button04randomize {
+  width: 100px;}
+  button {
+    scale: 1;
+
+  }
+  #fullscreenButton {
+    scale: 1;
+  width: 45px;
+
+  }
+#sizeBoxId02 {
+  top: 25%;
+}
+#sizeBoxId03 {
+  top: 20%;
+
+}
+#sizeBoxId04 {
+  top: 15%;
+  scale: 0.7;
+
+}
+#sizeBoxId05 {
+  top: 5%;
+  scale: 0.6;
+
+}
+#sizeBoxId06 {
+  scale: 0.8;
+  
+
+}
+#tableDiv {
+  scale: 1;
+  margin-top: 20px;
+}
+#sizeBoxId07 {
+  top: 25%;
+}
+  #fullscreenButton {
+    scale: 1;
+
+  
+  }
+  #timeButton {
+    scale: 1;
+    margin-top: 100px;
+  
+  }
+  #scoreFixArrowsDiv {
+    width: 300px;
+    margin-top: 30px;
+  }
+  table {
+    scale: 1.5;
+  width: 50%;
+
+  
+  }
+  #mainContainer h1 {
+    font-size: 120px;
+  }
+  #mainContainer p {
+    font-size: 32px;
+    width: 100%;
+  }
+  .button01Div {
+    bottom: 20px;
+
+  }
+  #page02Container p {
+    width: 100%;
+
+    font-size: 32px;
+  }
+  #page03Container p {
+    width: 100%;
+
+    font-size: 32px;
+  }
+  #page04Container p {
+    width: 100%;
+
+    font-size: 32px;
+  }
+  #page05Container p {
+    width: 100%;
+
+    font-size: 32px;
+  }
+  #pageResultContainer p, #pageFixContainer p {
+    width: 100%;
+
+    font-size: 32px;
+  }
+  
+  #nextPlayersDiv{
+    padding: 10px 0px 0px 0px;
+  } 
+  #nextPlayersDiv p {
+    font-size: 24px;
+    padding: 15px;
+  line-height: 15%;
+  } 
+  #timeLeftP {
+    color: rgb(0, 211, 0);
+    font-size: 50px;
+
+  }
+  #timeLeftSpanText, #timeLeftSpan {
+    font-size: 50px;
+    
+  }
+  #previousMatchDiv {
+  font-size: 16px;
+  margin: auto;
+  margin-top: 65px;
+  scale: 1.6;
+}
+#fixpreviousMatchDiv  {
+  font-size: 16px;
+  margin: auto;
+  margin-top: 50px;
+  
+}
+#previousMatchDiv p, #fixpreviousMatchDiv p  {
+  font-size: 16px;
+  justify-content: space-evenly;
+  width: 50%;
+
+  
+}#page4PointsBorder, #fixpage4PointsBorder {
+  width: 100%;
+}
+.h2Title {
+  scale: 1.6;
+  margin-top: 0px;
+
+    font-size: 60px;
+}
+.plusAndMinusButtons  {
+  scale: 1.3;
+  margin: 5px;
+}
+#nameInputContainer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height:70px;    
+  width: 400px;
+  scale: 1.3;
+
+}
+#nameInputContainer input{
+  margin: 5px;  
+  
+}
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+  #sizeBoxId01 {
+    scale: 1.5;
+    margin-bottom: 25%;
+  }
+  #sizeBoxId02 {
+    scale: 1.4;
+  top: 30%;
+  }
+  #sizeBoxId03 {
+    scale: 0.9;
+  top: 20%;
+  }
+  #sizeBoxId04 {
+    scale: 1.1;
+  top: 25%;
+  }
+  #sizeBoxId05 {
+    scale: 0.9;
+    top: 15%;
+
+
+  
+
+  }
+  #sizeBoxId05 .plusAndMinusButtons{
+    scale: 1.3;
+  }
+  #sizeBoxId06 {
+    scale: 1;
+  }
+  #tableDiv {
+    scale: 1;
+    margin-top: 20px;
+  }
+  #sizeBoxId07 {
+    scale: 1;
+  top: 30%;
+  }
+  .h2Title {
+    scale: 1.9;
+    margin-top: 0px;
+  }
+  .plusAndMinusButtons  {
+    scale: 1.3;
+    margin: 5px;
+  }
+  #nameInputContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height:70px;    
+    width: 400px;
+    scale: 1.7;
+
+  }
+  #nameInputContainer input{
+    margin: 5px;  
+    
+  }
+  #previousMatchDiv{
+  margin-top: 65px;
+  scale: 1.2;
+  
+  }
+}
+
+
+@media screen and (max-height: 550px) and (max-width: 768px) and (orientation:landscape) {
+  #sizeBoxId01 {
+    scale: 1.3;
+    margin-bottom: 25%;    
+  }
+  
+  #sizeBoxId02 {
+    scale: 1;
+  top: 20%;
+  }
+  #sizeBoxId03 {
+    scale: 0.9;
+  top: 25%;
+  }
+  #sizeBoxId04 {
+    scale: 1;
+  top: 20%;
+  }
+  #sizeBoxId05 {
+    scale: 0.7;
+  top: 10%;
+  }
+  #sizeBoxId06 {
+    scale: 1;
+  top: 20%;
+  }
+  #sizeBoxId07 {
+    scale: 1;
+  top: 20%;
+  }
+  .h2Title {
+    scale: 1;
+    margin-top: -20px;
+
+  }
+  .plusAndMinusButtons  {
+    scale: 1.3;
+    margin: 5px;
+  }
+}
+@media screen and (max-height: 500px) and (max-width: 768px) and (orientation:landscape) {
+  #sizeBoxId01 {
+    scale: 1;
+    margin-bottom: 25%;
+  }
+  #sizeBoxId02 {
+    scale: 0.8;
+    margin-top: 30px;    
+  }
+  #sizeBoxId03 {
+    scale: 0.7;
+    margin-top: -50px;    
+  }
+  #sizeBoxId04 {
+    scale: 0.8;
+    margin-top: 0px;    
+  }
+  #sizeBoxId05 {
+    scale: 0.6;
+    margin-top: -60px;  
+  top: 15%;
+
+  }
+  #sizeBoxId06 {
+    scale: 0.8;
+  }
+  #sizeBoxId07 {
+    scale: 0.8;
+    margin-top: 30px;    
+  }
+  .h2Title {
+    scale: 0.9;
+    margin-top: -30px;
+
+  }
+  .plusAndMinusButtons  {
+    scale: 1.3;
+    margin: 5px;
+  }
+}
+@media screen and (max-height: 400px) and (max-width: 768px) and (orientation:landscape) {
+  #sizeBoxId01 {
+    scale: 0.7;
+    margin-bottom: 25%;
+  }
+  #sizeBoxId02 {
+    scale: 0.6;
+    margin-top: -20px;
+  }
+  #sizeBoxId03 {
+    scale: 0.5;
+    margin-top: -70px;
+  }
+  #sizeBoxId04 {
+    scale: 0.6;
+    margin-top: -20px;
+  }
+  #sizeBoxId05 {
+    scale: 0.6;
+    margin-top: -40px;
+    top: 15%;
+  }
+  #sizeBoxId06 {
+    scale: 0.8;
+    margin-top: -40px;
+  }
+  #sizeBoxId07 {
+    scale: 0.6;
+    margin-top: -20px;
+  }
+  .h2Title {
+    scale: 0.8;
+    margin-top: -40px;
+
+  }
+}
+@media screen and (max-height: 300px) and (max-width: 768px) and (orientation:landscape) {
+  #sizeBoxId01 {
+    scale: 0.6;
+    margin-bottom: 25%;
+  }
+  #sizeBoxId02 {
+    scale: 0.4;
+    margin-top: -70px;
+  }
+  #sizeBoxId03 {
+    scale: 0.3;
+    margin-top: -110px;
+  }
+  #sizeBoxId04 {
+    scale: 0.4;
+    margin-top: -70px;
+  }
+  #sizeBoxId05 {
+    scale: 0.3;
+    margin-top: -90px;
+    top: 15%;
+  }
+  #sizeBoxId06 {
+    scale: 0.8;
+    margin-top: -70px;
+  }
+  #tableDiv {
+    scale: 1;
+    margin-top: 20px;
+  }
+  #sizeBoxId07 {
+    scale: 0.4;
+    margin-top: -70px;
+  }
+  .h2Title {
+    scale: 0.7;
+    margin-top: -50px;
+
+  }
+
+}
+/*
+@media (max-height: 400px) {
+  #blackBackground {
+
+    height: 100%;
+
+  
+  }
+  #mainBody {
+    background-color: black;
+    background: url("./images/bg01.jpg");
+
+  
+    
+    
+  }
+
+
+}*/
+
+@media screen and (min-width: 1199px) {
+  
+  #sizeBoxId03 {
+    scale: 1;
+  top: 20%;
+  }
+
+#sizeBoxId04 {
+  scale: 1;
+top: 20%;
+}
+#sizeBoxId05 {
+  scale: 0.9;
+top: 15%;
+
+}
+.plusAndMinusButtons  {
+  scale: 1.3;
+  margin: 5px;
+}
+}
+
+  
+  
+@media screen and (min-width: 1919px) {
+  #sizeBoxId01 {
+    scale: 2;
+    margin-bottom: 25%;
+  }
+  #sizeBoxId02 {
+    scale: 1.7;
+  top: 40%;
+  }
+  #sizeBoxId03 {
+    scale: 1.7;
+  top: 40%;
+  }
+  #sizeBoxId04 {
+    scale: 1.7;
+  top: 40%;
+  }
+  #sizeBoxId05 {
+    scale: 1.7;
+  top: 40%;
+  }
+  #sizeBoxId06 {
+    scale: 1.7;
+  top: 40%;
+  }
+  #sizeBoxId07 {
+    scale: 1.7;
+  top: 40%;
+  }
+  .h2Title {
+    scale: 2;
+    margin-top: 30px;
+  }
+}
+
+h1, h2 {
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-weight: 100;
+}
+
+
+
+
+    
+
+    
+  
+  
