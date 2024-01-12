@@ -1,0 +1,10 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/adminn/LoginMessage/page": "app/adminn/LoginMessage/page.js",
+  "/adminn/page": "app/adminn/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/newItemPage/page": "app/newItemPage/page.js",
+  "/page": "app/page.js",
+  "/edit/page": "app/edit/page.js",
+  "/login/page": "app/login/page.js"
+}
