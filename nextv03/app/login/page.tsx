@@ -20,22 +20,41 @@ function Login() {
   //Function to log in.
   //Fetches from database, and compares with login input values.
   async function tryLogin(event: any) {
+    console.log("trying login");
+    console.log(event);
+
     event.preventDefault();
+    console.log("default is prevented");
+
     //Fetches user data from db.
     const cards = await getUser();
+    console.log("awaiting user");
+
     //Compares form data with db values.
     if (
       cards.name === event.target.userName.value &&
       cards.password === event.target.password.value
     ) {
+      console.log("yes to login");
+
       //Sets global variable with true that the user is logged in.
       globalVariable("true");
+    console.log("01");
+
       localStorage.setItem("loggedIn", "true");
+    console.log("02");
+
       setIsLoggedIn(true);
+    console.log("03");
+
       setFailedAttempt("false");
+    console.log("04");
+
       router.refresh();
+    console.log("05");
+
     } else {
-      //console.log("fail");
+      console.log("fail");
       setFailedAttempt("true");
     }
   }
@@ -43,6 +62,7 @@ function Login() {
   useEffect(() => {
     // Perform localStorage action
     const item = localStorage.getItem("loggedIn");
+    console.log("useefect");
 
     if (item) {
       setIsLoggedIn(true);
