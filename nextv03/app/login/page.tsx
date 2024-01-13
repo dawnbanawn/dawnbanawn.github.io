@@ -29,6 +29,8 @@ function Login() {
     //Fetches user data from db.
     const cards = await getUser();
     console.log("awaiting user");
+    console.log(cards);
+
 
     //Compares form data with db values.
     if (
