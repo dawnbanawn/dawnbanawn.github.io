@@ -1,5 +1,10 @@
-function submitForm(e) {
-    e.preventDefault();
+document.getElementById("myCheckbox").addEventListener("click", function(event){
+    event.preventDefault()
+    submitForm();
+  }); 
+
+function submitForm() {
+   
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
 
