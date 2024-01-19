@@ -3,7 +3,7 @@ function submitForm() {
     var email = document.getElementById("email").value;
 
     // Send data to the backend
-    fetch('/process', {
+    fetch('https://dawnbanawn.github.io/Backend_Test/process', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

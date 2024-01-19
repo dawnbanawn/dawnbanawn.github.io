@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 // Process the form data
-app.post('/process', (req, res) => {
+app.post('https://dawnbanawn.github.io/Backend_Test/process', (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
 
