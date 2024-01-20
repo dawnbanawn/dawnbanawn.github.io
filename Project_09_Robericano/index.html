@@ -25,9 +25,9 @@
     <div id="mainContainer">
       <div id="sizeBoxId01">
         <div class="sportImagesLogo">
-          <img src="./images/Fotbollsvolley.png" alt="sport image">
+          <img id="image01" src="./images/Fotbollsvolley.png" alt="sport image">
           <h1>Robericano</h1>
-          <img src="./images/Beachvolleyboll.png" alt="sport image">       
+          <img id="image02" src="./images/Beachvolleyboll.png" alt="sport image">       
         </div>
         
         <div class="sportImages">
@@ -47,14 +47,18 @@
         <!-- <a href="https://www.freecounterstat.com" title="web counters">
           <img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=k32unghy992axpjbur1tflf3fxxkfjjq" 
            title="web counters" alt="web counters">Counter</a> -->
+           
+           
            <div style="scale: 0.5;">
             <div id="sfck32unghy992axpjbur1tflf3fxxkfjjq"></div><script type="text/javascript" 
             src="https://counter7.optistats.ovh/private/counter.js?c=k32unghy992axpjbur1tflf3fxxkfjjq&down=async" 
             async></script><br><a href="https://www.freecounterstat.com"></a><noscript>
               <a href="https://www.freecounterstat.com" title="web counters">
                 <img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=k32unghy992axpjbur1tflf3fxxkfjjq" 
-                border="0" title="web counters" alt="web counters"></a></noscript>
+                 title="web counters" alt="web counters"></a></noscript>
            </div>
+
+
            <!-- <div>
             <div id="sfc9h514flskl2jqulyuxbtf3ftekkmys3f"></div><script type="text/javascript" src="https://counter7.optistats.ovh/private/counter.js?c=9h514flskl2jqulyuxbtf3ftekkmys3f&down=async" async></script><br><a href="https://www.freecounterstat.com">hit counters</a><noscript><a href="https://www.freecounterstat.com" title="hit counters"><img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=9h514flskl2jqulyuxbtf3ftekkmys3f" border="0" title="hit counters" alt="hit counters"></a></noscript>
            </div> -->
@@ -67,7 +71,8 @@
       <h2 class="h2Title">Robericano</h2>
       <div id="sizeBoxId02">
         <p>Please enter your preferred game time (min).</p>
-        <br /><br />
+        <br />
+        <!-- <br /> -->
         <input
           placeholder="120"
           type="text"
@@ -80,9 +85,11 @@
         />
 
         <p></p>
-        <br /><br /><br />
+        <br />
+        <!-- <br /> -->
+        <!-- <br /> -->
         <p>Please choose the number of players.</p>
-        <p style="scale: 0.7;">4-6 players.</p>
+        <!-- <p style="scale: 0.7;">4-6 players.</p> -->
 
         <br />
         <select name="playerNumber" id="numberOfPlayersDropDown">
@@ -90,7 +97,8 @@
           <option value="5">5 players</option>
           <option value="4">4 players</option>
         </select>
-
+        <br /><br>
+        <p>Match time: <span id="page03MatchTimeV2">0</span></p>
         <!--<button  id="input01button">Ok</button>-->
       </div>
       <div class="button01Div"><button id="button02">Next</button></div>
@@ -268,7 +276,14 @@
       <h2 class="h2Title">Robericano</h2>
       <div id="sizeBoxId06">
         <p>Results</p>
-        <div id="tableDiv"></div>
+        <div id="tableDiv">
+          <p id="table01p">Player scores</p>
+          <div id="table01"></div>
+          <br><br><br>
+          <p id="table02p">Team scores</p>
+          <div id="table02"></div>
+
+        </div>
       </div>
       <div class="button01Div">
         <button id="buttonResultBack">Back</button>
@@ -397,7 +412,10 @@
         </div>
 
         <!--<button>Click to copy the playstore link.</button>-->
-        <button id="buttonFullscreen">Fullscreen</button> <br />
+        <button style="display: none;" id="buttonFullscreen">Fullscreen</button> <br />
+        <button style="margin-top: 5px;" id="buttonSound">Sound is on</button> <br />
+        <button style="margin-top: 5px;" id="changeSound">Sound: 1</button> <br />
+        
         <p id="resetText">
           Caution: This button resets the app and all results!
           <br />
