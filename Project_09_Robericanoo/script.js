@@ -1,1 +1,3515 @@
-const _0x36686c=_0x536b;(function(_0x47163a,_0x1cd947){const _0x17bba1=_0x536b,_0x5ef7e6=_0x47163a();while(!![]){try{const _0x1252b8=parseInt(_0x17bba1(0xec))/0x1+-parseInt(_0x17bba1(0xce))/0x2*(-parseInt(_0x17bba1(0x150))/0x3)+parseInt(_0x17bba1(0x10b))/0x4+-parseInt(_0x17bba1(0xb7))/0x5+-parseInt(_0x17bba1(0x9e))/0x6*(parseInt(_0x17bba1(0xae))/0x7)+parseInt(_0x17bba1(0x119))/0x8+parseInt(_0x17bba1(0xcf))/0x9*(parseInt(_0x17bba1(0xd4))/0xa);if(_0x1252b8===_0x1cd947)break;else _0x5ef7e6['push'](_0x5ef7e6['shift']());}catch(_0x3410e8){_0x5ef7e6['push'](_0x5ef7e6['shift']());}}}(_0x5dbd,0x4666c),window[_0x36686c(0x12f)](openFullscreen,0x3e8),document[_0x36686c(0x148)][_0x36686c(0x112)](_0x36686c(0xd6),function(_0x1acaec){const _0x595f77=_0x36686c;console['log'](_0x1acaec[_0x595f77(0x116)]),_0x1acaec[_0x595f77(0xc5)]();},![]));let timeWindowOn=![];function _0x5dbd(){const _0x2d9a7f=['\x20score','SteelBlue','color','#fixButton','#points4','#leftArrow','2THFVKK','47007ZnndBO','lineWidth','#page03MatchTime','stroke','maxlength','340MDyDEi','#fixSpanMatchNumber','touchmove','hidden','style','setTimeout','Sound\x20is\x20off','Caution:\x20This\x20button\x20resets\x20the\x20app\x20and\x20all\x20results!','#previewCurrentPlayerD','clearRect','#fixpage4PointsBorder','#minusButton02','none','#page04PreviousMatch','rgb(0,\x20211,\x200)','#resetText','end\x20game','matchTime','#fulltimeDiv','maxLength','#mainContainer','#currentPlayerC','Time´s\x20Out!','setAttribute','404604hssxgq','placeholder','#previousPlayerB','LightBlue','#page03Container','Players\x20\x20','mozRequestAnimationFrame','Break:\x20','100px','Start','#button04next','Gold','#button04randomize','#previewCurrentPlayerB','#pauseButton','#currentPlayerA','requestAnimFrame','webkitRequestFullscreen','timeInSeconds','innerHeight','SlateBlue','#resultButton','PaleGreen','#page03chosenGameTimeSpan','strokeStyle','red','size','random','#gameTime','#buttonResultBack','floor','909328OumHLP','#points3','width','Time\x20left:\x20','#previewCurrentPlayerC','#nextPlayerD','length','addEventListener','teamResults:\x20','tiltAngle','#buttonFullscreen','source','msRequestAnimationFrame','getElementById','1243984nYSwVi','splice','n/a','#fixplusButton02','oRequestAnimationFrame','value','OliveDrab','Please\x20re-write\x20the\x20game\x20time.','---','round','getContext','#fixminusButton02','appendChild','confetti-canvas','moveTo','removeChild','breakInSeconds','Match:\x20','#nextPlayerA','beginPath','#tableDiv','breakTime','setInterval','points','hasChildNodes','#numberOfPlayersDropDown','Player','requestAnimationFrame','#previousPlayerD','scale','team','canvas','sin','height','#buttonResetYes','Pause','Pink','70px','matchTime00:00','#plusButton01','#pageMenuContainer','#points','#nextPlayerB','tilt','timeLeftP','sort','display','body','#currentPlayerD','#button02','filter','#button03','Are\x20you\x20really\x20sure?','documentElement','Sound:\x201','371211ViSdzg','images/menu.png','./blop.ogg','/15','Violet','totalscrore\x20','createElement','Please\x20use\x20numbers.','#buttonResetNo','#previousPlayerA','SandyBrown','Crimson','table','remove','#button01','log','src','toString','input','rgba(0,\x200,\x200,\x200.5)','618HOJxkk','#fixpreviousPlayerC','Points','querySelector','required','block','Team\x20Points','innerHTML','#buttonFixBack','#page02Container','#timeLeftSpanText','push','Chocolate','rgba(0,\x200,\x200,\x200.0)','#fixbuttonAcceptScore','lineTo','34139miBBTZ','visibility','minlength','Sound\x20is\x20on','Matches','#minusButton01','diameter','#fullscreenButton','#button04back','1490290stSjyv','resize','#previousPlayerC','yellow','#fixpreviousPlayerD','firstChild','menuIcon','sorted','type','Player\x20','innerWidth','click','cos','#fixpreviousMatchDiv','preventDefault','images/menu_x.png','webkitRequestAnimationFrame'];_0x5dbd=function(){return _0x2d9a7f;};return _0x5dbd();}const buttonFullscreen=document[_0x36686c(0xa1)](_0x36686c(0x115)),buttonPage01=document[_0x36686c(0xa1)](_0x36686c(0x98)),pageResultContainer=document[_0x36686c(0xa1)]('#pageResultContainer'),buttonResultBack=document[_0x36686c(0xa1)](_0x36686c(0x109));pageResultContainer['style'][_0x36686c(0x147)]=_0x36686c(0xe0);const buttonPage02=document[_0x36686c(0xa1)](_0x36686c(0x14a)),buttonPage03=document['querySelector'](_0x36686c(0x14c)),buttonPage03Back=document[_0x36686c(0xa1)]('#button04'),button04back=document[_0x36686c(0xa1)](_0x36686c(0xb6)),button04next=document[_0x36686c(0xa1)](_0x36686c(0xf6)),pauseButton=document[_0x36686c(0xa1)](_0x36686c(0xfa)),resultButton=document[_0x36686c(0xa1)](_0x36686c(0x101)),gameTimeField=document[_0x36686c(0xa1)](_0x36686c(0x108)),LastBackButton=document['querySelector']('#LastBackButton'),pageMenuContainer=document['querySelector'](_0x36686c(0x141));pageMenuContainer[_0x36686c(0xd8)][_0x36686c(0x147)]='none';const buttonReset=document[_0x36686c(0xa1)]('#buttonReset'),buttonResetYes=document[_0x36686c(0xa1)](_0x36686c(0x13b)),buttonResetNo=document[_0x36686c(0xa1)](_0x36686c(0x92)),resetText=document['querySelector'](_0x36686c(0xe3)),buttonSound=document[_0x36686c(0xa1)]('#buttonSound'),changeSound=document[_0x36686c(0xa1)]('#changeSound');buttonResetYes[_0x36686c(0xd8)]['display']=_0x36686c(0xe0),buttonResetNo[_0x36686c(0xd8)]['display']=_0x36686c(0xe0),nextPlayersDiv=document[_0x36686c(0xa1)]('#nextPlayersDiv'),currentPlayersDiv=document['querySelector']('#currentPlayersDiv'),previewCurrentPlayerA=document[_0x36686c(0xa1)]('#previewCurrentPlayerA'),previewCurrentPlayerB=document[_0x36686c(0xa1)](_0x36686c(0xf9)),previewCurrentPlayerC=document['querySelector'](_0x36686c(0x10f)),previewCurrentPlayerD=document[_0x36686c(0xa1)](_0x36686c(0xdc));const tableDiv=document['querySelector'](_0x36686c(0x12d));let table=document[_0x36686c(0x90)](_0x36686c(0x96)),table02el=document[_0x36686c(0x90)](_0x36686c(0x96)),table01el=document[_0x36686c(0x90)](_0x36686c(0x96)),table01=document[_0x36686c(0x118)]('table01'),table02=document[_0x36686c(0x118)]('table02');currentPlayerA=document[_0x36686c(0xa1)](_0x36686c(0xfb)),currentPlayerB=document[_0x36686c(0xa1)]('#currentPlayerB'),currentPlayerC=document[_0x36686c(0xa1)](_0x36686c(0xe9)),currentPlayerD=document[_0x36686c(0xa1)](_0x36686c(0x149)),nextPlayerA=document[_0x36686c(0xa1)](_0x36686c(0x12b)),nextPlayerB=document['querySelector'](_0x36686c(0x143)),nextPlayerC=document[_0x36686c(0xa1)]('#nextPlayerC'),nextPlayerD=document['querySelector'](_0x36686c(0x110)),previousPlayerA=document[_0x36686c(0xa1)](_0x36686c(0x93)),previousPlayerB=document[_0x36686c(0xa1)](_0x36686c(0xee)),previousPlayerC=document[_0x36686c(0xa1)](_0x36686c(0xb9)),previousPlayerD=document[_0x36686c(0xa1)](_0x36686c(0x135));const minusButton01=document[_0x36686c(0xa1)](_0x36686c(0xb3)),plusButton01=document['querySelector'](_0x36686c(0x140)),minusButton02=document[_0x36686c(0xa1)](_0x36686c(0xdf)),plusButton02=document[_0x36686c(0xa1)]('#plusButton02'),points=document[_0x36686c(0xa1)](_0x36686c(0x142)),points2=document[_0x36686c(0xa1)]('#points2'),page04PreviousMatch=document[_0x36686c(0xa1)](_0x36686c(0xe1)),previousMatchDiv=document[_0x36686c(0xa1)]('#previousMatchDiv');previousMatchDiv[_0x36686c(0xd8)]['display']=_0x36686c(0xe0);const fullscreenDiv=document[_0x36686c(0xa1)]('#fullscreenDiv');fullscreenDiv['style'][_0x36686c(0x147)]=_0x36686c(0xe0);const buttonFixBack=document[_0x36686c(0xa1)](_0x36686c(0xa6)),fullscreenButton=document[_0x36686c(0xa1)](_0x36686c(0xb5)),fulltimeDiv=document['querySelector'](_0x36686c(0xe6));fulltimeDiv[_0x36686c(0xd8)][_0x36686c(0x147)]=_0x36686c(0xe0);const fixButton=document[_0x36686c(0xa1)](_0x36686c(0xcb));fixButton[_0x36686c(0xd8)][_0x36686c(0x147)]=_0x36686c(0xe0);const pageFixContainer=document[_0x36686c(0xa1)]('#pageFixContainer');pageFixContainer[_0x36686c(0xd8)][_0x36686c(0x147)]=_0x36686c(0xe0);const buttonAcceptScore=document[_0x36686c(0xa1)]('#buttonAcceptScore'),timeLeftSpan=document[_0x36686c(0xa1)]('#timeLeftSpan'),timeLeftSpanText=document[_0x36686c(0xa1)](_0x36686c(0xa8)),currentMatchId=document[_0x36686c(0xa1)]('#currentMatchId'),leftArrow=document['querySelector'](_0x36686c(0xcd)),rightArrow=document['querySelector']('#rightArrow'),fixSpanMatchNumber=document[_0x36686c(0xa1)](_0x36686c(0xd5));let page03MatchTime=document['querySelector'](_0x36686c(0xd1));points['value']=0x0,points2[_0x36686c(0x11e)]=0x0;let fixNumber=0x1,player01points=0x0,player02points=0x0,player03points=0x0,player04points=0x0,player05points=0x0,player06points=0x0,team12=0x0,team13=0x0,team14=0x0,team15=0x0,team16=0x0,team23=0x0,team24=0x0,team25=0x0,team26=0x0,team34=0x0,team35=0x0,team36=0x0,team45=0x0,team46=0x0,team56=0x0,gameTimeFactor,pointsArray=[team12,team13,team14,team15,team16,team23,team24,team25,team26,team34,team35,team36,team45,team46,team56],player01MatchCount=0x0,player02MatchCount=0x0,player03MatchCount=0x0,player04MatchCount=0x0,player05MatchCount=0x0,player06MatchCount=0x0,playerMatchCount=[0x0,0x0,0x0,0x0,0x0,0x0,0x0],gameOn=!![];var c=0xa;let colorGreen='rgb(0,\x20211,\x200)',page04Points=0x0,page04Points02=0x0,fixpage04Points=0x0,fixpage04Points02=0x0,currentMatch=0x1,gameTime=0x78,numberOfPlayers,playerNamesArray=[],timePerGame,chosenMatchOrder,soundIsOn=!![],pairScore={},pairScoreArray=[];var obj={'team':0x0,'points':0x0};let chosenSound=0x1;gameTimeField[_0x36686c(0x11e)]=0x78;var elem=document[_0x36686c(0x14e)];function openFullscreen(){const _0x7ae5b6=_0x36686c;gameTime!=gameTimeField[_0x7ae5b6(0x11e)]&&checkInput();if(elem['requestFullscreen'])elem['requestFullscreen']();else{if(elem['webkitRequestFullscreen'])elem[_0x7ae5b6(0xfd)]();else elem['msRequestFullscreen']&&elem['msRequestFullscreen']();}}const gameSetup={0x4:{0x1:[{'a':0x1,'b':0x2,'c':0x3,'d':0x4,0x1:0x0,0x2:0x0,0x3:0x0,0x4:0x0},{'a':0x2,'b':0x3,'c':0x1,'d':0x4,0x2:0x0,0x3:0x0,0x1:0x0,0x4:0x0},{'a':0x1,'b':0x3,'c':0x2,'d':0x4,0x1:0x0,0x3:0x0,0x2:0x0,0x4:0x0},{'a':0x3,'b':0x4,'c':0x1,'d':0x2,0x3:0x0,0x4:0x0,0x1:0x0,0x2:0x0},{'a':0x1,'b':0x4,'c':0x2,'d':0x3,0x1:0x0,0x4:0x0,0x2:0x0,0x3:0x0},{'a':0x1,'b':0x3,'c':0x2,'d':0x4,0x1:0x0,0x3:0x0,0x2:0x0,0x4:0x0},{'a':0x1,'b':0x2,'c':0x3,'d':0x4,0x1:0x0,0x2:0x0,0x3:0x0,0x4:0x0},{'a':0x2,'b':0x3,'c':0x1,'d':0x4,0x2:0x0,0x3:0x0,0x1:0x0,0x4:0x0},{'a':0x2,'b':0x4,'c':0x1,'d':0x3,0x2:0x0,0x4:0x0,0x1:0x0,0x3:0x0}]},0x5:{0x1:[{'a':0x1,'b':0x4,'c':0x2,'d':0x3,0x1:0x0,0x4:0x0,0x2:0x0,0x3:0x0},{'a':0x2,'b':0x5,'c':0x3,'d':0x4,0x2:0x0,0x5:0x0,0x3:0x0,0x4:0x0},{'a':0x2,'b':0x3,'c':0x1,'d':0x5,0x2:0x0,0x3:0x0,0x1:0x0,0x5:0x0},{'a':0x1,'b':0x4,'c':0x2,'d':0x5,0x1:0x0,0x4:0x0,0x2:0x0,0x5:0x0},{'a':0x4,'b':0x5,'c':0x1,'d':0x3,0x4:0x0,0x5:0x0,0x1:0x0,0x3:0x0},{'a':0x2,'b':0x4,'c':0x3,'d':0x5,0x2:0x0,0x4:0x0,0x3:0x0,0x5:0x0},{'a':0x1,'b':0x2,'c':0x3,'d':0x4,0x1:0x0,0x2:0x0,0x3:0x0,0x4:0x0},{'a':0x2,'b':0x5,'c':0x1,'d':0x3,0x2:0x0,0x5:0x0,0x1:0x0,0x3:0x0},{'a':0x1,'b':0x2,'c':0x4,'d':0x5,0x1:0x0,0x2:0x0,0x4:0x0,0x5:0x0},{'a':0x3,'b':0x4,'c':0x1,'d':0x5,0x3:0x0,0x4:0x0,0x1:0x0,0x5:0x0},{'a':0x4,'b':0x5,'c':0x2,'d':0x3,0x4:0x0,0x5:0x0,0x2:0x0,0x3:0x0},{'a':0x1,'b':0x3,'c':0x2,'d':0x4,0x1:0x0,0x3:0x0,0x2:0x0,0x4:0x0},{'a':0x3,'b':0x5,'c':0x1,'d':0x2,0x3:0x0,0x5:0x0,0x1:0x0,0x2:0x0},{'a':0x1,'b':0x5,'c':0x2,'d':0x4,0x1:0x0,0x5:0x0,0x2:0x0,0x4:0x0},{'a':0x3,'b':0x5,'c':0x1,'d':0x4,0x3:0x0,0x5:0x0,0x1:0x0,0x4:0x0}],0x2:[{'a':0x2,'b':0x5,'c':0x3,'d':0x4,0x2:0x0,0x5:0x0,0x3:0x0,0x4:0x0},{'a':0x3,'b':0x1,'c':0x4,'d':0x5,0x3:0x0,0x1:0x0,0x4:0x0,0x5:0x0},{'a':0x3,'b':0x4,'c':0x2,'d':0x1,0x3:0x0,0x4:0x0,0x2:0x0,0x1:0x0},{'a':0x2,'b':0x5,'c':0x3,'d':0x1,0x2:0x0,0x5:0x0,0x3:0x0,0x1:0x0},{'a':0x5,'b':0x1,'c':0x2,'d':0x4,0x5:0x0,0x1:0x0,0x2:0x0,0x4:0x0},{'a':0x3,'b':0x5,'c':0x4,'d':0x1,0x3:0x0,0x5:0x0,0x4:0x0,0x1:0x0},{'a':0x2,'b':0x3,'c':0x4,'d':0x5,0x2:0x0,0x3:0x0,0x4:0x0,0x5:0x0},{'a':0x3,'b':0x1,'c':0x2,'d':0x4,0x3:0x0,0x1:0x0,0x2:0x0,0x4:0x0},{'a':0x2,'b':0x3,'c':0x5,'d':0x1,0x2:0x0,0x3:0x0,0x5:0x0,0x1:0x0},{'a':0x4,'b':0x5,'c':0x2,'d':0x1,0x4:0x0,0x5:0x0,0x2:0x0,0x1:0x0},{'a':0x5,'b':0x1,'c':0x3,'d':0x4,0x5:0x0,0x1:0x0,0x3:0x0,0x4:0x0},{'a':0x2,'b':0x4,'c':0x3,'d':0x5,0x2:0x0,0x4:0x0,0x3:0x0,0x5:0x0},{'a':0x4,'b':0x1,'c':0x2,'d':0x3,0x4:0x0,0x1:0x0,0x2:0x0,0x3:0x0},{'a':0x2,'b':0x1,'c':0x3,'d':0x5,0x2:0x0,0x1:0x0,0x3:0x0,0x5:0x0},{'a':0x4,'b':0x1,'c':0x2,'d':0x5,0x4:0x0,0x1:0x0,0x2:0x0,0x5:0x0}],0x3:[{'a':0x3,'b':0x1,'c':0x4,'d':0x5,0x3:0x0,0x1:0x0,0x4:0x0,0x5:0x0},{'a':0x4,'b':0x2,'c':0x5,'d':0x1,0x4:0x0,0x2:0x0,0x5:0x0,0x1:0x0},{'a':0x4,'b':0x5,'c':0x3,'d':0x2,0x4:0x0,0x5:0x0,0x3:0x0,0x2:0x0},{'a':0x3,'b':0x1,'c':0x4,'d':0x2,0x3:0x0,0x1:0x0,0x4:0x0,0x2:0x0},{'a':0x1,'b':0x2,'c':0x3,'d':0x5,0x1:0x0,0x2:0x0,0x3:0x0,0x5:0x0},{'a':0x4,'b':0x1,'c':0x5,'d':0x2,0x4:0x0,0x1:0x0,0x5:0x0,0x2:0x0},{'a':0x3,'b':0x4,'c':0x5,'d':0x1,0x3:0x0,0x4:0x0,0x5:0x0,0x1:0x0},{'a':0x4,'b':0x2,'c':0x3,'d':0x5,0x4:0x0,0x2:0x0,0x3:0x0,0x5:0x0},{'a':0x3,'b':0x4,'c':0x1,'d':0x2,0x3:0x0,0x4:0x0,0x1:0x0,0x2:0x0},{'a':0x5,'b':0x1,'c':0x3,'d':0x2,0x5:0x0,0x1:0x0,0x3:0x0,0x2:0x0},{'a':0x1,'b':0x2,'c':0x4,'d':0x5,0x1:0x0,0x2:0x0,0x4:0x0,0x5:0x0},{'a':0x3,'b':0x5,'c':0x4,'d':0x1,0x3:0x0,0x5:0x0,0x4:0x0,0x1:0x0},{'a':0x5,'b':0x2,'c':0x3,'d':0x4,0x5:0x0,0x2:0x0,0x3:0x0,0x4:0x0},{'a':0x3,'b':0x2,'c':0x4,'d':0x1,0x3:0x0,0x2:0x0,0x4:0x0,0x1:0x0},{'a':0x5,'b':0x2,'c':0x3,'d':0x1,0x5:0x0,0x2:0x0,0x3:0x0,0x1:0x0}],0x4:[{'a':0x4,'b':0x2,'c':0x5,'d':0x1,0x4:0x0,0x2:0x0,0x5:0x0,0x1:0x0},{'a':0x5,'b':0x3,'c':0x1,'d':0x2,0x5:0x0,0x3:0x0,0x1:0x0,0x2:0x0},{'a':0x5,'b':0x1,'c':0x4,'d':0x3,0x5:0x0,0x1:0x0,0x4:0x0,0x3:0x0},{'a':0x4,'b':0x2,'c':0x5,'d':0x3,0x4:0x0,0x2:0x0,0x5:0x0,0x3:0x0},{'a':0x2,'b':0x3,'c':0x4,'d':0x1,0x2:0x0,0x3:0x0,0x4:0x0,0x1:0x0},{'a':0x5,'b':0x2,'c':0x1,'d':0x3,0x5:0x0,0x2:0x0,0x1:0x0,0x3:0x0},{'a':0x4,'b':0x5,'c':0x1,'d':0x2,0x4:0x0,0x5:0x0,0x1:0x0,0x2:0x0},{'a':0x5,'b':0x3,'c':0x4,'d':0x1,0x5:0x0,0x3:0x0,0x4:0x0,0x1:0x0},{'a':0x4,'b':0x5,'c':0x2,'d':0x3,0x4:0x0,0x5:0x0,0x2:0x0,0x3:0x0},{'a':0x1,'b':0x2,'c':0x4,'d':0x3,0x1:0x0,0x2:0x0,0x4:0x0,0x3:0x0},{'a':0x2,'b':0x3,'c':0x5,'d':0x1,0x2:0x0,0x3:0x0,0x5:0x0,0x1:0x0},{'a':0x4,'b':0x1,'c':0x5,'d':0x2,0x4:0x0,0x1:0x0,0x5:0x0,0x2:0x0},{'a':0x1,'b':0x3,'c':0x4,'d':0x5,0x1:0x0,0x3:0x0,0x4:0x0,0x5:0x0},{'a':0x4,'b':0x3,'c':0x5,'d':0x2,0x4:0x0,0x3:0x0,0x5:0x0,0x2:0x0},{'a':0x1,'b':0x3,'c':0x4,'d':0x2,0x1:0x0,0x3:0x0,0x4:0x0,0x2:0x0}],0x5:[{'a':0x5,'b':0x3,'c':0x1,'d':0x2,0x5:0x0,0x3:0x0,0x1:0x0,0x2:0x0},{'a':0x1,'b':0x4,'c':0x2,'d':0x3,0x1:0x0,0x4:0x0,0x2:0x0,0x3:0x0},{'a':0x1,'b':0x2,'c':0x5,'d':0x4,0x1:0x0,0x2:0x0,0x5:0x0,0x4:0x0},{'a':0x5,'b':0x3,'c':0x1,'d':0x4,0x5:0x0,0x3:0x0,0x1:0x0,0x4:0x0},{'a':0x3,'b':0x4,'c':0x5,'d':0x2,0x3:0x0,0x4:0x0,0x5:0x0,0x2:0x0},{'a':0x1,'b':0x3,'c':0x2,'d':0x4,0x1:0x0,0x3:0x0,0x2:0x0,0x4:0x0},{'a':0x5,'b':0x1,'c':0x2,'d':0x3,0x5:0x0,0x1:0x0,0x2:0x0,0x3:0x0},{'a':0x1,'b':0x4,'c':0x5,'d':0x2,0x1:0x0,0x4:0x0,0x5:0x0,0x2:0x0},{'a':0x5,'b':0x1,'c':0x3,'d':0x4,0x5:0x0,0x1:0x0,0x3:0x0,0x4:0x0},{'a':0x2,'b':0x3,'c':0x5,'d':0x4,0x2:0x0,0x3:0x0,0x5:0x0,0x4:0x0},{'a':0x3,'b':0x4,'c':0x1,'d':0x2,0x3:0x0,0x4:0x0,0x1:0x0,0x2:0x0},{'a':0x5,'b':0x2,'c':0x1,'d':0x3,0x5:0x0,0x2:0x0,0x1:0x0,0x3:0x0},{'a':0x2,'b':0x4,'c':0x5,'d':0x1,0x2:0x0,0x4:0x0,0x5:0x0,0x1:0x0},{'a':0x5,'b':0x4,'c':0x1,'d':0x3,0x5:0x0,0x4:0x0,0x1:0x0,0x3:0x0},{'a':0x2,'b':0x4,'c':0x5,'d':0x3,0x2:0x0,0x4:0x0,0x5:0x0,0x3:0x0}]},0x6:{0x1:[{'a':0x6,'b':0x1,'c':0x3,'d':0x2,0x6:0x0,0x1:0x0,0x3:0x0,0x2:0x0},{'a':0x3,'b':0x5,'c':0x4,'d':0x1,0x3:0x0,0x5:0x0,0x4:0x0,0x1:0x0},{'a':0x2,'b':0x1,'c':0x5,'d':0x6,0x2:0x0,0x1:0x0,0x5:0x0,0x6:0x0},{'a':0x4,'b':0x2,'c':0x3,'d':0x6,0x4:0x0,0x2:0x0,0x3:0x0,0x6:0x0},{'a':0x3,'b':0x1,'c':0x2,'d':0x5,0x3:0x0,0x1:0x0,0x2:0x0,0x5:0x0},{'a':0x5,'b':0x6,'c':0x3,'d':0x4,0x5:0x0,0x6:0x0,0x3:0x0,0x4:0x0},{'a':0x4,'b':0x1,'c':0x6,'d':0x2,0x4:0x0,0x1:0x0,0x6:0x0,0x2:0x0},{'a':0x3,'b':0x2,'c':0x4,'d':0x5,0x3:0x0,0x2:0x0,0x4:0x0,0x5:0x0},{'a':0x3,'b':0x6,'c':0x1,'d':0x5,0x3:0x0,0x6:0x0,0x1:0x0,0x5:0x0},{'a':0x2,'b':0x5,'c':0x4,'d':0x6,0x2:0x0,0x5:0x0,0x4:0x0,0x6:0x0},{'a':0x1,'b':0x2,'c':0x3,'d':0x4,0x1:0x0,0x2:0x0,0x3:0x0,0x4:0x0},{'a':0x4,'b':0x5,'c':0x1,'d':0x6,0x4:0x0,0x5:0x0,0x1:0x0,0x6:0x0},{'a':0x3,'b':0x5,'c':0x6,'d':0x2,0x3:0x0,0x5:0x0,0x6:0x0,0x2:0x0},{'a':0x6,'b':0x4,'c':0x3,'d':0x1,0x6:0x0,0x4:0x0,0x3:0x0,0x1:0x0},{'a':0x4,'b':0x2,'c':0x1,'d':0x5,0x4:0x0,0x2:0x0,0x1:0x0,0x5:0x0}],0x2:[{'a':0x4,'b':0x5,'c':0x1,'d':0x6,0x4:0x0,0x5:0x0,0x1:0x0,0x6:0x0},{'a':0x1,'b':0x3,'c':0x2,'d':0x5,0x1:0x0,0x3:0x0,0x2:0x0,0x5:0x0},{'a':0x6,'b':0x5,'c':0x3,'d':0x4,0x6:0x0,0x5:0x0,0x3:0x0,0x4:0x0},{'a':0x2,'b':0x6,'c':0x1,'d':0x4,0x2:0x0,0x6:0x0,0x1:0x0,0x4:0x0},{'a':0x1,'b':0x5,'c':0x6,'d':0x3,0x1:0x0,0x5:0x0,0x6:0x0,0x3:0x0},{'a':0x3,'b':0x4,'c':0x1,'d':0x2,0x3:0x0,0x4:0x0,0x1:0x0,0x2:0x0},{'a':0x2,'b':0x5,'c':0x4,'d':0x6,0x2:0x0,0x5:0x0,0x4:0x0,0x6:0x0},{'a':0x1,'b':0x6,'c':0x2,'d':0x3,0x1:0x0,0x6:0x0,0x2:0x0,0x3:0x0},{'a':0x1,'b':0x4,'c':0x5,'d':0x3,0x1:0x0,0x4:0x0,0x5:0x0,0x3:0x0},{'a':0x6,'b':0x3,'c':0x2,'d':0x4,0x6:0x0,0x3:0x0,0x2:0x0,0x4:0x0},{'a':0x5,'b':0x6,'c':0x1,'d':0x2,0x5:0x0,0x6:0x0,0x1:0x0,0x2:0x0},{'a':0x2,'b':0x3,'c':0x5,'d':0x4,0x2:0x0,0x3:0x0,0x5:0x0,0x4:0x0},{'a':0x1,'b':0x3,'c':0x4,'d':0x6,0x1:0x0,0x3:0x0,0x4:0x0,0x6:0x0},{'a':0x4,'b':0x2,'c':0x1,'d':0x5,0x4:0x0,0x2:0x0,0x1:0x0,0x5:0x0},{'a':0x2,'b':0x6,'c':0x5,'d':0x3,0x2:0x0,0x6:0x0,0x5:0x0,0x3:0x0}],0x3:[{'a':0x2,'b':0x3,'c':0x5,'d':0x4,0x2:0x0,0x3:0x0,0x5:0x0,0x4:0x0},{'a':0x5,'b':0x1,'c':0x6,'d':0x3,0x5:0x0,0x1:0x0,0x6:0x0,0x3:0x0},{'a':0x4,'b':0x3,'c':0x1,'d':0x2,0x4:0x0,0x3:0x0,0x1:0x0,0x2:0x0},{'a':0x6,'b':0x4,'c':0x5,'d':0x2,0x6:0x0,0x4:0x0,0x5:0x0,0x2:0x0},{'a':0x5,'b':0x3,'c':0x4,'d':0x1,0x5:0x0,0x3:0x0,0x4:0x0,0x1:0x0},{'a':0x1,'b':0x2,'c':0x5,'d':0x6,0x1:0x0,0x2:0x0,0x5:0x0,0x6:0x0},{'a':0x6,'b':0x3,'c':0x2,'d':0x4,0x6:0x0,0x3:0x0,0x2:0x0,0x4:0x0},{'a':0x5,'b':0x4,'c':0x6,'d':0x1,0x5:0x0,0x4:0x0,0x6:0x0,0x1:0x0},{'a':0x5,'b':0x2,'c':0x3,'d':0x1,0x5:0x0,0x2:0x0,0x3:0x0,0x1:0x0},{'a':0x4,'b':0x1,'c':0x6,'d':0x2,0x4:0x0,0x1:0x0,0x6:0x0,0x2:0x0},{'a':0x3,'b':0x4,'c':0x5,'d':0x6,0x3:0x0,0x4:0x0,0x5:0x0,0x6:0x0},{'a':0x6,'b':0x1,'c':0x3,'d':0x2,0x6:0x0,0x1:0x0,0x3:0x0,0x2:0x0},{'a':0x5,'b':0x1,'c':0x2,'d':0x4,0x5:0x0,0x1:0x0,0x2:0x0,0x4:0x0},{'a':0x2,'b':0x6,'c':0x5,'d':0x3,0x2:0x0,0x6:0x0,0x5:0x0,0x3:0x0},{'a':0x6,'b':0x4,'c':0x3,'d':0x1,0x6:0x0,0x4:0x0,0x3:0x0,0x1:0x0}]}};let matchOrders=structuredClone(gameSetup);page02Container=document[_0x36686c(0xa1)](_0x36686c(0xa7)),page03Container=document[_0x36686c(0xa1)](_0x36686c(0xf0)),mainContainer=document[_0x36686c(0xa1)](_0x36686c(0xe8));const nameInputContainer=document['querySelector']('#nameInputContainer'),playerNumberDropdown=document[_0x36686c(0xa1)](_0x36686c(0x132));let menuBool=![];fullscreenButton['addEventListener'](_0x36686c(0xc2),()=>{const _0x32ea43=_0x36686c;menuBool=!menuBool,menuBool?(pageMenuContainer[_0x32ea43(0xd8)][_0x32ea43(0x147)]='block',document[_0x32ea43(0x118)]('menuIcon')[_0x32ea43(0x9a)]=_0x32ea43(0xc6)):(pageMenuContainer[_0x32ea43(0xd8)]['display']='none',document[_0x32ea43(0x118)](_0x32ea43(0xbd))[_0x32ea43(0x9a)]='images/menu.png');}),button04randomize=document[_0x36686c(0xa1)](_0x36686c(0xf8)),buttonFullscreen[_0x36686c(0x112)]('click',()=>{openFullscreen();}),button04randomize[_0x36686c(0x112)](_0x36686c(0xc2),()=>{numberOfPlayers==0x4&&(chosenMatchOrder=0x1);if(numberOfPlayers==0x5){if(chosenMatchOrder==0x1)chosenMatchOrder=0x2;else{if(chosenMatchOrder==0x2)chosenMatchOrder=0x3;else{if(chosenMatchOrder==0x3)chosenMatchOrder=0x4;else chosenMatchOrder==0x4?chosenMatchOrder=0x5:chosenMatchOrder=0x1;}}}if(numberOfPlayers==0x6){if(chosenMatchOrder==0x1)chosenMatchOrder=0x2;else chosenMatchOrder==0x2?chosenMatchOrder=0x3:chosenMatchOrder=0x1;}reloadPreviewPlayerOrder();}),button04next[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0xd8ad3a=_0x36686c;page04Container[_0xd8ad3a(0xd8)][_0xd8ad3a(0x147)]='none',page05Container[_0xd8ad3a(0xd8)]['display']=_0xd8ad3a(0xa3),fulltimeDiv[_0xd8ad3a(0xd8)][_0xd8ad3a(0x147)]='block',loadFirstScreen();}),button04back[_0x36686c(0x112)]('click',()=>{const _0x2b6c1f=_0x36686c;page04Container[_0x2b6c1f(0xd8)]['display']=_0x2b6c1f(0xe0),page03Container[_0x2b6c1f(0xd8)][_0x2b6c1f(0x147)]=_0x2b6c1f(0xa3),loadNameInputs();}),LastBackButton[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x51a6e3=_0x36686c;page05Container[_0x51a6e3(0xd8)]['display']=_0x51a6e3(0xe0),page04Container[_0x51a6e3(0xd8)][_0x51a6e3(0x147)]=_0x51a6e3(0xa3);}),buttonPage03[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0xc08829=_0x36686c;page03Container[_0xc08829(0xd8)][_0xc08829(0x147)]=_0xc08829(0xe0),page04Container[_0xc08829(0xd8)][_0xc08829(0x147)]=_0xc08829(0xa3),playerNamesArray=[];let _0x132366=0x0;while(nameInputContainer[_0xc08829(0x131)]()){_0x132366++,nameInputContainer[_0xc08829(0xbc)]['value']==''&&(nameInputContainer[_0xc08829(0xbc)][_0xc08829(0x11e)]=_0xc08829(0xc0)+_0x132366['toString']()),playerNamesArray[_0xc08829(0xa9)](nameInputContainer[_0xc08829(0xbc)][_0xc08829(0x11e)]),nameInputContainer[_0xc08829(0x128)](nameInputContainer[_0xc08829(0xbc)]);}chosenMatchOrder=0x1,numberOfPlayers==0x6&&(chosenMatchOrder=Math[_0xc08829(0x10a)](Math[_0xc08829(0x107)]()*0x3)+0x1,console['log'](chosenMatchOrder)),numberOfPlayers==0x5&&(chosenMatchOrder=Math[_0xc08829(0x10a)](Math[_0xc08829(0x107)]()*0x5)+0x1,console[_0xc08829(0x99)](chosenMatchOrder)),console[_0xc08829(0x99)](playerNamesArray),match=0x1,loadFirstScreen();}),buttonPage03Back[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x39db8c=_0x36686c;page03Container['style'][_0x39db8c(0x147)]=_0x39db8c(0xe0),page02Container[_0x39db8c(0xd8)][_0x39db8c(0x147)]=_0x39db8c(0xa3),numberOfPlayers=0x0,playerNamesArray=[];while(nameInputContainer[_0x39db8c(0x131)]()){playerNamesArray[_0x39db8c(0xa9)](nameInputContainer[_0x39db8c(0xbc)][_0x39db8c(0x11e)]),nameInputContainer[_0x39db8c(0x128)](nameInputContainer[_0x39db8c(0xbc)]);}console['log'](playerNamesArray);}),buttonPage01[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x4b1026=_0x36686c;openFullscreen(),mainContainer['style'][_0x4b1026(0x147)]=_0x4b1026(0xe0),page02Container[_0x4b1026(0xd8)][_0x4b1026(0x147)]=_0x4b1026(0xa3),fullscreenDiv[_0x4b1026(0xd8)][_0x4b1026(0x147)]='block';}),buttonPage02['addEventListener'](_0x36686c(0xc2),()=>{const _0xf37aa7=_0x36686c;gameTimeField[_0xf37aa7(0x11e)]==''?gameTime=0x78:gameTime=gameTimeField[_0xf37aa7(0x11e)];console[_0xf37aa7(0x99)](gameTime);if(isNaN(gameTime)==!![])alert(_0xf37aa7(0x91));else{if(parseInt(gameTime)<0x4||parseInt(gameTime)>0x78)alert('Please\x20have\x20a\x20game\x20time\x20between\x204\x20and\x20120\x20min.');else{if(gameTime[_0xf37aa7(0x111)]>0x1&&gameTime['charAt'](0x0)=='0')alert(_0xf37aa7(0x120));else{numberOfPlayers=playerNumberDropdown[_0xf37aa7(0x11e)];numberOfPlayers==0x4?(button04randomize[_0xf37aa7(0xd8)]['display']='none',nameInputContainer[_0xf37aa7(0xd8)]['height']=_0xf37aa7(0x13e)):(button04randomize['style'][_0xf37aa7(0x147)]=_0xf37aa7(0xa3),nameInputContainer[_0xf37aa7(0xd8)][_0xf37aa7(0x13a)]=_0xf37aa7(0xf4));let _0x1a5bc8=document[_0xf37aa7(0xa1)](_0xf37aa7(0x103));_0x1a5bc8[_0xf37aa7(0xa5)]=gameTime;let _0x486c7a=document[_0xf37aa7(0xa1)]('#page03PlayerNumberSpan');page03MatchTime[_0xf37aa7(0xa5)]=calculateMatchTime('matchTime00:00'),_0x486c7a['innerHTML']=numberOfPlayers,page02Container[_0xf37aa7(0xd8)][_0xf37aa7(0x147)]='none',page03Container[_0xf37aa7(0xd8)][_0xf37aa7(0x147)]='block',loadNameInputs();}}}});function calculateMatchTime(_0x3b1901){const _0x58dbe5=_0x36686c;let _0x224cde=0x0;numberOfPlayers==0x4?_0x224cde=0x9:_0x224cde=0xf;if(numberOfPlayers==0x4)gameTimeFactor=0.025;else(numberOfPlayers==0x5||numberOfPlayers==0x6)&&(gameTimeFactor=0.0625);if(_0x3b1901==_0x58dbe5(0xe5))return parseInt(gameTime)/_0x224cde-parseInt(gameTime)/_0x224cde*gameTimeFactor;else{if(_0x3b1901==_0x58dbe5(0x12e))return parseInt(gameTime)/_0x224cde*gameTimeFactor;else{if(_0x3b1901=='matchTime00:00'){let _0x2682ad=parseInt(gameTime)/_0x224cde-parseInt(gameTime)/_0x224cde*gameTimeFactor,_0x4f37d0=Math[_0x58dbe5(0x10a)](_0x2682ad*0x3c);var _0x4b72ad=_0x4f37d0%0x3c,_0x357e33=(_0x4f37d0-_0x4b72ad)/0x3c,_0x11ae4d=_0x357e33%0x3c;return(_0x11ae4d<0xa?'0'+_0x11ae4d:_0x11ae4d)+':'+(_0x4b72ad<0xa?'0'+_0x4b72ad:_0x4b72ad);}else{if(_0x3b1901==_0x58dbe5(0xfe))return Math['floor']((parseInt(gameTime)/_0x224cde-parseInt(gameTime)/_0x224cde*gameTimeFactor)*0x3c);else{if(_0x3b1901==_0x58dbe5(0x129))return Math[_0x58dbe5(0x10a)](parseInt(gameTime)/_0x224cde*gameTimeFactor*0x3c);}}}}}function loadNameInputs(){const _0x3cf1ea=_0x36686c;for(let _0x3ae06b=0x1;_0x3ae06b<=numberOfPlayers;_0x3ae06b++){let _0xef2b27=document['createElement'](_0x3cf1ea(0x9c));_0xef2b27[_0x3cf1ea(0xbf)]='text',_0xef2b27[_0x3cf1ea(0x106)]='9',_0xef2b27[_0x3cf1ea(0xed)]='Player\x20'+_0x3ae06b,_0xef2b27[_0x3cf1ea(0xeb)](_0x3cf1ea(0xe7),0xa),_0xef2b27[_0x3cf1ea(0xa2)],_0xef2b27[_0x3cf1ea(0xb0)]='0',_0xef2b27[_0x3cf1ea(0xd3)]='10',playerNamesArray[_0x3ae06b-0x1]!=''&&playerNamesArray[_0x3ae06b-0x1]!=undefined&&(_0xef2b27[_0x3cf1ea(0x11e)]=playerNamesArray[_0x3ae06b-0x1]),nameInputContainer[_0x3cf1ea(0x125)](_0xef2b27);}}function reloadPreviewPlayerOrder(){const _0x2232be=_0x36686c;previewCurrentPlayerA[_0x2232be(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['a']-0x1],previewCurrentPlayerB[_0x2232be(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['b']-0x1],previewCurrentPlayerC['innerHTML']=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['c']-0x1],previewCurrentPlayerD[_0x2232be(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['d']-0x1];}function loadFirstScreen(){const _0x280fb9=_0x36686c;numberOfPlayers!=0x4?currentMatchId[_0x280fb9(0xa5)]='Match:\x20'+match+_0x280fb9(0x153):currentMatchId['innerHTML']='Match:\x20'+match+'/9',console['log'](Math['floor']((parseInt(gameTime)/0xf-parseInt(gameTime)/0xf*gameTimeFactor)*0x3c)),timeLeftSpan[_0x280fb9(0xa5)]=calculateMatchTime('matchTime00:00'),reloadPreviewPlayerOrder(),timeLeftSpan[_0x280fb9(0xd8)][_0x280fb9(0xca)]=_0x280fb9(0xba),timeLeftSpanText[_0x280fb9(0xd8)][_0x280fb9(0xca)]='yellow',currentPlayerA['innerHTML']=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['a']-0x1],currentPlayerB[_0x280fb9(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['b']-0x1],currentPlayerC[_0x280fb9(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['c']-0x1],currentPlayerD[_0x280fb9(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['d']-0x1],nextPlayerA[_0x280fb9(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['a']-0x1],nextPlayerB['innerHTML']=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['b']-0x1],nextPlayerC[_0x280fb9(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['c']-0x1],nextPlayerD[_0x280fb9(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['d']-0x1],console[_0x280fb9(0x99)](_0x280fb9(0x130)+matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1][matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['d'][_0x280fb9(0x9b)]()]);}minusButton01['addEventListener'](_0x36686c(0xc2),()=>{const _0x2704a6=_0x36686c;page04Points>0x0&&(page04Points--,points[_0x2704a6(0x11e)]=page04Points);}),minusButton02[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x443865=_0x36686c;page04Points02>0x0&&(page04Points02--,points2[_0x443865(0x11e)]=page04Points02);}),plusButton01[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x12806c=_0x36686c;page04Points++,points[_0x12806c(0x11e)]=page04Points;}),plusButton02[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x4e9c82=_0x36686c;page04Points02++,points2[_0x4e9c82(0x11e)]=page04Points02;});let seconds=calculateMatchTime(_0x36686c(0xe5))*0x3c;var myTimer;let pause=![],initializeClock=![];function _0x536b(_0x4769f4,_0x571171){const _0x5dbd84=_0x5dbd();return _0x536b=function(_0x536bab,_0x135b49){_0x536bab=_0x536bab-0x8f;let _0x3a2a33=_0x5dbd84[_0x536bab];return _0x3a2a33;},_0x536b(_0x4769f4,_0x571171);}pauseButton['addEventListener'](_0x36686c(0xc2),()=>{const _0x25edc6=_0x36686c;LastBackButton['style']['display']=_0x25edc6(0xe0),pauseButton[_0x25edc6(0xa5)]==_0x25edc6(0xf5)?(gameOn==!![]?c>0x3?(timeLeftSpan[_0x25edc6(0xd8)][_0x25edc6(0xca)]=colorGreen,timeLeftSpanText['style'][_0x25edc6(0xca)]=colorGreen):(timeLeftSpan[_0x25edc6(0xd8)]['color']=_0x25edc6(0xba),timeLeftSpanText['style']['color']=_0x25edc6(0xba)):(timeLeftSpan[_0x25edc6(0xd8)][_0x25edc6(0xca)]='red',timeLeftSpanText['style'][_0x25edc6(0xca)]=_0x25edc6(0x105)),pauseButton['innerHTML']=_0x25edc6(0x13c),pause=![],initializeClock==![]&&(initializeClock=!![],clock())):(timeLeftSpan['style'][_0x25edc6(0xca)]=_0x25edc6(0xba),timeLeftSpanText['style'][_0x25edc6(0xca)]=_0x25edc6(0xba),pauseButton[_0x25edc6(0xa5)]='Start',pause=!![]);});function clock(){const _0x7633b0=_0x36686c;myTimer=setInterval(_0x1f442f,0x3e8);var _0x404c3b=calculateMatchTime(_0x7633b0(0xfe))*0xf;c=calculateMatchTime(_0x7633b0(0xfe));function _0x1f442f(){const _0x4b4374=_0x7633b0;pause==![]&&(--c,--_0x404c3b);var _0x17cd20=c%0x3c,_0x937558=(c-_0x17cd20)/0x3c,_0x41c45e=_0x937558%0x3c;timeLeftSpan['innerHTML']=(_0x41c45e<0xa?'0'+_0x41c45e:_0x41c45e)+':'+(_0x17cd20<0xa?'0'+_0x17cd20:_0x17cd20),console['log'](timeLeftSpan[_0x4b4374(0xa5)]);if(gameOn==!![]&&pause==![]){if(c==0x5){timeLeftSpan['style'][_0x4b4374(0xca)]=_0x4b4374(0xba),timeLeftSpanText['style']['color']='yellow',switchToMainMatchPage(),playBlip();let _0x34ac39=0x0;var _0x1a2f79=0x1f4,_0x42d768=setInterval(function(){const _0x464db1=_0x4b4374;var _0x4f1cf4=document[_0x464db1(0x118)](_0x464db1(0x145));_0x34ac39+=0x1f4,_0x34ac39==0x1388&&clearInterval(_0x42d768),_0x4f1cf4[_0x464db1(0xd8)][_0x464db1(0xaf)]=_0x4f1cf4['style'][_0x464db1(0xaf)]=='hidden'?'':_0x464db1(0xd7);},_0x1a2f79);}c==0x4&&playBlip();c==0x3&&playBlip();c==0x2&&playBlip();c==0x1&&playBlip();if(c==0x0){timeLeftSpan[_0x4b4374(0xd8)]['color']=_0x4b4374(0x105),timeLeftSpanText[_0x4b4374(0xd8)][_0x4b4374(0xca)]=_0x4b4374(0x105),c=calculateMatchTime(_0x4b4374(0x129)),switchToMainMatchPage(),gameOn=![],timeLeftSpanText['innerHTML']=_0x4b4374(0xf3);var _0x17cd20=c%0x3c,_0x937558=(c-_0x17cd20)/0x3c,_0x41c45e=_0x937558%0x3c;timeLeftSpan[_0x4b4374(0xa5)]=(_0x41c45e<0xa?'0'+_0x41c45e:_0x41c45e)+':'+(_0x17cd20<0xa?'0'+_0x17cd20:_0x17cd20);}}if(gameOn==![]&&pause==![]){c==0x2&&(timeLeftSpan[_0x4b4374(0xd8)][_0x4b4374(0xca)]=_0x4b4374(0xba),timeLeftSpanText['style']['color']=_0x4b4374(0xba),switchToMainMatchPage(),playBlip());c==0x1&&playBlip();if(c==0x0){timeLeftSpan[_0x4b4374(0xd8)][_0x4b4374(0xca)]=colorGreen,timeLeftSpanText[_0x4b4374(0xd8)][_0x4b4374(0xca)]=colorGreen,c=calculateMatchTime(_0x4b4374(0xfe)),gameOn=!![],timeLeftSpanText[_0x4b4374(0xa5)]=_0x4b4374(0x10e);var _0x17cd20=c%0x3c,_0x937558=(c-_0x17cd20)/0x3c,_0x41c45e=_0x937558%0x3c;timeLeftSpan[_0x4b4374(0xa5)]=(_0x41c45e<0xa?'0'+_0x41c45e:_0x41c45e)+':'+(_0x17cd20<0xa?'0'+_0x17cd20:_0x17cd20),match++,reloadMainMatchPage(),switchToMainMatchPage();if(numberOfPlayers==0x6||numberOfPlayers==0x5)currentMatchId['innerHTML']='Match:\x20'+match+_0x4b4374(0x153);else numberOfPlayers==0x4&&(currentMatchId['innerHTML']=_0x4b4374(0x12a)+match+'/9');numberOfPlayers!=0x4&&match==0x10&&(clearInterval(myTimer),currentMatchId[_0x4b4374(0xa5)]=_0x4b4374(0x12a)+(match-0x1)+_0x4b4374(0x153),timeLeftSpanText[_0x4b4374(0xa5)]=_0x4b4374(0xea),timeLeftSpan[_0x4b4374(0xa5)]='',console['log'](_0x4b4374(0xe4)),nextPlayersDiv[_0x4b4374(0xd8)][_0x4b4374(0x147)]='none',currentPlayersDiv[_0x4b4374(0xd8)][_0x4b4374(0x147)]=_0x4b4374(0xe0)),numberOfPlayers==0x4&&match==0xa&&(clearInterval(myTimer),currentMatchId[_0x4b4374(0xa5)]=_0x4b4374(0x12a)+(match-0x1)+'/9',timeLeftSpanText['innerHTML']=_0x4b4374(0xea),timeLeftSpan['innerHTML']='',console['log'](_0x4b4374(0xe4)),nextPlayersDiv[_0x4b4374(0xd8)][_0x4b4374(0x147)]='none',currentPlayersDiv['style'][_0x4b4374(0x147)]=_0x4b4374(0xe0)),nextPlayersDiv[_0x4b4374(0xd8)]['display']='none',previousMatchDiv[_0x4b4374(0xd8)][_0x4b4374(0x147)]='block',page04PreviousMatch['innerHTML']=match-0x1;}}}}function stopTimer(){clearInterval(myTimer);}function reloadMainMatchPage(){const _0x194b90=_0x36686c;for(let _0x280404=0x1;_0x280404<0x7;_0x280404++){matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['a']==_0x280404&&(playerMatchCount[_0x280404]+=0x1),matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['b']==_0x280404&&(playerMatchCount[_0x280404]+=0x1),matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['c']==_0x280404&&(playerMatchCount[_0x280404]+=0x1),matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['d']==_0x280404&&(playerMatchCount[_0x280404]+=0x1);}console[_0x194b90(0x99)](playerMatchCount),page04Points=0x0,page04Points02=0x0,previousMatchDiv['style'][_0x194b90(0x147)]=_0x194b90(0xa3),fixButton[_0x194b90(0xd8)][_0x194b90(0x147)]=_0x194b90(0xe0),previousPlayerA[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['a']-0x1],previousPlayerB['innerHTML']=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['b']-0x1],previousPlayerC['innerHTML']=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['c']-0x1],previousPlayerD[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['d']-0x1];if((numberOfPlayers==0x6||numberOfPlayers==0x5)&&match<0x10){currentPlayerA[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['a']-0x1],currentPlayerB[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['b']-0x1],currentPlayerC[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['c']-0x1],currentPlayerD['innerHTML']=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['d']-0x1];if((numberOfPlayers==0x6||numberOfPlayers==0x5)&&match<0xf)nextPlayerA[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['a']-0x1],nextPlayerB[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['b']-0x1],nextPlayerC[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['c']-0x1],nextPlayerD[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['d']-0x1];else(numberOfPlayers==0x6||numberOfPlayers==0x5)&&(nextPlayerA[_0x194b90(0xa5)]=_0x194b90(0x121),nextPlayerB[_0x194b90(0xa5)]=_0x194b90(0x121),nextPlayerC[_0x194b90(0xa5)]=_0x194b90(0x121),nextPlayerD[_0x194b90(0xa5)]='---');}if(numberOfPlayers==0x4&&match<0xa){currentPlayerA[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['a']-0x1],currentPlayerB[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['b']-0x1],currentPlayerC['innerHTML']=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['c']-0x1],currentPlayerD[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match-0x1]['d']-0x1];if(numberOfPlayers==0x4&&match<0x9)nextPlayerA[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['a']-0x1],nextPlayerB[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['b']-0x1],nextPlayerC[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['c']-0x1],nextPlayerD[_0x194b90(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match]['d']-0x1];else numberOfPlayers==0x4&&(nextPlayerA[_0x194b90(0xa5)]=_0x194b90(0x121),nextPlayerB[_0x194b90(0xa5)]=_0x194b90(0x121),nextPlayerC['innerHTML']=_0x194b90(0x121),nextPlayerD[_0x194b90(0xa5)]='---');}}buttonAcceptScore['addEventListener'](_0x36686c(0xc2),()=>{const _0x5af880=_0x36686c;fixButton['style'][_0x5af880(0x147)]=_0x5af880(0xa3),previousMatchDiv[_0x5af880(0xd8)]['display']='none';if(numberOfPlayers!=0x4&&match<0xf)nextPlayersDiv['style'][_0x5af880(0x147)]=_0x5af880(0xa3);else numberOfPlayers==0x4&&match<0x9&&(nextPlayersDiv[_0x5af880(0xd8)][_0x5af880(0x147)]=_0x5af880(0xa3));matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2][matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['a']]=points[_0x5af880(0x11e)],matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2][matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['b']]=points[_0x5af880(0x11e)],matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2][matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['c']]=points2[_0x5af880(0x11e)],matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2][matchOrders[numberOfPlayers][chosenMatchOrder][match-0x2]['d']]=points2[_0x5af880(0x11e)],points[_0x5af880(0x11e)]=0x0,points2[_0x5af880(0x11e)]=0x0,console['log'](matchOrders);}),resultButton[_0x36686c(0x112)]('click',()=>{const _0x5d2bcf=_0x36686c;page05Container[_0x5d2bcf(0xd8)][_0x5d2bcf(0x147)]=_0x5d2bcf(0xe0),pageResultContainer[_0x5d2bcf(0xd8)]['display']='block',fulltimeDiv['style'][_0x5d2bcf(0x147)]='none',loadResultTable();}),buttonResultBack[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x2c2456=_0x36686c;page05Container[_0x2c2456(0xd8)][_0x2c2456(0x147)]=_0x2c2456(0xa3),pageResultContainer[_0x2c2456(0xd8)][_0x2c2456(0x147)]=_0x2c2456(0xe0),fulltimeDiv[_0x2c2456(0xd8)][_0x2c2456(0x147)]=_0x2c2456(0xa3);});function switchToMainMatchPage(){const _0x2329b2=_0x36686c;pageMenuContainer['style'][_0x2329b2(0x147)]=_0x2329b2(0xe0),document['getElementById']('menuIcon')[_0x2329b2(0x9a)]=_0x2329b2(0x151),buttonResetYes[_0x2329b2(0xd8)][_0x2329b2(0x147)]=_0x2329b2(0xe0),buttonResetNo['style'][_0x2329b2(0x147)]=_0x2329b2(0xe0),buttonReset[_0x2329b2(0xd8)][_0x2329b2(0x147)]=_0x2329b2(0xa3),resetText['innerHTML']='Caution:\x20This\x20button\x20resets\x20the\x20app\x20and\x20all\x20results!',menuBool=![],page05Container[_0x2329b2(0xd8)][_0x2329b2(0x147)]='block',pageFixContainer[_0x2329b2(0xd8)]['display']=_0x2329b2(0xe0),pageResultContainer[_0x2329b2(0xd8)][_0x2329b2(0x147)]='none';}function loadResultTable(){const _0x19917d=_0x36686c;player01points=0x0,player02points=0x0,player03points=0x0,player04points=0x0,player05points=0x0,player06points=0x0,team12=0x0,team13=0x0,team14=0x0,team15=0x0,team16=0x0,team23=0x0,team24=0x0,team25=0x0,team26=0x0,team34=0x0,team35=0x0,team36=0x0,team45=0x0,team46=0x0,team56=0x0,table[_0x19917d(0x97)](),table01el[_0x19917d(0x97)](),table=document[_0x19917d(0x90)](_0x19917d(0x96)),table01el=document[_0x19917d(0x90)](_0x19917d(0x96)),pairScore={},pairScoreArray=[];if(numberOfPlayers==0x5||numberOfPlayers==0x6){for(let _0x428066=0x0;_0x428066<0xf;_0x428066++){matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['1']!=undefined&&(player01points+=parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['1'])),matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['2']!=undefined&&(player02points+=parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['2'])),matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['3']!=undefined&&(player03points+=parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['3'])),matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['4']!=undefined&&(player04points+=parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['4'])),matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['5']!=undefined&&(player05points+=parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['5'])),numberOfPlayers==0x6&&(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['6']!=undefined&&(player06points+=parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['6']))),pair1=matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['a'][_0x19917d(0x9b)]()+matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['b'][_0x19917d(0x9b)](),pair1MirrorCheck=matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['b'][_0x19917d(0x9b)]()+matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['a']['toString'](),pari1Score=(parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066][matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['a'][_0x19917d(0x9b)]()])+parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066][matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['b'][_0x19917d(0x9b)]()]))/0x2,pair2=matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['c']['toString']()+matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['d'][_0x19917d(0x9b)](),pair2MirrorCheck=matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['d'][_0x19917d(0x9b)]()+matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['c']['toString'](),pari2Score=(parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066][matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['c'][_0x19917d(0x9b)]()])+parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066][matchOrders[numberOfPlayers][chosenMatchOrder][_0x428066]['d'][_0x19917d(0x9b)]()]))/0x2,obj={'team':pair1,'points':pari1Score},pairScoreArray[_0x19917d(0xa9)](obj),obj={'team':pair2,'points':pari2Score},pairScoreArray[_0x19917d(0xa9)](obj);}console['log']('kolla\x20denna'+pairScoreArray),calculateTeamScore();}else{if(numberOfPlayers==0x4){for(let _0x3487f9=0x0;_0x3487f9<0x9;_0x3487f9++){matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['1']!=undefined&&(player01points+=parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['1'])),matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['2']!=undefined&&(player02points+=parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['2'])),matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['3']!=undefined&&(player03points+=parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['3'])),matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['4']!=undefined&&(player04points+=parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['4'])),pair1=matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['a'][_0x19917d(0x9b)]()+matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['b'][_0x19917d(0x9b)](),pair1MirrorCheck=matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['b']['toString']()+matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['a']['toString'](),pari1Score=(parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9][matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['a'][_0x19917d(0x9b)]()])+parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9][matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['b']['toString']()]))/0x2,pair2=matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['c'][_0x19917d(0x9b)]()+matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['d'][_0x19917d(0x9b)](),pair2MirrorCheck=matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['d'][_0x19917d(0x9b)]()+matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['c'][_0x19917d(0x9b)](),pari2Score=(parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9][matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['c'][_0x19917d(0x9b)]()])+parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9][matchOrders[numberOfPlayers][chosenMatchOrder][_0x3487f9]['d'][_0x19917d(0x9b)]()]))/0x2,obj={'team':pair1,'points':pari1Score},pairScoreArray[_0x19917d(0xa9)](obj),obj={'team':pair2,'points':pari2Score},pairScoreArray[_0x19917d(0xa9)](obj);}calculateTeamScore();}}let _0x137976=[];if(numberOfPlayers==0x6)_0x137976=[[_0x19917d(0xf1),_0x19917d(0xb2),_0x19917d(0xa0),_0x19917d(0x121)],[playerNamesArray[0x0],playerMatchCount[0x1],player01points,_0x19917d(0x11b)],[playerNamesArray[0x1],playerMatchCount[0x2],player02points,_0x19917d(0x11b)],[playerNamesArray[0x2],playerMatchCount[0x3],player03points,_0x19917d(0x11b)],[playerNamesArray[0x3],playerMatchCount[0x4],player04points,_0x19917d(0x11b)],[playerNamesArray[0x4],playerMatchCount[0x5],player05points,_0x19917d(0x11b)],[playerNamesArray[0x5],playerMatchCount[0x6],player06points,_0x19917d(0x11b)]];else{if(numberOfPlayers==0x5)_0x137976=[[_0x19917d(0xf1),_0x19917d(0xb2),'Points',_0x19917d(0x121)],[playerNamesArray[0x0],playerMatchCount[0x1],player01points,_0x19917d(0x11b)],[playerNamesArray[0x1],playerMatchCount[0x2],player02points,_0x19917d(0x11b)],[playerNamesArray[0x2],playerMatchCount[0x3],player03points,_0x19917d(0x11b)],[playerNamesArray[0x3],playerMatchCount[0x4],player04points,_0x19917d(0x11b)],[playerNamesArray[0x4],playerMatchCount[0x5],player05points,'n/a']];else numberOfPlayers==0x4&&(_0x137976=[[_0x19917d(0xf1),_0x19917d(0xb2),_0x19917d(0xa0),_0x19917d(0x121)],[playerNamesArray[0x0],playerMatchCount[0x1],player01points,_0x19917d(0x11b)],[playerNamesArray[0x1],playerMatchCount[0x2],player02points,_0x19917d(0x11b)],[playerNamesArray[0x2],playerMatchCount[0x3],player03points,_0x19917d(0x11b)],[playerNamesArray[0x3],playerMatchCount[0x4],player04points,'n/a']]);}_0x137976['sort'](function(_0x434890,_0x41b8e5){return _0x41b8e5[0x2]-_0x434890[0x2];});var _0x210819=pointsArray['sort'](function(_0x4e66e6,_0x29f52e){return _0x29f52e[0x0]-_0x4e66e6[0x0];});console[_0x19917d(0x99)](_0x19917d(0xbe)+_0x210819),console[_0x19917d(0x99)](playerNamesArray[_0x210819[0x0][0x1]-0x1]+playerNamesArray[_0x210819[0x0][0x2]-0x1]);let _0xfb13a6=[];if(numberOfPlayers==0x6)_0xfb13a6=[[_0x19917d(0x133),'Player',_0x19917d(0xa4),'---'],[playerNamesArray[_0x210819[0x0][0x1]-0x1],playerNamesArray[_0x210819[0x0][0x2]-0x1],_0x210819[0x0][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x1][0x1]-0x1],playerNamesArray[_0x210819[0x1][0x2]-0x1],_0x210819[0x1][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x2][0x1]-0x1],playerNamesArray[_0x210819[0x2][0x2]-0x1],_0x210819[0x2][0x0],'n/a'],[playerNamesArray[_0x210819[0x3][0x1]-0x1],playerNamesArray[_0x210819[0x3][0x2]-0x1],_0x210819[0x3][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x4][0x1]-0x1],playerNamesArray[_0x210819[0x4][0x2]-0x1],_0x210819[0x4][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x5][0x1]-0x1],playerNamesArray[_0x210819[0x5][0x2]-0x1],_0x210819[0x5][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x6][0x1]-0x1],playerNamesArray[_0x210819[0x6][0x2]-0x1],_0x210819[0x6][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x7][0x1]-0x1],playerNamesArray[_0x210819[0x7][0x2]-0x1],_0x210819[0x7][0x0],'n/a'],[playerNamesArray[_0x210819[0x8][0x1]-0x1],playerNamesArray[_0x210819[0x8][0x2]-0x1],_0x210819[0x8][0x0],'n/a'],[playerNamesArray[_0x210819[0x9][0x1]-0x1],playerNamesArray[_0x210819[0x9][0x2]-0x1],_0x210819[0x9][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0xa][0x1]-0x1],playerNamesArray[_0x210819[0xa][0x2]-0x1],_0x210819[0xa][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0xb][0x1]-0x1],playerNamesArray[_0x210819[0xb][0x2]-0x1],_0x210819[0xb][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0xc][0x1]-0x1],playerNamesArray[_0x210819[0xc][0x2]-0x1],_0x210819[0xc][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0xd][0x1]-0x1],playerNamesArray[_0x210819[0xd][0x2]-0x1],_0x210819[0xd][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0xe][0x1]-0x1],playerNamesArray[_0x210819[0xe][0x2]-0x1],_0x210819[0xe][0x0],'n/a']];else{if(numberOfPlayers==0x5)_0xfb13a6=[[_0x19917d(0x133),_0x19917d(0x133),_0x19917d(0xa4),_0x19917d(0x121)],[playerNamesArray[_0x210819[0x0][0x1]-0x1],playerNamesArray[_0x210819[0x0][0x2]-0x1],_0x210819[0x0][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x1][0x1]-0x1],playerNamesArray[_0x210819[0x1][0x2]-0x1],_0x210819[0x1][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x2][0x1]-0x1],playerNamesArray[_0x210819[0x2][0x2]-0x1],_0x210819[0x2][0x0],'n/a'],[playerNamesArray[_0x210819[0x3][0x1]-0x1],playerNamesArray[_0x210819[0x3][0x2]-0x1],_0x210819[0x3][0x0],'n/a'],[playerNamesArray[_0x210819[0x4][0x1]-0x1],playerNamesArray[_0x210819[0x4][0x2]-0x1],_0x210819[0x4][0x0],'n/a'],[playerNamesArray[_0x210819[0x5][0x1]-0x1],playerNamesArray[_0x210819[0x5][0x2]-0x1],_0x210819[0x5][0x0],'n/a'],[playerNamesArray[_0x210819[0x6][0x1]-0x1],playerNamesArray[_0x210819[0x6][0x2]-0x1],_0x210819[0x6][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x7][0x1]-0x1],playerNamesArray[_0x210819[0x7][0x2]-0x1],_0x210819[0x7][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x8][0x1]-0x1],playerNamesArray[_0x210819[0x8][0x2]-0x1],_0x210819[0x8][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x9][0x1]-0x1],playerNamesArray[_0x210819[0x9][0x2]-0x1],_0x210819[0x9][0x0],_0x19917d(0x11b)]];else numberOfPlayers==0x4&&(_0xfb13a6=[['Player',_0x19917d(0x133),_0x19917d(0xa4),_0x19917d(0x121)],[playerNamesArray[_0x210819[0x0][0x1]-0x1],playerNamesArray[_0x210819[0x0][0x2]-0x1],_0x210819[0x0][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x1][0x1]-0x1],playerNamesArray[_0x210819[0x1][0x2]-0x1],_0x210819[0x1][0x0],'n/a'],[playerNamesArray[_0x210819[0x2][0x1]-0x1],playerNamesArray[_0x210819[0x2][0x2]-0x1],_0x210819[0x2][0x0],_0x19917d(0x11b)],[playerNamesArray[_0x210819[0x3][0x1]-0x1],playerNamesArray[_0x210819[0x3][0x2]-0x1],_0x210819[0x3][0x0],'n/a'],[playerNamesArray[_0x210819[0x4][0x1]-0x1],playerNamesArray[_0x210819[0x4][0x2]-0x1],_0x210819[0x4][0x0],'n/a'],[playerNamesArray[_0x210819[0x5][0x1]-0x1],playerNamesArray[_0x210819[0x5][0x2]-0x1],_0x210819[0x5][0x0],_0x19917d(0x11b)]]);}console[_0x19917d(0x99)](_0x19917d(0x113)+_0xfb13a6);for(let _0x36c460=0x0;_0x36c460<_0x137976['length'];_0x36c460++){let _0x592127=document[_0x19917d(0x90)]('tr');for(let _0xdefb56=0x0;_0xdefb56<=_0x137976[_0x36c460][_0x19917d(0x111)]-0x2;_0xdefb56++){if(_0xdefb56==_0x137976[_0x36c460]['length']){if(_0x36c460==0x0){let _0x3a655b=document[_0x19917d(0x90)]('td');_0x3a655b[_0x19917d(0xa5)]=_0x19917d(0x121),_0x592127['appendChild'](_0x3a655b);}else{let _0x30fad6=document['createElement']('td');_0x30fad6[_0x19917d(0xa5)]=Math[_0x19917d(0x122)]((_0x137976[_0x36c460][0x1]+_0x137976[_0x36c460][0x2]+_0x137976[_0x36c460][0x3])/0x3*0xa)/0xa,_0x592127[_0x19917d(0x125)](_0x30fad6);}}else{let _0x76ca08=document[_0x19917d(0x90)]('td');_0x76ca08[_0x19917d(0xa5)]=_0x137976[_0x36c460][_0xdefb56],_0x592127[_0x19917d(0x125)](_0x76ca08);}}table[_0x19917d(0x125)](_0x592127);}for(let _0x3d3534=0x0;_0x3d3534<_0xfb13a6[_0x19917d(0x111)];_0x3d3534++){let _0x8d9553=document[_0x19917d(0x90)]('tr');for(let _0x4dd273=0x0;_0x4dd273<=_0xfb13a6[_0x3d3534]['length']-0x2;_0x4dd273++){if(_0x4dd273==_0xfb13a6[_0x3d3534][_0x19917d(0x111)]){if(_0x3d3534==0x0){let _0x5a3333=document[_0x19917d(0x90)]('td');_0x5a3333['innerHTML']=_0x19917d(0x121),_0x8d9553[_0x19917d(0x125)](_0x5a3333);}else{let _0x215c54=document[_0x19917d(0x90)]('td');_0x215c54[_0x19917d(0xa5)]=Math[_0x19917d(0x122)]((_0xfb13a6[_0x3d3534][0x1]+_0xfb13a6[_0x3d3534][0x2]+_0xfb13a6[_0x3d3534][0x3])/0x3*0xa)/0xa,_0x8d9553['appendChild'](_0x215c54);}}else{let _0x1f64ab=document[_0x19917d(0x90)]('td');_0x1f64ab['innerHTML']=_0xfb13a6[_0x3d3534][_0x4dd273],_0x8d9553[_0x19917d(0x125)](_0x1f64ab);}}table01el[_0x19917d(0x125)](_0x8d9553);}table01[_0x19917d(0x125)](table),table02[_0x19917d(0x125)](table01el);}fixButton[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x2e5c4d=_0x36686c;pageFixContainer[_0x2e5c4d(0xd8)][_0x2e5c4d(0x147)]=_0x2e5c4d(0xa3),page05Container['style'][_0x2e5c4d(0x147)]=_0x2e5c4d(0xe0),fulltimeDiv['style'][_0x2e5c4d(0x147)]=_0x2e5c4d(0xe0),fixSpanMatchNumber[_0x2e5c4d(0xa5)]=match-0x1,fixNumber=match-0x1,loadPlayersToFix();}),buttonFixBack[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x4b0afa=_0x36686c;pageFixContainer['style'][_0x4b0afa(0x147)]=_0x4b0afa(0xe0),page05Container['style'][_0x4b0afa(0x147)]=_0x4b0afa(0xa3),fulltimeDiv[_0x4b0afa(0xd8)]['display']=_0x4b0afa(0xa3);}),leftArrow['addEventListener'](_0x36686c(0xc2),()=>{fixNumber<match-0x1&&(fixNumber++,fixSpanMatchNumber['innerHTML']=fixNumber,loadPlayersToFix());}),rightArrow['addEventListener'](_0x36686c(0xc2),()=>{fixNumber>0x1&&(fixNumber--,fixSpanMatchNumber['innerHTML']=fixNumber,loadPlayersToFix());});const fixpreviousMatchDiv=document[_0x36686c(0xa1)](_0x36686c(0xc4)),fixpointsInfo01=document['querySelector']('#fixpointsInfo01'),fixpage04PreviousMatch=document['querySelector']('#fixpage04PreviousMatch'),fixbuttonAcceptScore=document[_0x36686c(0xa1)](_0x36686c(0xac)),fixpreviousPlayerA=document[_0x36686c(0xa1)]('#fixpreviousPlayerA'),fixpreviousPlayerB=document[_0x36686c(0xa1)]('#fixpreviousPlayerB'),fixminusButton01=document['querySelector']('#fixminusButton01'),fixplusButton01=document[_0x36686c(0xa1)]('#fixplusButton01'),fixpage4PointsBorder=document[_0x36686c(0xa1)](_0x36686c(0xde)),fixpreviousPlayerC=document[_0x36686c(0xa1)](_0x36686c(0x9f)),fixpreviousPlayerD=document[_0x36686c(0xa1)](_0x36686c(0xbb)),fixminusButton02=document['querySelector'](_0x36686c(0x124)),fixplusButton02=document[_0x36686c(0xa1)](_0x36686c(0x11c)),points3=document['querySelector'](_0x36686c(0x10c)),points4=document['querySelector'](_0x36686c(0xcc));function loadPlayersToFix(){const _0x274dff=_0x36686c;fixpreviousMatchDiv['style']['display']=_0x274dff(0xa3),fixpreviousPlayerA[_0x274dff(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1]['a']-0x1],fixpreviousPlayerB[_0x274dff(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1]['b']-0x1],fixpreviousPlayerC['innerHTML']=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1]['c']-0x1],fixpreviousPlayerD[_0x274dff(0xa5)]=playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1]['d']-0x1],fixpage04PreviousMatch['innerHTML']=fixNumber,points3['value']=matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1][matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1]['a']],points4[_0x274dff(0x11e)]=matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1][matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1]['c']],fixpage04Points=points3[_0x274dff(0x11e)],fixpage04Points02=points4[_0x274dff(0x11e)];}fixminusButton01[_0x36686c(0x112)](_0x36686c(0xc2),()=>{fixpage04Points>0x0&&(fixpage04Points--,points3['value']=fixpage04Points);}),fixminusButton02['addEventListener'](_0x36686c(0xc2),()=>{const _0x5c6114=_0x36686c;fixpage04Points02>0x0&&(fixpage04Points02--,points4[_0x5c6114(0x11e)]=fixpage04Points02);}),fixplusButton01[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x31e6f7=_0x36686c;fixpage04Points++,points3[_0x31e6f7(0x11e)]=fixpage04Points;}),fixplusButton02[_0x36686c(0x112)](_0x36686c(0xc2),()=>{fixpage04Points02++,points4['value']=fixpage04Points02;}),fixbuttonAcceptScore[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x2b5d28=_0x36686c;fixpreviousMatchDiv['style']['display']=_0x2b5d28(0xe0),matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1][matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1]['a']]=points3[_0x2b5d28(0x11e)],matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1][matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1]['b']]=points3[_0x2b5d28(0x11e)],matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1][matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1]['c']]=points4[_0x2b5d28(0x11e)],matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1][matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber-0x1]['d']]=points4['value'];});function playBlip(){const _0x3d2064=_0x36686c;if(soundIsOn==!![]){if(chosenSound==0x1)var _0x3edbd2=new Audio('./blip.ogg');if(chosenSound==0x2)var _0x3edbd2=new Audio(_0x3d2064(0x152));_0x3edbd2['play']();}}function playBlop(){const _0x2c03b1=_0x36686c;if(soundIsOn==!![]){var _0x521235=new Audio(_0x2c03b1(0x152));_0x521235['play']();}}let fulltime=0x1;const timeLeftP=document[_0x36686c(0xa1)]('#timeLeftP');fulltimeDiv[_0x36686c(0x112)]('click',()=>{timeWindow();});function timeWindow(){const _0x908d27=_0x36686c;fulltime<2.1?(fulltime+=0.4,timeLeftP[_0x908d27(0xd8)][_0x908d27(0x136)]=fulltime['toString'](),timeLeftP[_0x908d27(0xd8)]['backgroundColor']=_0x908d27(0x9d)):(timeLeftP['style'][_0x908d27(0x136)]='1',timeLeftP[_0x908d27(0xd8)]['backgroundColor']=_0x908d27(0xab),fulltime=0x1);}var maxParticleCount=0x96,particleSpeed=0x2,startConfetti,stopConfetti,toggleConfetti,removeConfetti;(function(){const _0x138ee3=_0x36686c;startConfetti=_0x1a3b8d,stopConfetti=_0x3edafa,toggleConfetti=_0x9623e8,removeConfetti=_0x31615f;var _0x10739d=['DodgerBlue',_0x138ee3(0x11f),_0x138ee3(0xf7),_0x138ee3(0x13d),_0x138ee3(0x100),_0x138ee3(0xef),_0x138ee3(0x154),_0x138ee3(0x102),_0x138ee3(0xc9),_0x138ee3(0x94),_0x138ee3(0xaa),_0x138ee3(0x95)],_0x35e7f9=![],_0x558a54=null,_0x44fe47=[],_0x3dbe09=0x0;function _0x131d82(_0x236132,_0x335814,_0xca066e){const _0x15f071=_0x138ee3;return _0x236132[_0x15f071(0xca)]=_0x10739d[Math[_0x15f071(0x107)]()*_0x10739d[_0x15f071(0x111)]|0x0],_0x236132['x']=Math[_0x15f071(0x107)]()*_0x335814,_0x236132['y']=Math[_0x15f071(0x107)]()*_0xca066e-_0xca066e,_0x236132[_0x15f071(0xb4)]=Math['random']()*0xa+0x5,_0x236132[_0x15f071(0x144)]=Math[_0x15f071(0x107)]()*0xa-0xa,_0x236132['tiltAngleIncrement']=Math['random']()*0.07+0.05,_0x236132[_0x15f071(0x114)]=0x0,_0x236132;}function _0x1a3b8d(){const _0xadf5f3=_0x138ee3;var _0x246de6=window[_0xadf5f3(0xc1)],_0x257375=window[_0xadf5f3(0xff)];window[_0xadf5f3(0xfc)]=(function(){const _0x2049d7=_0xadf5f3;return window[_0x2049d7(0x134)]||window[_0x2049d7(0xc7)]||window[_0x2049d7(0xf2)]||window[_0x2049d7(0x11d)]||window[_0x2049d7(0x117)]||function(_0xda32cf){const _0x20d303=_0x2049d7;return window[_0x20d303(0xd9)](_0xda32cf,16.6666667);};}());var _0x162f13=document[_0xadf5f3(0x118)](_0xadf5f3(0x126));_0x162f13===null&&(_0x162f13=document[_0xadf5f3(0x90)](_0xadf5f3(0x138)),_0x162f13['setAttribute']('id',_0xadf5f3(0x126)),_0x162f13[_0xadf5f3(0xeb)]('style','display:block;z-index:999999;pointer-events:none'),document['body'][_0xadf5f3(0x125)](_0x162f13),_0x162f13[_0xadf5f3(0x10d)]=_0x246de6,_0x162f13[_0xadf5f3(0x13a)]=_0x257375,window[_0xadf5f3(0x112)](_0xadf5f3(0xb8),function(){const _0x48f86c=_0xadf5f3;_0x162f13[_0x48f86c(0x10d)]=window[_0x48f86c(0xc1)],_0x162f13[_0x48f86c(0x13a)]=window[_0x48f86c(0xff)];},!![]));var _0x15f2e5=_0x162f13[_0xadf5f3(0x123)]('2d');while(_0x44fe47['length']<maxParticleCount)_0x44fe47['push'](_0x131d82({},_0x246de6,_0x257375));_0x35e7f9=!![],_0x558a54===null&&function _0x23856b(){const _0x3e87c5=_0xadf5f3;_0x15f2e5[_0x3e87c5(0xdd)](0x0,0x0,window[_0x3e87c5(0xc1)],window[_0x3e87c5(0xff)]);if(_0x44fe47[_0x3e87c5(0x111)]===0x0)_0x558a54=null;else _0x38ade9(),_0x56010b(_0x15f2e5),_0x558a54=requestAnimFrame(_0x23856b);}();}function _0x3edafa(){_0x35e7f9=![];}function _0x31615f(){stopConfetti(),_0x44fe47=[];}function _0x9623e8(){if(_0x35e7f9)_0x3edafa();else _0x1a3b8d();}function _0x56010b(_0x557c41){const _0xf02bd9=_0x138ee3;var _0x10f5de,_0x32057c;for(var _0x296c83=0x0;_0x296c83<_0x44fe47['length'];_0x296c83++){_0x10f5de=_0x44fe47[_0x296c83],_0x557c41[_0xf02bd9(0x12c)](),_0x557c41[_0xf02bd9(0xd0)]=_0x10f5de[_0xf02bd9(0xb4)],_0x557c41[_0xf02bd9(0x104)]=_0x10f5de[_0xf02bd9(0xca)],_0x32057c=_0x10f5de['x']+_0x10f5de[_0xf02bd9(0x144)],_0x557c41[_0xf02bd9(0x127)](_0x32057c+_0x10f5de['diameter']/0x2,_0x10f5de['y']),_0x557c41[_0xf02bd9(0xad)](_0x32057c,_0x10f5de['y']+_0x10f5de[_0xf02bd9(0x144)]+_0x10f5de[_0xf02bd9(0xb4)]/0x2),_0x557c41[_0xf02bd9(0xd2)]();}}function _0x38ade9(){const _0x1ca62a=_0x138ee3;var _0x245783=window['innerWidth'],_0x264d56=window[_0x1ca62a(0xff)],_0x2c6562;_0x3dbe09+=0.01;for(var _0x225360=0x0;_0x225360<_0x44fe47[_0x1ca62a(0x111)];_0x225360++){_0x2c6562=_0x44fe47[_0x225360];if(!_0x35e7f9&&_0x2c6562['y']<-0xf)_0x2c6562['y']=_0x264d56+0x64;else _0x2c6562['tiltAngle']+=_0x2c6562['tiltAngleIncrement'],_0x2c6562['x']+=Math[_0x1ca62a(0x139)](_0x3dbe09),_0x2c6562['y']+=(Math[_0x1ca62a(0xc3)](_0x3dbe09)+_0x2c6562['diameter']+particleSpeed)*0.5,_0x2c6562['tilt']=Math['sin'](_0x2c6562[_0x1ca62a(0x114)])*0xf;if(_0x2c6562['x']>_0x245783+0x14||_0x2c6562['x']<-0x14||_0x2c6562['y']>_0x264d56){if(_0x35e7f9&&_0x44fe47['length']<=maxParticleCount)_0x131d82(_0x2c6562,_0x245783,_0x264d56);else _0x44fe47[_0x1ca62a(0x11a)](_0x225360,0x1),_0x225360--;}}}}()),buttonReset[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x47e00d=_0x36686c;buttonResetYes[_0x47e00d(0xd8)][_0x47e00d(0x147)]=_0x47e00d(0xa3),buttonResetNo[_0x47e00d(0xd8)][_0x47e00d(0x147)]='block',buttonReset['style'][_0x47e00d(0x147)]=_0x47e00d(0xe0),resetText['innerHTML']=_0x47e00d(0x14d);}),buttonResetNo[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x1a6f21=_0x36686c;buttonResetYes['style']['display']='none',buttonResetNo[_0x1a6f21(0xd8)][_0x1a6f21(0x147)]=_0x1a6f21(0xe0),buttonReset['style'][_0x1a6f21(0x147)]=_0x1a6f21(0xa3),resetText[_0x1a6f21(0xa5)]='Caution:\x20This\x20button\x20resets\x20the\x20app\x20and\x20all\x20results!';}),buttonResetYes[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x1d94bd=_0x36686c;page02Container[_0x1d94bd(0xd8)]['display']='none',page03Container[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]=_0x1d94bd(0xe0),page04Container[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]='none',page05Container[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]='none',pageResultContainer[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]=_0x1d94bd(0xe0),pageFixContainer[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]=_0x1d94bd(0xe0),pageMenuContainer[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]=_0x1d94bd(0xe0),mainContainer[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]='block',fullscreenDiv['style'][_0x1d94bd(0x147)]='none',document[_0x1d94bd(0x118)](_0x1d94bd(0xbd))['src']='images/menu.png',buttonResetYes[_0x1d94bd(0xd8)]['display']=_0x1d94bd(0xe0),buttonResetNo[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]=_0x1d94bd(0xe0),buttonReset[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]=_0x1d94bd(0xa3),resetText[_0x1d94bd(0xa5)]=_0x1d94bd(0xdb),menuBool=![];while(nameInputContainer[_0x1d94bd(0x131)]()){playerNamesArray['push'](nameInputContainer[_0x1d94bd(0xbc)][_0x1d94bd(0x11e)]),nameInputContainer[_0x1d94bd(0x128)](nameInputContainer[_0x1d94bd(0xbc)]);}points[_0x1d94bd(0x11e)]=0x0,points2[_0x1d94bd(0x11e)]=0x0,fixNumber=0x1,player01points=0x0,player02points=0x0,player03points=0x0,player04points=0x0,player05points=0x0,player06points=0x0,team12=0x0,team13=0x0,team14=0x0,team15=0x0,team16=0x0,team23=0x0,team24=0x0,team25=0x0,team26=0x0,team34=0x0,team35=0x0,team36=0x0,team45=0x0,team46=0x0,team56=0x0,pointsArray=[],player01MatchCount=0x0,player02MatchCount=0x0,player03MatchCount=0x0,player04MatchCount=0x0,player05MatchCount=0x0,player06MatchCount=0x0,playerMatchCount=[0x0,0x0,0x0,0x0,0x0,0x0,0x0],gameOn=!![],c=0xa,colorGreen=_0x1d94bd(0xe2),page04Points=0x0,page04Points02=0x0,fixpage04Points=0x0,fixpage04Points02=0x0,currentMatch=0x1,gameTime=0x0,numberOfPlayers=0x0,playerNamesArray=[],timePerGame=0x0,chosenMatchOrder=0x1,stopTimer(),seconds=0x0,pause=![],initializeClock=![],LastBackButton[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]='block',fixButton[_0x1d94bd(0xd8)]['display']=_0x1d94bd(0xe0),pauseButton[_0x1d94bd(0xa5)]='Start',previousMatchDiv[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]='none',nextPlayersDiv[_0x1d94bd(0xd8)][_0x1d94bd(0x147)]='block',currentPlayersDiv['style'][_0x1d94bd(0x147)]=_0x1d94bd(0xa3),matchOrders={},matchOrders=structuredClone(gameSetup),console['log'](matchOrders),table['remove'](),table01el[_0x1d94bd(0x97)](),timeLeftSpanText['innerHTML']=_0x1d94bd(0x10e),soundIsOn=!![],buttonSound['innerHTML']='Sound\x20is\x20on',chosenSound=0x1,changeSound['innerHTML']='Sound:\x201',gameTimeField[_0x1d94bd(0x11e)]=0x78,pairScore={},pairScoreArray=[];}),buttonSound[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0xe2a13=_0x36686c;soundIsOn==!![]?(buttonSound['innerHTML']=_0xe2a13(0xda),soundIsOn=![]):(buttonSound[_0xe2a13(0xa5)]=_0xe2a13(0xb1),soundIsOn=!![]);}),changeSound[_0x36686c(0x112)](_0x36686c(0xc2),()=>{const _0x1765cf=_0x36686c;chosenSound==0x1?(changeSound[_0x1765cf(0xa5)]='Sound:\x202',chosenSound=0x2):(changeSound[_0x1765cf(0xa5)]=_0x1765cf(0x14f),chosenSound=0x1),playBlip();}),playerNumberDropdown[_0x36686c(0x112)]('change',()=>{checkInput();});function checkInput(){const _0x4fb188=_0x36686c;console[_0x4fb188(0x99)](gameTimeField['value']),gameTime=gameTimeField[_0x4fb188(0x11e)],numberOfPlayers=playerNumberDropdown[_0x4fb188(0x11e)],page03MatchTimeV2['innerHTML']=calculateMatchTime(_0x4fb188(0x13f));}checkInput();function searchTeamScores(_0x24cdc6){const _0x45791a=_0x36686c;let _0x4e7cb7=0x0;console['log'](pairScoreArray);let _0xa8e925=0x0;numberOfPlayers==0x5||numberOfPlayers==0x6?_0xa8e925=0x1e:_0xa8e925=0x12;for(let _0x279ed8=0x0;_0x279ed8<_0xa8e925;_0x279ed8++){console[_0x45791a(0x99)](pairScoreArray[_0x279ed8]),console['log'](_0x279ed8),pairScoreArray[_0x279ed8][_0x45791a(0x137)]==_0x24cdc6&&(_0x4e7cb7+=pairScoreArray[_0x279ed8][_0x45791a(0x130)],console[_0x45791a(0x99)](_0x45791a(0x8f)+_0x4e7cb7));}return _0x4e7cb7;}function calculateTeamScore(){const _0x4b3167=_0x36686c;console[_0x4b3167(0x99)]('scorearray\x20'+typeof pairScoreArray[0x0][_0x4b3167(0x137)]);pairScoreArray[_0x4b3167(0x14b)](_0x22ee4c=>_0x22ee4c[_0x4b3167(0x137)]==='12')[0x0]!=undefined&&(team12+=searchTeamScores('12'));pairScoreArray[_0x4b3167(0x14b)](_0x10f4d2=>_0x10f4d2[_0x4b3167(0x137)]==='21')[0x0]!=undefined&&(team12+=searchTeamScores('21'));pairScoreArray['filter'](_0x8d6dc5=>_0x8d6dc5[_0x4b3167(0x137)]==='13')[0x0]!=undefined&&(team13+=searchTeamScores('13'));pairScoreArray[_0x4b3167(0x14b)](_0x12ed57=>_0x12ed57[_0x4b3167(0x137)]==='31')[0x0]!=undefined&&(team13+=searchTeamScores('31'));pairScoreArray[_0x4b3167(0x14b)](_0x617274=>_0x617274[_0x4b3167(0x137)]==='14')[0x0]!=undefined&&(team14+=searchTeamScores('14'));pairScoreArray[_0x4b3167(0x14b)](_0x3dacda=>_0x3dacda[_0x4b3167(0x137)]==='41')[0x0]!=undefined&&(team14+=searchTeamScores('41'));pairScoreArray[_0x4b3167(0x14b)](_0x4f4ef5=>_0x4f4ef5[_0x4b3167(0x137)]==='15')[0x0]!=undefined&&(team15+=searchTeamScores('15'));pairScoreArray['filter'](_0x676fd=>_0x676fd[_0x4b3167(0x137)]==='51')[0x0]!=undefined&&(team15+=searchTeamScores('51'));pairScoreArray[_0x4b3167(0x14b)](_0x383b57=>_0x383b57['team']==='16')[0x0]!=undefined&&(team16+=searchTeamScores('16'));pairScoreArray[_0x4b3167(0x14b)](_0x48677f=>_0x48677f['team']==='61')[0x0]!=undefined&&(team16+=searchTeamScores('61'));pairScoreArray[_0x4b3167(0x14b)](_0x4d9af2=>_0x4d9af2['team']==='23')[0x0]!=undefined&&(team23+=searchTeamScores('23'));pairScoreArray[_0x4b3167(0x14b)](_0x36b09b=>_0x36b09b['team']==='32')[0x0]!=undefined&&(team23+=searchTeamScores('32'));pairScoreArray['filter'](_0x20b0ea=>_0x20b0ea[_0x4b3167(0x137)]==='24')[0x0]!=undefined&&(team24+=searchTeamScores('24'));pairScoreArray['filter'](_0x35cc4a=>_0x35cc4a[_0x4b3167(0x137)]==='42')[0x0]!=undefined&&(team24+=searchTeamScores('42'));pairScoreArray[_0x4b3167(0x14b)](_0x5e47c0=>_0x5e47c0['team']==='25')[0x0]!=undefined&&(team25+=searchTeamScores('25'));pairScoreArray[_0x4b3167(0x14b)](_0x1f1f87=>_0x1f1f87[_0x4b3167(0x137)]==='52')[0x0]!=undefined&&(team25+=searchTeamScores('52'));pairScoreArray[_0x4b3167(0x14b)](_0x539db7=>_0x539db7[_0x4b3167(0x137)]==='26')[0x0]!=undefined&&(team26+=searchTeamScores('26'));pairScoreArray[_0x4b3167(0x14b)](_0x442dfb=>_0x442dfb['team']==='62')[0x0]!=undefined&&(team26+=searchTeamScores('62'));pairScoreArray[_0x4b3167(0x14b)](_0x40a6b0=>_0x40a6b0[_0x4b3167(0x137)]==='34')[0x0]!=undefined&&(team34+=searchTeamScores('34'));pairScoreArray[_0x4b3167(0x14b)](_0x3eaa26=>_0x3eaa26['team']==='43')[0x0]!=undefined&&(team34+=searchTeamScores('43'));pairScoreArray['filter'](_0x1d2879=>_0x1d2879[_0x4b3167(0x137)]==='35')[0x0]!=undefined&&(team35+=searchTeamScores('35'));pairScoreArray[_0x4b3167(0x14b)](_0x266bb0=>_0x266bb0['team']==='53')[0x0]!=undefined&&(team35+=searchTeamScores('53'));pairScoreArray[_0x4b3167(0x14b)](_0x3b260b=>_0x3b260b['team']==='36')[0x0]!=undefined&&(team36+=searchTeamScores('36'));pairScoreArray[_0x4b3167(0x14b)](_0x56766b=>_0x56766b[_0x4b3167(0x137)]==='63')[0x0]!=undefined&&(team36+=searchTeamScores('63'));pairScoreArray[_0x4b3167(0x14b)](_0x35c988=>_0x35c988[_0x4b3167(0x137)]==='45')[0x0]!=undefined&&(team45+=searchTeamScores('45'));pairScoreArray[_0x4b3167(0x14b)](_0x319a6f=>_0x319a6f[_0x4b3167(0x137)]==='54')[0x0]!=undefined&&(team45+=searchTeamScores('54'));pairScoreArray[_0x4b3167(0x14b)](_0x1c6a83=>_0x1c6a83[_0x4b3167(0x137)]==='46')[0x0]!=undefined&&(team46+=searchTeamScores('46'));pairScoreArray[_0x4b3167(0x14b)](_0x237ffb=>_0x237ffb['team']==='64')[0x0]!=undefined&&(team46+=searchTeamScores('64'));pairScoreArray[_0x4b3167(0x14b)](_0x57b262=>_0x57b262[_0x4b3167(0x137)]==='56')[0x0]!=undefined&&(team56+=searchTeamScores('56'));pairScoreArray['filter'](_0x3463f1=>_0x3463f1[_0x4b3167(0x137)]==='65')[0x0]!=undefined&&(team56+=searchTeamScores('65'));if(numberOfPlayers==0x6)pointsArray=[[team12,0x1,0x2],[team13,0x1,0x3],[team14,0x1,0x4],[team15,0x1,0x5],[team16,0x1,0x6],[team23,0x2,0x3],[team24,0x2,0x4],[team25,0x2,0x5],[team26,0x2,0x6],[team34,0x3,0x4],[team35,0x3,0x5],[team36,0x3,0x6],[team45,0x4,0x5],[team46,0x4,0x6],[team56,0x5,0x6]];else{if(numberOfPlayers==0x5)pointsArray=[[team12,0x1,0x2],[team13,0x1,0x3],[team14,0x1,0x4],[team15,0x1,0x5],[team23,0x2,0x3],[team24,0x2,0x4],[team25,0x2,0x5],[team34,0x3,0x4],[team35,0x3,0x5],[team45,0x4,0x5]];else numberOfPlayers==0x4&&(pointsArray=[[team12,0x1,0x2],[team13,0x1,0x3],[team14,0x1,0x4],[team23,0x2,0x3],[team24,0x2,0x4],[team34,0x3,0x4]]);}pointsArray[_0x4b3167(0x146)](function(_0x2cd7d9,_0x5a5572){return _0x5a5572-_0x2cd7d9;}),console[_0x4b3167(0x99)](team16+_0x4b3167(0xc8)+pointsArray);}
+// window.addEventListener('resize', function(){
+//   if (window.innerWidth > window.innerHeight) {
+// console.log("force landscape");
+// screen.orientation.lock('landscape');
+
+//   } else {
+//     console.log("force portrait");
+// screen.orientation.lock('portrait');
+
+//   }
+// });
+//screen.orientation.lock('landscape');
+
+// window.addEventListener('beforeunload', function (e) {
+//   e.preventDefault();
+//   e.returnValue = '';
+// });
+//setTimeout(openFullscreen, 10000);
+
+//function yourfunction() { alert('test'); }
+//Nedan
+window.setInterval(openFullscreen, 1000);
+
+
+document.body.addEventListener(
+  "touchmove",
+  function (event) {
+    console.log(event.source);
+    event.preventDefault();
+  },
+  false
+);
+
+// window.onbeforeunload = confirmExit;
+// function confirmExit() {
+//   return "You have attempted to leave this page. Are you sure?";
+// }
+
+
+//Ovan
+
+
+let timeWindowOn = false;
+const buttonFullscreen = document.querySelector("#buttonFullscreen");
+const buttonPage01 = document.querySelector("#button01");
+const pageResultContainer = document.querySelector("#pageResultContainer");
+const buttonResultBack = document.querySelector("#buttonResultBack");
+pageResultContainer.style.display = "none";
+const buttonPage02 = document.querySelector("#button02");
+const buttonPage03 = document.querySelector("#button03");
+const buttonPage03Back = document.querySelector("#button04");
+const button04back = document.querySelector("#button04back");
+const button04next = document.querySelector("#button04next");
+const pauseButton = document.querySelector("#pauseButton");
+const resultButton = document.querySelector("#resultButton");
+const gameTimeField = document.querySelector("#gameTime");
+const LastBackButton = document.querySelector("#LastBackButton");
+const pageMenuContainer = document.querySelector("#pageMenuContainer");
+pageMenuContainer.style.display = "none";
+const buttonReset = document.querySelector("#buttonReset");
+const buttonResetYes = document.querySelector("#buttonResetYes");
+const buttonResetNo = document.querySelector("#buttonResetNo");
+const resetText = document.querySelector("#resetText");
+const buttonSound = document.querySelector("#buttonSound");
+const changeSound = document.querySelector("#changeSound");
+buttonResetYes.style.display = "none";
+buttonResetNo.style.display = "none";
+
+
+
+//Check if window is suddenly resized.
+// window.onresize = function() {    
+//   console.log("new rezise");
+//   if (document.activeElement === gameTimeField){
+//     console.log("Input is focused");
+//     buttonPage02.style.display = "none";
+//   } else {
+//     console.log("Input is not focused");
+//     buttonPage02.style.display = "block";
+
+
+//   }
+// };
+
+// if (document.activeElement === gameTimeField){
+//   console.log("Input is focused");
+//   buttonPage02.style.display = "none";
+// } 
+// gameTimeField.addEventListener("input", () => {
+//   let tempValue = gameTimeField.style.scale;
+//   console.log("Typing is done");
+//   gameTimeField.style.scale = "2";
+
+
+// });
+//   let tempValue = gameTimeField.style.scale;
+// input01button = document.querySelector("#input01button");
+
+// let tempValue = gameTimeField.style.scale;
+// function checkDocumentFocus() {
+//   if (document.activeElement === gameTimeField){
+//     input01button.style.marginLeft = "80px";
+//     input01button.style.scale = "2";
+
+//     gameTimeField.style.scale = "2";
+//     console.log("Input is focused");
+//     buttonPage02.style.display = "none";
+//   } else {
+//     gameTimeField.style.scale = tempValue;
+//     console.log("Input is not focused");
+//     buttonPage02.style.display = "block";
+//     input01button.style.marginLeft = "20px";
+//     input01button.style.scale = "1";
+//   }
+// };
+// setInterval(checkDocumentFocus, 300);
+// input01button.addEventListener("click", () => {
+//   gameTimeField.style.scale = tempValue;
+//   console.log("Input is not focused");
+//   buttonPage02.style.display = "block";
+//   input01button.style.marginLeft = "20px";
+//   input01button.style.scale = "1";
+// });
+nextPlayersDiv = document.querySelector("#nextPlayersDiv");
+currentPlayersDiv = document.querySelector("#currentPlayersDiv");
+
+previewCurrentPlayerA = document.querySelector("#previewCurrentPlayerA");
+previewCurrentPlayerB = document.querySelector("#previewCurrentPlayerB");
+previewCurrentPlayerC = document.querySelector("#previewCurrentPlayerC");
+previewCurrentPlayerD = document.querySelector("#previewCurrentPlayerD");
+const tableDiv = document.querySelector("#tableDiv");
+let table = document.createElement("table");
+let table02el = document.createElement("table");
+let table01el = document.createElement("table");
+
+ let table01 = document.getElementById("table01");
+  let table02 = document.getElementById("table02");
+currentPlayerA = document.querySelector("#currentPlayerA");
+currentPlayerB = document.querySelector("#currentPlayerB");
+currentPlayerC = document.querySelector("#currentPlayerC");
+currentPlayerD = document.querySelector("#currentPlayerD");
+nextPlayerA = document.querySelector("#nextPlayerA");
+nextPlayerB = document.querySelector("#nextPlayerB");
+nextPlayerC = document.querySelector("#nextPlayerC");
+nextPlayerD = document.querySelector("#nextPlayerD");
+previousPlayerA = document.querySelector("#previousPlayerA");
+previousPlayerB = document.querySelector("#previousPlayerB");
+previousPlayerC = document.querySelector("#previousPlayerC");
+previousPlayerD = document.querySelector("#previousPlayerD");
+
+const minusButton01 = document.querySelector("#minusButton01");
+const plusButton01 = document.querySelector("#plusButton01");
+const minusButton02 = document.querySelector("#minusButton02");
+const plusButton02 = document.querySelector("#plusButton02");
+const points = document.querySelector("#points");
+const points2 = document.querySelector("#points2");
+
+const page04PreviousMatch = document.querySelector("#page04PreviousMatch");
+
+const previousMatchDiv = document.querySelector("#previousMatchDiv");
+previousMatchDiv.style.display = "none";
+
+const fullscreenDiv = document.querySelector("#fullscreenDiv");
+//fullscreenDiv.style.display = "none";
+
+const buttonFixBack = document.querySelector("#buttonFixBack");
+const fullscreenButton = document.querySelector("#fullscreenButton");
+
+const fulltimeDiv = document.querySelector("#fulltimeDiv");
+fulltimeDiv.style.display = "none";
+
+const fixButton = document.querySelector("#fixButton");
+fixButton.style.display = "none";
+const pageFixContainer = document.querySelector("#pageFixContainer");
+pageFixContainer.style.display = "none";
+const buttonAcceptScore = document.querySelector("#buttonAcceptScore");
+const timeLeftSpan = document.querySelector("#timeLeftSpan");
+const timeLeftSpanText = document.querySelector("#timeLeftSpanText");
+
+const currentMatchId = document.querySelector("#currentMatchId");
+
+const leftArrow = document.querySelector("#leftArrow");
+const rightArrow = document.querySelector("#rightArrow");
+const fixSpanMatchNumber = document.querySelector("#fixSpanMatchNumber");
+let page03MatchTime = document.querySelector("#page03MatchTime");
+points.value = 0;
+points2.value = 0;
+let fixNumber = 1;
+
+let player01points = 0;
+let player02points = 0;
+let player03points = 0;
+let player04points = 0;
+let player05points = 0;
+let player06points = 0;
+
+let team12 = 0;
+let team13 = 0;
+let team14 = 0;
+let team15 = 0;
+let team16 = 0;
+let team23 = 0;
+let team24 = 0;
+let team25 = 0;
+let team26 = 0;
+let team34 = 0;
+let team35 = 0;
+let team36 = 0;
+let team45 = 0;
+let team46 = 0;
+let team56 = 0;
+
+let gameTimeFactor;
+
+let pointsArray = [
+   team12,
+   team13,
+   team14,
+   team15,
+   team16,
+   team23,
+   team24,
+   team25,
+   team26,
+   team34,
+   team35,
+   team36,
+   team45,
+   team46,
+   team56,
+
+]
+
+let player01MatchCount = 0;
+let player02MatchCount = 0;
+let player03MatchCount = 0;
+let player04MatchCount = 0;
+let player05MatchCount = 0;
+let player06MatchCount = 0;
+
+let playerMatchCount = [0, 0, 0, 0, 0, 0, 0];
+
+let gameOn = true;
+var c = 10;
+let colorGreen = "rgb(0, 211, 0)";
+let page04Points = 0;
+let page04Points02 = 0;
+let fixpage04Points = 0;
+let fixpage04Points02 = 0;
+let currentMatch = 1;
+let gameTime = 120;
+let numberOfPlayers;
+let playerNamesArray = [];
+let timePerGame; //gametime divided by matches.
+//What the random match order is.
+let chosenMatchOrder;
+let soundIsOn = true; 
+let pairScore = {};
+let pairScoreArray = [];
+
+var obj = {"team": 0, "points": 0};
+let chosenSound = 1;
+gameTimeField.value = 120;
+var elem = document.documentElement;
+
+function openFullscreen() {
+   if (gameTime != gameTimeField.value){
+    checkInput();
+
+   }
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+}
+
+//which players meet which. Setup version.
+const gameSetup = {
+
+  
+//4 players
+
+4: {
+  1: [
+    {
+      //1
+      a: 1,
+      b: 2,
+      c: 3,
+      d: 4,
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+    },{
+      //1
+      a: 2,
+      b: 3,
+      c: 1,
+      d: 4,
+      2: 0,
+      3: 0,
+      1: 0,
+      4: 0,
+    },{
+      //1
+      a: 1,
+      b: 3,
+      c: 2,
+      d: 4,
+      1: 0,
+      3: 0,
+      2: 0,
+      4: 0,
+    },{
+      //1
+      a: 3,
+      b: 4,
+      c: 1,
+      d: 2,
+      3: 0,
+      4: 0,
+      1: 0,
+      2: 0,
+    },{
+      //1
+      a: 1,
+      b: 4,
+      c: 2,
+      d: 3,
+      1: 0,
+      4: 0,
+      2: 0,
+      3: 0,
+    },{
+      //1
+      a: 1,
+      b: 3,
+      c: 2,
+      d: 4,
+      1: 0,
+      3: 0,
+      2: 0,
+      4: 0,
+    },{
+      //1
+      a: 1,
+      b: 2,
+      c: 3,
+      d: 4,
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+    },{
+      //1
+      a: 2,
+      b: 3,
+      c: 1,
+      d: 4,
+      2: 0,
+      3: 0,
+      1: 0,
+      4: 0,
+    },{
+      //1
+      a: 2,
+      b: 4,
+      c: 1,
+      d: 3,
+      2: 0,
+      4: 0,
+      1: 0,
+      3: 0,
+    },
+  ],
+},
+
+
+//5 players
+
+  5: {
+    1: [
+      {
+        //1
+        a: 1,
+        b: 4,
+        c: 2,
+        d: 3,
+        1: 0,
+        4: 0,
+        2: 0,
+        3: 0,
+      },{
+        //2
+        a: 2,
+        b: 5,
+        c: 3,
+        d: 4,
+        2: 0,
+        5: 0,
+        3: 0,
+        4: 0,
+      },{
+        
+        a: 2,
+        b: 3,
+        c: 1,
+        d: 5,
+        2: 0,
+        3: 0,
+        1: 0,
+        5: 0,
+      },{
+        
+        a: 1,
+        b: 4,
+        c: 2,
+        d: 5,
+        1: 0,
+        4: 0,
+        2: 0,
+        5: 0,
+      },{
+        
+        a: 4,
+        b: 5,
+        c: 1,
+        d: 3,
+        4: 0,
+        5: 0,
+        1: 0,
+        3: 0,
+      },{
+        
+        a: 2,
+        b: 4,
+        c: 3,
+        d: 5,
+        2: 0,
+        4: 0,
+        3: 0,
+        5: 0,
+      },{
+        
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4,
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+      },{
+        
+        a: 2,
+        b: 5,
+        c: 1,
+        d: 3,
+        2: 0,
+        5: 0,
+        1: 0,
+        3: 0,
+      },{
+        
+        a: 1,
+        b: 2,
+        c: 4,
+        d: 5,
+        1: 0,
+        2: 0,
+        4: 0,
+        5: 0,
+      },{
+        
+        a: 3,
+        b: 4,
+        c: 1,
+        d: 5,
+        3: 0,
+        4: 0,
+        1: 0,
+        5: 0,
+      },{
+        
+        a: 4,
+        b: 5,
+        c: 2,
+        d: 3,
+        4: 0,
+        5: 0,
+        2: 0,
+        3: 0,
+      },{
+        
+        a: 1,
+        b: 3,
+        c: 2,
+        d: 4,
+        1: 0,
+        3: 0,
+        2: 0,
+        4: 0,
+      },{
+        
+        a: 3,
+        b: 5,
+        c: 1,
+        d: 2,
+        3: 0,
+        5: 0,
+        1: 0,
+        2: 0,
+      },{
+        
+        a: 1,
+        b: 5,
+        c: 2,
+        d: 4,
+        1: 0,
+        5: 0,
+        2: 0,
+        4: 0,
+      },{
+        
+        a: 3,
+        b: 5,
+        c: 1,
+        d: 4,
+        3: 0,
+        5: 0,
+        1: 0,
+        4: 0,
+      },
+    ],
+    2: [
+      {        
+        a: 2,
+        b: 5,
+        c: 3,
+        d: 4,
+        2: 0,
+        5: 0,
+        3: 0,
+        4: 0,
+      },{        
+        a: 3,
+        b: 1,
+        c: 4,
+        d: 5,
+        3: 0,
+        1: 0,
+        4: 0,
+        5: 0,
+      },{        
+        a: 3,
+        b: 4,
+        c: 2,
+        d: 1,
+        3: 0,
+        4: 0,
+        2: 0,
+        1: 0,
+      },{        
+        a: 2,
+        b: 5,
+        c: 3,
+        d: 1,
+        2: 0,
+        5: 0,
+        3: 0,
+        1: 0,
+      },{        
+        a: 5,
+        b: 1,
+        c: 2,
+        d: 4,
+        5: 0,
+        1: 0,
+        2: 0,
+        4: 0,
+      },{        
+        a: 3,
+        b: 5,
+        c: 4,
+        d: 1,
+        3: 0,
+        5: 0,
+        4: 0,
+        1: 0,
+      },{        
+        a: 2,
+        b: 3,
+        c: 4,
+        d: 5,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+      },{        
+        a: 3,
+        b: 1,
+        c: 2,
+        d: 4,
+        3: 0,
+        1: 0,
+        2: 0,
+        4: 0,
+      },{        
+        a: 2,
+        b: 3,
+        c: 5,
+        d: 1,
+        2: 0,
+        3: 0,
+        5: 0,
+        1: 0,
+      },{        
+        a: 4,
+        b: 5,
+        c: 2,
+        d: 1,
+        4: 0,
+        5: 0,
+        2: 0,
+        1: 0,
+      },{        
+        a: 5,
+        b: 1,
+        c: 3,
+        d: 4,
+        5: 0,
+        1: 0,
+        3: 0,
+        4: 0,
+      },{        
+        a: 2,
+        b: 4,
+        c: 3,
+        d: 5,
+        2: 0,
+        4: 0,
+        3: 0,
+        5: 0,
+      },{        
+        a: 4,
+        b: 1,
+        c: 2,
+        d: 3,
+        4: 0,
+        1: 0,
+        2: 0,
+        3: 0,
+      },{        
+        a: 2,
+        b: 1,
+        c: 3,
+        d: 5,
+        2: 0,
+        1: 0,
+        3: 0,
+        5: 0,
+      },{        
+        a: 4,
+        b: 1,
+        c: 2,
+        d: 5,
+        4: 0,
+        1: 0,
+        2: 0,
+        5: 0,
+      },
+    ],
+    3: [
+      {        
+        a: 3,
+        b: 1,
+        c: 4,
+        d: 5,
+        3: 0,
+        1: 0,
+        4: 0,
+        5: 0,
+      },{        
+        a: 4,
+        b: 2,
+        c: 5,
+        d: 1,
+        4: 0,
+        2: 0,
+        5: 0,
+        1: 0,
+      },{        
+        a: 4,
+        b: 5,
+        c: 3,
+        d: 2,
+        4: 0,
+        5: 0,
+        3: 0,
+        2: 0,
+      },{        
+        a: 3,
+        b: 1,
+        c: 4,
+        d: 2,
+        3: 0,
+        1: 0,
+        4: 0,
+        2: 0,
+      },{        
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 5,
+        1: 0,
+        2: 0,
+        3: 0,
+        5: 0,
+      },{        
+        a: 4,
+        b: 1,
+        c: 5,
+        d: 2,
+        4: 0,
+        1: 0,
+        5: 0,
+        2: 0,
+      },{        
+        a: 3,
+        b: 4,
+        c: 5,
+        d: 1,
+        3: 0,
+        4: 0,
+        5: 0,
+        1: 0,
+      },{        
+        a: 4,
+        b: 2,
+        c: 3,
+        d: 5,
+        4: 0,
+        2: 0,
+        3: 0,
+        5: 0,
+      },{        
+        a: 3,
+        b: 4,
+        c: 1,
+        d: 2,
+        3: 0,
+        4: 0,
+        1: 0,
+        2: 0,
+      },{        
+        a: 5,
+        b: 1,
+        c: 3,
+        d: 2,
+        5: 0,
+        1: 0,
+        3: 0,
+        2: 0,
+      },{        
+        a: 1,
+        b: 2,
+        c: 4,
+        d: 5,
+        1: 0,
+        2: 0,
+        4: 0,
+        5: 0,
+      },{        
+        a: 3,
+        b: 5,
+        c: 4,
+        d: 1,
+        3: 0,
+        5: 0,
+        4: 0,
+        1: 0,
+      },{        
+        a: 5,
+        b: 2,
+        c: 3,
+        d: 4,
+        5: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+      },{        
+        a: 3,
+        b: 2,
+        c: 4,
+        d: 1,
+        3: 0,
+        2: 0,
+        4: 0,
+        1: 0,
+      },{        
+        a: 5,
+        b: 2,
+        c: 3,
+        d: 1,
+        5: 0,
+        2: 0,
+        3: 0,
+        1: 0,
+      },
+    ],
+    4: [
+      {        
+        a: 4,
+        b: 2,
+        c: 5,
+        d: 1,
+        4: 0,
+        2: 0,
+        5: 0,
+        1: 0,
+      },{        
+        a: 5,
+        b: 3,
+        c: 1,
+        d: 2,
+        5: 0,
+        3: 0,
+        1: 0,
+        2: 0,
+      },{        
+        a: 5,
+        b: 1,
+        c: 4,
+        d: 3,
+        5: 0,
+        1: 0,
+        4: 0,
+        3: 0,
+      },{        
+        a: 4,
+        b: 2,
+        c: 5,
+        d: 3,
+        4: 0,
+        2: 0,
+        5: 0,
+        3: 0,
+      },{        
+        a: 2,
+        b: 3,
+        c: 4,
+        d: 1,
+        2: 0,
+        3: 0,
+        4: 0,
+        1: 0,
+      },{        
+        a: 5,
+        b: 2,
+        c: 1,
+        d: 3,
+        5: 0,
+        2: 0,
+        1: 0,
+        3: 0,
+      },{        
+        a: 4,
+        b: 5,
+        c: 1,
+        d: 2,
+        4: 0,
+        5: 0,
+        1: 0,
+        2: 0,
+      },{        
+        a: 5,
+        b: 3,
+        c: 4,
+        d: 1,
+        5: 0,
+        3: 0,
+        4: 0,
+        1: 0,
+      },{        
+        a: 4,
+        b: 5,
+        c: 2,
+        d: 3,
+        4: 0,
+        5: 0,
+        2: 0,
+        3: 0,
+      },{        
+        a: 1,
+        b: 2,
+        c: 4,
+        d: 3,
+        1: 0,
+        2: 0,
+        4: 0,
+        3: 0,
+      },{        
+        a: 2,
+        b: 3,
+        c: 5,
+        d: 1,
+        2: 0,
+        3: 0,
+        5: 0,
+        1: 0,
+      },{        
+        a: 4,
+        b: 1,
+        c: 5,
+        d: 2,
+        4: 0,
+        1: 0,
+        5: 0,
+        2: 0,
+      },{        
+        a: 1,
+        b: 3,
+        c: 4,
+        d: 5,
+        1: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+      },{        
+        a: 4,
+        b: 3,
+        c: 5,
+        d: 2,
+        4: 0,
+        3: 0,
+        5: 0,
+        2: 0,
+      },{        
+        a: 1,
+        b: 3,
+        c: 4,
+        d: 2,
+        1: 0,
+        3: 0,
+        4: 0,
+        2: 0,
+      },
+    ],
+    5: [
+      {        
+        a: 5,
+        b: 3,
+        c: 1,
+        d: 2,
+        5: 0,
+        3: 0,
+        1: 0,
+        2: 0,
+      },{        
+        a: 1,
+        b: 4,
+        c: 2,
+        d: 3,
+        1: 0,
+        4: 0,
+        2: 0,
+        3: 0,
+      },{        
+        a: 1,
+        b: 2,
+        c: 5,
+        d: 4,
+        1: 0,
+        2: 0,
+        5: 0,
+        4: 0,
+      },{        
+        a: 5,
+        b: 3,
+        c: 1,
+        d: 4,
+        5: 0,
+        3: 0,
+        1: 0,
+        4: 0,
+      },{        
+        a: 3,
+        b: 4,
+        c: 5,
+        d: 2,
+        3: 0,
+        4: 0,
+        5: 0,
+        2: 0,
+      },{        
+        a: 1,
+        b: 3,
+        c: 2,
+        d: 4,
+        1: 0,
+        3: 0,
+        2: 0,
+        4: 0,
+      },{        
+        a: 5,
+        b: 1,
+        c: 2,
+        d: 3,
+        5: 0,
+        1: 0,
+        2: 0,
+        3: 0,
+      },{        
+        a: 1,
+        b: 4,
+        c: 5,
+        d: 2,
+        1: 0,
+        4: 0,
+        5: 0,
+        2: 0,
+      },{        
+        a: 5,
+        b: 1,
+        c: 3,
+        d: 4,
+        5: 0,
+        1: 0,
+        3: 0,
+        4: 0,
+      },{        
+        a: 2,
+        b: 3,
+        c: 5,
+        d: 4,
+        2: 0,
+        3: 0,
+        5: 0,
+        4: 0,
+      },{        
+        a: 3,
+        b: 4,
+        c: 1,
+        d: 2,
+        3: 0,
+        4: 0,
+        1: 0,
+        2: 0,
+      },{        
+        a: 5,
+        b: 2,
+        c: 1,
+        d: 3,
+        5: 0,
+        2: 0,
+        1: 0,
+        3: 0,
+      },{        
+        a: 2,
+        b: 4,
+        c: 5,
+        d: 1,
+        2: 0,
+        4: 0,
+        5: 0,
+        1: 0,
+      },{        
+        a: 5,
+        b: 4,
+        c: 1,
+        d: 3,
+        5: 0,
+        4: 0,
+        1: 0,
+        3: 0,
+      },{        
+        a: 2,
+        b: 4,
+        c: 5,
+        d: 3,
+        2: 0,
+        4: 0,
+        5: 0,
+        3: 0,
+      },
+    ],
+  },
+
+
+  //6 players, setup version 1-3.
+
+
+  6: {
+    1: [
+      {
+        //1
+        a: 6,
+        b: 1,
+        c: 3,
+        d: 2,
+        6: 0,
+        1: 0,
+        3: 0,
+        2: 0,
+      },
+      {
+        //2
+        a: 3,
+        b: 5,
+        c: 4,
+        d: 1,
+        3: 0,
+        5: 0,
+        4: 0,
+        1: 0,
+      },
+      {
+        //3
+        a: 2,
+        b: 1,
+        c: 5,
+        d: 6,
+        2: 0,
+        1: 0,
+        5: 0,
+        6: 0,
+      },
+      {
+        //4
+        a: 4,
+        b: 2,
+        c: 3,
+        d: 6,
+        4: 0,
+        2: 0,
+        3: 0,
+        6: 0,
+      },
+      {
+        //5
+        a: 3,
+        b: 1,
+        c: 2,
+        d: 5,
+        3: 0,
+        1: 0,
+        2: 0,
+        5: 0,
+      },
+      {
+        //6
+        a: 5,
+        b: 6,
+        c: 3,
+        d: 4,
+        5: 0,
+        6: 0,
+        3: 0,
+        4: 0,
+      },
+      {
+        //7
+        a: 4,
+        b: 1,
+        c: 6,
+        d: 2,
+        4: 0,
+        1: 0,
+        6: 0,
+        2: 0,
+      },
+      {
+        //8
+        a: 3,
+        b: 2,
+        c: 4,
+        d: 5,
+        3: 0,
+        2: 0,
+        4: 0,
+        5: 0,
+      },
+      {
+        //9
+        a: 3,
+        b: 6,
+        c: 1,
+        d: 5,
+        3: 0,
+        6: 0,
+        1: 0,
+        5: 0,
+      },
+      {
+        //10
+        a: 2,
+        b: 5,
+        c: 4,
+        d: 6,
+        2: 0,
+        5: 0,
+        4: 0,
+        6: 0,
+      },
+      {
+        //11
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4,
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+      },
+      {
+        //12
+        a: 4,
+        b: 5,
+        c: 1,
+        d: 6,
+        4: 0,
+        5: 0,
+        1: 0,
+        6: 0,
+      },
+      {
+        //13
+        a: 3,
+        b: 5,
+        c: 6,
+        d: 2,
+        3: 0,
+        5: 0,
+        6: 0,
+        2: 0,
+      },
+      {
+        //14
+        a: 6,
+        b: 4,
+        c: 3,
+        d: 1,
+        6: 0,
+        4: 0,
+        3: 0,
+        1: 0,
+      },
+      {
+        //15
+        a: 4,
+        b: 2,
+        c: 1,
+        d: 5,
+        4: 0,
+        2: 0,
+        1: 0,
+        5: 0,
+      },
+    ],
+    2: [
+      {
+        //15
+        a: 4,
+        b: 5,
+        c: 1,
+        d: 6,
+        4: 0,
+        5: 0,
+        1: 0,
+        6: 0,
+      },
+      {
+        //14
+        a: 1,
+        b: 3,
+        c: 2,
+        d: 5,
+        1: 0,
+        3: 0,
+        2: 0,
+        5: 0,
+      },
+      {
+        //13
+        a: 6,
+        b: 5,
+        c: 3,
+        d: 4,
+        6: 0,
+        5: 0,
+        3: 0,
+        4: 0,
+      },
+      {
+        //12
+        a: 2,
+        b: 6,
+        c: 1,
+        d: 4,
+        2: 0,
+        6: 0,
+        1: 0,
+        4: 0,
+      },
+      {
+        //11
+        a: 1,
+        b: 5,
+        c: 6,
+        d: 3,
+        1: 0,
+        5: 0,
+        6: 0,
+        3: 0,
+      },
+      {
+        //10
+        a: 3,
+        b: 4,
+        c: 1,
+        d: 2,
+        3: 0,
+        4: 0,
+        1: 0,
+        2: 0,
+      },
+      {
+        //9
+        a: 2,
+        b: 5,
+        c: 4,
+        d: 6,
+        2: 0,
+        5: 0,
+        4: 0,
+        6: 0,
+      },
+      {
+        //8
+        a: 1,
+        b: 6,
+        c: 2,
+        d: 3,
+        1: 0,
+        6: 0,
+        2: 0,
+        3: 0,
+      },
+      {
+        //7
+        a: 1,
+        b: 4,
+        c: 5,
+        d: 3,
+        1: 0,
+        4: 0,
+        5: 0,
+        3: 0,
+      },
+      {
+        //6
+        a: 6,
+        b: 3,
+        c: 2,
+        d: 4,
+        6: 0,
+        3: 0,
+        2: 0,
+        4: 0,
+      },
+      {
+        //5
+        a: 5,
+        b: 6,
+        c: 1,
+        d: 2,
+        5: 0,
+        6: 0,
+        1: 0,
+        2: 0,
+      },
+      {
+        //4
+        a: 2,
+        b: 3,
+        c: 5,
+        d: 4,
+        2: 0,
+        3: 0,
+        5: 0,
+        4: 0,
+      },
+      {
+        //3
+        a: 1,
+        b: 3,
+        c: 4,
+        d: 6,
+        1: 0,
+        3: 0,
+        4: 0,
+        6: 0,
+      },
+      {
+        //2
+        a: 4,
+        b: 2,
+        c: 1,
+        d: 5,
+        4: 0,
+        2: 0,
+        1: 0,
+        5: 0,
+      },
+      {
+        //1
+        a: 2,
+        b: 6,
+        c: 5,
+        d: 3,
+        2: 0,
+        6: 0,
+        5: 0,
+        3: 0,
+      },
+    ],
+    3: [
+      {
+        //2
+        a: 2,
+        b: 3,
+        c: 5,
+        d: 4,
+        2: 0,
+        3: 0,
+        5: 0,
+        4: 0,
+      },
+      {
+        //3
+        a: 5,
+        b: 1,
+        c: 6,
+        d: 3,
+        5: 0,
+        1: 0,
+        6: 0,
+        3: 0,
+      },
+      {
+        //4
+        a: 4,
+        b: 3,
+        c: 1,
+        d: 2,
+        4: 0,
+        3: 0,
+        1: 0,
+        2: 0,
+      },
+      {
+        //5
+        a: 6,
+        b: 4,
+        c: 5,
+        d: 2,
+        6: 0,
+        4: 0,
+        5: 0,
+        2: 0,
+      },
+      {
+        //6
+        a: 5,
+        b: 3,
+        c: 4,
+        d: 1,
+        5: 0,
+        3: 0,
+        4: 0,
+        1: 0,
+      },
+      {
+        //7
+        a: 1,
+        b: 2,
+        c: 5,
+        d: 6,
+        1: 0,
+        2: 0,
+        5: 0,
+        6: 0,
+      },
+      {
+        //8
+        a: 6,
+        b: 3,
+        c: 2,
+        d: 4,
+        6: 0,
+        3: 0,
+        2: 0,
+        4: 0,
+      },
+      {
+        //9
+        a: 5,
+        b: 4,
+        c: 6,
+        d: 1,
+        5: 0,
+        4: 0,
+        6: 0,
+        1: 0,
+      },
+      {
+        //10
+        a: 5,
+        b: 2,
+        c: 3,
+        d: 1,
+        5: 0,
+        2: 0,
+        3: 0,
+        1: 0,
+      },
+      {
+        //11
+        a: 4,
+        b: 1,
+        c: 6,
+        d: 2,
+        4: 0,
+        1: 0,
+        6: 0,
+        2: 0,
+      },
+      {
+        //12
+        a: 3,
+        b: 4,
+        c: 5,
+        d: 6,
+        3: 0,
+        4: 0,
+        5: 0,
+        6: 0,
+      },
+      {
+        //13
+        a: 6,
+        b: 1,
+        c: 3,
+        d: 2,
+        6: 0,
+        1: 0,
+        3: 0,
+        2: 0,
+      },
+      {
+        //14
+        a: 5,
+        b: 1,
+        c: 2,
+        d: 4,
+        5: 0,
+        1: 0,
+        2: 0,
+        4: 0,
+      },
+      {
+        //15
+        a: 2,
+        b: 6,
+        c: 5,
+        d: 3,
+        2: 0,
+        6: 0,
+        5: 0,
+        3: 0,
+      },
+      {
+        //1
+        a: 6,
+        b: 4,
+        c: 3,
+        d: 1,
+        6: 0,
+        4: 0,
+        3: 0,
+        1: 0,
+      },
+    ],
+  },
+};
+
+// let matchOrders = {
+//   ...gameSetup
+// }
+let matchOrders = structuredClone(gameSetup);
+
+page02Container = document.querySelector("#page02Container");
+page03Container = document.querySelector("#page03Container");
+mainContainer = document.querySelector("#mainContainer");
+const nameInputContainer = document.querySelector("#nameInputContainer");
+const playerNumberDropdown = document.querySelector("#numberOfPlayersDropDown");
+
+//Menu button
+let menuBool = false;
+fullscreenButton.addEventListener("click", () => {
+  menuBool = !menuBool;
+  if (menuBool) {
+    pageMenuContainer.style.display = "block";
+    document.getElementById('menuIcon').src = "images/menu_x.png";
+  } else {
+    pageMenuContainer.style.display = "none";
+    document.getElementById('menuIcon').src = "images/menu.png";
+
+  }
+
+});
+//Randomizerbutton
+button04randomize = document.querySelector("#button04randomize");
+buttonFullscreen.addEventListener("click", () => {
+  openFullscreen();
+});
+
+button04randomize.addEventListener("click", () => {
+  if (numberOfPlayers == 4) {    
+      chosenMatchOrder = 1;
+  }
+  if (numberOfPlayers == 5) {
+    if (chosenMatchOrder == 1) {
+      chosenMatchOrder = 2;
+    } else if (chosenMatchOrder == 2) {
+      chosenMatchOrder = 3;
+    } else if (chosenMatchOrder == 3) {
+      chosenMatchOrder = 4;
+    } else if (chosenMatchOrder == 4) {
+      chosenMatchOrder = 5;
+    } else {
+      chosenMatchOrder = 1;
+    }
+  }
+  if (numberOfPlayers == 6) {
+    if (chosenMatchOrder == 1) {
+      chosenMatchOrder = 2;
+    } else if (chosenMatchOrder == 2) {
+      chosenMatchOrder = 3;
+    } else {
+      chosenMatchOrder = 1;
+    }
+  }
+  reloadPreviewPlayerOrder();
+});
+
+
+
+button04next.addEventListener("click", () => {
+  // playerNamesArray = [];
+  // let count = 0;
+  // while (nameInputContainer.hasChildNodes()) {
+  //   count++;
+  //   if (nameInputContainer.firstChild.value == "") {
+  //     nameInputContainer.firstChild.value = "Player " + count.toString();
+  //   }
+  //   playerNamesArray.push(nameInputContainer.firstChild.value);
+  //   nameInputContainer.removeChild(nameInputContainer.firstChild);
+  // }
+  page04Container.style.display = "none";
+  page05Container.style.display = "block";
+  fulltimeDiv.style.display = "block";
+
+  // chosenMatchOrder = 1; //This will randomize later.
+  // console.log(playerNamesArray);
+  loadFirstScreen();
+});
+button04back.addEventListener("click", () => {
+  page04Container.style.display = "none";
+  page03Container.style.display = "block";
+  loadNameInputs();
+});
+//Back button on main page.
+LastBackButton.addEventListener("click", () => {
+  page05Container.style.display = "none";
+  page04Container.style.display = "block";
+  //loadNameInputs();
+});
+buttonPage03.addEventListener("click", () => {
+  page03Container.style.display = "none";
+  page04Container.style.display = "block";
+  playerNamesArray = [];
+  let count = 0;
+  while (nameInputContainer.hasChildNodes()) {
+    count++;
+    if (nameInputContainer.firstChild.value == "") {
+      nameInputContainer.firstChild.value = "Player " + count.toString();
+    }
+    playerNamesArray.push(nameInputContainer.firstChild.value);
+    nameInputContainer.removeChild(nameInputContainer.firstChild);
+  }
+  chosenMatchOrder = 1; //This will randomize later.
+  //Randomizing between available options.
+  if (numberOfPlayers == 6) {
+    //randomizer for 6 players! Make new ones for different player numbers.
+
+    chosenMatchOrder = Math.floor(Math.random() * 3) + 1;
+    console.log(chosenMatchOrder);
+  }
+  if (numberOfPlayers == 5) {
+    //randomizer for 6 players! Make new ones for different player numbers.
+
+    chosenMatchOrder = Math.floor(Math.random() * 5) + 1;
+    console.log(chosenMatchOrder);
+  }
+  console.log(playerNamesArray);
+  match = 1;
+  loadFirstScreen();
+});
+buttonPage03Back.addEventListener("click", () => {
+  page03Container.style.display = "none";
+  page02Container.style.display = "block";
+  //saveNames(numberOfPlayers);
+  numberOfPlayers = 0;
+  playerNamesArray = [];
+
+  while (nameInputContainer.hasChildNodes()) {
+    playerNamesArray.push(nameInputContainer.firstChild.value);
+    nameInputContainer.removeChild(nameInputContainer.firstChild);
+  }
+  console.log(playerNamesArray);
+  //loadNameInputs();
+});
+buttonPage01.addEventListener("click", () => {
+  //buttonPage02.style.backgroundColor  = "white";
+  openFullscreen(); //For fullscreen.
+  mainContainer.style.display = "none";
+  page02Container.style.display = "block";
+  fullscreenDiv.style.display = "block";
+  //buttonPage02.style.backgroundColor  = "black";
+
+  //window.open("./counter.html", "_blank"); 
+});
+
+buttonPage02.addEventListener("click", () => {
+  if (gameTimeField.value == "") {
+    gameTime = 120;
+  } else {
+    gameTime = gameTimeField.value;
+  }
+  console.log(gameTime);
+  if (isNaN(gameTime) == true) {
+    alert("Please use numbers.");
+  } else if (parseInt(gameTime) < 4 || parseInt(gameTime) > 120) {
+    alert("Please have a game time between 4 and 120 min.");
+  } else if (gameTime.length > 1 && gameTime.charAt(0) == "0") {
+    alert("Please re-write the game time.");
+  } else {
+    numberOfPlayers = playerNumberDropdown.value;
+
+      if (numberOfPlayers == 4) {
+        button04randomize.style.display = "none";
+        nameInputContainer.style.height = "70px";
+      } else {
+        button04randomize.style.display = "block";
+        nameInputContainer.style.height = "100px";
+      
+      }
+    //console.log("page03" + numberOfPlayers);
+    //window.setTimeout(loadNameInputs, 2000);
+    //window.open("./page03.html","_self");
+    //window.location.href = './page03.html';
+    let page03chosenGameTimeSpan = document.querySelector(
+      "#page03chosenGameTimeSpan"
+    );
+
+    page03chosenGameTimeSpan.innerHTML = gameTime;
+    let page03PlayerNumberSpan = document.querySelector(
+      "#page03PlayerNumberSpan"
+    );
+    // let page03MatchTime = document.querySelector("#page03MatchTime");
+    page03MatchTime.innerHTML = calculateMatchTime("matchTime00:00");
+
+    page03PlayerNumberSpan.innerHTML = numberOfPlayers;
+
+    page02Container.style.display = "none";
+    page03Container.style.display = "block";
+    loadNameInputs();
+  }
+});
+
+
+//&& numberOfPlayers == 6
+function calculateMatchTime(message) {
+
+  let matches = 0; 
+  if (numberOfPlayers == 4){
+    matches = 9;
+  } else {
+    matches = 15;
+  }
+
+  
+  if(numberOfPlayers == 4) {
+    gameTimeFactor = 0.025;
+  } else if (numberOfPlayers == 5 || numberOfPlayers == 6 ){
+    gameTimeFactor = 0.0625;
+
+  }
+
+  if (message == "matchTime" ) {
+    return parseInt(gameTime) / matches - (parseInt(gameTime) / matches) * gameTimeFactor;
+  } else if (message == "breakTime" ) {
+    return (parseInt(gameTime) / matches) * gameTimeFactor;
+  } else if (message == "matchTime00:00" ) {
+    let tempTime = parseInt(gameTime) / matches - (parseInt(gameTime) / matches) * gameTimeFactor;
+    let totalSeconds = Math.floor(tempTime * 60);
+    var seconds = totalSeconds % 60; // Seconds that cannot be written in minutes
+    var secondsInMinutes = (totalSeconds - seconds) / 60; // Gives the seconds that COULD be given in minutes
+    var minutes = secondsInMinutes % 60;
+
+    return (
+      (minutes < 10 ? "0" + minutes : minutes) +
+      ":" +
+      (seconds < 10 ? "0" + seconds : seconds)
+    );
+  } else if (message == "timeInSeconds" ) {
+    return Math.floor(
+      (parseInt(gameTime) / matches - (parseInt(gameTime) / matches) * gameTimeFactor) * 60
+    );
+  } else if (message == "breakInSeconds" ) {
+    return Math.floor((parseInt(gameTime) / matches) * gameTimeFactor * 60);
+  }
+}
+
+function loadNameInputs() {
+  for (let i = 1; i <= numberOfPlayers; i++) {
+    let inputElement = document.createElement("input");
+    inputElement.type = "text";
+    inputElement.size = "9";
+    inputElement.placeholder = "Player " + i;
+    inputElement.setAttribute('maxLength',10);
+    inputElement.required;
+    inputElement.minlength = "0";
+    inputElement.maxlength = "10";
+    if (playerNamesArray[i - 1] != "" && playerNamesArray[i - 1] != undefined) {
+      inputElement.value = playerNamesArray[i - 1];
+    }
+    nameInputContainer.appendChild(inputElement);
+    //console.log("page03" + numberOfPlayers);
+  }
+}
+
+//function saveNames(numberOfPlayers) {
+
+//}
+
+function reloadPreviewPlayerOrder() {
+  previewCurrentPlayerA.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["a"] - 1
+    ];
+  previewCurrentPlayerB.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["b"] - 1
+    ];
+  previewCurrentPlayerC.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["c"] - 1
+    ];
+  previewCurrentPlayerD.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["d"] - 1
+    ];
+}
+
+function loadFirstScreen() {
+  if (numberOfPlayers != 4) {
+    currentMatchId.innerHTML = "Match: " + match + "/15";
+  } else {
+    currentMatchId.innerHTML = "Match: " + match + "/9";
+  }
+  console.log(
+    Math.floor(
+      (parseInt(gameTime) / 15 - (parseInt(gameTime) / 15) * gameTimeFactor) * 60
+    )
+  );
+  timeLeftSpan.innerHTML = calculateMatchTime("matchTime00:00");
+
+  reloadPreviewPlayerOrder();
+
+  timeLeftSpan.style.color = "yellow";
+  timeLeftSpanText.style.color = "yellow";
+  // previewCurrentPlayerA.innerHTML =
+  // playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["a"] - 1];
+  // previewCurrentPlayerB.innerHTML =
+  // playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["b"] - 1];
+  // previewCurrentPlayerC.innerHTML =
+  // playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["c"] - 1];
+  // previewCurrentPlayerD.innerHTML =
+  // playerNamesArray[matchOrders[numberOfPlayers][chosenMatchOrder][match -1]["d"] - 1];
+
+  currentPlayerA.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["a"] - 1
+    ];
+  currentPlayerB.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["b"] - 1
+    ];
+  currentPlayerC.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["c"] - 1
+    ];
+  currentPlayerD.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["d"] - 1
+    ];
+
+  nextPlayerA.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match]["a"] - 1
+    ];
+  nextPlayerB.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match]["b"] - 1
+    ];
+  nextPlayerC.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match]["c"] - 1
+    ];
+  nextPlayerD.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match]["d"] - 1
+    ];
+  //spear ds poäng
+  console.log(
+    "points" +
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 1][
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1][
+          "d"
+        ].toString()
+      ]
+  );
+}
+//Buttons for changing points on page 4.
+minusButton01.addEventListener("click", () => {
+  if (page04Points > 0) {
+    page04Points--;
+    points.value = page04Points;
+  }
+});
+minusButton02.addEventListener("click", () => {
+  if (page04Points02 > 0) {
+    page04Points02--;
+    points2.value = page04Points02;
+  }
+});
+plusButton01.addEventListener("click", () => {
+  page04Points++;
+  points.value = page04Points;
+});
+plusButton02.addEventListener("click", () => {
+  page04Points02++;
+  points2.value = page04Points02;
+});
+
+//Timer
+let seconds = calculateMatchTime("matchTime") * 60;
+var myTimer;
+let pause = false;
+let initializeClock = false;
+pauseButton.addEventListener("click", () => {
+  //Hide back button when start is first clicked.
+  LastBackButton.style.display = "none";
+  
+  if (pauseButton.innerHTML == "Start") {
+    if (gameOn == true) {
+      if (c > 3) {
+        timeLeftSpan.style.color = colorGreen;
+        timeLeftSpanText.style.color = colorGreen;
+      } else {
+        timeLeftSpan.style.color = "yellow";
+        timeLeftSpanText.style.color = "yellow";
+      }
+    } else {
+      timeLeftSpan.style.color = "red";
+      timeLeftSpanText.style.color = "red";
+    }
+
+    pauseButton.innerHTML = "Pause";
+    pause = false;
+    if (initializeClock == false) {
+      initializeClock = true;
+      clock();
+    }
+  } else {
+    timeLeftSpan.style.color = "yellow";
+    timeLeftSpanText.style.color = "yellow";
+    pauseButton.innerHTML = "Start";
+    pause = true;
+  }
+});
+function clock() {
+  myTimer = setInterval(myClock, 1000);
+  //if (numberOfPlayers == 6) {
+    var totalGameTime = calculateMatchTime("timeInSeconds") * 15;
+  //}
+  c = calculateMatchTime("timeInSeconds"); //Initially set to 1 hour
+  function myClock() {
+    if (pause == false) {
+      --c;
+      --totalGameTime;
+    }
+
+    var seconds = c % 60; // Seconds that cannot be written in minutes
+    var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
+    var minutes = secondsInMinutes % 60; // Minutes that cannot be written in hours
+    //var hours = (secondsInMinutes - minutes) / 60;
+    // Now in hours, minutes and seconds, you have the time you need.
+    //console.clear();
+
+    //console.log((minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds));
+    timeLeftSpan.innerHTML =
+      (minutes < 10 ? "0" + minutes : minutes) +
+      ":" +
+      (seconds < 10 ? "0" + seconds : seconds);
+    console.log(timeLeftSpan.innerHTML);
+    if (gameOn == true && pause == false) {
+      if (c == 5) {
+        timeLeftSpan.style.color = "yellow";
+        timeLeftSpanText.style.color = "yellow";
+        switchToMainMatchPage();
+
+        //play sound.
+        playBlip();
+          let count = 0;
+          var blink_speed = 500; // every 1000 == 1 second, adjust to suit
+          var t = setInterval(function () {
+          var ele = document.getElementById('timeLeftP');
+          count += 500;
+          //console.log("ff");
+          if (count == 5000) {
+            clearInterval(t);
+          }
+          ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
+          }, blink_speed);
+      }
+      if (c == 4) {
+        //play sound.
+        playBlip();
+      }
+      if (c == 3) {
+        //play sound.
+        playBlip();
+      }
+      if (c == 2) {
+        //play sound.
+        playBlip();
+      }
+      if (c == 1) {
+        //play sound.
+        playBlip();
+      }
+      if (c == 0) {
+        //play sound.
+       // playBlop();
+        // if (numberOfPlayers == 6 && currentMatch == 15) {
+        //   gameOn == false
+        // } else {
+        timeLeftSpan.style.color = "red";
+        timeLeftSpanText.style.color = "red";
+
+        c = calculateMatchTime("breakInSeconds");
+        switchToMainMatchPage();
+
+        gameOn = false;
+        timeLeftSpanText.innerHTML = "Break: ";
+        var seconds = c % 60; // Seconds that cannot be written in minutes
+        var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
+        var minutes = secondsInMinutes % 60; //
+        timeLeftSpan.innerHTML =
+          (minutes < 10 ? "0" + minutes : minutes) +
+          ":" +
+          (seconds < 10 ? "0" + seconds : seconds);
+        //
+        //           }
+      }
+    }
+    if (gameOn == false && pause == false) {
+      if (c == 2) {
+        timeLeftSpan.style.color = "yellow";
+        timeLeftSpanText.style.color = "yellow";
+        switchToMainMatchPage();
+
+        //play sound.
+        playBlip();
+      }
+      if (c == 1) {
+        //play sound.
+        playBlip();
+      }
+      // if (c == 1) {
+      //   //play sound.
+      //   playBlip();
+      // }
+      if (c == 0) {
+        //play sound.
+        //playBlop();
+
+        timeLeftSpan.style.color = colorGreen;
+        timeLeftSpanText.style.color = colorGreen;
+
+        c = calculateMatchTime("timeInSeconds");
+
+        gameOn = true;
+        timeLeftSpanText.innerHTML = "Time left: ";
+        var seconds = c % 60; // Seconds that cannot be written in minutes
+        var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
+        var minutes = secondsInMinutes % 60; //
+        timeLeftSpan.innerHTML =
+          (minutes < 10 ? "0" + minutes : minutes) +
+          ":" +
+          (seconds < 10 ? "0" + seconds : seconds);
+
+        match++;
+
+        reloadMainMatchPage();
+        switchToMainMatchPage();
+
+        if (numberOfPlayers == 6 || numberOfPlayers == 5) {
+          currentMatchId.innerHTML = "Match: " + match + "/15";
+        } else if (numberOfPlayers == 4 ){
+          currentMatchId.innerHTML = "Match: " + match + "/9";
+        }
+        if (numberOfPlayers != 4 && match == 16) {
+          //Game ended.
+          clearInterval(myTimer);
+          currentMatchId.innerHTML = "Match: " + (match - 1) + "/15";
+          timeLeftSpanText.innerHTML = "Time´s Out!";
+          timeLeftSpan.innerHTML = "";
+          //startConfetti();
+          console.log("end game");
+          nextPlayersDiv.style.display = "none";
+          currentPlayersDiv.style.display = "none";
+        }
+        if (numberOfPlayers == 4 && match == 10) {
+          //Game ended.
+          clearInterval(myTimer);
+          currentMatchId.innerHTML = "Match: " + (match - 1) + "/9";
+          timeLeftSpanText.innerHTML = "Time´s Out!";
+          timeLeftSpan.innerHTML = "";
+          //startConfetti();
+          console.log("end game");
+          nextPlayersDiv.style.display = "none";
+          currentPlayersDiv.style.display = "none";
+        }       
+        //PointsDiv
+        nextPlayersDiv.style.display = "none";
+        previousMatchDiv.style.display = "block";
+        page04PreviousMatch.innerHTML = match - 1;
+      }
+    }
+  }
+}
+function stopTimer() {
+  clearInterval(myTimer);
+}
+function reloadMainMatchPage() {
+  //Check how many matches a player has played.
+  for (let i = 1; i < 7; i++) {
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["a"] == i) {
+      playerMatchCount[i] += 1;
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["b"] == i) {
+      playerMatchCount[i] += 1;
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["c"] == i) {
+      playerMatchCount[i] += 1;
+    }
+    if (matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["d"] == i) {
+      playerMatchCount[i] += 1;
+    }
+  }
+
+  console.log(playerMatchCount);
+  //Score div
+  page04Points = 0;
+  page04Points02 = 0;
+  previousMatchDiv.style.display = "block";
+  fixButton.style.display = "none";
+
+  previousPlayerA.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["a"] - 1
+    ];
+  previousPlayerB.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["b"] - 1
+    ];
+  previousPlayerC.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["c"] - 1
+    ];
+  previousPlayerD.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["d"] - 1
+    ];
+
+  if ((numberOfPlayers == 6 || numberOfPlayers == 5) && match < 16) {
+    currentPlayerA.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["a"] - 1
+      ];
+    currentPlayerB.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["b"] - 1
+      ];
+    currentPlayerC.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["c"] - 1
+      ];
+    currentPlayerD.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["d"] - 1
+      ];
+    if ((numberOfPlayers == 6 || numberOfPlayers == 5) && match < 15) {
+      nextPlayerA.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["a"] - 1
+        ];
+      nextPlayerB.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["b"] - 1
+        ];
+      nextPlayerC.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["c"] - 1
+        ];
+      nextPlayerD.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["d"] - 1
+        ];
+    } else if ((numberOfPlayers == 6 || numberOfPlayers == 5)){
+      nextPlayerA.innerHTML = "---";
+      nextPlayerB.innerHTML = "---";
+      nextPlayerC.innerHTML = "---";
+      nextPlayerD.innerHTML = "---";
+    }
+  }
+  if (numberOfPlayers == 4 && match < 10) {
+    currentPlayerA.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["a"] - 1
+      ];
+    currentPlayerB.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["b"] - 1
+      ];
+    currentPlayerC.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["c"] - 1
+      ];
+    currentPlayerD.innerHTML =
+      playerNamesArray[
+        matchOrders[numberOfPlayers][chosenMatchOrder][match - 1]["d"] - 1
+      ];
+    if (numberOfPlayers == 4 && match < 9) {
+      nextPlayerA.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["a"] - 1
+        ];
+      nextPlayerB.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["b"] - 1
+        ];
+      nextPlayerC.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["c"] - 1
+        ];
+      nextPlayerD.innerHTML =
+        playerNamesArray[
+          matchOrders[numberOfPlayers][chosenMatchOrder][match]["d"] - 1
+        ];
+    } else if (numberOfPlayers == 4){
+      nextPlayerA.innerHTML = "---";
+      nextPlayerB.innerHTML = "---";
+      nextPlayerC.innerHTML = "---";
+      nextPlayerD.innerHTML = "---";
+    }
+  }
+}
+
+//Save score
+buttonAcceptScore.addEventListener("click", () => {
+  //Display fix button for the first time.
+  fixButton.style.display = "block";
+  //Hides the score div
+  previousMatchDiv.style.display = "none";
+  if (numberOfPlayers != 4 && match < 15) {
+    nextPlayersDiv.style.display = "block";
+  } else if (numberOfPlayers == 4 && match < 9) {
+    nextPlayersDiv.style.display = "block";
+  }
+  
+  //previousMatchDiv.style.display = "block";
+  // console.log(
+  //   "points" +
+  //     matchOrders[numberOfPlayers][chosenMatchOrder][match - 1][
+  //       matchOrders[numberOfPlayers][chosenMatchOrder][match - 1][
+  //         "d"
+  //       ].toString()
+  //     ]
+  // );
+  //console.log(points.value);
+
+  matchOrders[numberOfPlayers][chosenMatchOrder][match - 2][
+    matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["a"]
+  ] = points.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][match - 2][
+    matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["b"]
+  ] = points.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][match - 2][
+    matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["c"]
+  ] = points2.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][match - 2][
+    matchOrders[numberOfPlayers][chosenMatchOrder][match - 2]["d"]
+  ] = points2.value;
+
+  points.value = 0;
+  points2.value = 0;
+  console.log(matchOrders);
+});
+
+//Resultpage
+resultButton.addEventListener("click", () => {
+  page05Container.style.display = "none";
+  pageResultContainer.style.display = "block";
+  fulltimeDiv.style.display = "none";
+
+  loadResultTable();
+});
+buttonResultBack.addEventListener("click", () => {
+  page05Container.style.display = "block";
+  pageResultContainer.style.display = "none";
+  fulltimeDiv.style.display = "block";
+});
+
+//Switch to main page
+function switchToMainMatchPage() {
+  //Closes the menu page.
+  pageMenuContainer.style.display = "none";
+
+  document.getElementById('menuIcon').src = "images/menu.png";
+  buttonResetYes.style.display = "none";
+  buttonResetNo.style.display = "none";
+  buttonReset.style.display = "block";
+  resetText.innerHTML = "Caution: This button resets the app and all results!"
+
+  menuBool = false;
+  
+  page05Container.style.display = "block";
+  pageFixContainer.style.display = "none";
+
+  //none to all match score pages aswell
+
+  pageResultContainer.style.display = "none";
+}
+
+//Result table
+function loadResultTable() {
+  player01points = 0;
+  player02points = 0;
+  player03points = 0;
+  player04points = 0;
+  player05points = 0;
+  player06points = 0;
+
+  team12 = 0;
+  team13 = 0;
+  team14 = 0;
+  team15 = 0;
+  team16 = 0;
+  team23 = 0;
+  team24 = 0;
+  team25 = 0;
+  team26 = 0;
+  team34 = 0;
+ team35 = 0;
+  team36 = 0;
+  team45 = 0;
+  team46 = 0;
+  team56 = 0;
+
+  table.remove();
+
+table01el.remove();
+  table = document.createElement("table");
+  table01el = document.createElement("table");
+
+  pairScore = {};
+  pairScoreArray = [];
+
+  if (numberOfPlayers == 5 || numberOfPlayers == 6){
+    for (let i = 0; i < 15; i++) {
+      //console.log(matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"]);
+  
+      if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"] != undefined) {
+        player01points += parseInt(
+          matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"]
+        );
+      }
+      if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["2"] != undefined) {
+        player02points += parseInt(
+          matchOrders[numberOfPlayers][chosenMatchOrder][i]["2"]
+        );
+      }
+      if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["3"] != undefined) {
+        player03points += parseInt(
+          matchOrders[numberOfPlayers][chosenMatchOrder][i]["3"]
+        );
+      }
+      if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"] != undefined) {
+        player04points += parseInt(
+          matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"]
+        );
+      }
+      if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["5"] != undefined) {
+        player05points += parseInt(
+          matchOrders[numberOfPlayers][chosenMatchOrder][i]["5"]
+        );
+      }
+      if (numberOfPlayers == 6) {
+        if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["6"] != undefined) {
+          player06points += parseInt(
+            matchOrders[numberOfPlayers][chosenMatchOrder][i]["6"]
+          );
+        }
+      }
+
+      //Calculate pair scores:
+      // if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"] != undefined) {
+      pair1 = matchOrders[numberOfPlayers][chosenMatchOrder][i]["a"].toString()
+       + matchOrders[numberOfPlayers][chosenMatchOrder][i]["b"].toString();
+       pair1MirrorCheck = matchOrders[numberOfPlayers][chosenMatchOrder][i]["b"].toString()
+       + matchOrders[numberOfPlayers][chosenMatchOrder][i]["a"].toString();
+      
+      pari1Score = (parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i][matchOrders[numberOfPlayers][chosenMatchOrder][i]["a"].toString()])
+      + parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i][matchOrders[numberOfPlayers][chosenMatchOrder][i]["b"].toString()])) / 2;
+
+      pair2 = matchOrders[numberOfPlayers][chosenMatchOrder][i]["c"].toString()
+      + matchOrders[numberOfPlayers][chosenMatchOrder][i]["d"].toString();
+      pair2MirrorCheck = matchOrders[numberOfPlayers][chosenMatchOrder][i]["d"].toString()
+      + matchOrders[numberOfPlayers][chosenMatchOrder][i]["c"].toString();
+
+      pari2Score = (parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i][matchOrders[numberOfPlayers][chosenMatchOrder][i]["c"].toString()])
+      + parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i][matchOrders[numberOfPlayers][chosenMatchOrder][i]["d"].toString()])) / 2;
+
+      obj = {"team": pair1, "points": pari1Score};
+      pairScoreArray.push(obj);
+      obj = {"team": pair2, "points": pari2Score};
+      pairScoreArray.push(obj);
+
+
+      // }
+    }
+    console.log("kolla denna" + pairScoreArray);
+
+    calculateTeamScore();
+
+  //   team12 += pairScoreArray.filter(whatTeam => whatTeam.team === '12')[0].points;
+  //   team12 += pairScoreArray.filter(whatTeam => whatTeam.team === '21')[0].points;
+  // team13 = pairScoreArray.filter(whatTeam => whatTeam.team === '13')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '31')[0].points;
+  // team14 = pairScoreArray.filter(whatTeam => whatTeam.team === '14')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '41')[0].points;
+  // team15 = pairScoreArray.filter(whatTeam => whatTeam.team === '15')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '51')[0].points;
+  // team16 = pairScoreArray.filter(whatTeam => whatTeam.team === '16')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '61')[0].points;
+  // team23 = pairScoreArray.filter(whatTeam => whatTeam.team === '23')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '32')[0].points;
+  // team24 = pairScoreArray.filter(whatTeam => whatTeam.team === '24')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '42')[0].points;
+  // team25 = pairScoreArray.filter(whatTeam => whatTeam.team === '25')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '52')[0].points;
+  // team26 = pairScoreArray.filter(whatTeam => whatTeam.team === '26')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '62')[0].points;
+  // team34 = pairScoreArray.filter(whatTeam => whatTeam.team === '34')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '43')[0].points;
+  // team35 = pairScoreArray.filter(whatTeam => whatTeam.team === '35')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '53')[0].points;
+  // team36 = pairScoreArray.filter(whatTeam => whatTeam.team === '36')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '63')[0].points;
+  // team45 = pairScoreArray.filter(whatTeam => whatTeam.team === '45')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '54')[0].points;
+  // team46 = pairScoreArray.filter(whatTeam => whatTeam.team === '46')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '64')[0].points;
+  // team56 = pairScoreArray.filter(whatTeam => whatTeam.team === '56')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '65')[0].points;   
+       
+    //console.log(team12);
+    // for (let i = 0; i < pairScoreArray.length; i++){
+    //   pairScoreArray[i].team;
+    //   for (let j = 0; j < pairScoreArray.length; j++){
+    //     if (pairScoreArray[j].team.charAt(1) + pairScoreArray[j].team.charAt(0) == pairScoreArray[i].team){
+    //       let num = parseInt(pairScoreArray[i].points) + parseInt(pairScoreArray[j].points);
+    //       console.log(pairScoreArray[i].team + "  " + num);
+    //     }
+        
+    //   }
+    // }
+
+    //const score = pairScoreArray.filter(team => team.team === 'Avengers');
+
+    // let newObject = {};
+    // let score6Players = [
+    //   {"12": 0},
+    //   {"13": 0},
+    //   {"14": 0},
+    //   {"15": 0},
+    //   {"16": 0},
+    //   {"23": 0},
+    //   {"24": 0},
+    //   {"25": 0},
+    //   {"26": 0},
+    //   {"34": 0},
+    //   {"35": 0},
+    //   {"36": 0},
+    //   {"45": 0},
+    //   {"46": 0},
+    //   {"56": 0},
+    // ];
+
+    // const score = pairScoreArray.filter(team => team.team === 'Avengers');
+    //   //Check if mirror is alread present.
+    //   for (let i = 0; i < pairScoreArray.length; i++){
+
+    //       let 
+
+    //       for (let j = 0; j < pairScoreArray.length; j++){
+    //         if (Object.keys(pairScoreArray[i])[0] == number){
+    //           pairScoreArray[i].pair1MirrorCheck += pari1Score;
+    //           let number = pairScoreArray[i].charAt(1) + pairScoreArray[i].charAt(0);    
+    //         } 
+  
+
+    //     }
+ 
+    //   }
+
+  } else if (numberOfPlayers == 4){
+    for (let i = 0; i < 9; i++) {
+      //console.log(matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"]);
+  
+      if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"] != undefined) {
+        player01points += parseInt(
+          matchOrders[numberOfPlayers][chosenMatchOrder][i]["1"]
+        );
+      }
+      if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["2"] != undefined) {
+        player02points += parseInt(
+          matchOrders[numberOfPlayers][chosenMatchOrder][i]["2"]
+        );
+      }
+      if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["3"] != undefined) {
+        player03points += parseInt(
+          matchOrders[numberOfPlayers][chosenMatchOrder][i]["3"]
+        );
+      }
+      if (matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"] != undefined) {
+        player04points += parseInt(
+          matchOrders[numberOfPlayers][chosenMatchOrder][i]["4"]
+        );
+      } 
+      pair1 = matchOrders[numberOfPlayers][chosenMatchOrder][i]["a"].toString()
+      + matchOrders[numberOfPlayers][chosenMatchOrder][i]["b"].toString();
+      pair1MirrorCheck = matchOrders[numberOfPlayers][chosenMatchOrder][i]["b"].toString()
+      + matchOrders[numberOfPlayers][chosenMatchOrder][i]["a"].toString();
+     
+     pari1Score = (parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i][matchOrders[numberOfPlayers][chosenMatchOrder][i]["a"].toString()])
+     + parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i][matchOrders[numberOfPlayers][chosenMatchOrder][i]["b"].toString()])) / 2;
+
+     pair2 = matchOrders[numberOfPlayers][chosenMatchOrder][i]["c"].toString()
+     + matchOrders[numberOfPlayers][chosenMatchOrder][i]["d"].toString();
+     pair2MirrorCheck = matchOrders[numberOfPlayers][chosenMatchOrder][i]["d"].toString()
+     + matchOrders[numberOfPlayers][chosenMatchOrder][i]["c"].toString();
+
+     pari2Score = (parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i][matchOrders[numberOfPlayers][chosenMatchOrder][i]["c"].toString()])
+     + parseInt(matchOrders[numberOfPlayers][chosenMatchOrder][i][matchOrders[numberOfPlayers][chosenMatchOrder][i]["d"].toString()])) / 2;
+
+     obj = {"team": pair1, "points": pari1Score};
+     pairScoreArray.push(obj);
+     obj = {"team": pair2, "points": pari2Score};
+     pairScoreArray.push(obj);
+    }
+
+    calculateTeamScore();
+
+  //   team12 += pairScoreArray.filter(whatTeam => whatTeam.team === '12')[0].points;
+  //   team12 += pairScoreArray.filter(whatTeam => whatTeam.team === '21')[0].points;
+  // team13 = pairScoreArray.filter(whatTeam => whatTeam.team === '13')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '31')[0].points;
+  // team14 = pairScoreArray.filter(whatTeam => whatTeam.team === '14')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '41')[0].points;
+  // team15 = pairScoreArray.filter(whatTeam => whatTeam.team === '15')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '51')[0].points;
+  // team16 = pairScoreArray.filter(whatTeam => whatTeam.team === '16')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '61')[0].points;
+  // team23 = pairScoreArray.filter(whatTeam => whatTeam.team === '23')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '32')[0].points;
+  // team24 = pairScoreArray.filter(whatTeam => whatTeam.team === '24')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '42')[0].points;
+  // team25 = pairScoreArray.filter(whatTeam => whatTeam.team === '25')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '52')[0].points;
+  // team26 = pairScoreArray.filter(whatTeam => whatTeam.team === '26')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '62')[0].points;
+  // team34 = pairScoreArray.filter(whatTeam => whatTeam.team === '34')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '43')[0].points;
+  // team35 = pairScoreArray.filter(whatTeam => whatTeam.team === '35')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '53')[0].points;
+  // team36 = pairScoreArray.filter(whatTeam => whatTeam.team === '36')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '63')[0].points;
+  // team45 = pairScoreArray.filter(whatTeam => whatTeam.team === '45')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '54')[0].points;
+  // team46 = pairScoreArray.filter(whatTeam => whatTeam.team === '46')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '64')[0].points;
+  // team56 = pairScoreArray.filter(whatTeam => whatTeam.team === '56')[0].points
+  // + pairScoreArray.filter(whatTeam => whatTeam.team === '65')[0].points;   
+  }
+
+
+
+ 
+
+//console.log(team16);
+  //console.log(player01points);
+  //console.log(matchOrders[numberOfPlayers][chosenMatchOrder][0]["1"]);
+  let results = [];
+  if (numberOfPlayers == 6){
+     results = [
+      ["Players  ", "Matches", "Points", "---"],
+      [playerNamesArray[0], playerMatchCount[1], player01points, "n/a"],
+      [playerNamesArray[1], playerMatchCount[2], player02points, "n/a"],
+      [playerNamesArray[2], playerMatchCount[3], player03points, "n/a"],
+      [playerNamesArray[3], playerMatchCount[4], player04points, "n/a"],
+      [playerNamesArray[4], playerMatchCount[5], player05points, "n/a"],
+      [playerNamesArray[5], playerMatchCount[6], player06points, "n/a"],
+    ];
+  } else if (numberOfPlayers == 5) {
+     results = [
+      ["Players  ", "Matches", "Points", "---"],
+      [playerNamesArray[0], playerMatchCount[1], player01points, "n/a"],
+      [playerNamesArray[1], playerMatchCount[2], player02points, "n/a"],
+      [playerNamesArray[2], playerMatchCount[3], player03points, "n/a"],
+      [playerNamesArray[3], playerMatchCount[4], player04points, "n/a"],
+      [playerNamesArray[4], playerMatchCount[5], player05points, "n/a"],
+    ];
+  } else if (numberOfPlayers == 4) {
+     results = [
+      ["Players  ", "Matches", "Points", "---"],
+      [playerNamesArray[0], playerMatchCount[1], player01points, "n/a"],
+      [playerNamesArray[1], playerMatchCount[2], player02points, "n/a"],
+      [playerNamesArray[2], playerMatchCount[3], player03points, "n/a"],
+      [playerNamesArray[3], playerMatchCount[4], player04points, "n/a"],
+    ];  
+  }
+  //Sort the array after highest points.
+  results.sort(function (a, b) {
+    return b[2] - a[2];
+  });
+  // console.log(pointsArray);
+  // console.log(pointsArray[0]);
+  //console.log(pointsArray[0].charAt(4));
+
+
+  //TEAM SCORES
+  //Sort the score array
+  var sortedArray = pointsArray.sort(function(a, b) {
+    return b[0] - a[0];
+  });
+  console.log("sorted" + sortedArray);
+console.log(playerNamesArray[sortedArray[0][1] - 1] + playerNamesArray[sortedArray[0][2] - 1]);
+  let teamResults = [];
+  if (numberOfPlayers == 6){
+    teamResults = [
+     ["Player", "Player", "Team Points", "---"],
+     [playerNamesArray[sortedArray[0][1] - 1], playerNamesArray[sortedArray[0][2] - 1], sortedArray[0][0], "n/a"],
+     [playerNamesArray[sortedArray[1][1] - 1], playerNamesArray[sortedArray[1][2] - 1], sortedArray[1][0], "n/a"],
+     [playerNamesArray[sortedArray[2][1] - 1], playerNamesArray[sortedArray[2][2] - 1], sortedArray[2][0], "n/a"],
+     [playerNamesArray[sortedArray[3][1] - 1], playerNamesArray[sortedArray[3][2] - 1], sortedArray[3][0], "n/a"],
+     [playerNamesArray[sortedArray[4][1] - 1], playerNamesArray[sortedArray[4][2] - 1], sortedArray[4][0], "n/a"],
+     [playerNamesArray[sortedArray[5][1] - 1], playerNamesArray[sortedArray[5][2] - 1], sortedArray[5][0], "n/a"],
+     [playerNamesArray[sortedArray[6][1] - 1], playerNamesArray[sortedArray[6][2] - 1], sortedArray[6][0], "n/a"],
+     [playerNamesArray[sortedArray[7][1] - 1], playerNamesArray[sortedArray[7][2] - 1], sortedArray[7][0], "n/a"],
+     [playerNamesArray[sortedArray[8][1] - 1], playerNamesArray[sortedArray[8][2] - 1], sortedArray[8][0], "n/a"],
+     [playerNamesArray[sortedArray[9][1] - 1], playerNamesArray[sortedArray[9][2] - 1], sortedArray[9][0], "n/a"],
+     [playerNamesArray[sortedArray[10][1] - 1], playerNamesArray[sortedArray[10][2] - 1], sortedArray[10][0], "n/a"],
+     [playerNamesArray[sortedArray[11][1] - 1], playerNamesArray[sortedArray[11][2] - 1], sortedArray[11][0], "n/a"],
+     [playerNamesArray[sortedArray[12][1] - 1], playerNamesArray[sortedArray[12][2] - 1], sortedArray[12][0], "n/a"],
+     [playerNamesArray[sortedArray[13][1] - 1], playerNamesArray[sortedArray[13][2] - 1], sortedArray[13][0], "n/a"],
+     [playerNamesArray[sortedArray[14][1] - 1], playerNamesArray[sortedArray[14][2] - 1], sortedArray[14][0], "n/a"]
+   ];
+ } else if (numberOfPlayers == 5){
+  teamResults = [
+   ["Player", "Player", "Team Points", "---"],
+   [playerNamesArray[sortedArray[0][1] - 1], playerNamesArray[sortedArray[0][2] - 1], sortedArray[0][0], "n/a"],
+   [playerNamesArray[sortedArray[1][1] - 1], playerNamesArray[sortedArray[1][2] - 1], sortedArray[1][0], "n/a"],
+   [playerNamesArray[sortedArray[2][1] - 1], playerNamesArray[sortedArray[2][2] - 1], sortedArray[2][0], "n/a"],
+   [playerNamesArray[sortedArray[3][1] - 1], playerNamesArray[sortedArray[3][2] - 1], sortedArray[3][0], "n/a"],
+   [playerNamesArray[sortedArray[4][1] - 1], playerNamesArray[sortedArray[4][2] - 1], sortedArray[4][0], "n/a"],
+   [playerNamesArray[sortedArray[5][1] - 1], playerNamesArray[sortedArray[5][2] - 1], sortedArray[5][0], "n/a"],
+   [playerNamesArray[sortedArray[6][1] - 1], playerNamesArray[sortedArray[6][2] - 1], sortedArray[6][0], "n/a"],
+   [playerNamesArray[sortedArray[7][1] - 1], playerNamesArray[sortedArray[7][2] - 1], sortedArray[7][0], "n/a"],
+   [playerNamesArray[sortedArray[8][1] - 1], playerNamesArray[sortedArray[8][2] - 1], sortedArray[8][0], "n/a"],
+   [playerNamesArray[sortedArray[9][1] - 1], playerNamesArray[sortedArray[9][2] - 1], sortedArray[9][0], "n/a"]
+ ];
+} else if (numberOfPlayers == 4){
+  teamResults = [
+   ["Player", "Player", "Team Points", "---"],
+   [playerNamesArray[sortedArray[0][1] - 1], playerNamesArray[sortedArray[0][2] - 1], sortedArray[0][0], "n/a"],
+   [playerNamesArray[sortedArray[1][1] - 1], playerNamesArray[sortedArray[1][2] - 1], sortedArray[1][0], "n/a"],
+   [playerNamesArray[sortedArray[2][1] - 1], playerNamesArray[sortedArray[2][2] - 1], sortedArray[2][0], "n/a"],
+   [playerNamesArray[sortedArray[3][1] - 1], playerNamesArray[sortedArray[3][2] - 1], sortedArray[3][0], "n/a"],
+   [playerNamesArray[sortedArray[4][1] - 1], playerNamesArray[sortedArray[4][2] - 1], sortedArray[4][0], "n/a"],
+   [playerNamesArray[sortedArray[5][1] - 1], playerNamesArray[sortedArray[5][2] - 1], sortedArray[5][0], "n/a"]
+ ];
+} 
+console.log("teamResults: " + teamResults);
+  //console.log(results);
+
+
+//-------------------------------------------ORG TABELL--------------------------------------------------------------------
+  //Skapar ett table element till original tabell.
+  //let table = document.createElement("table");
+  //Två for-loopar, den förste för den yttre arrayen och den inne för arrayerna i arrayen.
+  for (let i = 0; i < results.length; i++) {
+    //Ett table row skapas för varje element i den yttre arrayen.
+    let tr = document.createElement("tr");
+    //Här loopas var inre array för sig, med med <= för att kunna addera ett extra table data-element i varje rad.
+    for (let j = 0; j <= results[i].length - 2; j++) {
+      //Ser om loopen är i slutet (efter arrayen är slut).
+      if (j == results[i].length) {
+        //Om det är den första inre arrayen, så ska table data fyllas med texten "medel".
+        if (i == 0) {
+          let td = document.createElement("td");
+          td.innerHTML = "---";
+          tr.appendChild(td);
+        } else {
+          //Om det inte är den första inre arrayen, så ska table data fyllas med uträknat medelvärde.
+          let td = document.createElement("td");
+          //Medelvärde räknas ut från den inre array som håller på att loopas igenom, och de element som innehåller värdena vi vill åt.
+          //Detta får man ändra om man skulle vilja göra om ursprungsarrayen, t.ex. om man vill lägga till mindre/fler tidsintervall.
+          td.innerHTML =
+            Math.round(
+              ((results[i][1] + results[i][2] + results[i][3]) / 3) * 10.0
+            ) / 10.0;
+          tr.appendChild(td);
+        }
+      } else {
+        //om det inte är efter slutet på den inre arrayen, så hämtas rätt värde till en skapad table data-element, som sedan appendas till tr-elementet.
+
+        let td = document.createElement("td");
+        td.innerHTML = results[i][j];
+        tr.appendChild(td);
+      }
+    }
+    //Varje nyskapat och fyllt med table-data tr-element appendas här till table-elementet.
+    table.appendChild(tr);
+  }
+  //Tillslut appendas table till tableDiv (div-element i html-dokumentet).
+  //tableDiv.appendChild(table);
+//---------------------------------------------------------------------------------------------------------------
+//-------------------------------------------PAIR TABELL--------------------------------------------------------------------
+  //Skapar ett table element till original tabell.
+  //let table = document.createElement("table");
+  //Två for-loopar, den förste för den yttre arrayen och den inne för arrayerna i arrayen.
+  for (let i = 0; i < teamResults.length; i++) {
+    //Ett table row skapas för varje element i den yttre arrayen.
+    let tr = document.createElement("tr");
+    //Här loopas var inre array för sig, med med <= för att kunna addera ett extra table data-element i varje rad.
+    for (let j = 0; j <= teamResults[i].length - 2; j++) {
+      //Ser om loopen är i slutet (efter arrayen är slut).
+      if (j == teamResults[i].length) {
+        //Om det är den första inre arrayen, så ska table data fyllas med texten "medel".
+        if (i == 0) {
+          let td = document.createElement("td");
+          td.innerHTML = "---";
+          tr.appendChild(td);
+        } else {
+          //Om det inte är den första inre arrayen, så ska table data fyllas med uträknat medelvärde.
+          let td = document.createElement("td");
+          //Medelvärde räknas ut från den inre array som håller på att loopas igenom, och de element som innehåller värdena vi vill åt.
+          //Detta får man ändra om man skulle vilja göra om ursprungsarrayen, t.ex. om man vill lägga till mindre/fler tidsintervall.
+          td.innerHTML =
+            Math.round(
+              ((teamResults[i][1] + teamResults[i][2] + teamResults[i][3]) / 3) * 10.0
+            ) / 10.0;
+          tr.appendChild(td);
+        }
+      } else {
+        //om det inte är efter slutet på den inre arrayen, så hämtas rätt värde till en skapad table data-element, som sedan appendas till tr-elementet.
+
+        let td = document.createElement("td");
+        td.innerHTML = teamResults[i][j];
+        tr.appendChild(td);
+      }
+    }
+    //Varje nyskapat och fyllt med table-data tr-element appendas här till table-elementet.
+    table01el.appendChild(tr);
+  }
+  //Tillslut appendas table till tableDiv (div-element i html-dokumentet).
+  //tableDiv.appendChild(table);
+//---------------------------------------------------------------------------------------------------------------
+//tableDiv.append(table);
+table01.appendChild(table);
+table02.appendChild(table01el);
+
+  // const table01 = document.getElementById("table01");
+  // const table02 = document.getElementById("table02");
+  // const table01 = document.getElementById("table01");
+  // const table02 = document.getElementById("table02");
+  // table01.appendChild(table);
+  // table02.appendChild(table);
+
+  //Append all
+//   var listItem = document.createElement("li");
+// var documentFragment = document.createDocumentFragment();
+// documentFragment.appendChild(listItem);
+// listItem.appendChild(table);
+// listItem.appendChild(table);
+// tableDiv.appendChild(documentFragment);
+}
+
+
+
+//Fix button that opens fix page.
+fixButton.addEventListener("click", () => {
+  pageFixContainer.style.display = "block";
+  page05Container.style.display = "none";
+  fulltimeDiv.style.display = "none";
+
+  fixSpanMatchNumber.innerHTML = match - 1;
+  fixNumber = match - 1;
+  loadPlayersToFix();
+});
+//Backbutton from fix page.
+buttonFixBack.addEventListener("click", () => {
+  pageFixContainer.style.display = "none";
+  page05Container.style.display = "block";
+  fulltimeDiv.style.display = "block";
+});
+leftArrow.addEventListener("click", () => {
+  if (fixNumber < match - 1) {
+    fixNumber++;
+    fixSpanMatchNumber.innerHTML = fixNumber;
+    loadPlayersToFix();
+  }
+});
+rightArrow.addEventListener("click", () => {
+  if (fixNumber > 1) {
+    fixNumber--;
+    fixSpanMatchNumber.innerHTML = fixNumber;
+    loadPlayersToFix();
+  }
+});
+
+const fixpreviousMatchDiv = document.querySelector("#fixpreviousMatchDiv");
+const fixpointsInfo01 = document.querySelector("#fixpointsInfo01");
+const fixpage04PreviousMatch = document.querySelector(
+  "#fixpage04PreviousMatch"
+);
+const fixbuttonAcceptScore = document.querySelector("#fixbuttonAcceptScore");
+const fixpreviousPlayerA = document.querySelector("#fixpreviousPlayerA");
+const fixpreviousPlayerB = document.querySelector("#fixpreviousPlayerB");
+const fixminusButton01 = document.querySelector("#fixminusButton01");
+const fixplusButton01 = document.querySelector("#fixplusButton01");
+const fixpage4PointsBorder = document.querySelector("#fixpage4PointsBorder");
+const fixpreviousPlayerC = document.querySelector("#fixpreviousPlayerC");
+const fixpreviousPlayerD = document.querySelector("#fixpreviousPlayerD");
+const fixminusButton02 = document.querySelector("#fixminusButton02");
+const fixplusButton02 = document.querySelector("#fixplusButton02");
+const points3 = document.querySelector("#points3");
+const points4 = document.querySelector("#points4");
+
+//Fix div
+
+function loadPlayersToFix() {
+  fixpreviousMatchDiv.style.display = "block";
+
+  fixpreviousPlayerA.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"] - 1
+    ];
+  fixpreviousPlayerB.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["b"] - 1
+    ];
+  fixpreviousPlayerC.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["c"] - 1
+    ];
+  fixpreviousPlayerD.innerHTML =
+    playerNamesArray[
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["d"] - 1
+    ];
+  fixpage04PreviousMatch.innerHTML = fixNumber;
+
+  //Load the current scores
+  points3.value =
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"]
+    ];
+  points4.value =
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+      matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["c"]
+    ];
+
+  fixpage04Points = points3.value;
+  fixpage04Points02 = points4.value;
+}
+
+//Buttons for changing points on the fix page.
+fixminusButton01.addEventListener("click", () => {
+  if (fixpage04Points > 0) {
+    fixpage04Points--;
+    points3.value = fixpage04Points;
+  }
+});
+fixminusButton02.addEventListener("click", () => {
+  if (fixpage04Points02 > 0) {
+    fixpage04Points02--;
+    points4.value = fixpage04Points02;
+  }
+});
+fixplusButton01.addEventListener("click", () => {
+  fixpage04Points++;
+  points3.value = fixpage04Points;
+});
+fixplusButton02.addEventListener("click", () => {
+  fixpage04Points02++;
+  points4.value = fixpage04Points02;
+});
+
+//Save fixed score
+fixbuttonAcceptScore.addEventListener("click", () => {
+  fixpreviousMatchDiv.style.display = "none";
+
+  //console.log(points.value);
+
+  matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["a"]
+  ] = points3.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["b"]
+  ] = points3.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["c"]
+  ] = points4.value;
+  matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1][
+    matchOrders[numberOfPlayers][chosenMatchOrder][fixNumber - 1]["d"]
+  ] = points4.value;
+});
+
+//Play audio
+function playBlip() {
+  if (soundIsOn == true){
+    if (chosenSound == 1){
+      var audio = new Audio("./blip.ogg");
+    }
+    if (chosenSound == 2){
+      var audio = new Audio("./blop.ogg");
+    }
+      audio.play();
+  }
+
+}
+function playBlop() {
+  if (soundIsOn == true){
+  var audio = new Audio("./blop.ogg");
+  audio.play();
+  }
+}
+//Fullscreen button
+// fullscreenButton.addEventListener("click", () => {
+//   openFullscreen();
+// });
+
+let fulltime = 1;
+const timeLeftP = document.querySelector("#timeLeftP");
+
+//Time screen button
+fulltimeDiv.addEventListener("click", () => {
+  timeWindow();
+});
+function timeWindow() {
+  if (fulltime < 2.1) {
+    fulltime += 0.4;
+    timeLeftP.style.scale = fulltime.toString();
+    timeLeftP.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  } else {
+    timeLeftP.style.scale = "1";
+    timeLeftP.style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+
+    fulltime = 1;
+  }
+}
+
+var maxParticleCount = 150; //set max confetti count
+var particleSpeed = 2; //set the particle animation speed
+var startConfetti; //call to start confetti animation
+var stopConfetti; //call to stop adding confetti
+var toggleConfetti; //call to start or stop the confetti animation depending on whether it's already running
+var removeConfetti; //call to stop the confetti animation and remove all confetti immediately
+(function () {
+  startConfetti = startConfettiInner;
+  stopConfetti = stopConfettiInner;
+  toggleConfetti = toggleConfettiInner;
+  removeConfetti = removeConfettiInner;
+  var colors = [
+    "DodgerBlue",
+    "OliveDrab",
+    "Gold",
+    "Pink",
+    "SlateBlue",
+    "LightBlue",
+    "Violet",
+    "PaleGreen",
+    "SteelBlue",
+    "SandyBrown",
+    "Chocolate",
+    "Crimson",
+  ];
+  var streamingConfetti = false;
+  var animationTimer = null;
+  var particles = [];
+  var waveAngle = 0;
+  //startConfettiInner();
+
+  function resetParticle(particle, width, height) {
+    particle.color = colors[(Math.random() * colors.length) | 0];
+    particle.x = Math.random() * width;
+    particle.y = Math.random() * height - height;
+    particle.diameter = Math.random() * 10 + 5;
+    particle.tilt = Math.random() * 10 - 10;
+    particle.tiltAngleIncrement = Math.random() * 0.07 + 0.05;
+    particle.tiltAngle = 0;
+    return particle;
+  }
+
+  function startConfettiInner() {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    window.requestAnimFrame = (function () {
+      return (
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (callback) {
+          return window.setTimeout(callback, 16.6666667);
+        }
+      );
+    })();
+    var canvas = document.getElementById("confetti-canvas");
+    if (canvas === null) {
+      canvas = document.createElement("canvas");
+      canvas.setAttribute("id", "confetti-canvas");
+      canvas.setAttribute(
+        "style",
+        "display:block;z-index:999999;pointer-events:none"
+      );
+      document.body.appendChild(canvas);
+      canvas.width = width;
+      canvas.height = height;
+      window.addEventListener(
+        "resize",
+        function () {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        },
+        true
+      );
+    }
+    var context = canvas.getContext("2d");
+    while (particles.length < maxParticleCount)
+      particles.push(resetParticle({}, width, height));
+    streamingConfetti = true;
+    if (animationTimer === null) {
+      (function runAnimation() {
+        context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        if (particles.length === 0) animationTimer = null;
+        else {
+          updateParticles();
+          drawParticles(context);
+          animationTimer = requestAnimFrame(runAnimation);
+        }
+      })();
+    }
+  }
+
+  function stopConfettiInner() {
+    streamingConfetti = false;
+  }
+
+  function removeConfettiInner() {
+    stopConfetti();
+    particles = [];
+  }
+
+  function toggleConfettiInner() {
+    if (streamingConfetti) stopConfettiInner();
+    else startConfettiInner();
+  }
+
+  function drawParticles(context) {
+    var particle;
+    var x;
+    for (var i = 0; i < particles.length; i++) {
+      particle = particles[i];
+      context.beginPath();
+      context.lineWidth = particle.diameter;
+      context.strokeStyle = particle.color;
+      x = particle.x + particle.tilt;
+      context.moveTo(x + particle.diameter / 2, particle.y);
+      context.lineTo(x, particle.y + particle.tilt + particle.diameter / 2);
+      context.stroke();
+    }
+  }
+
+  function updateParticles() {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var particle;
+    waveAngle += 0.01;
+    for (var i = 0; i < particles.length; i++) {
+      particle = particles[i];
+      if (!streamingConfetti && particle.y < -15) particle.y = height + 100;
+      else {
+        particle.tiltAngle += particle.tiltAngleIncrement;
+        particle.x += Math.sin(waveAngle);
+        particle.y +=
+          (Math.cos(waveAngle) + particle.diameter + particleSpeed) * 0.5;
+        particle.tilt = Math.sin(particle.tiltAngle) * 15;
+      }
+      if (particle.x > width + 20 || particle.x < -20 || particle.y > height) {
+        if (streamingConfetti && particles.length <= maxParticleCount)
+          resetParticle(particle, width, height);
+        else {
+          particles.splice(i, 1);
+          i--;
+        }
+      }
+    }
+  }
+})();
+
+//startConfetti();
+
+buttonReset.addEventListener("click", () => {
+  buttonResetYes.style.display = "block";
+  buttonResetNo.style.display = "block";
+  buttonReset.style.display = "none";
+  resetText.innerHTML = "Are you really sure?"
+});
+
+buttonResetNo.addEventListener("click", () => {
+  buttonResetYes.style.display = "none";
+  buttonResetNo.style.display = "none";
+  buttonReset.style.display = "block";
+  resetText.innerHTML = "Caution: This button resets the app and all results!"
+});
+
+//Reset button in the menu, is clicked, and resets everything.
+buttonResetYes.addEventListener("click", () => {
+  //window.location.reload();
+
+  page02Container.style.display = "none";
+  page03Container.style.display = "none";
+  page04Container.style.display = "none";
+  page05Container.style.display = "none";
+  pageResultContainer.style.display = "none";
+  pageFixContainer.style.display = "none";
+  pageMenuContainer.style.display = "none";
+  mainContainer.style.display = "block";
+  //fullscreenDiv.style.display = "none";
+
+  document.getElementById('menuIcon').src = "images/menu.png";
+  buttonResetYes.style.display = "none";
+  buttonResetNo.style.display = "none";
+  buttonReset.style.display = "block";
+  resetText.innerHTML = "Caution: This button resets the app and all results!"
+
+
+menuBool = false;
+while (nameInputContainer.hasChildNodes()) {
+  playerNamesArray.push(nameInputContainer.firstChild.value);
+  nameInputContainer.removeChild(nameInputContainer.firstChild);
+}
+points.value = 0;
+points2.value = 0;
+fixNumber = 1;
+
+player01points = 0;
+player02points = 0;
+player03points = 0;
+player04points = 0;
+player05points = 0;
+player06points = 0;
+
+ team12 = 0;
+ team13 = 0;
+ team14 = 0;
+ team15 = 0;
+ team16 = 0;
+ team23 = 0;
+ team24 = 0;
+ team25 = 0;
+ team26 = 0;
+ team34 = 0;
+team35 = 0;
+ team36 = 0;
+ team45 = 0;
+ team46 = 0;
+ team56 = 0;
+ pointsArray = [];
+
+player01MatchCount = 0;
+player02MatchCount = 0;
+player03MatchCount = 0;
+ player04MatchCount = 0;
+ player05MatchCount = 0;
+ player06MatchCount = 0;
+
+ playerMatchCount = [0, 0, 0, 0, 0, 0, 0];
+
+ gameOn = true;
+ c = 10;
+ colorGreen = "rgb(0, 211, 0)";
+ page04Points = 0;
+ page04Points02 = 0;
+ fixpage04Points = 0;
+ fixpage04Points02 = 0;
+ currentMatch = 1;
+ gameTime = 0;
+ numberOfPlayers = 0;
+ playerNamesArray = [];
+ timePerGame = 0; 
+ chosenMatchOrder = 1;
+ stopTimer();
+ seconds = 0;
+
+pause = false;
+initializeClock = false;
+LastBackButton.style.display = "block";
+fixButton.style.display = "none";
+
+pauseButton.innerHTML = "Start";
+previousMatchDiv.style.display = "none";
+nextPlayersDiv.style.display = "block";
+currentPlayersDiv.style.display = "block";
+matchOrders = {};
+matchOrders = structuredClone(gameSetup);
+
+console.log(matchOrders);
+table.remove();
+
+table01el.remove();
+timeLeftSpanText.innerHTML = "Time left: ";
+soundIsOn = true;
+buttonSound.innerHTML = "Sound is on";
+chosenSound = 1;
+changeSound.innerHTML = "Sound: 1";
+gameTimeField.value = 120;
+pairScore = {};
+pairScoreArray = [];
+});
+
+
+
+buttonSound.addEventListener("click", () => {
+  if (soundIsOn == true){
+    buttonSound.innerHTML = "Sound is off";
+    soundIsOn = false;
+    // console.log("ff");
+  } else {
+    buttonSound.innerHTML = "Sound is on";
+    soundIsOn = true;
+    // console.log("ffoo");
+
+  }
+});
+
+changeSound.addEventListener("click", () => {
+  if (chosenSound == 1){
+    changeSound.innerHTML = "Sound: 2";
+    chosenSound = 2;
+    // console.log("ff");
+  } else {
+    changeSound.innerHTML = "Sound: 1";
+    chosenSound = 1;
+    // console.log("ffoo");
+
+  }
+  playBlip();
+});
+
+// gameTimeField.addEventListener("change", () => {
+//   console.log("tid");
+// });
+playerNumberDropdown.addEventListener("change", () => {
+  checkInput();
+});
+function checkInput(){
+  console.log(gameTimeField.value);
+  gameTime = gameTimeField.value;
+  numberOfPlayers = playerNumberDropdown.value;
+  page03MatchTimeV2.innerHTML = calculateMatchTime("matchTime00:00");
+}
+
+checkInput();
+
+
+function searchTeamScores(position){
+  let totalScore = 0;
+  let matches = 0;
+  if (numberOfPlayers == 5 || numberOfPlayers == 6){
+    matches = 30;
+  } else {
+    matches = 18;
+  }
+  for (let j = 0; j < matches; j++){    
+    if (pairScoreArray[j].team == position) {
+        totalScore += pairScoreArray[j].points;
+    }    
+  }
+  return totalScore;
+}
+
+function calculateTeamScore(){ 
+console.log("scorearray " + typeof pairScoreArray[0].team);
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '12')[0]  != undefined){
+  //team12 += pairScoreArray.filter(whatTeam => whatTeam.team === '12')[0].points;
+  team12 += searchTeamScores("12");
+
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '21')[0]  != undefined){
+  team12 += searchTeamScores("21");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '13')[0] != undefined){
+  team13 += searchTeamScores("13");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '31')[0] != undefined){
+  team13 += searchTeamScores("31");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '14')[0] != undefined){
+  team14 += searchTeamScores("14");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '41')[0] != undefined){
+  team14 += searchTeamScores("41");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '15')[0] != undefined){
+  team15 += searchTeamScores("15");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '51')[0] != undefined){
+  team15 += searchTeamScores("51");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '16')[0] != undefined){
+  team16 += searchTeamScores("16");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '61')[0] != undefined){
+  team16 += searchTeamScores("61");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '23')[0] != undefined){
+  team23 += searchTeamScores("23");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '32')[0] != undefined){
+  team23 += searchTeamScores("32");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '24')[0] != undefined){
+  team24 += searchTeamScores("24");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '42')[0] != undefined){
+  team24 += searchTeamScores("42");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '25')[0] != undefined){
+  team25 += searchTeamScores("25");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '52')[0] != undefined){
+  team25 += searchTeamScores("52");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '26')[0] != undefined){
+  team26 += searchTeamScores("26");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '62')[0] != undefined){
+  team26 += searchTeamScores("62");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '34')[0] != undefined){
+  team34 += searchTeamScores("34");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '43')[0] != undefined){
+  team34 += searchTeamScores("43");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '35')[0] != undefined){
+  team35 += searchTeamScores("35");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '53')[0] != undefined){
+  team35 += searchTeamScores("53");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '36')[0] != undefined){
+  team36 += searchTeamScores("36");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '63')[0] != undefined){
+  team36 += searchTeamScores("63");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '45')[0] != undefined){
+  team45 += searchTeamScores("45");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '54')[0] != undefined){
+  team45 += searchTeamScores("54");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '46')[0] != undefined){
+  team46 += searchTeamScores("46");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '64')[0] != undefined){
+  team46 += searchTeamScores("64");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '56')[0] != undefined){
+  team56 += searchTeamScores("56");
+}
+if (pairScoreArray.filter(whatTeam => whatTeam.team === '65')[0] != undefined){
+  team56 += searchTeamScores("65");
+}
+
+if (numberOfPlayers == 6) {
+  pointsArray = [
+    [team12, 1, 2],
+    [team13, 1, 3],
+    [team14, 1, 4],
+    [team15, 1, 5],
+    [team16, 1, 6],
+    [team23, 2, 3],
+    [team24, 2, 4],
+    [team25, 2, 5],
+    [team26, 2, 6],
+    [team34, 3, 4],
+    [team35, 3, 5],
+    [team36, 3, 6],
+    [team45, 4, 5],
+    [team46, 4, 6],
+    [team56, 5, 6],
+  ]
+} else if (numberOfPlayers == 5){
+  pointsArray = [
+    [team12, 1, 2],
+    [team13, 1, 3],
+    [team14, 1, 4],
+    [team15, 1, 5],
+    [team23, 2, 3],
+    [team24, 2, 4],
+    [team25, 2, 5],
+    [team34, 3, 4],
+    [team35, 3, 5],
+    [team45, 4, 5],
+  ]
+} else if (numberOfPlayers == 4){
+pointsArray = [
+  [team12, 1, 2],
+  [team13, 1, 3],
+  [team14, 1, 4],
+  [team23, 2, 3],
+  [team24, 2, 4],
+  [team34, 3, 4],
+]
+}
+pointsArray.sort(function(a, b){return b - a});
+console.log(team16 + " score"  + pointsArray);
+}
+
+
+// team12 += pairScoreArray.filter(whatTeam => whatTeam.team === '21')[0].points;
+// team13 = pairScoreArray.filter(whatTeam => whatTeam.team === '13')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '31')[0].points;
+// team14 = pairScoreArray.filter(whatTeam => whatTeam.team === '14')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '41')[0].points;
+// team15 = pairScoreArray.filter(whatTeam => whatTeam.team === '15')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '51')[0].points;
+// team16 = pairScoreArray.filter(whatTeam => whatTeam.team === '16')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '61')[0].points;
+// team23 = pairScoreArray.filter(whatTeam => whatTeam.team === '23')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '32')[0].points;
+// team24 = pairScoreArray.filter(whatTeam => whatTeam.team === '24')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '42')[0].points;
+// team25 = pairScoreArray.filter(whatTeam => whatTeam.team === '25')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '52')[0].points;
+// team26 = pairScoreArray.filter(whatTeam => whatTeam.team === '26')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '62')[0].points;
+// team34 = pairScoreArray.filter(whatTeam => whatTeam.team === '34')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '43')[0].points;
+// team35 = pairScoreArray.filter(whatTeam => whatTeam.team === '35')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '53')[0].points;
+// team36 = pairScoreArray.filter(whatTeam => whatTeam.team === '36')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '63')[0].points;
+// team45 = pairScoreArray.filter(whatTeam => whatTeam.team === '45')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '54')[0].points;
+// team46 = pairScoreArray.filter(whatTeam => whatTeam.team === '46')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '64')[0].points;
+// team56 = pairScoreArray.filter(whatTeam => whatTeam.team === '56')[0].points
+// + pairScoreArray.filter(whatTeam => whatTeam.team === '65')[0].points;   

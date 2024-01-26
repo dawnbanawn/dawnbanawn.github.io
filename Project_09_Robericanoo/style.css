@@ -1290,8 +1290,18 @@ html{
   scale: 0.95;
 }
 
+.patchInfo{
+  scale: 0.7;
+  width: 100%;
+  height: 100px;
+  overflow-y:scroll; 
+}
+.textfield{
+ background-color: green;
+ display: flex wrap;
+ 
 
-    
+}  
 
     
   
