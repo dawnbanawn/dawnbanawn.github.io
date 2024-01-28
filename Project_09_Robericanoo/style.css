@@ -1291,18 +1291,33 @@ html{
 }
 
 .patchInfo{
-  scale: 0.7;
+  scale: 0.6;
   width: 100%;
   height: 100px;
   overflow-y:scroll; 
+  color: black;
+  border: 1px solid rgba(255, 153, 0, 0.737);
+  overflow-x: hidden; 
+  background-color: rgba(0, 0, 0, 0.5);
+
 }
 .textfield{
- background-color: green;
+ background-color: black;
  display: flex wrap;
+ width: 90%;
+ text-align: left !important;
  
 
 }  
-
+.textfield p{
+  margin-top: 5px !important;
+  text-align: left !important;
+  
+ 
+ }  
+ .patchText{
+  margin-left: 10px !important;
+ }
     
   
   
