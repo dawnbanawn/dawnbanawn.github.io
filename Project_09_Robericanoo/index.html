@@ -43,9 +43,12 @@
         <p>For 4-6 players.</p>
         <br>
 
-        <p style="scale: 0.7; margin-bottom: -20px;">News:</p>
+
+        <!-- <p style="scale: 0.7; margin-bottom: -20px;">News:</p>
         <div class="patchInfo">
           <div class="textfield">
+            <p class="patchText">24/01/29 <br>News table (this table) added.</p>
+            <br>
             <p class="patchText">24/01/20 <br>New team score result table. <br>Option to change timer sound.</p>
             <br>
             <p class="patchText">24/01/02 <br>Schedules for 4 & 5 players.</p>
@@ -54,7 +57,10 @@
             <br>
             <p class="patchText">23/06/01 <br>Schedules for 6 players.</p>
           </div>
-        </div>
+        </div> -->
+
+
+
         <!-- <form style="scale: 0.7;" action="https://www.paypal.com/donate" method="post" target="_top">
           <input type="hidden" name="hosted_button_id" value="6MBRL2FZ8PBVL" />
           <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
@@ -67,14 +73,14 @@
            title="web counters" alt="web counters">Counter</a> -->
            
            
-           <div style="scale: 0.5;">
+           <!-- <div style="scale: 0.5;">
             <div id="sfck32unghy992axpjbur1tflf3fxxkfjjq"></div><script type="text/javascript" 
             src="https://counter7.optistats.ovh/private/counter.js?c=k32unghy992axpjbur1tflf3fxxkfjjq&down=async" 
             async></script><br><a href="https://www.freecounterstat.com"></a><noscript>
               <a href="https://www.freecounterstat.com" title="web counters">
                 <img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=k32unghy992axpjbur1tflf3fxxkfjjq" 
                  title="web counters" alt="web counters"></a></noscript>
-           </div>
+           </div> -->
 
 
            <!-- <div>
@@ -385,22 +391,24 @@
     <div id="pageMenuContainer">
       <div id="sizeBoxId08">
         <h1>Info</h1>
-        <p>
-          If there is a sun side of the court, this symbol represents it:
+        <!-- <p>
+          The sun side of the court:
           <img
             src="./images/sun.png"
             alt="sun icon"
             height="20px"
             width="20px"
           />
-        </p>
+        </p> -->
         <div id="pdfLinks">
+          <div id="menuItems">
+
           <a href="./instructions.html" target="_blank"><p>Instructions  <img
             src="./images/arrow.png"
             alt="arrow icon"
             height="12px"
             width="12px"
-          /> </p>          </a>
+          /></p></a>
           <!-- <a href="mailto:robericano@gmail.com"><p>Send Email</p><img
           src="./images/arrow.png"
           alt="arrow icon"
@@ -413,7 +421,9 @@
             alt="arrow icon"
             height="12px"
             width="12px"
-          /> </p>          </a>
+          /></p></a>
+        </div>
+<hr class="line">
           <!-- <a href="https://dawnbanawn.github.io/wintergrim.github.io/pdf/policy_robericano.html" target="_blank"><p>Privacy Policy  <img
             src="./images/arrow.png"
             alt="arrow icon"
@@ -431,10 +441,27 @@
 
         <!--<button>Click to copy the playstore link.</button>-->
         <button style="display: none;" id="buttonFullscreen">Fullscreen</button> <br />
-        <button style="margin-top: 5px;" id="buttonSound">Sound is on</button> <br />
-        <button style="margin-top: 5px;" id="changeSound">Sound: 1</button> <br />
+        <div id="wakeButton">
+          <button id="wakeButtonStyle" data-status="off">Turn Wake Lock ON</button>
+          <section id="status">
+            <section id="status">
+              <p>Wake Lock Status</p>
+              <p></p>
+            <!-- <p>Wake lock will automatically release if if the tab becomes inactive.
+            To re-activate the wake lock automatically when the tab becomes active again, check this box: <input type="checkbox" id="reaquire" /></p>
+           -->
+          </section>
+        </div>
+<hr class="line">
+
+        <div id="soundItems">
+        <button style="margin-top: 5px;" id="buttonSound">Sound is on</button> 
+        <button style="margin-top: 5px;" id="changeSound">Sound: 1</button><br> <br />
         
-        <p id="resetText">
+      </div>
+      <hr style="margin-top: 20px;" class="line">
+        
+        <p id="resetText">          
           Caution: This button resets the app and all results!
           <br />
         </p>

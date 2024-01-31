@@ -1319,5 +1319,32 @@ html{
   margin-left: 10px !important;
  }
     
-  
-  
+#wakeButton{
+  text-align: center;
+}
+#wakeButtonStyle{
+  border: 1px solid orange;
+  background-color: black;
+  color: orange;
+  height: 40px;
+  border-radius: 15px;
+  width: 150px;
+}
+#wakeButtonStyle:hover{
+
+  color: white;
+}
+#menuItems{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.line{  
+width: 250px;
+margin-bottom: 20px;
+}
+#soundItems{
+  display: flex;
+  justify-content: space-around;
+
+}
