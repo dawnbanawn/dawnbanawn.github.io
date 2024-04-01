@@ -1,0 +1,25 @@
+
+
+  .buttonDiv{
+    height: 150px;
+display: flex;
+justify-content: center;
+align-items: center;
+  }
+  .deleteButton{
+    margin: auto;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(239, 193, 193);
+    color: rgb(7, 7, 7);
+    border: 1px solid rgb(255, 154, 154);
+  }
+  .deleteButton:hover{
+    cursor: pointer;
+    scale: 0.95;
+  }
+  @media (max-width: 600px) {
+    .buttonDiv{
+      height: 100px;
+    }
+  }
